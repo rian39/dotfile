@@ -1,22 +1,27 @@
 execute pathogen#infect()
 syntax enable
 syntax on
+set nocompatible
+filetype plugin on
+filetype indent on
 se t_Co=16
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 call togglebg#map("<F5>")
-set ruler  " Text after a double-quote is a comment
+set ruler  
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set showcmd
+set hlsearch
+"cursor show
+"set cursorline
+"set cursorcolumn
 
 set encoding=utf-8
 "let mapleader=","
 set foldmethod=marker
-filetype plugin indent on
-filetype plugin on
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
 \ [%l/%L\ (%p%%)
@@ -45,11 +50,13 @@ let g:Tex_BibtexFlavor = 'bibtex'
 let g:Tex_Flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
+"markdown syntax
+"au BufRead,BufNewFile *.md *.rmd  set filetype=mkd
 
 " <leader>k Knits to MD
 nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
 
 
 "vimroom
-nnoremap <silent> <Leader>mz <Plug>VimroomToggle
+nnoremap <Leader>mz <Plug>VimroomToggle
 nnoremap <Leader><C-V><C-V> <Plug>VimroomToggle<CR>
