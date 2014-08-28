@@ -10,6 +10,7 @@ call vundle#begin()
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'reedes/vim-pencil'
     Plugin 'scrooloose/nerdcommenter'
+    Plugin 'tpope/vim-fugitive'
     Plugin 'scrooloose/nerdtree'
     Plugin 'altercation/vim-colors-solarized'
     
@@ -29,16 +30,17 @@ set shiftwidth=4
 set expandtab
 set showcmd
 set hlsearch
+set incsearch
+
 "cursor show
 "set cursorline
 "set cursorcolumn
 
 set encoding=utf-8
-"let mapleader=","
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
-\ [%l/%L\ (%p%%)
+set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
+"set statusline=wc:%{WordCount()}
 
 "save keys
 noremap <silent> <C-S>          :update<CR>
@@ -60,12 +62,12 @@ hi comment ctermfg=blue
 
 "let g:pandoc#filetypes#handled = ['
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 "bibtex
-let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 "let g:Tex_Flavor='latex'
 "let g:Tex_DefaultTargetFormat='pdf'
@@ -105,3 +107,35 @@ augroup pencil
     autocmd FileType textile call pencil#init()
     autocmd FileType text call pencil#init({'wrap': 'hard'})
 augroup END
+
+function! WordCount()
+      let s:old_status = v:statusmsg
+        let position = getpos(".")
+        exe ":silent normal g\<c-g>"
+            let stat = v:statusmsg
+              let s:word_count = 0
+                if stat != '--No lines in buffer--'
+                        let s:word_count = str2nr(split(v:statusmsg)[11])
+                            let v:statusmsg = s:old_status
+                              end
+                                call setpos('.', position)
+                                  return s:word_count 
+endfunction
+
+
+" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):
+filetype plugin on
+let vimrplugin_assign = 0
+" Change the <LocalLeader> key:
+let maplocalleader = ","
+" Use Ctrl+Space to do omnicompletion:
+if has("gui_running")
+    inoremap <C-Space> <C-x><C-o>
+else
+    inoremap <Nul> <C-x><C-o>
+endif
+" Press the space bar to send lines (in Normal mode) and selections to R:
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
+
+" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-28 11:53):
