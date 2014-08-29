@@ -8,11 +8,14 @@ call vundle#begin()
     Plugin 'vim-pandoc/vim-pandoc'
     Plugin 'vim-pandoc/vim-pandoc-syntax'
     Plugin 'terryma/vim-multiple-cursors'
-    Plugin 'reedes/vim-pencil'
+    "Plugin 'reedes/vim-pencil'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'tpope/vim-fugitive'
     Plugin 'scrooloose/nerdtree'
     Plugin 'altercation/vim-colors-solarized'
+    Plugin 'nanotech/jellybeans.vim'
+    "Plugin 'bling/vim-airline'
+    Plugin 'itchyny/lightline.vim'
     
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,12 +43,12 @@ set encoding=utf-8
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
-"set statusline=wc:%{WordCount()}
 
 "save keys
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
+
 
 "python editing
 au FileType py set autoindent
@@ -69,11 +72,11 @@ set grepprg=grep\ -nH\ $*
 "bibtex
 let g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
-"let g:Tex_Flavor='latex'
-"let g:Tex_DefaultTargetFormat='pdf'
 
 let g:pandoc#folding#fold_fenced_codeblocks=1
-
+set omnifunc=pandoc#completion#Complete
+"let g:Tex_Flavor='latex'
+"let g:Tex_DefaultTargetFormat='pdf'
 
 " <leader>k Knits to MD
 nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
@@ -99,14 +102,14 @@ augroup markers
 augroup END
 nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 
-let g:pencil#wrapModeDefault = 'soft'
+"let g:pencil#wrapModeDefault = 'soft'
 
-augroup pencil
-      autocmd!
-    autocmd FileType markdown,mkd call pencil#init()
-    autocmd FileType textile call pencil#init()
-    autocmd FileType text call pencil#init({'wrap': 'hard'})
-augroup END
+"augroup pencil
+      "autocmd!
+    "autocmd FileType markdown,mkd call pencil#init()
+    "autocmd FileType textile call pencil#init()
+    "autocmd FileType text call pencil#init({'wrap': 'hard'})
+"augroup END
 
 function! WordCount()
       let s:old_status = v:statusmsg
@@ -134,8 +137,81 @@ if has("gui_running")
 else
     inoremap <Nul> <C-x><C-o>
 endif
+"
 " Press the space bar to send lines (in Normal mode) and selections to R:
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
-" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-28 11:53):
+
+"** airline related**
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+ let g:airline#extensions#tabline#fnamemod = ':t'
+ if !exists('g:airline_symbols')
+       let g:airline_symbols = {}
+   endif
+
+ " unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+"lightline config
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
+      \   'readonly': 'MyReadonly',
+      \   'modified': 'MyModified',
+      \      'count': 'WordCount'
+      \ },
+      \ 'separator': { 'left':  '▶', 'right':  '▶'},
+      \ 'subseparator': { 'left':  '»', 'right': '»' }
+      \ }
+
+function! MyModified()
+if &filetype == "help"
+return ""
+elseif &modified
+return "+"
+elseif &modifiable
+return ""
+else
+return ""
+endif
+endfunction
+
+function! MyReadonly()
+if &filetype == "help"
+return ""
+  elseif &readonly
+  return "⭤"
+else
+    return ""
+endif
+endfunction
+
+function! MyFugitive()
+return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
+
+function! MyFilename()
+return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+\ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
+
