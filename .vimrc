@@ -8,7 +8,7 @@ call vundle#begin()
     Plugin 'vim-pandoc/vim-pandoc'
     Plugin 'vim-pandoc/vim-pandoc-syntax'
     Plugin 'terryma/vim-multiple-cursors'
-    "Plugin 'reedes/vim-pencil'
+    Plugin 'reedes/vim-pencil'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'tpope/vim-fugitive'
     Plugin 'scrooloose/nerdtree'
@@ -102,14 +102,14 @@ augroup markers
 augroup END
 nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 
-"let g:pencil#wrapModeDefault = 'soft'
+let g:pencil#wrapModeDefault = 'soft'
 
-"augroup pencil
-      "autocmd!
-    "autocmd FileType markdown,mkd call pencil#init()
-    "autocmd FileType textile call pencil#init()
-    "autocmd FileType text call pencil#init({'wrap': 'hard'})
-"augroup END
+augroup pencil
+      autocmd!
+    autocmd FileType markdown,mkd,rmd call pencil#init()
+    autocmd FileType textile call pencil#init()
+    autocmd FileType text call pencil#init({'wrap': 'hard'})
+augroup END
 
 function! WordCount()
       let s:old_status = v:statusmsg
