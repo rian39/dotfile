@@ -16,6 +16,8 @@ call vundle#begin()
     Plugin 'nanotech/jellybeans.vim'
     "Plugin 'bling/vim-airline'
     Plugin 'itchyny/lightline.vim'
+    Plugin 'reedes/vim-colors-pencil'
+    "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -23,6 +25,9 @@ execute pathogen#infect()
 syntax enable
 syntax on
 se t_Co=16
+if !has('gui_running')
+      set t_Co=256
+endif
 let g:solarized_termcolors=256
 "set background=dark
 colorscheme molokai
@@ -34,7 +39,7 @@ set expandtab
 set showcmd
 set hlsearch
 set incsearch
-
+let g:pencil#wrapModeDefault = 'soft'
 "cursor show
 "set cursorline
 "set cursorcolumn
@@ -44,6 +49,7 @@ set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
 
+set foldcolumn=6
 "save keys
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
@@ -102,14 +108,14 @@ augroup markers
 augroup END
 nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 
-let g:pencil#wrapModeDefault = 'soft'
+"let g:pencil#wrapModeDefault = 'soft'
 
-augroup pencil
-      autocmd!
-    autocmd FileType markdown,mkd,rmd call pencil#init()
-    autocmd FileType textile call pencil#init()
-    autocmd FileType text call pencil#init({'wrap': 'hard'})
-augroup END
+"augroup pencil
+      "autocmd!
+    "autocmd FileType markdown,mkd call pencil#init()
+    "autocmd FileType textile call pencil#init()
+    "autocmd FileType text call pencil#init({'wrap': 'hard'})
+"augroup END
 
 function! WordCount()
       let s:old_status = v:statusmsg
@@ -214,4 +220,5 @@ return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
 \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
 \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
+
 
