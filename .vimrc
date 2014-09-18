@@ -17,6 +17,9 @@ call vundle#begin()
     "Plugin 'bling/vim-airline'
     Plugin 'itchyny/lightline.vim'
     Plugin 'reedes/vim-colors-pencil'
+      Bundle "MarcWeber/vim-addon-mw-utils"
+        Bundle "tomtom/tlib_vim"
+          Bundle "garbas/vim-snipmate"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
