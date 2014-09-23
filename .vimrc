@@ -58,6 +58,10 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
+"insert mode commands
+inoremap II <Esc>I
+inoremap AA <Esc>A
+inoremap OO <Esc>O
 
 "python editing
 au FileType py set autoindent

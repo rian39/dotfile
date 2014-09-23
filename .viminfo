@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<this\>
+~MSle0~/Bayes
 
 # Last Substitute Search Pattern:
 ~MSle0&Body & Society 19(2&3)
@@ -18,25 +18,45 @@ $
 
 # Command Line History (newest to oldest):
 :q
-:PluginUpdate
+:b2
+:b1
+:b19
+:ls
+:e ~/.vim/snippets/
+:cw
+:grep Bayes ~/notes/*.md
+:SoftPencil
+:vimgrep Bayes .
+:vimgrep Bayes
+:Pandoc! docx
+:#
+:help :number
+:set numberwidth=8
+:set numberwidth=4
+:set relativenumber
+:e book.md
+:q!
+:e part1.rmd
+:e chapter_list.txt
 :set
+:w mcneil_fest.md
+:colorscheme molokai
+:colorscheme solarized
 :colorscheme pencil
+:colorscheme jellybeans
+:reg
+:PluginUpdate
 :w!
 :reg 2
 :reg 3
 :registers
 :2d3
-:SoftPencil
 :%s/Body & Society 19(2&3)//g
 :grep #
-:e chapter_list.txt
-:ls
 :e ch2_curves/ch2_curves_function.rmd
 :set fdc=6
 :e .
-:b1
 :bp
-:b2
 :e part2.rmd
 :w part1.rmd
 :e part_intros.md
@@ -56,7 +76,6 @@ $
 :h :map-expression
 :set fc=6
 :set fdc=0
-:q!
 :colo jellybeans
 :%s///gn
 :colorscheme wombat
@@ -76,7 +95,6 @@ $
 :Pandoc! pdf
 :e ~/Documents/data_intensive/ngs_data_topography/ngs_paper/revision_letter_aug2014.md
 :h [I
-:cw
 :e ~/notes/hacking_1990.md
 :e ~/notes/hastie_2008.md
 :%s/- //g
@@ -95,13 +113,9 @@ $
 :e ~/notes/amoore_2011.md
 :e ~/notes/lanier_2012.md
 :Pandoc! odt
-:Pandoc! docx
-:colorscheme solarized
-:colorscheme molokai
 :set fdc=4
 :colorscheme elflord
 :set fdc=5
-:colorscheme jellybeans
 :e ~/Documents/tcs_editing/aug2014/
 :e revision_letter_aug2014.md
 :b3
@@ -134,7 +148,6 @@ $
 :e ~/notes/sterne_bourdieu_technique_2003.md
 :command
 :cmap
-:reg
 :e ~/test.rmd
 :let g:
 :vmap
@@ -196,11 +209,18 @@ $
 :colorschemeshine
 
 # Search String History (newest to oldest):
+? \Vnb\%#
+? \Vnn\%#
+? \Vdt\%#
+? \Vml\%#
+?/Bayes
+?/asdfsad
+?/Kirk
+?/Part 1
 ? \<this\>
 ? Body & Society 19(2&3)
 ?/habit
 ?/#
-? \Vml\%#
 ?/Virno
 ?/Galloway
 ?/Bourdieu
@@ -209,9 +229,6 @@ $
 ?/McNair
 ?/Attwood
 ? \Vsvm\%#
-? \Vnb\%#
-? \Vnn\%#
-?/Bayes
 ? - 
 ?/outline
 ?/triple
@@ -251,7 +268,6 @@ $
 ?/Gilles
 ?/asdfasdf
 ? \<The\>
-?/asdfsad
 ?   
 ? ^ 
 ?/^ 
@@ -279,58 +295,44 @@ $
 
 # Registers:
 "0	CHAR	0
-	4
-"1	LINE	0
-	this is some text and here it is 
-	this is some text and here it is 
-"2	LINE	0
-	this is some text and here it is 
-	this is some text and here it is 
-	this is some text and here it is 
-	            this is some text and here it is 
-	    this is some text and here it is 
-	    this is some text and here it is 
-	                this is some text and here it is 
-	 }   this is some text and here it is 
-	                this is some text and here it is 
-	this is some text and here it is 
-	this is some text and here it is 
-	this is some text and here it is 
-	                this is some text and here it is 
-	}
-	## h2
+	274
+<naive Bayes .. assumes statistical independence of all the features: at a very minimum this means the features are assumed to be all uncorrelated with each other. ... This is often a wildly implausible assumption but the method has been shown to work surprisingly well 46
 	
-	this is a a sdfasd fsdf s df s if self sadf sdf sd fsdf sdf asd f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf 
-	1116
-<this is a a sdfasd fsdf s df s df sdf sadf sdf sd fsdf sdf asd f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf this is a a sdfasd fsdf s df s df sdf sadf sdf sd fsdf sdf asd f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf this is a a sdfasd fsdf s df s df sdf sadf sdf sd fsdf sdf asd f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf this is a a sdfasd fsdf s df s df sdf sadf sdf sd fsdf sdf asd f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf this is a a sdfasd fsdf s df s df sdf sadf sdf sd fsdf sdf asd f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf this is a a sdfasd fsdf sf s df sdf sadf sdf sd fsdf sdf @Kaufman_1990] f sd ;sdkf asd sdlfkj sd asd lksdf asd asdk sd as sdflk sdf as asdlkfj sdf sadfklj asdfk asdf  asdf sdf sadf sdflkj asdf 
+""1	LINE	0
+	
+"2	LINE	0
 	
 "3	LINE	0
 	
-	{
-	 {
-"4	LINE	0
-	
-	{
-	 {
 "5	LINE	0
-	Downloaded from bod.sagepub.com at Lancaster University Library on September 19, 2014
-"6	CHAR	0
-	14.
 	
-	15.
-	
-	16.
-	
-	17.
-	
-	
+"6	LINE	0
 	
 "7	LINE	0
-	# Chapter 7
+	
+	                                                                       this is some text and here it is 
+	                                                                       this is some text and here it is 
+	                                                                       # Chapter 7
+	                                                                       14.
+	
+	                                                                       15.
+	
+	                                                                       16.
+	
 "8	LINE	0
-	        # plot the line, the points, and the nearest vectors to the plane
+	
+	                                                                       17.
+	
+	sadf adsf sdfg sdf sdfg  asdf sfdglk 
+	
+	
+	
+	this is some text and here it is 
+	
+	
 "9	LINE	0
-	            # support vectors
+	this is some text and here it is 
+	this is some text and here it is 
 "a	CHAR	0
 	i
 "j	CHAR	0
@@ -343,8 +345,8 @@ $
 "w	CHAR	0
 	1449
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
-""-	CHAR	0
-	 
+"-	CHAR	0
+	.
 
 # global variables:
 
@@ -375,28 +377,52 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  41  830  ~/test.md
-'1  1  0  ~/test.md
-'2  42  0  ~/test.md
-'3  20  0  ~/test.md
-'4  933  0  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
-'5  1  0  ~/Documents/data_intensive/book/book.md
-'6  2553  0  ~/Documents/data_intensive/book/book.md
-'7  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'8  20  43  ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
-'9  242  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'0  3  35  ~/test.md
+'1  64  17  ~/.vimrc
+'2  5  0  ~/Dropbox/mcneil_fest.txt
+'3  99  0  ~/test.md
+'4  32  6  ~/.vimrc
+'5  44  830  ~/test.md
+'6  1  0  ~/test.md
+'7  45  0  ~/test.md
+'8  23  0  ~/test.md
+'9  933  0  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
 
 # Jumplist (newest first):
--'  41  830  ~/test.md
+-'  3  35  ~/test.md
 -'  1  0  ~/test.md
--'  42  0  ~/test.md
--'  20  0  ~/test.md
--'  22  577  ~/test.md
--'  21  0  ~/test.md
+-'  64  17  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  1  0  /usr/share/vim/vim74/doc/various.txt
+-'  20  0  ~/Documents/notes/flach_ml_2012.md
+-'  122  7  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  96  1373  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  86  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  65  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  39  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  12  78  ~/Dropbox/mcneil_fest.md
+-'  282  3  /usr/share/vim/vim74/doc/various.txt
+-'  114  13  /usr/share/vim/vim74/doc/various.txt
+-'  3  0  ~/Dropbox/mcneil_fest.md
+-'  6  111  ~/Dropbox/mcneil_fest.md
+-'  13  0  ~/Dropbox/mcneil_fest.md
+-'  1  0  ~/Dropbox/mcneil_fest.md
+-'  5  0  ~/Dropbox/mcneil_fest.txt
+-'  4  0  ~/Dropbox/mcneil_fest.txt
+-'  1  0  ~/Dropbox/mcneil_fest.txt
+-'  99  0  ~/test.md
+-'  5  0  ~/test.md
+-'  32  6  ~/.vimrc
+-'  224  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+-'  44  830  ~/test.md
+-'  45  0  ~/test.md
 -'  23  0  ~/test.md
+-'  25  577  ~/test.md
+-'  24  0  ~/test.md
 -'  26  0  ~/test.md
--'  13  0  ~/test.md
--'  2  0  ~/test.md
+-'  29  0  ~/test.md
+-'  16  0  ~/test.md
 -'  933  0  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
 -'  82  23  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
 -'  66  5  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
@@ -412,7 +438,6 @@ $
 -'  10  0  ~/Documents/data_intensive/book/chapter_list.txt
 -'  20  43  ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
 -'  9  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  242  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  6  0  ~/Documents/data_intensive/book/chapter_list.txt
 -'  12  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
@@ -442,190 +467,187 @@ $
 -'  317  24  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
 -'  314  4  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
 -'  292  2  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  286  4  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  933  0  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  82  23  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  66  5  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  65  15  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  63  18  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  59  59  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  55  64  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  54  38  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  1  0  ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
--'  1  0  ~/Documents/data_intensive/book/book.md
--'  2553  0  ~/Documents/data_intensive/book/book.md
--'  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  10  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  20  43  ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
--'  9  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  242  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  6  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  12  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  1  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  702  1  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  641  1  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  608  13  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  606  13  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  603  26  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  602  34  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  588  1  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  527  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  522  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  517  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  514  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  510  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  475  1  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  450  4  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  398  1  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  382  4  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  367  4  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+-'  1  0  /usr/share/vim/vim74/doc/various.txt
+-'  20  0  ~/Documents/notes/flach_ml_2012.md
+-'  122  7  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  96  1373  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  86  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  65  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  39  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  12  78  ~/Dropbox/mcneil_fest.md
+-'  282  3  /usr/share/vim/vim74/doc/various.txt
+-'  114  13  /usr/share/vim/vim74/doc/various.txt
+-'  3  0  ~/Dropbox/mcneil_fest.md
+-'  6  111  ~/Dropbox/mcneil_fest.md
+-'  13  0  ~/Dropbox/mcneil_fest.md
+-'  1  0  ~/Dropbox/mcneil_fest.md
+-'  5  0  ~/Dropbox/mcneil_fest.txt
+-'  4  0  ~/Dropbox/mcneil_fest.txt
+-'  1  0  ~/Dropbox/mcneil_fest.txt
 
 # History of marks within files (newest to oldest):
 
 > ~/test.md
-	"	41	830
-	^	22	1
-	.	22	0
+	"	3	35
+	^	3	36
+	.	3	35
 	+	1	0
-	+	55	0
-	+	56	12
-	+	51	0
-	+	52	38
-	+	54	46
-	+	43	12
-	+	2	0
-	+	2	1
-	+	2	1
-	+	2	835
-	+	2	0
-	+	2	0
+	+	120	0
+	+	121	12
+	+	116	0
+	+	117	38
+	+	119	46
+	+	108	12
+	+	5	0
+	+	5	1
+	+	5	1
+	+	5	835
+	+	5	0
+	+	5	0
+	+	29	0
 	+	26	0
-	+	23	0
-	+	24	0
-	+	22	502
-	+	22	0
+	+	27	0
+	+	25	502
+	+	25	0
+	+	46	46
+	+	69	33
+	+	71	26
+	+	74	27
+	+	108	0
+	+	108	33
+	+	108	0
+	+	108	0
+	+	108	37
+	+	108	0
+	+	99	95
+	+	99	0
+	+	3	35
 	a	1	0
-	c	6	0
+	c	9	0
 
-> ~/[Vundle] Installer
-	"	18	0
-	.	1	0
-	+	190	0
-	+	186	0
-	+	181	0
-	+	172	0
-	+	162	0
-	+	152	0
-	+	141	0
-	+	128	0
-	+	114	0
-	+	102	0
-	+	90	0
-	+	77	0
-	+	64	0
-	+	52	0
-	+	35	0
+> ~/.vimrc
+	"	64	17
+	^	64	18
+	.	64	17
+	+	60	13
+	+	60	3
+	+	60	0
+	+	155	1
+	+	127	0
+	+	18	51
+	+	17	51
+	+	17	12
+	+	17	29
 	+	18	0
+	+	26	0
+	+	34	38
+	+	17	0
+	+	34	0
+	+	17	0
+	+	26	0
+	+	165	0
+	+	161	1
+	+	182	0
+	+	182	0
+	+	171	0
+	+	173	0
+	+	170	0
+	+	161	20
+	+	105	1
+	+	53	0
+	+	120	0
+	+	17	0
+	+	17	33
+	+	17	0
+	+	17	0
+	+	12	0
+	+	87	0
+	+	93	0
+	+	92	4
+	+	17	35
+	+	233	8
+	+	233	33
+	+	233	9
+	+	233	8
+	+	233	9
+	+	233	0
+	+	233	8
+	+	233	10
+	+	233	6
+	+	233	6
+	+	233	0
+	+	199	8
+	+	189	76
+	+	196	0
+	+	195	29
+	+	196	0
+	+	195	6
+	+	198	0
+	+	196	9
+	+	194	34
+	+	196	9
+	+	198	0
+	+	197	32
+	+	173	0
+	+	173	0
+	+	197	55
+	+	198	54
+	+	197	38
+	+	232	0
+	+	202	0
+	+	203	0
+	+	220	0
+	+	218	0
+	+	217	0
+	+	222	0
+	+	12	0
+	+	120	0
+	+	128	0
+	+	124	34
+	+	85	23
+	+	17	0
+	+	17	0
+	+	17	0
+	+	17	0
 	+	1	0
+	+	17	0
+	+	26	0
+	+	1	0
+	+	33	0
+	+	23	0
+	+	11	0
+	+	34	8
+	+	235	0
+	+	55	0
+	+	56	14
+	+	34	0
+	+	56	0
+	+	46	0
+	+	45	30
+	+	19	35
+	+	22	37
+	+	88	27
+	+	90	30
+	+	64	17
 
-> /tmp/vuQUGZF/61
-	"	1	0
-
-> /tmp/vjHmaff/59
-	"	100	0
-
-> ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
-	"	933	0
-	.	933	0
-	+	80	0
-	+	898	0
-	+	933	0
-
-> ~/Documents/data_intensive/book/book.md
-	"	1	0
-	^	424	13
-	.	279	0
-	+	424	13
-	+	857	2
-	+	1812	2
-	+	2155	2
-	+	2447	2
-	+	272	0
-	+	276	0
-	+	277	0
-	+	336	518
-	+	560	1
-	+	561	1
-	+	277	0
-	+	279	0
-
-> ~/Documents/data_intensive/book/chapter_list.txt
-	"	10	0
-	^	7	9
-	.	2	0
-	+	11	32
-	+	3	8
-	+	7	8
+> ~/Dropbox/mcneil_fest.md
+	"	12	0
+	^	12	79
+	.	12	79
+	+	12	77
 	+	3	0
-	+	2	0
-
-> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
-	"	20	43
-	^	20	44
-	.	20	43
-	+	1	2
-	+	20	43
+	+	12	22
+	+	6	111
+	+	13	61
+	+	10	118
+	+	11	117
+	+	12	79
 
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	242	0
-	^	5	0
-	.	4	0
-	+	34	0
-	+	79	42
-	+	12	81
-	+	50	0
-	+	51	1
-	+	68	0
-	+	9	128
-	+	34	0
-	+	19	7
-	+	38	0
-	+	65	0
-	+	66	0
-	+	76	0
-	+	77	0
-	+	72	0
-	+	36	0
-	+	37	0
-	+	52	0
-	+	55	16
-	+	56	0
-	+	64	0
-	+	63	0
-	+	58	0
-	+	57	0
-	+	59	0
-	+	60	0
-	+	62	0
-	+	64	0
-	+	54	0
-	+	72	0
-	+	10	108
-	+	12	98
-	+	13	96
-	+	41	16
-	+	42	0
-	+	47	0
-	+	50	0
-	+	48	0
-	+	50	0
-	+	48	0
-	+	46	0
+	"	106	33
+	^	106	34
+	.	106	33
 	+	44	0
 	+	46	0
 	+	47	0
@@ -638,121 +660,119 @@ $
 	+	15	0
 	+	17	0
 	+	18	0
-	+	195	0
+	+	122	0
 	+	55	31
 	+	4	0
+	+	86	0
+	+	96	1198
+	+	96	0
+	+	96	1222
+	+	96	0
+	+	96	1462
+	+	96	0
+	+	96	1609
+	+	96	981
+	+	96	1643
+	+	96	0
+	+	96	1744
+	+	96	0
+	+	96	1899
+	+	96	0
+	+	96	1915
+	+	96	1727
+	+	96	2037
+	+	96	0
+	+	96	2168
+	+	114	0
+	+	114	316
+	+	96	2145
+	+	96	0
+	+	96	2152
+	+	115	0
+	+	116	121
+	+	116	1
+	+	116	213
+	+	96	923
+	+	96	1056
+	+	122	0
+	+	116	213
+	+	117	0
+	+	118	0
+	+	120	0
+	+	119	0
+	+	119	156
+	+	96	1627
+	+	96	0
+	+	96	1693
+	+	96	0
+	+	96	1709
+	+	119	0
+	+	116	0
+	+	114	0
+	+	96	2037
+	+	101	0
+	+	96	1944
+	+	97	0
+	+	98	0
+	+	98	0
+	+	98	253
+	+	98	0
+	+	98	0
+	+	99	0
+	+	99	0
+	+	100	0
+	+	100	485
+	+	100	189
+	+	122	0
+	+	100	380
+	+	100	800
+	+	100	896
+	+	102	512
+	+	113	0
+	+	102	697
+	+	104	0
+	+	104	565
+	+	104	0
+	+	104	607
+	+	106	33
+	+	108	0
+	+	108	112
+	+	109	0
+	+	110	0
+	+	110	290
+	+	108	113
+	+	108	0
+	+	108	131
+	+	108	0
+	+	108	223
+	+	108	0
+	+	108	327
+	+	106	33
+	a	85	0
 	o	8	0
 	p	32	0
 	q	39	15
 	t	19	7
 	x	65	0
 
-> ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
-	"	12	0
-	.	527	0
-	+	1	2
-	+	3	19
-	+	716	0
-	+	653	0
-	+	638	3360
-	+	653	0
-	+	638	3283
-	+	653	0
-	+	638	3198
-	+	653	0
-	+	653	0
-	+	638	3180
-	+	653	0
-	+	653	0
-	+	638	2927
-	+	653	0
-	+	653	0
-	+	638	1019
-	+	653	0
-	+	653	0
-	+	638	987
-	+	653	0
-	+	653	0
-	+	638	3
-	+	3	0
-	+	714	0
-	+	667	0
-	+	670	0
-	+	667	0
-	+	602	0
-	+	603	0
-	+	602	31
-	+	603	0
-	+	602	35
-	+	604	0
-	+	603	74
-	+	608	7
-	+	608	0
-	+	614	0
-	+	619	0
-	+	626	0
-	+	629	0
-	+	633	0
-	+	168	0
-	+	185	0
-	+	286	0
-	+	288	0
-	+	287	0
-	+	286	0
-	+	288	0
-	+	291	0
-	+	314	0
-	+	344	0
-	+	348	0
-	+	352	0
-	+	355	0
-	+	361	0
-	+	365	0
-	+	367	0
-	+	382	0
-	+	398	0
-	+	450	0
-	+	510	0
-	+	514	0
-	+	517	0
-	+	522	0
-	+	527	0
+> /usr/share/vim/vim74/doc/various.txt
+	"	1	0
 
-> ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
-	"	52	6
-	^	11	4
-	.	11	3
-	+	3	0
-	+	10	2
-	+	11	3
+> ~/Documents/notes/alpaydin_machine_learning_2010.md
+	"	4	0
 
-> ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
-	"	36	32
-	^	36	33
-	.	36	32
-	+	38	0
-	+	38	75
-	+	39	0
-	+	38	16
-	+	37	0
-	+	1	1
-	+	32	15
-	+	17	2
-	+	17	47
-	+	18	0
-	+	17	47
-	+	3	19
-	+	15	0
-	+	14	0
-	+	36	32
-	a	38	15
-	o	14	0
-	q	32	15
-	t	26	8
-	x	17	47
+> ~/Documents/notes/conway_myles_white_machine_learning_2012.md
+	"	5	187
+	^	5	188
+	.	5	187
+	+	7	367
+	+	5	187
+
+> ~/Documents/notes/flach_ml_2012.md
+	"	20	0
 
 > ~/Documents/data_intensive/book/ch4_probability/NERD_tree_1
-	"	56	2
+	"	5	2
 	.	1	0
 	+	1	0
 	+	1	0
@@ -772,30 +792,85 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
-
-> ~/Documents/data_intensive/book/ch4_probability/NERD_tree_2
-	"	20	0
-	.	1	0
-	+	1	0
 	+	1	0
 
-> ~/Documents/data_intensive/book/part1.rmd
-	"	16	0
-	.	23	0
-	+	23	0
+> ~/.vim/snippets/pandoc.snippets
+	"	13	0
+	^	18	20
+	.	13	0
+	+	19	0
+	+	12	14
+	+	4	41
+	+	19	0
+	+	16	13
+	+	18	19
+	+	17	0
+	+	15	0
+	+	13	0
 
-> ~/Documents/data_intensive/book/part_intros.md
-	"	8	0
-	.	23	0
-	+	23	0
+> ~/Documents/data_intensive/book/book.md
+	"	537	149
+	^	537	149
+	.	537	148
+	+	424	13
+	+	853	2
+	+	1808	2
+	+	2151	2
+	+	2443	2
+	+	272	0
+	+	276	0
+	+	277	0
+	+	336	518
+	+	556	1
+	+	557	1
+	+	277	0
+	+	279	0
+	+	512	259
+	+	468	0
+	+	468	177
+	+	504	0
+	+	505	0
+	+	498	0
+	+	537	0
+	+	537	148
 
-> ~/Documents/data_intensive/book/part2.rmd
-	"	2	0
+> ~/Documents/data_intensive/book/chapter_list.txt
+	"	1	0
+	^	7	9
 	.	2	0
+	+	11	32
+	+	3	8
+	+	7	8
+	+	3	0
 	+	2	0
 
+> ~/Documents/data_intensive/book/part_intros.md
+	"	1	0
+	.	23	0
+	+	23	0
+
+> ~/Documents/data_intensive/book/build.sh
+	"	1	0
+
+> ~/Documents/data_intensive/book/chapter_overview.md
+	"	7	0
+
+> ~/Documents/data_intensive/book/part1.rmd
+	"	1	0
+	.	23	0
+	+	23	0
+
+> ~/Dropbox/mcneil_fest.txt
+	"	5	0
+	^	4	134
+	.	4	133
+	+	7	0
+	+	3	23
+	+	7	86
+	+	4	133
+
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-	"	249	0
+	"	224	0
 	^	73	80
 	.	249	0
 	+	72	0
@@ -909,6 +984,167 @@ $
 	q	53	15
 	t	32	0
 
+> ~/[Vundle] Installer
+	"	18	0
+	.	1	0
+	+	190	0
+	+	186	0
+	+	181	0
+	+	172	0
+	+	162	0
+	+	152	0
+	+	141	0
+	+	128	0
+	+	114	0
+	+	102	0
+	+	90	0
+	+	77	0
+	+	64	0
+	+	52	0
+	+	35	0
+	+	18	0
+	+	1	0
+
+> /tmp/vuQUGZF/61
+	"	1	0
+
+> /tmp/vjHmaff/59
+	"	100	0
+
+> ~/Documents/document-archive/adoption/Grosz_habit_2013.txt
+	"	933	0
+	.	933	0
+	+	80	0
+	+	898	0
+	+	933	0
+
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
+	"	20	43
+	^	20	44
+	.	20	43
+	+	1	2
+	+	20	43
+
+> ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+	"	12	0
+	.	527	0
+	+	1	2
+	+	3	19
+	+	716	0
+	+	653	0
+	+	638	3360
+	+	653	0
+	+	638	3283
+	+	653	0
+	+	638	3198
+	+	653	0
+	+	653	0
+	+	638	3180
+	+	653	0
+	+	653	0
+	+	638	2927
+	+	653	0
+	+	653	0
+	+	638	1019
+	+	653	0
+	+	653	0
+	+	638	987
+	+	653	0
+	+	653	0
+	+	638	3
+	+	3	0
+	+	714	0
+	+	667	0
+	+	670	0
+	+	667	0
+	+	602	0
+	+	603	0
+	+	602	31
+	+	603	0
+	+	602	35
+	+	604	0
+	+	603	74
+	+	608	7
+	+	608	0
+	+	614	0
+	+	619	0
+	+	626	0
+	+	629	0
+	+	633	0
+	+	168	0
+	+	185	0
+	+	286	0
+	+	288	0
+	+	287	0
+	+	286	0
+	+	288	0
+	+	291	0
+	+	314	0
+	+	344	0
+	+	348	0
+	+	352	0
+	+	355	0
+	+	361	0
+	+	365	0
+	+	367	0
+	+	382	0
+	+	398	0
+	+	450	0
+	+	510	0
+	+	514	0
+	+	517	0
+	+	522	0
+	+	527	0
+
+> ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
+	"	52	6
+	^	11	4
+	.	11	3
+	+	3	0
+	+	10	2
+	+	11	3
+
+> ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
+	"	36	32
+	^	36	33
+	.	36	32
+	+	38	0
+	+	38	75
+	+	39	0
+	+	38	16
+	+	37	0
+	+	1	1
+	+	32	15
+	+	17	2
+	+	17	47
+	+	18	0
+	+	17	47
+	+	3	19
+	+	15	0
+	+	14	0
+	+	36	32
+	a	38	15
+	o	14	0
+	q	32	15
+	t	26	8
+	x	17	47
+
+> ~/Documents/data_intensive/book/ch4_probability/NERD_tree_2
+	"	20	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/book/part2.rmd
+	"	2	0
+	.	2	0
+	+	2	0
+
 > ~/Documents/data_intensive/book/writing_log.md
 	"	6	274
 	^	6	275
@@ -1002,121 +1238,8 @@ $
 	+	48	0
 	+	48	0
 
-> ~/.vimrc
-	"	87	0
-	^	87	0
-	.	86	30
-	+	60	19
-	+	60	13
-	+	60	3
-	+	60	0
-	+	151	1
-	+	123	0
-	+	18	51
-	+	17	51
-	+	17	12
-	+	17	29
-	+	18	0
-	+	26	0
-	+	34	38
-	+	17	0
-	+	34	0
-	+	17	0
-	+	26	0
-	+	161	0
-	+	157	1
-	+	178	0
-	+	178	0
-	+	167	0
-	+	169	0
-	+	166	0
-	+	157	20
-	+	101	1
-	+	53	0
-	+	116	0
-	+	17	0
-	+	17	33
-	+	17	0
-	+	17	0
-	+	12	0
-	+	83	0
-	+	89	0
-	+	88	4
-	+	17	35
-	+	229	8
-	+	229	33
-	+	229	9
-	+	229	8
-	+	229	9
-	+	229	0
-	+	229	8
-	+	229	10
-	+	229	6
-	+	229	6
-	+	229	0
-	+	195	8
-	+	185	76
-	+	192	0
-	+	191	29
-	+	192	0
-	+	191	6
-	+	194	0
-	+	192	9
-	+	190	34
-	+	192	9
-	+	194	0
-	+	193	32
-	+	169	0
-	+	169	0
-	+	193	55
-	+	194	54
-	+	193	38
-	+	228	0
-	+	198	0
-	+	199	0
-	+	216	0
-	+	214	0
-	+	213	0
-	+	218	0
-	+	12	0
-	+	116	0
-	+	124	0
-	+	120	34
-	+	81	23
-	+	17	0
-	+	17	0
-	+	17	0
-	+	17	0
-	+	1	0
-	+	17	0
-	+	26	0
-	+	1	0
-	+	33	0
-	+	23	0
-	+	11	0
-	+	34	8
-	+	231	0
-	+	55	0
-	+	56	14
-	+	34	0
-	+	56	0
-	+	46	0
-	+	45	30
-	+	19	35
-	+	22	37
-	+	84	27
-	+	86	30
-
 > /tmp/crontab.8JEBHv/crontab
 	"	1	0
-
-> ~/.vim/snippets/pandoc.snippets
-	"	4	41
-	^	4	42
-	.	4	41
-	+	13	0
-	+	12	14
-	+	4	41
 
 > ~/test.rmd
 	"	123	66
@@ -1868,50 +1991,3 @@ $
 
 > /usr/share/vim/vim74/doc/change.txt
 	"	540	7
-
-> ~/Documents/data_intensive/book/ch0_introduction/option-window
-	"	12	17
-	.	916	0
-	+	1831	0
-	+	916	0
-
-> ~/Documents/data_intensive/book/ch0_introduction/[Vundle] Installer
-	"	14	0
-	.	1	0
-	+	91	0
-	+	78	0
-	+	65	0
-	+	51	0
-	+	39	0
-	+	26	0
-	+	14	0
-	+	1	0
-
-> /usr/share/vim/vim74/doc/sign.txt
-	"	85	21
-
-> ~/Documents/data_intensive/book/ch0_introduction/[Vundle] clean
-	"	2	0
-	.	1	0
-	+	8	0
-	+	3	0
-	+	2	0
-	+	1	0
-
-> /usr/share/vim/vim74/doc/motion.txt
-	"	866	52
-
-> ~/.vim/bundle/Vundle.vim/doc/vundle.txt
-	"	321	0
-
-> /tmp/v9zZNks/44
-	"	50	24
-
-> ~/Documents/notes/virno.md
-	"	10	0
-	^	11	0
-	.	11	0
-	+	4	0
-	+	7	0
-	+	9	0
-	+	11	0
