@@ -42,7 +42,6 @@ set expandtab
 set showcmd
 set hlsearch
 set incsearch
-let g:pencil#wrapModeDefault = 'soft'
 "cursor show
 "set cursorline
 "set cursorcolumn
@@ -54,9 +53,9 @@ set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L
 
 set foldcolumn=6
 "save keys
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S><C-C> :update<CR>
+inoremap <silent> <C-S><C-O> :update<CR>
 
 "insert mode commands
 inoremap II <Esc>I
@@ -232,3 +231,4 @@ return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
 endfunction
 
 
+let g:pencil#wrapModeDefault = 'soft'

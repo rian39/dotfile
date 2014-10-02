@@ -8,18 +8,53 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/HERE
+~MSle0~/sexy
 
 # Last Substitute Search Pattern:
-~MSle0&\.
+~MSle0&cat(
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+: e ch_naive_informed.md
+:set relativenumber
+:%s/cat(/#cat(/gc
+:%s/cat/#cat/gc
+:s/gas/sex/
+:s/gas/finance/
+:bn
+:s/,/, /g
+:colorscheme jellybeans
+:colorscheme solarized
+:colorscheme pencil
+:e ch_naive_informed.md
+:map
+:RpluginConfig
+:so %
+:so
+:e Vim-R-plugin(1).vmb
 :q
-:vertical resize +10
+:set relativenumber=0
+:q!
+:read enron_naive_bayes.R
+:set fdc=0
+:set fdc=5
+:h insert
+:h source
+:w
+:R
+:e ~/book/ch1_learning/ch1_notes.rmd
+:bp
+:split
+:wq
 :SoftPencil
+:Pandoc! docx
+:Pandoc! doc
+:Pandoc! rtf
+:nmap <S-Enter> O<Esc>
+:colo solarized
+:vertical resize +10
 :set vertical re +10
 :e ejors_nov2012.rmd
 :e ~/notes/haraway_situated_1999.md
@@ -36,14 +71,12 @@ $
 :h nnoremap 
 :set relativenumber=off
 :set relativenumber=false
-:set relativenumber
 :vertical resize+20
 :b4
 :ls
 :e ~/notes/parisi_2013.md
 :e ~/notes/badiou_number.md
 :h lock
-:q!
 :%s/some/some\r/gc
 :%s/some/some\/r/gc
 :%s/some/some\/n/gc
@@ -60,11 +93,9 @@ $
 :h vertical-resize
 :e ~/Dropbox/mcneil_fest.md
 :marks
-:map
 :e ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
 :'N
 :e ~/notes/suchman_artificial_intelligence.md
-:split
 :set filetype=html
 :e ~/Documents/data_intensive/data_other_transformations_london_sept2014/
 :pwd
@@ -72,7 +103,6 @@ $
 :browse
 :h ins-completion
 :b3
-:bp
 :bd
 :browse old
 ::q!
@@ -95,7 +125,6 @@ $
 :grep Bayes ~/notes/*.md
 :vimgrep Bayes .
 :vimgrep Bayes
-:Pandoc! docx
 :#
 :help :number
 :set numberwidth=8
@@ -106,9 +135,6 @@ $
 :set
 :w mcneil_fest.md
 :colorscheme molokai
-:colorscheme solarized
-:colorscheme pencil
-:colorscheme jellybeans
 :reg
 :PluginUpdate
 :w!
@@ -132,17 +158,13 @@ $
 :e ~/book/writing_log.md
 :b0
 :b6
-:e ~/book/ch1_learning/ch1_notes.rmd
 :e ~/book/ch1_learning/ch1_praxis.rmd
 :e ~/notes/stengers_cosmopolitique_2.md
 :h :map-expression
 :set fc=6
-:set fdc=0
 :%s///gn
 :colorscheme wombat
 :q1
-:wq
-:w
 :w'
 :h snippet
 :e ~/.vim/snippets/markdown.snippet
@@ -173,10 +195,8 @@ $
 :e ~/notes/lanier_2012.md
 :set fdc=4
 :colorscheme elflord
-:set fdc=5
 :e ~/Documents/tcs_editing/aug2014/
 :e revision_letter_aug2014.md
-:bn
 :e ngs_post_archive.rmd
 :s/ngs_metacommunities_oct2013/ngs_post_archive/gc
 :e pandoc.sh
@@ -264,10 +284,22 @@ $
 :colorschemeshine
 
 # Search String History (newest to oldest):
+? \Vnb\%#
 ? \Vml\%#
+?/sexy
+? cat(
+? cat
+? gas
+?/asdfas
+?/The input
+?/adfs
+? ,
+?/finance
+? ^\s*$
+?/connect
+?/nnore
 ? \Vsvm\%#
 ? \Vdt\%#
-? \Vnb\%#
 ?/HERE
 ?/random
 ?/data
@@ -357,44 +389,29 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	1281
-<Everywhere, numbers are increasingly in variation, and display increasingly distributional characteristics.  While some events have discrete outcomes (Obama was re-elected in 2012), many happenings are not. In Lancaster here in north-west England, the probability of rain on a given day would be say 70%, but days have very different amounts of rain.  Some days, it rains once briefly and lightly. Other days it rains frequently and heavily. A gamut of rain events can occur, and each would distribute different amounts of water on Lancaster. Given the amount of variation,  a much better way to face the weather is to say that Lancaster's rain is a *random variable*: â€˜a random variable is a mapping that assigns a real number to each outcomeâ€™ [@wasserman_all_2003,19]. If events have probabilities, random variables have a range of outcomes that are mapped to numbers. Again, the deceptive simplicity of 'mapping' hides many variations. Mapping is a form of one-to-one correspondence, usually expressed as a mathematical function. A random variable links events to numbers through functions.  Again, all this remains rather formal. The practical reality of random variables is variation, variations that are  visually expressed by curves and by probability distributions. 
-	
-	```{r  distributions, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} 
-	
-		source('mcmc_examples.R')
-		generate_distributions()
-	```
-	591
-<Probability distributions are a common way of showing and  talking about random variables. The curves shown in Figure 2 could refer to almost anything (the chances of rain at different times of day in Lancaster, the seasonal variation in precipitation, etc.). These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@bertin_semiology_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:
-	
-	>$f(x;\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
-	
-	1832
-<This  function, whose mathematics were intensively worked over during the 18-19th centuries, has a power-laden biopolitical history closely tied with knowledges and governing of  national and other  populations. The key symbols here include $\mu$, the mean and $\sigma$, the variance. These two parameters together describe  the shape of the curve. Given $\mu$ and $\sigma$, it become possible to map different outcomes to probabilities. Given the normal distribution, it is possible, under certain circumstances, to effectively subjectify someone on the spot. For instance, if an educational psychologist indicates to someone that their intelligence lies towards the left-hand side of the normal curve peak in Figure 2 (and hence less than the population mean), they quickly render them somehow subject to the normal curve. But statistics uses dozens of different probability distributions to map continuous and discrete variations to real numbers. Other probability distributions abound â€” normal (Gaussian), uniform, Cauchy exponential, gamma, beta,  hypergeometric, binomial, Poisson, chi-squared, Boltzmann-Gibbs distributions, etc (see [@nist_2012] for a gallery of distributions) â€” because outcomes occur in widely differing patterns. The  queuing times at airport check-ins do not, for instance, easily fit a normal distribution. Queues are usually modelled using a Poisson distribution, which unfortunately for travellers, distributes waiting times very differently.  Similarly, it might be better to think of the probability of rain today in Lancaster in terms of a Poisson distribution that models that queue of clouds in the Atlantic just waiting to land on the northwest coast of England. Rather than addressing the question of if it will rain or not, a Poisson-based model might address the question of how soon.
-	
-	2016
-<The diverse range of probability distributions â€” and we will see below some reasons why we can expect them to proliferate in certain settings â€” attests to the variety of ways in which events might be mapped to real numbers. Despite  the sometime forbidding mathematical equations, the term *distribution* emphasises a quite material or tangible way of thinking about how probabilities vary. The curves in both Figure 1 and Figure 2 are examples of the most common mathematical descriptions in any data analysis setting: they are  *probability density* functions (pdf). (There are also  *probability mass* functions for variables that have discrete values; for instance: 1,2,3,4,5). Pdfs such as the Gaussian function shown above are usually graphed as a curve that indicates how likely a random variable is to take on a particular value. In many cases, statistical practice seeks to estimate distribution functions such as pdfs (or their close relatives, cdfs â€” *cumulative distribution functions*) for the given data. Statisticians speak of 'fitting a density' to data, emphasising their assumption that events can be incorporated in the forms of probability distributions. The underlying probability distribution is in principle â€˜unobservableâ€™ as such, but a probability density function is  assumed to give rise to all the variations in data gathered through experiments and observations. The task is to estimate the shape of that curve, and its defining parameters (means, variance, etc.). Given that curve, areas under the pdf equate to the likely range of value of a variable. While the total 'probability mass' under the probability density function curve always must be equal to one (since the combined probability of all possible outcomes = 1), finding the area under particular parts of the curve is a key issue. Finding the area under probability density curves becomes the way in which many epistemic processes envisage lived states of affairs as random variables or as numbers in variation.
-	
-"1	CHAR	0
-	  
+"0	LINE	0
+	predict_spam('gas')
+"1	LINE	0
+	610
+<The tranformations that machine learning bring to probability itself are not insignificant. As we will see, the growth of these techniques operationalises probabilities in new ways, or at least in ways that render the long-standing dichotomy between probability as objective randomness in the world and probability as measure of our own uncertain knowledge of the world more and more untenable. At core, both the objective and subjective treatments of probability find themselves reassembled in a new algo-probablistic assemblage. By virtue of its simplicity, the Naive Bayes classifier helps to show this. 
 "2	LINE	0
-	923
-<In order to make something of the transformation discussable, some definitional discussion might be useful. I'm suggesting that we countenace a scene in which multiple different probability practices stack on top of each other. Amidst these, random variables and their associated probability distributions particularly concern us. As we will see, the power of the transformation in probability associated with machine learning algorithms resides in their capacity to draw in many more relations, features and components of data in support of a probabilistic outcome.dwis, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
+	
 "3	LINE	0
-	1788
-<The topic in this chapter is the role of randomness and probability in machine learning. While statistical techniques and practices have been discussed in previous chapters, this chapter foregrounds the changes in probability practices associated with machine learning. I approach this mainly through the extremely simple and easily implemented Naive Bayes classifier but also with some reference to theso-called 'Bayesian revolution' in statistical practice that took shape in the early 1990s, and in particular, the key algorithmic technique used in Bayesian statistics, Markov Chain Monte Carlo simulation (MCMC). Across the gamut of differences between the very simple Naive Bayes approach and the sophisticated MCMC techniques, we can see a broad ranging shift in probability practice has been occurring. The key argument here, following on from the discussions of vector space, the function of optimisation and the development of decisionistic mechanisms developed in the preceding chapters is that what is happening to data, the ways in which are being corralled and marshalled, and the kinds of pattern-finding, anticipation or pre-emption delivered by machine learning need to be considered alongside a transformation in the status of probability. This is not the first such transformation, but it is the  The computationally intensive techniques of Bayesian analysis treat all numbers as potentially random variables; that is, as best described by probability distributions. The ensuing popularity of Bayesian inference is a striking example of transverse momentum of methods across fields, and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
-"4	CHAR	0
-	The implications include a fluctuating role of nunmbers which in some cases attract very close scrutiny and in others
+	       ```
+"4	LINE	0
+	
+"5	LINE	0
+	
 "6	LINE	0
-	
+	    P_ham = ham_count/(ham_count + spam_count)
+	    P_spam = spam_count/(ham_count + spam_count)
 "7	LINE	0
-	[HERE]
-"8	LINE	0
-	- made some kind of plea to keep open the possibility that prediction is not the end of potential or eventhood
-"9	LINE	0
 	
+"8	LINE	0
+	    ham = sapply(f_ham, readLines, warn=FALSE)
+	    spam = sapply(f_spam, readLines, warn=FALSE)
+"9	LINE	0
+	    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
 "a	CHAR	0
 	i
 "j	CHAR	0
@@ -408,7 +425,7 @@ $
 	1449
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 ""-	CHAR	0
-	and the chapter will trace some of the ramifications of the heavily-used MCMC technique in fields ranging from nuclear physics, image processing to political science and epidemiology. 
+	print
 
 # global variables:
 
@@ -439,119 +456,610 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  225  0  ~/test.md
-'1  75  1072  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
-'2  189  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
-'3  7  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
-'4  43  167  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
-'5  4  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/test.md
-'6  1  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
-'7  31  109  ~/Documents/computationaL_cultures/taylor/Taylor_Comp_Culture_final.txt
-'8  3  35  ~/test.md
-'9  64  17  ~/.vimrc
+'0  84  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'1  182  42  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'2  217  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'3  126  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'4  2  0  ~/Documents/notes/badiou_number.md
+'5  1  0  ~/Dropbox/mcneil_fest.md
+'6  234  0  ~/.vimrc
+'7  58  28  ~/.vimrc
+'8  56  32  ~/.vimrc
+'9  76  0  ~/.vimrc
 
 # Jumplist (newest first):
+-'  84  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  250  65  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  246  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  221  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+-'  245  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  247  79  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  262  403  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  254  1208  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  263  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  204  40  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  197  70  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  244  596  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  216  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  24  70  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  248  31  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  40  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  39  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  38  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  182  42  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  216  1503  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+-'  219  508  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  213  26  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  205  1  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  215  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  187  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  193  39  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  187  50  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+-'  213  164  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+-'  88  46  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  209  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  210  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  217  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  59  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  177  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  199  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  126  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  212  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+-'  180  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  113  22  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  18  6  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  35  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  27  48  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  13  4  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  34  40  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.sh
+-'  2  0  ~/Documents/notes/badiou_number.md
+-'  1  0  ~/Documents/notes/badiou_number.md
+-'  1  0  ~/Dropbox/mcneil_fest.md
+-'  234  0  ~/.vimrc
+-'  45  0  ~/.vimrc
+-'  2  0  ~/Dropbox/mcneil_fest.md
+-'  58  28  ~/.vimrc
+-'  56  32  ~/.vimrc
+-'  76  0  ~/.vimrc
+-'  32  6  ~/.vimrc
+-'  14  330  ~/Dropbox/mcneil_fest.md
+-'  9  664  ~/Dropbox/mcneil_fest.md
+-'  40  0  ~/Dropbox/mcneil_fest.md
+-'  48  11  ~/Dropbox/mcneil_fest.md
+-'  37  492  ~/Dropbox/mcneil_fest.md
+-'  22  4  ~/Dropbox/mcneil_fest.md
+-'  12  0  ~/Dropbox/mcneil_fest.md
+-'  10  0  ~/Dropbox/mcneil_fest.md
+-'  6  0  ~/Dropbox/mcneil_fest.md
+-'  5  38  ~/Dropbox/mcneil_fest.md
+-'  3  1  ~/Dropbox/mcneil_fest.md
+-'  13  17  ~/Dropbox/mcneil_fest.md
+-'  18  610  ~/Dropbox/mcneil_fest.md
+-'  23  1  ~/Dropbox/mcneil_fest.md
+-'  75  0  ~/.vimrc
+-'  27  6  ~/.vimrc
+-'  20  8  ~/Dropbox/mcneil_fest.md
+-'  19  0  ~/Dropbox/mcneil_fest.md
+-'  7  186  ~/Dropbox/mcneil_fest.md
+-'  39  43  ~/Dropbox/mcneil_fest.md
+-'  31  328  ~/Dropbox/mcneil_fest.md
+-'  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  225  0  ~/test.md
 -'  1  0  ~/test.md
 -'  75  1072  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  1  0  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  67  0  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  125  1115  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/notes/haraway_situated_1999.md
--'  128  643  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  103  72  ~/Documents/notes/mitchell_carbon_democracy_2009.md
--'  104  0  ~/Documents/notes/mitchell_carbon_democracy_2009.md
--'  2  0  ~/Documents/notes/lehningner_principles_biochemistry_2008.md
--'  207  9  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  202  129  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  189  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  199  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  177  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  188  7  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  194  10  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  69  28  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  2  0  ~/Documents/notes/badiou_number.md
--'  3  18  ~/Documents/notes/parisi_2013.md
--'  1  0  ~/Documents/notes/parisi_2013.md
--'  7  146  ~/Documents/notes/badiou_number.md
--'  20  0  ~/Documents/notes/badiou_number.md
--'  18  0  ~/Documents/notes/badiou_number.md
--'  16  0  ~/Documents/notes/badiou_number.md
--'  14  0  ~/Documents/notes/badiou_number.md
--'  13  89  ~/Documents/notes/badiou_number.md
--'  196  135  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  171  1  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  120  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  65  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  7  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  31  0  ~/Documents/computationaL_cultures/taylor/Taylor_Comp_Culture_final.txt
--'  1  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  4  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/test.md
--'  182  119  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  162  8  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  159  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  168  6  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  154  57  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  43  167  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  43  169  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  98  100  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  153  194  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  52  38  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  1  0  ~/Dropbox/mcneil_fest.md
--'  178  340  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  180  163  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  8  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  5  0  ~/Dropbox/mcneil_fest.txt
--'  1  0  ~/Documents/computationaL_cultures/taylor/Taylor_Comp_Culture_final.txt
--'  14  0  ~/Documents/notes/berlant_cruel_optimism,_2007.md
--'  1  0  ~/Documents/notes/berlant_cruel_optimism,_2007.md
--'  3  35  ~/test.md
--'  64  17  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  /usr/share/vim/vim74/doc/various.txt
--'  20  0  ~/Documents/notes/flach_ml_2012.md
--'  102  1373  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  92  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  65  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  39  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  12  78  ~/Dropbox/mcneil_fest.md
--'  282  3  /usr/share/vim/vim74/doc/various.txt
--'  114  13  /usr/share/vim/vim74/doc/various.txt
--'  3  0  ~/Dropbox/mcneil_fest.md
--'  6  111  ~/Dropbox/mcneil_fest.md
--'  13  0  ~/Dropbox/mcneil_fest.md
--'  4  0  ~/Dropbox/mcneil_fest.txt
--'  1  0  ~/Dropbox/mcneil_fest.txt
--'  99  0  ~/test.md
--'  5  0  ~/test.md
--'  32  6  ~/.vimrc
--'  228  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  44  830  ~/test.md
--'  45  0  ~/test.md
--'  23  0  ~/test.md
--'  25  577  ~/test.md
--'  24  0  ~/test.md
--'  75  1072  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  1  0  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  67  0  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  125  1115  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/notes/haraway_situated_1999.md
--'  128  643  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  103  72  ~/Documents/notes/mitchell_carbon_democracy_2009.md
--'  104  0  ~/Documents/notes/mitchell_carbon_democracy_2009.md
--'  2  0  ~/Documents/notes/lehningner_principles_biochemistry_2008.md
--'  207  9  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  202  129  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  189  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  199  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  177  0  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
--'  188  7  ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
+-'  252  183  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # History of marks within files (newest to oldest):
+
+> ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+	"	40	0
+	^	40	0
+	.	40	0
+	+	34	19
+	+	30	30
+	+	34	38
+	+	12	31
+	+	13	0
+	+	35	0
+	+	26	45
+	+	28	0
+	+	27	41
+	+	22	36
+	+	21	38
+	+	17	61
+	+	18	64
+	+	17	7
+	+	18	53
+	+	17	60
+	+	13	0
+	+	6	0
+	+	13	0
+	+	18	0
+	+	20	0
+	+	8	0
+	+	17	7
+	+	37	19
+	+	38	0
+	+	39	0
+	+	40	0
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+	"	84	0
+	^	250	75
+	.	250	74
+	+	85	0
+	+	82	1339
+	+	85	411
+	+	85	0
+	+	85	567
+	+	85	0
+	+	84	0
+	+	84	922
+	+	84	261
+	+	84	1247
+	+	84	1471
+	+	87	0
+	+	86	64
+	+	224	902
+	+	226	0
+	+	224	902
+	+	242	0
+	+	246	292
+	+	246	1231
+	+	113	22
+	+	180	34
+	+	217	5
+	+	182	0
+	+	181	0
+	+	182	0
+	+	180	0
+	+	219	140
+	+	246	1017
+	+	246	1266
+	+	246	1384
+	+	246	0
+	+	246	1536
+	+	246	745
+	+	246	0
+	+	246	782
+	+	246	0
+	+	246	768
+	+	246	0
+	+	246	867
+	+	246	785
+	+	246	876
+	+	246	0
+	+	214	19
+	+	199	0
+	+	182	0
+	+	215	0
+	+	182	0
+	+	214	0
+	+	194	0
+	+	214	0
+	+	205	69
+	+	206	0
+	+	213	12
+	+	214	29
+	+	213	12
+	+	197	0
+	+	217	0
+	+	216	3
+	+	232	0
+	+	244	729
+	+	246	53
+	+	246	865
+	+	250	186
+	+	254	346
+	+	254	1
+	+	254	451
+	+	248	0
+	+	248	52
+	+	197	0
+	+	198	0
+	+	200	0
+	+	201	0
+	+	205	0
+	+	206	0
+	+	213	0
+	+	244	581
+	+	197	0
+	+	204	0
+	+	204	0
+	+	203	0
+	+	254	1156
+	+	254	0
+	+	254	1209
+	+	254	1995
+	+	254	0
+	+	254	0
+	+	262	370
+	+	263	0
+	+	262	237
+	+	247	0
+	+	262	393
+	+	246	787
+	+	246	811
+	+	250	0
+	+	246	929
+	+	246	1759
+	+	246	0
+	+	246	0
+	+	250	0
+	+	250	74
+	a	91	0
+	b	112	0
+	c	264	0
+	o	8	0
+	p	32	0
+	q	39	15
+	t	19	7
+	x	65	0
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+	"	221	0
+
+> ~/Downloads/Vim-R-plugin(1).vmb
+	"	1	0
+
+> ~/.vim/.VimballRecord
+	"	2	0
+
+> ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.sh
+	"	58	4
+	.	58	0
+	+	55	0
+	+	58	0
+
+> ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+	"	1	0
+	^	45	143
+	.	45	142
+	+	75	0
+	+	75	858
+	+	73	339
+	+	75	856
+	+	55	55
+	+	71	46
+	+	214	0
+	+	214	0
+	+	213	0
+	+	235	0
+	+	205	468
+	+	207	0
+	+	207	688
+	+	207	509
+	+	207	1010
+	+	207	374
+	+	207	1129
+	+	203	855
+	+	207	2013
+	+	207	1012
+	+	210	0
+	+	213	75
+	+	211	1757
+	+	211	1007
+	+	207	1016
+	+	209	7
+	+	209	761
+	+	209	8
+	+	211	26
+	+	214	0
+	+	213	0
+	+	211	1120
+	+	211	969
+	+	211	1336
+	+	211	1079
+	+	211	0
+	+	211	1237
+	+	213	104
+	+	213	0
+	+	211	0
+	+	193	41
+	+	21	34
+	+	23	51
+	+	38	0
+	+	76	0
+	+	72	0
+	+	76	0
+	+	72	0
+	+	72	2
+	+	184	401
+	+	184	660
+	+	186	238
+	+	257	0
+	+	238	0
+	+	229	32
+	+	213	51
+	+	193	0
+	+	211	0
+	+	211	1569
+	+	213	19
+	+	215	98
+	+	215	0
+	+	215	335
+	+	215	0
+	+	215	613
+	+	223	447
+	+	225	2026
+	+	225	0
+	+	225	2561
+	+	227	1113
+	+	227	1419
+	+	228	0
+	+	227	1533
+	+	227	1275
+	+	227	1415
+	+	227	1648
+	+	223	1084
+	+	161	0
+	+	257	13
+	+	28	102
+	+	29	0
+	+	226	0
+	+	227	0
+	+	227	1112
+	+	227	1113
+	+	228	0
+	+	227	1766
+	+	227	0
+	+	227	1782
+	+	227	1236
+	+	227	1139
+	+	229	0
+	+	246	0
+	+	221	0
+	+	220	0
+	+	72	0
+	+	77	79
+	+	253	0
+	+	36	52
+	+	45	142
+	a	86	1
+	b	107	0
+	c	132	0
+	d	163	0
+	e	171	0
+	f	193	0
+	g	213	0
+	o	13	0
+	q	57	15
+	t	32	0
+
+> ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
+	"	49	0
+	^	49	1
+	.	49	0
+	+	51	104
+	+	50	153
+	+	49	0
+
+> /usr/share/vim/vim74/doc/repeat.txt
+	"	156	11
+
+> ~/Documents/notes/badiou_number.md
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/Dropbox/mcneil_fest.md
+	"	1	0
+	^	14	331
+	.	2	0
+	+	48	44
+	+	13	39
+	+	3	39
+	+	4	37
+	+	7	1003
+	+	3	39
+	+	4	0
+	+	3	0
+	+	7	448
+	+	7	600
+	+	9	154
+	+	9	281
+	+	9	376
+	+	9	756
+	+	23	30
+	+	23	403
+	+	14	0
+	+	14	761
+	+	14	0
+	+	14	759
+	+	17	0
+	+	18	25
+	+	11	123
+	+	18	560
+	+	18	21
+	+	14	994
+	+	31	470
+	+	33	247
+	+	39	84
+	+	46	104
+	+	4	0
+	+	69	0
+	+	69	0
+	+	54	0
+	+	53	0
+	+	9	154
+	+	7	475
+	+	7	568
+	+	7	669
+	+	9	154
+	+	9	608
+	+	9	824
+	+	9	609
+	+	9	963
+	+	19	0
+	+	9	154
+	+	9	963
+	+	20	8
+	+	22	0
+	+	21	0
+	+	2	0
+	+	12	0
+	+	12	0
+	+	10	0
+	+	14	720
+	+	22	0
+	+	23	548
+	+	24	210
+	+	23	0
+	+	14	285
+	+	14	285
+	+	16	0
+	+	15	0
+	+	18	610
+	+	13	24
+	+	22	3
+	+	35	16
+	+	37	490
+	+	39	207
+	+	14	748
+	+	16	709
+	+	16	754
+	+	3	38
+	+	14	99
+	+	22	3
+	+	35	49
+	+	37	157
+	+	37	327
+	+	37	0
+	+	37	326
+	+	37	0
+	+	39	165
+	+	48	814
+	+	49	0
+	+	50	0
+	+	51	0
+	+	52	0
+	+	51	79
+	+	41	6
+	+	30	6
+	+	11	7
+	+	7	75
+	+	7	231
+	+	7	709
+	+	9	153
+	+	10	0
+	+	8	0
+	+	9	794
+	+	14	330
+	+	2	0
+
+> ~/.vimrc
+	"	234	0
+	^	58	29
+	.	234	0
+	+	164	0
+	+	160	1
+	+	181	0
+	+	181	0
+	+	170	0
+	+	172	0
+	+	169	0
+	+	160	20
+	+	104	1
+	+	52	0
+	+	119	0
+	+	17	0
+	+	17	33
+	+	17	0
+	+	17	0
+	+	12	0
+	+	86	0
+	+	92	0
+	+	91	4
+	+	17	35
+	+	232	8
+	+	232	33
+	+	232	9
+	+	232	8
+	+	232	9
+	+	232	0
+	+	232	8
+	+	232	10
+	+	232	6
+	+	232	6
+	+	232	0
+	+	198	8
+	+	188	76
+	+	195	0
+	+	194	29
+	+	195	0
+	+	194	6
+	+	197	0
+	+	195	9
+	+	193	34
+	+	195	9
+	+	197	0
+	+	196	32
+	+	172	0
+	+	172	0
+	+	196	55
+	+	197	54
+	+	196	38
+	+	231	0
+	+	201	0
+	+	202	0
+	+	219	0
+	+	217	0
+	+	216	0
+	+	221	0
+	+	12	0
+	+	119	0
+	+	127	0
+	+	123	34
+	+	84	23
+	+	17	0
+	+	17	0
+	+	17	0
+	+	17	0
+	+	1	0
+	+	17	0
+	+	26	0
+	+	1	0
+	+	33	0
+	+	23	0
+	+	11	0
+	+	34	8
+	+	235	0
+	+	54	0
+	+	55	14
+	+	34	0
+	+	55	0
+	+	45	0
+	+	45	30
+	+	19	35
+	+	22	37
+	+	87	27
+	+	89	30
+	+	63	17
+	+	76	0
+	+	76	0
+	+	76	57
+	+	75	0
+	+	56	22
+	+	57	23
+	+	58	23
+	+	57	23
+	+	56	22
+	+	58	23
+	+	76	0
+	+	56	22
+	+	57	28
+	+	58	28
+	+	45	0
+	+	234	0
+
+> ~/Dropbox/pandoc output
+	"	3	0
+	.	3	0
+	+	3	0
 
 > ~/test.md
 	"	225	0
@@ -708,235 +1216,8 @@ $
 > ~/Documents/document-archive/788330044_content.txt
 	"	953	0
 
-> ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-	"	128	643
-	^	45	143
-	.	45	142
-	+	75	0
-	+	75	858
-	+	73	339
-	+	75	856
-	+	55	55
-	+	71	46
-	+	214	0
-	+	214	0
-	+	213	0
-	+	235	0
-	+	205	468
-	+	207	0
-	+	207	688
-	+	207	509
-	+	207	1010
-	+	207	374
-	+	207	1129
-	+	203	855
-	+	207	2013
-	+	207	1012
-	+	210	0
-	+	213	75
-	+	211	1757
-	+	211	1007
-	+	207	1016
-	+	209	7
-	+	209	761
-	+	209	8
-	+	211	26
-	+	214	0
-	+	213	0
-	+	211	1120
-	+	211	969
-	+	211	1336
-	+	211	1079
-	+	211	0
-	+	211	1237
-	+	213	104
-	+	213	0
-	+	211	0
-	+	193	41
-	+	21	34
-	+	23	51
-	+	38	0
-	+	76	0
-	+	72	0
-	+	76	0
-	+	72	0
-	+	72	2
-	+	184	401
-	+	184	660
-	+	186	238
-	+	257	0
-	+	238	0
-	+	229	32
-	+	213	51
-	+	193	0
-	+	211	0
-	+	211	1569
-	+	213	19
-	+	215	98
-	+	215	0
-	+	215	335
-	+	215	0
-	+	215	613
-	+	223	447
-	+	225	2026
-	+	225	0
-	+	225	2561
-	+	227	1113
-	+	227	1419
-	+	228	0
-	+	227	1533
-	+	227	1275
-	+	227	1415
-	+	227	1648
-	+	223	1084
-	+	161	0
-	+	257	13
-	+	28	102
-	+	29	0
-	+	226	0
-	+	227	0
-	+	227	1112
-	+	227	1113
-	+	228	0
-	+	227	1766
-	+	227	0
-	+	227	1782
-	+	227	1236
-	+	227	1139
-	+	229	0
-	+	246	0
-	+	221	0
-	+	220	0
-	+	72	0
-	+	77	79
-	+	253	0
-	+	36	52
-	+	45	142
-	a	86	1
-	b	107	0
-	c	132	0
-	d	163	0
-	e	171	0
-	f	193	0
-	g	213	0
-	o	13	0
-	q	57	15
-	t	32	0
-
 > ~/Documents/notes/haraway_situated_1999.md
 	"	1	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	178	1
-	^	86	65
-	.	86	64
-	+	178	755
-	+	178	251
-	+	178	148
-	+	178	1122
-	+	178	1137
-	+	178	785
-	+	178	1234
-	+	178	0
-	+	178	1293
-	+	178	0
-	+	178	1
-	+	178	850
-	+	178	1
-	+	178	818
-	+	178	70
-	+	178	242
-	+	178	25
-	+	178	0
-	+	178	277
-	+	178	0
-	+	178	0
-	+	178	0
-	+	178	0
-	+	178	0
-	+	178	220
-	+	178	252
-	+	178	53
-	+	178	340
-	+	1	0
-	+	43	0
-	+	118	112
-	+	125	678
-	+	125	0
-	+	125	1115
-	+	178	28
-	+	178	0
-	+	178	0
-	+	178	209
-	+	178	0
-	+	178	1825
-	+	178	89
-	+	178	29
-	+	178	28
-	+	178	7
-	+	178	592
-	+	178	95
-	+	178	1833
-	+	178	2017
-	+	178	3
-	+	178	0
-	+	178	0
-	+	161	0
-	+	141	656
-	+	142	0
-	+	86	248
-	+	86	0
-	+	86	341
-	+	86	0
-	+	86	356
-	+	91	19
-	+	86	67
-	+	86	404
-	+	86	0
-	+	86	675
-	+	86	0
-	+	86	927
-	+	86	1163
-	+	86	0
-	+	86	1310
-	+	80	0
-	+	80	1524
-	+	80	0
-	+	80	1686
-	+	80	0
-	+	80	2251
-	+	81	0
-	+	82	312
-	+	82	0
-	+	82	803
-	+	82	0
-	+	82	828
-	+	82	0
-	+	82	902
-	+	82	0
-	+	82	1073
-	+	82	0
-	+	82	1338
-	+	85	0
-	+	82	1339
-	+	85	411
-	+	85	0
-	+	85	567
-	+	85	0
-	+	84	0
-	+	84	922
-	+	84	261
-	+	84	1247
-	+	84	1471
-	+	87	0
-	+	86	64
-	a	91	0
-	b	112	0
-	o	8	0
-	p	32	0
-	q	39	15
-	t	19	7
-	x	65	0
 
 > ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
 	"	75	1072
@@ -1225,12 +1506,6 @@ $
 > /usr/share/vim/vim74/doc/eval.txt
 	"	7061	46
 
-> ~/Documents/notes/badiou_number.md
-	"	2	0
-	^	2	0
-	.	2	0
-	+	2	0
-
 > /usr/share/vim/vim74/doc/map.txt
 	"	65	45
 	e	1175	24
@@ -1370,247 +1645,9 @@ $
 > ~/Documents/notes/suchman_artificial_intelligence.md
 	"	14	255
 
-> ~/Dropbox/mcneil_fest.md
-	"	1	0
-	^	24	548
-	.	24	547
-	+	16	77
-	+	3	0
-	+	16	22
-	+	7	111
-	+	17	61
-	+	14	118
-	+	15	117
-	+	16	79
-	+	5	103
-	+	9	215
-	+	12	0
-	+	11	287
-	+	12	1
-	+	10	0
-	+	34	98
-	+	44	154
-	+	37	0
-	+	44	621
-	+	19	737
-	+	18	0
-	+	19	897
-	+	19	738
-	+	34	30
-	+	19	1126
-	+	21	405
-	+	30	510
-	+	34	115
-	+	34	30
-	+	34	107
-	+	34	30
-	+	34	112
-	+	34	30
-	+	21	417
-	+	30	97
-	+	30	98
-	+	30	256
-	+	30	257
-	+	30	420
-	+	30	421
-	+	30	0
-	+	30	178
-	+	30	257
-	+	30	470
-	+	30	471
-	+	30	420
-	+	30	471
-	+	34	30
-	+	30	471
-	+	33	0
-	+	30	11
-	+	33	0
-	+	34	0
-	+	21	499
-	+	21	590
-	+	21	499
-	+	30	0
-	+	21	636
-	+	21	34
-	+	22	1173
-	+	28	661
-	+	30	0
-	+	30	0
-	+	26	0
-	+	27	0
-	+	30	0
-	+	34	51
-	+	28	0
-	+	28	662
-	+	29	0
-	+	31	0
-	+	32	319
-	+	23	0
-	+	24	547
-
 > ~/Dropbox/NERD_tree_1
 	"	15	0
 	.	1	0
 	+	1	0
 	+	1	0
 	+	1	0
-
-> ~/.vimrc
-	"	64	0
-	^	64	18
-	.	64	17
-	+	60	13
-	+	60	3
-	+	60	0
-	+	155	1
-	+	127	0
-	+	18	51
-	+	17	51
-	+	17	12
-	+	17	29
-	+	18	0
-	+	26	0
-	+	34	38
-	+	17	0
-	+	34	0
-	+	17	0
-	+	26	0
-	+	165	0
-	+	161	1
-	+	182	0
-	+	182	0
-	+	171	0
-	+	173	0
-	+	170	0
-	+	161	20
-	+	105	1
-	+	53	0
-	+	120	0
-	+	17	0
-	+	17	33
-	+	17	0
-	+	17	0
-	+	12	0
-	+	87	0
-	+	93	0
-	+	92	4
-	+	17	35
-	+	233	8
-	+	233	33
-	+	233	9
-	+	233	8
-	+	233	9
-	+	233	0
-	+	233	8
-	+	233	10
-	+	233	6
-	+	233	6
-	+	233	0
-	+	199	8
-	+	189	76
-	+	196	0
-	+	195	29
-	+	196	0
-	+	195	6
-	+	198	0
-	+	196	9
-	+	194	34
-	+	196	9
-	+	198	0
-	+	197	32
-	+	173	0
-	+	173	0
-	+	197	55
-	+	198	54
-	+	197	38
-	+	232	0
-	+	202	0
-	+	203	0
-	+	220	0
-	+	218	0
-	+	217	0
-	+	222	0
-	+	12	0
-	+	120	0
-	+	128	0
-	+	124	34
-	+	85	23
-	+	17	0
-	+	17	0
-	+	17	0
-	+	17	0
-	+	1	0
-	+	17	0
-	+	26	0
-	+	1	0
-	+	33	0
-	+	23	0
-	+	11	0
-	+	34	8
-	+	235	0
-	+	55	0
-	+	56	14
-	+	34	0
-	+	56	0
-	+	46	0
-	+	45	30
-	+	19	35
-	+	22	37
-	+	88	27
-	+	90	30
-	+	64	17
-
-> /usr/share/vim/vim74/doc/insert.txt
-	"	623	56
-
-> /usr/share/vim/vim74/doc/editing.txt
-	"	1658	1
-
-> ~/Documents/data_intensive/book/bookcurrent
-	"	1	0
-
-> /usr/share/vim/vim74/doc/change.txt
-	"	971	7
-
-> /usr/share/vim/vim74/doc/various.txt
-	"	87	6
-
-> ~/Documents/notes/alpaydin_machine_learning_2010.md
-	"	4	0
-
-> ~/Documents/data_intensive/book/ch4_probability/NERD_tree_1
-	"	5	2
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/.vim/snippets/pandoc.snippets
-	"	13	0
-	^	18	20
-	.	13	0
-	+	19	0
-	+	12	14
-	+	4	41
-	+	19	0
-	+	16	13
-	+	18	19
-	+	17	0
-	+	15	0
-	+	13	0
