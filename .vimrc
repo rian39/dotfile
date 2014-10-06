@@ -53,14 +53,20 @@ set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L
 
 set foldcolumn=6
 "save keys
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S><C-C> :update<CR>
-inoremap <silent> <C-S><C-O> :update<CR>
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 "insert mode commands
 inoremap II <Esc>I
 inoremap AA <Esc>A
 inoremap OO <Esc>O
+
+"split pane navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "python editing
 au FileType py set autoindent
@@ -232,3 +238,5 @@ endfunction
 
 
 let g:pencil#wrapModeDefault = 'soft'
+
+" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
