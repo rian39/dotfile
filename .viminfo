@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/sexy
+~Msle0~/
 
 # Last Substitute Search Pattern:
 ~MSle0&cat(
@@ -17,6 +17,13 @@
 $
 
 # Command Line History (newest to oldest):
+:q
+:Pandoc! pdf
+:b2
+:ls
+:e test.rmd
+:vertical resize+25
+:w
 : e ch_naive_informed.md
 :set relativenumber
 :%s/cat(/#cat(/gc
@@ -34,7 +41,6 @@ $
 :so %
 :so
 :e Vim-R-plugin(1).vmb
-:q
 :set relativenumber=0
 :q!
 :read enron_naive_bayes.R
@@ -42,7 +48,6 @@ $
 :set fdc=5
 :h insert
 :h source
-:w
 :R
 :e ~/book/ch1_learning/ch1_notes.rmd
 :bp
@@ -73,7 +78,6 @@ $
 :set relativenumber=false
 :vertical resize+20
 :b4
-:ls
 :e ~/notes/parisi_2013.md
 :e ~/notes/badiou_number.md
 :h lock
@@ -85,7 +89,6 @@ $
 :%s/\./\.\n/gc
 :%s/./.\n/gc
 :Pandoc! odt
-:Pandoc! pdf
 :e test.md
 :e ~/test3.md
 :vertical resize +5
@@ -118,7 +121,6 @@ $
 :colo Jellybean
 :col pencil
 :colo pencil
-:b2
 :b1
 :b19
 :e ~/.vim/snippets/
@@ -284,8 +286,19 @@ $
 :colorschemeshine
 
 # Search String History (newest to oldest):
-? \Vnb\%#
+? 
+? \<The\>
+?/\^\^
+?/\^
+?/^
+?/^^S
+?/equati
+?/begin
+?/asdfd
+?/$$
 ? \Vml\%#
+??hacking
+? \Vnb\%#
 ?/sexy
 ? cat(
 ? cat
@@ -362,7 +375,6 @@ $
 ?/\cpandoc
 ?/Gilles
 ?/asdfasdf
-? \<The\>
 ?   
 ? ^ 
 ?/^ 
@@ -390,28 +402,31 @@ $
 
 # Registers:
 "0	LINE	0
-	predict_spam('gas')
-"1	LINE	0
-	610
-<The tranformations that machine learning bring to probability itself are not insignificant. As we will see, the growth of these techniques operationalises probabilities in new ways, or at least in ways that render the long-standing dichotomy between probability as objective randomness in the world and probability as measure of our own uncertain knowledge of the world more and more untenable. At core, both the objective and subjective treatments of probability find themselves reassembled in a new algo-probablistic assemblage. By virtue of its simplicity, the Naive Bayes classifier helps to show this. 
+	\begin {equation}
+	\label {eq:naive_bayes}
+	$$f_j(X) = \prod_{k=1}^{p}f_{jk}(X_k)$$
+	\end {equation}
+	
+	[@Hastie_2009, 211]
+""1	LINE	0
+	>It is especially appropriate when the dimension p of the feature space is high, making density estimation unattractive. The naive Bayes model assumes that given a class $G = j$, the features $X_k$ are independent 211
 "2	LINE	0
-	
+	stuff from amoore
 "3	LINE	0
-	       ```
+	
 "4	LINE	0
-	
+	$
 "5	LINE	0
 	
 "6	LINE	0
-	    P_ham = ham_count/(ham_count + spam_count)
-	    P_spam = spam_count/(ham_count + spam_count)
+	[TODO: the definitional work; move stuff up from below to do this]
 "7	LINE	0
-	
+	>By the 1930s, however, the world teemed with frequencies, and the 'objective' notion would come to seem more important than the 'subjective' one for the rest of the century -- simply because there were so many more frequencies to be known. 97
 "8	LINE	0
-	    ham = sapply(f_ham, readLines, warn=FALSE)
-	    spam = sapply(f_spam, readLines, warn=FALSE)
+	610
+<The tranformations that machine learning bring to probability itself are not insignificant. As we will see, the growth of these techniques operationalises probabilities in new ways, or at least in ways that render the long-standing dichotomy between probability as objective randomness in the world and probability as measure of our own uncertain knowledge of the world more and more untenable. At core, both the objective and subjective treatments of probability find themselves reassembled in a new algo-probablistic assemblage. By virtue of its simplicity, the Naive Bayes classifier helps to show this. 
 "9	LINE	0
-	    Pspam_word=`echo "scale=4; $Pword_spam*$Pspam" | bc`
+	
 "a	CHAR	0
 	i
 "j	CHAR	0
@@ -419,13 +434,15 @@ $
 "p	CHAR	0
 	6454
 <set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()    Plugin 'gmarik/Vundle.vim'    Plugin 'vim-pandoc/vim-pandoc'    Plugin 'vim-pandoc/vim-pandoc-syntax'    Plugin 'terryma/vim-multiple-cursors'    "Plugin 'reedes/vim-pencil'    Plugin 'scrooloose/nerdcommenter'    Plugin 'tpope/vim-fugitive'    Plugin 'scrooloose/nerdtree'    Plugin 'altercation/vim-colors-solarized'    Plugin 'nanotech/jellybeans.vim'    "Plugin 'bling/vim-airline'    Plugin 'itchyny/lightline.vim'    call vundle#end()            " requiredfiletype plugin indent on    " requiredexecute pathogen#infect()syntax enablesyntax onse t_Co=16let g:solarized_termcolors=256"set background=darkcolorscheme molokai"call togglebg#map("<F5>")set ruler  set tabstop=4set shiftwidth=4set expandtabset showcmdset hlsearchset incsearch"cursor show"set cursorline"set cursorcolumnset encoding=utf-8set foldmethod=markerset list listchars=tab:‚ñ∑‚ãÖ,trail:‚ãÖ,nbsp:‚ãÖset statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]"save keysnoremap <silent> <C-S>          :update<CR>vnoremap <silent> <C-S>         <C-C>:update<CR>inoremap <silent> <C-S>         <C-O>:update<CR>"python editingau FileType py set autoindentau FileType py set smartindentau FileType py set textwidth=79 " PEP-8 Friendlyhi comment ctermfg=blue "set linenumbers:nnoremap <C-M><C-N> :set invnumber<CR>:map <Up> gk:map <Down> gj"pandoc plugin files"let g:pandoc#filetypes#handled = ['let g:pandoc#biblio#sources = "bcg"let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:pandoc_use_bibtool = 1set grepprg=grep\ -nH\ $*"bibtexlet g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:Tex_BibtexFlavor = 'bibtex'let g:pandoc#folding#fold_fenced_codeblocks=1set omnifunc=pandoc#completion#Complete"let g:Tex_Flavor='latex'"let g:Tex_DefaultTargetFormat='pdf'" <leader>k Knits to MDnnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>"Rmd and Rpres are pandoc"autocmd BufRead,BufNewFile *.rmd,*.Rpres setfiletype pandoc"autocmd BufNewFile,BufReadPost *.md set filetype=markdownau BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc"""" New signs for the pandoc bundlelet g:pandoc_syntax_user_cchars = {'atx': '¬∂', 'codelang': '>', 'footnote': '¬ß', 'definition': '¬ª', 'newline': '¬¨'}" Format paragraphs with <leader>qmap <leader>q {!}fmt -w 105<CR>}<CR>" Place markers with {type} for markdown filesaugroup markers   autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'augroup ENDnnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>"let g:pencil#wrapModeDefault = 'soft'"augroup pencil      "autocmd!    "autocmd FileType markdown,mkd call pencil#init()    "autocmd FileType textile call pencil#init()    "autocmd FileType text call pencil#init({'wrap': 'hard'})"augroup ENDfunction! WordCount()      let s:old_status = v:statusmsg        let position = getpos(".")        exe ":silent normal g\<c-g>"            let stat = v:statusmsg              let s:word_count = 0                if stat != '--No lines in buffer--'                        let s:word_count = str2nr(split(v:statusmsg)[11])                            let v:statusmsg = s:old_status                              end                                call setpos('.', position)                                  return s:word_count endfunction" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):filetype plugin onlet vimrplugin_assign = 0" Change the <LocalLeader> key:let maplocalleader = ","" Use Ctrl+Space to do omnicompletion:if has("gui_running")    inoremap <C-Space> <C-x><C-o>else    inoremap <Nul> <C-x><C-o>endif"" Press the space bar to send lines (in Normal mode) and selections to R:vmap <Space> <Plug>RDSendSelectionnmap <Space> <Plug>RDSendLine"** airline related**let g:airline#extensions#tabline#enabled = 1" Show just the filename let g:airline#extensions#tabline#fnamemod = ':t' if !exists('g:airline_symbols')       let g:airline_symbols = {}   endif " unicode symbolslet g:airline_left_sep = '¬ª'let g:airline_left_sep = '‚ñ∂'let g:airline_right_sep = '¬´'let g:airline_right_sep = '‚óÄ'let g:airline_symbols.linenr = '‚êä'let g:airline_symbols.linenr = '‚ê§'let g:airline_symbols.linenr = '¬∂'let g:airline_symbols.branch = '‚éá'let g:airline_symbols.paste = 'œÅ'let g:airline_symbols.paste = '√û'let g:airline_symbols.paste = '‚à•'let g:airline_symbols.whitespace = 'Œû'"lightline configlet g:lightline = {      \ 'colorscheme': 'wombat',      \ 'active': {      \   'left': [ [ 'mode', 'paste' ],      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]      \ },      \ 'component_function': {      \   'fugitive': 'MyFugitive',      \   'readonly': 'MyReadonly',      \   'modified': 'MyModified',      \      'count': 'WordCount'      \ },      \ 'separator': { 'left':  '‚ñ∂', 'right':  '‚ñ∂'},      \ 'subseparator': { 'left':  '¬ª', 'right': '¬ª' }      \ }function! MyModified()if &filetype == "help"return ""elseif &modifiedreturn "+"elseif &modifiablereturn ""elsereturn ""endifendfunctionfunction! MyReadonly()if &filetype == "help"return ""  elseif &readonly  return "‚≠§"else    return ""endifendfunctionfunction! MyFugitive()return exists('*fugitive#head') ? fugitive#head() : ''endfunctionfunction! MyFilename()return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .\ ('' != MyModified() ? ' ' . MyModified() : '')endfunction
+"q	CHAR	0
+	wwwwwwlx
 "u	CHAR	0
 	estÄkb
 "w	CHAR	0
 	1449
 <wwwwwwi[ÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkr]ÄkrÄklÄkrÄklxÄkrÄkbÄkbÄkdÄkdÄkuÄkdÄkuÄkuÄkdÄkdbbbÄkbÄkbÄkbbbbbbbbbbbbbbieither ÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkl or a support vector machineÄkrÄkrÄklÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkb,ÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄkbÄkbÄkbÄkbÄkbÄkbÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkdÄkrÄkrÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkuÄkuÄkdÄkdÄkdÄkdÄkuÄku
-""-	CHAR	0
-	print
+"-	CHAR	0
+	
 
 # global variables:
 
@@ -456,19 +473,32 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  84  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'1  182  42  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'2  217  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'3  126  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'4  2  0  ~/Documents/notes/badiou_number.md
-'5  1  0  ~/Dropbox/mcneil_fest.md
-'6  234  0  ~/.vimrc
-'7  58  28  ~/.vimrc
-'8  56  32  ~/.vimrc
-'9  76  0  ~/.vimrc
+'0  1  0  ~/Documents/data_intensive/book/chapter_list.txt
+'1  1  0  ~/Documents/data_intensive/book/build.sh
+'2  1  0  ~/Documents/data_intensive/book/chapter_overview.md
+'3  66  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'4  81  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'5  182  42  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'6  217  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'7  126  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'8  2  0  ~/Documents/notes/badiou_number.md
+'9  1  0  ~/Dropbox/mcneil_fest.md
 
 # Jumplist (newest first):
--'  84  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/chapter_list.txt
+-'  1  0  ~/Documents/data_intensive/book/build.sh
+-'  1  0  ~/Documents/data_intensive/book/chapter_overview.md
+-'  66  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  101  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  221  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  113  147  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  308  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  58  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  94  683  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  90  377  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  92  1268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  19  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  81  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  250  65  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  246  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  221  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
@@ -499,17 +529,15 @@ $
 -'  187  50  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
 -'  213  164  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
 -'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
--'  88  46  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  85  46  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  209  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  210  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  217  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  59  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  177  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  199  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  126  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  212  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
 -'  180  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  113  22  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  18  6  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
 -'  35  0  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
 -'  27  48  ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
@@ -549,88 +577,29 @@ $
 -'  31  328  ~/Dropbox/mcneil_fest.md
 -'  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  225  0  ~/test.md
--'  1  0  ~/test.md
--'  75  1072  ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
--'  252  183  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  66  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  101  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  221  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  113  147  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  308  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  58  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  94  683  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # History of marks within files (newest to oldest):
 
-> ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
-	"	40	0
-	^	40	0
-	.	40	0
-	+	34	19
-	+	30	30
-	+	34	38
-	+	12	31
-	+	13	0
-	+	35	0
-	+	26	45
-	+	28	0
-	+	27	41
-	+	22	36
-	+	21	38
-	+	17	61
-	+	18	64
-	+	17	7
-	+	18	53
-	+	17	60
-	+	13	0
-	+	6	0
-	+	13	0
-	+	18	0
-	+	20	0
-	+	8	0
-	+	17	7
-	+	37	19
-	+	38	0
-	+	39	0
-	+	40	0
+> ~/Documents/data_intensive/book/chapter_list.txt
+	"	1	0
+
+> ~/Documents/data_intensive/book/build.sh
+	"	1	0
+
+> ~/Documents/data_intensive/book/chapter_overview.md
+	"	1	0
 
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	84	0
-	^	250	75
-	.	250	74
-	+	85	0
-	+	82	1339
-	+	85	411
-	+	85	0
-	+	85	567
-	+	85	0
-	+	84	0
-	+	84	922
-	+	84	261
-	+	84	1247
-	+	84	1471
-	+	87	0
-	+	86	64
-	+	224	902
-	+	226	0
-	+	224	902
-	+	242	0
-	+	246	292
-	+	246	1231
-	+	113	22
-	+	180	34
-	+	217	5
-	+	182	0
-	+	181	0
-	+	182	0
-	+	180	0
-	+	219	140
-	+	246	1017
-	+	246	1266
-	+	246	1384
-	+	246	0
-	+	246	1536
-	+	246	745
-	+	246	0
-	+	246	782
-	+	246	0
-	+	246	768
-	+	246	0
-	+	246	867
-	+	246	785
+	"	66	0
+	^	330	0
+	.	66	0
 	+	246	876
 	+	246	0
 	+	214	19
@@ -691,32 +660,92 @@ $
 	+	246	0
 	+	250	0
 	+	250	74
-	a	91	0
+	+	55	204
+	+	90	945
+	+	90	1178
+	+	90	1813
+	+	92	341
+	+	92	573
+	+	92	994
+	+	92	1344
+	+	94	185
+	+	90	1106
+	+	90	2253
+	+	90	1770
+	+	90	2477
+	+	92	104
+	+	92	512
+	+	93	0
+	+	90	377
+	+	92	2070
+	+	94	41
+	+	94	683
+	+	55	0
+	+	94	683
+	+	96	0
+	+	97	0
+	+	96	259
+	+	95	0
+	+	94	707
+	+	98	144
+	+	98	806
+	+	94	696
+	+	100	0
+	+	104	0
+	+	104	98
+	+	108	34
+	+	101	0
+	+	221	140
+	+	101	0
+	+	329	13
+	+	64	0
+	+	66	0
+	a	88	0
 	b	112	0
 	c	264	0
 	o	8	0
 	p	32	0
-	q	39	15
+	q	51	0
 	t	19	7
-	x	65	0
 
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
-	"	221	0
-
-> ~/Downloads/Vim-R-plugin(1).vmb
-	"	1	0
-
-> ~/.vim/.VimballRecord
-	"	2	0
-
-> ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.sh
-	"	58	4
-	.	58	0
+> ~/Documents/data_intensive/book/ch4_probability/pandoc output
+	"	5	5
+	.	3	0
+	+	90	0
+	+	97	0
+	+	83	0
+	+	76	0
+	+	1	0
+	+	69	0
+	+	62	0
 	+	55	0
-	+	58	0
+	+	48	0
+	+	41	0
+	+	34	0
+	+	27	0
+	+	20	0
+	+	13	0
+	+	8	0
+	+	3	0
+
+> ~/Documents/data_intensive/book/ch4_probability/test.rmd
+	"	3	30
+	^	3	33
+	.	3	30
+	+	1	0
+	+	1	0
+	+	3	17
+	+	2	0
+	+	3	0
+	+	4	0
+	+	3	14
+	+	4	4
+	+	1	6
+	+	2	10
+	+	3	30
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-	"	1	0
+	"	113	8
 	^	45	143
 	.	45	142
 	+	75	0
@@ -829,6 +858,53 @@ $
 	o	13	0
 	q	57	15
 	t	32	0
+
+> ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.R
+	"	40	0
+	^	40	0
+	.	40	0
+	+	34	19
+	+	30	30
+	+	34	38
+	+	12	31
+	+	13	0
+	+	35	0
+	+	26	45
+	+	28	0
+	+	27	41
+	+	22	36
+	+	21	38
+	+	17	61
+	+	18	64
+	+	17	7
+	+	18	53
+	+	17	60
+	+	13	0
+	+	6	0
+	+	13	0
+	+	18	0
+	+	20	0
+	+	8	0
+	+	17	7
+	+	37	19
+	+	38	0
+	+	39	0
+	+	40	0
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
+	"	221	0
+
+> ~/Downloads/Vim-R-plugin(1).vmb
+	"	1	0
+
+> ~/.vim/.VimballRecord
+	"	2	0
+
+> ~/Documents/data_intensive/book/ch4_probability/enron_naive_bayes.sh
+	"	58	4
+	.	58	0
+	+	55	0
+	+	58	0
 
 > ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
 	"	49	0
@@ -1621,33 +1697,3 @@ $
 	+	3	0
 	+	4	0
 	+	4	0
-
-> ~/pandoc output
-	"	3	0
-	.	3	0
-	+	3	0
-
-> ~/Documents/data_intensive/data_other_transformations_london_sept2014/pandoc output
-	"	3	0
-	.	3	0
-	+	3	0
-
-> ~/Dropbox/mcneil_fest.txt
-	"	5	0
-	^	5	134
-	.	2	0
-	+	8	0
-	+	4	23
-	+	8	86
-	+	5	133
-	+	2	0
-
-> ~/Documents/notes/suchman_artificial_intelligence.md
-	"	14	255
-
-> ~/Dropbox/NERD_tree_1
-	"	15	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
