@@ -8,30 +8,46 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/HERE
+~MSle0~/tis
 
 # Last Substitute Search Pattern:
-~MSle0~&modelling
+~MSle0&modelling
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:q
-:w
-:e ~/book/ch5_topologies/ch_genomic_topologies.rmd
+:wq
+:e ~/book/preface.md
+:e ~/notes/badiou_number.md
 :sp
 :vertical resize+25
+:e ~/notes/parisi_2013.md
+:e 
+:q
+:qa
+:wa
+:e ~/book/ch4_probability/ejors_nov2012.rmd
+:nmap ,rv vertical resize +10
+:nmap  vertical resize +10
+:e ~/notes/foucault_order.md
+:marks
+:set fdc=0
+:set dfc=0
+:ls
+:e ~/notes/stengers_invention_modern_science.md
+:e ~/notes/stengers_d&g_2005.md
+:e ~/Documents/supervision/kilis/supervision_oct_2014.md
+:w
+:e ~/book/ch5_topologies/ch_genomic_topologies.rmd
 :e ~/book/ch1_learning/ch1_notes.rmd
 :browse old
 :browse recent
 :e ~/notes/blei_topic_models_2011.md
-:qa
 :s/modelling/models/gc
 :s/modelling/model/gc
 :bn
 :bp
-:ls
 :vertical resize +15
 :vertical resize -10
 :vertical resize-30
@@ -40,11 +56,8 @@ $
 :split
 :vertical resize+30
 :b
-:e ~/notes/foucault_order.md
 :e ../ch1_learning/ch1_notes.rmd
 :e ch2_curves/
-:marks
-:wq
 :Pandoc! pdf
 :b2
 :e test.rmd
@@ -67,7 +80,6 @@ $
 :set relativenumber=0
 :q!
 :read enron_naive_bayes.R
-:set fdc=0
 :set fdc=5
 :h insert
 :h source
@@ -97,8 +109,6 @@ $
 :set relativenumber=false
 :vertical resize+20
 :b4
-:e ~/notes/parisi_2013.md
-:e ~/notes/badiou_number.md
 :h lock
 :%s/some/some\r/gc
 :%s/some/some\/r/gc
@@ -303,13 +313,18 @@ $
 :colorschemeshine
 
 # Search String History (newest to oldest):
-? \Vnb\%#
+?/tis
+?/HERE
 ? \Vml\%#
 ? \Vtm\%#
+? \<secondly\>
+?/asdf
+?/event
+?/random
+? \Vnb\%#
 ? \Vlogr\%#
 ? \Vlr\%#
 ? modelling
-?/HERE
 ? 
 ? \<The\>
 ?/\^\^
@@ -335,7 +350,6 @@ $
 ?/nnore
 ? \Vsvm\%#
 ? \Vdt\%#
-?/random
 ?/data
 ? some
 ?/asdfasdf/
@@ -422,19 +436,19 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	437
-<language no longer consists only of representations and of sounds that in turn represent the representations and oare ordered amongh them as the links of thought requirel it consists also of formal elements, grouped into a a system, which impose upon the sounds, syllables, and roots an organization that is not that of representation. Thus an element has been introduced into the analysis of language that is not reducible to it. 235
-""1	LINE	0
-	
+"0	CHAR	0
+	263
+<Instead, I take Chaitinâ€™s computational proof of Omega or infinite probabilities, which are at once computably enumerable and algorithmically random, to explain that the automation of data implies an irreversible encounter with incomputable probabilities.  T
+"1	LINE	0
+	## The random variable $X$ and the random variable $G$
 "2	LINE	0
 	
 "3	LINE	0
-	Say how these practices are dealing with words statistically. What does it matter than certain words are dropped because they are too frequent or too rare. How does the scaling up from hundreds of docs in Maron to millions of docs in Blei matter?
+	
 "4	LINE	0
-	
+	j
 "5	LINE	0
-	Say how these practices are dealing with words statistically. What does it matter than certain words are dropped because they are too frequent or too rare. How does the scaling up from hundreds of docs in Maron to millions of docs in Blei matter?
+	jj
 "6	LINE	0
 	
 "7	LINE	0
@@ -442,9 +456,7 @@ $
 "8	LINE	0
 	
 "9	LINE	0
-	[TODO] Say how these practices are dealing with words statistically. What does it matter than certain words are dropped because they are too frequent or too rare. How does the scaling up from hundreds of docs in Maron to millions of docs in Blei matter?
-"a	CHAR	0
-	i
+	
 "j	CHAR	0
 	kkk  lkkkokkkk12 +kkkkkkkkkkki12 + 34 kkkkkkkkkk
 "p	CHAR	0
@@ -457,7 +469,9 @@ $
 "w	CHAR	0
 	1449
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
-"-	CHAR	0
+"z	CHAR	0
+	Zq
+""-	CHAR	0
 	 
 
 # global variables:
@@ -489,25 +503,56 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  5  465  ~/Documents/notes/blei_topic_models_2011.md
-'1  1  0  ~/Documents/tcs_editing/aug2014/toxins.md
-'2  323  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'3  20  4  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
-'4  2  36  ~/.git/MERGE_MSG
-'5  1  0  ~/Documents/data_intensive/book/chapter_list.txt
-'6  1  0  ~/Documents/data_intensive/book/build.sh
-'7  1  0  ~/Documents/data_intensive/book/chapter_overview.md
-'8  66  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'9  81  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'0  4  44  ~/Documents/data_intensive/book/preface.md
+'1  348  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'2  16  116  ~/Documents/notes/badiou_number.md
+'3  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'4  338  516  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'5  14  0  ~/Documents/bigdata_society/reviews/facebook.md
+'6  5  0  ~/Documents/notes/stengers_d&g_2005.md
+'7  1  0  ~/runs.py
+'8  5  465  ~/Documents/notes/blei_topic_models_2011.md
+'9  1  0  ~/Documents/tcs_editing/aug2014/toxins.md
 
 # Jumplist (newest first):
+-'  4  44  ~/Documents/data_intensive/book/preface.md
+-'  1  0  ~/Documents/data_intensive/book/preface.md
+-'  348  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  294  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  276  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  16  116  ~/Documents/notes/badiou_number.md
+-'  12  224  ~/Documents/notes/badiou_number.md
+-'  6  273  ~/Documents/notes/badiou_number.md
+-'  4  134  ~/Documents/notes/badiou_number.md
+-'  24  0  ~/Documents/notes/badiou_number.md
+-'  18  43  ~/Documents/notes/parisi_2013.md
+-'  338  511  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  336  569  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  330  562  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  332  48  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  333  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  335  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  111  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  88  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  345  86  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  326  231  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  14  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  13  843  ~/Documents/bigdata_society/reviews/facebook.md
+-'  11  88  ~/Documents/bigdata_society/reviews/facebook.md
+-'  1  7  ~/Documents/bigdata_society/reviews/facebook.md
+-'  5  0  ~/Documents/notes/stengers_d&g_2005.md
+-'  5  0  ~/Documents/supervision/kilis/supervision_oct_2014.md
+-'  10  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  5  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  4  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  1  0  ~/runs.py
 -'  5  465  ~/Documents/notes/blei_topic_models_2011.md
 -'  1  82  ~/Documents/notes/blei_topic_models_2011.md
 -'  322  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  327  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  253  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  105  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  88  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  31  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  55  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  53  764  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -516,7 +561,7 @@ $
 -'  320  149  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  312  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  319  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  347  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  360  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  314  1156  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  309  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  311  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -529,7 +574,7 @@ $
 -'  41  0  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
 -'  33  25  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  337  224  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  350  224  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  300  344  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  296  95  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  266  257  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -558,115 +603,31 @@ $
 -'  112  147  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  58  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  90  377  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  91  1268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  19  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  81  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  249  65  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  245  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  221  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.md
--'  244  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  246  79  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  267  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  203  40  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  196  70  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  3  198  ~/Documents/notes/foucault_order.md
--'  4  0  ~/Documents/notes/foucault_order.md
+-'  14  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  13  843  ~/Documents/bigdata_society/reviews/facebook.md
+-'  11  88  ~/Documents/bigdata_society/reviews/facebook.md
+-'  1  7  ~/Documents/bigdata_society/reviews/facebook.md
+-'  5  0  ~/Documents/notes/stengers_d&g_2005.md
+-'  5  0  ~/Documents/supervision/kilis/supervision_oct_2014.md
+-'  10  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  5  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  4  0  ~/Documents/bigdata_society/reviews/facebook.md
+-'  16  116  ~/Documents/notes/badiou_number.md
+-'  12  224  ~/Documents/notes/badiou_number.md
 
 # History of marks within files (newest to oldest):
 
+> ~/Documents/data_intensive/book/preface.md
+	"	4	44
+	^	5	0
+	.	4	44
+	+	4	153
+	+	4	44
+
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	331	91
-	^	331	92
-	.	331	91
-	+	266	354
-	+	267	0
-	+	266	513
-	+	266	655
-	+	282	412
-	+	283	0
-	+	296	105
-	+	296	0
-	+	296	105
-	+	294	27
-	+	300	275
-	+	308	0
-	+	308	339
-	+	308	0
-	+	309	0
-	+	312	0
-	+	309	0
-	+	312	0
-	+	312	121
-	+	312	0
-	+	312	161
-	+	312	0
-	+	314	0
-	+	312	413
-	+	312	641
-	+	312	0
-	+	312	740
-	+	312	0
-	+	312	1099
-	+	85	28
-	+	93	0
-	+	93	1314
-	+	93	1737
-	+	312	1354
-	+	312	0
-	+	312	1530
-	+	310	20
-	+	347	13
-	+	349	32
-	+	314	0
-	+	314	0
-	+	314	344
-	+	314	246
-	+	314	357
-	+	314	0
-	+	314	608
-	+	314	0
-	+	314	778
-	+	314	78
-	+	314	786
-	+	314	0
-	+	314	1156
-	+	347	0
-	+	316	0
-	+	314	900
-	+	314	1068
-	+	316	64
-	+	323	0
-	+	312	0
-	+	324	4
-	+	318	0
-	+	317	0
-	+	320	146
-	+	320	0
-	+	320	148
-	+	320	0
-	+	320	164
-	+	320	337
-	+	321	0
-	+	322	142
-	+	323	0
-	+	324	131
-	+	324	0
-	+	324	186
-	+	324	0
-	+	324	1040
-	+	325	0
-	+	324	1307
-	+	324	0
-	+	324	1404
-	+	326	158
-	+	324	1715
-	+	326	0
-	+	327	0
-	+	327	0
-	+	328	44
-	+	332	0
-	+	327	0
-	+	330	0
+	"	348	0
+	^	348	0
+	.	347	0
 	+	329	0
 	+	327	0
 	+	326	0
@@ -677,48 +638,167 @@ $
 	+	330	252
 	+	330	0
 	+	330	457
-	+	331	91
+	+	345	91
+	+	326	231
+	+	330	770
+	+	349	0
+	+	330	874
+	+	330	914
+	+	330	610
+	+	332	48
+	+	336	114
+	+	336	0
+	+	336	121
+	+	336	452
+	+	332	48
+	+	332	188
+	+	336	157
+	+	332	189
+	+	332	546
+	+	332	189
+	+	332	433
+	+	336	0
+	+	330	0
+	+	330	562
+	+	331	0
+	+	332	47
+	+	333	0
+	+	332	132
+	+	336	1310
+	+	336	96
+	+	336	244
+	+	336	569
+	+	336	685
+	+	336	1241
+	+	338	264
+	+	338	0
+	+	338	276
+	+	338	183
+	+	338	478
+	+	338	392
+	+	338	853
+	+	338	860
+	+	338	1578
+	+	338	1800
+	+	340	117
+	+	340	118
+	+	341	0
+	+	340	272
+	+	340	280
+	+	340	734
+	+	338	860
+	+	338	1118
+	+	338	1146
+	+	338	1146
+	+	338	1136
+	+	338	860
+	+	338	854
+	+	338	1289
+	+	336	1244
+	+	338	5
+	+	338	859
+	+	338	1127
+	+	338	1146
+	+	338	1320
+	+	338	1146
+	+	340	117
+	+	340	280
+	+	338	862
+	+	338	1127
+	+	338	863
+	+	338	1109
+	+	338	1131
+	+	338	1154
+	+	338	1320
+	+	338	1154
+	+	338	1297
+	+	338	1324
+	+	340	117
+	+	338	1676
+	+	340	0
+	+	340	0
+	+	339	0
+	+	340	127
+	+	340	280
+	+	340	128
+	+	340	261
+	+	340	283
+	+	341	0
+	+	340	0
+	+	362	0
+	+	348	668
+	+	347	0
 	a	88	0
 	b	105	0
 	c	253	0
 	d	276	0
 	e	294	0
 	f	310	0
+	g	328	0
 	o	8	0
 	p	32	0
 	q	55	0
 	t	31	0
 
-> ~/Documents/notes/blei_topic_models_2011.md
-	"	5	465
-	^	5	551
-	.	6	0
-	+	1	81
+> ~/Documents/notes/parisi_2013.md
+	"	15	0
+	^	1	171
+	.	17	0
+	+	1	280
+	+	21	0
+	+	3	304
+	+	21	0
+	+	4	0
+	+	5	380
+	+	21	0
 	+	6	0
-	+	3	265
-	+	3	174
-	+	6	0
-	+	5	550
-	+	5	189
-	+	5	282
-	+	5	369
-	+	5	465
-	+	6	0
+	+	7	68
+	+	7	290
+	+	21	0
+	+	21	0
+	+	9	531
+	+	21	0
+	+	11	294
+	+	21	0
+	+	11	244
+	+	11	93
+	+	11	292
+	+	11	1032
+	+	21	0
+	+	16	305
+	+	21	0
+	+	18	769
+	+	18	100
+	+	18	781
+	+	21	0
+	+	18	767
+	+	18	613
+	+	19	0
+	+	1	168
+	+	1	0
+	+	14	0
+	+	13	259
+	+	18	72
+	+	11	552
+	+	11	291
+	+	12	0
+	+	13	259
+	+	13	259
+	+	14	0
+	+	1	170
+	+	17	0
+
+> ~/Documents/notes/badiou_number.md
+	"	16	116
+	^	16	117
+	.	16	116
+	+	2	0
+	+	16	0
+	+	16	116
 
 > ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 	"	74	0
 	t	75	0
-
-> ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
-	"	42	140
-	^	42	141
-	.	42	140
-	+	53	104
-	+	52	153
-	+	51	0
-	+	41	181
-	+	42	140
-	t	39	0
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 	"	1	0
@@ -835,6 +915,208 @@ $
 	q	60	15
 	t	35	0
 
+> ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
+	"	1	0
+	^	207	41
+	.	207	40
+	+	194	0
+	+	199	0
+	+	199	1
+	+	209	12
+	+	81	0
+	+	132	250
+	+	133	150
+	+	140	108
+	+	5	0
+	+	30	0
+	+	34	0
+	+	39	0
+	+	43	0
+	+	43	814
+	+	65	0
+	+	140	148
+	+	141	215
+	+	145	132
+	+	146	78
+	+	147	77
+	+	148	154
+	+	149	26
+	+	152	108
+	+	153	194
+	+	154	0
+	+	155	84
+	+	156	0
+	+	157	0
+	+	159	57
+	+	168	7
+	+	159	0
+	+	171	0
+	+	170	0
+	+	162	0
+	+	163	121
+	+	167	121
+	+	168	44
+	+	169	245
+	+	182	118
+	+	182	0
+	+	182	165
+	+	184	1
+	+	183	1
+	+	186	228
+	+	199	0
+	+	196	134
+	+	196	0
+	+	199	231
+	+	186	354
+	+	176	0
+	+	177	0
+	+	3	6
+	+	14	60
+	+	24	88
+	+	27	32
+	+	28	0
+	+	37	300
+	+	63	187
+	+	67	46
+	+	194	2
+	+	194	106
+	+	188	0
+	+	188	0
+	+	186	228
+	+	188	0
+	+	188	0
+	+	187	0
+	+	197	0
+	+	199	1
+	+	199	0
+	+	182	0
+	+	173	0
+	+	182	0
+	+	177	0
+	+	174	0
+	+	175	0
+	+	187	0
+	+	185	97
+	+	190	74
+	+	194	0
+	+	192	0
+	+	191	0
+	+	199	0
+	+	198	0
+	+	189	0
+	+	209	0
+	+	200	13
+	+	206	121
+	+	207	0
+	+	207	72
+	+	200	9
+	+	202	128
+	+	202	0
+	+	206	0
+	+	203	69
+	+	205	141
+	+	206	109
+	+	206	0
+	+	204	0
+	+	207	40
+	a	7	0
+	b	65	0
+	c	120	0
+
+> ~/Documents/notes/foucault_order.md
+	"	13	458
+	^	13	459
+	.	13	458
+	+	5	305
+	+	3	200
+	+	4	0
+	+	2	0
+	+	13	458
+
+> ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
+	"	35	0
+
+> ~/Documents/bigdata_society/reviews/facebook.md
+	"	14	0
+	^	14	130
+	.	14	129
+	+	6	12
+	+	4	0
+	+	8	30
+	+	4	72
+	+	9	80
+	+	2	0
+	+	11	776
+	+	14	551
+	+	14	2
+	+	14	290
+	+	15	0
+	+	15	0
+	+	13	442
+	+	13	0
+	+	13	843
+	+	11	88
+	+	11	0
+	+	11	102
+	+	11	358
+	+	11	777
+	+	14	129
+
+> ~/Documents/supervision/kilis/supervision_oct_2014.md
+	"	5	0
+	^	5	0
+	.	4	0
+	+	4	0
+
+> ~/Documents/notes/stengers_d&g_2005.md
+	"	5	0
+
+> ~/Documents/notes/stengers_invention_modern_science.md
+	"	17	0
+	^	45	0
+	.	45	0
+	+	27	0
+	+	29	0
+	+	32	0
+	+	34	0
+	+	37	0
+	+	39	0
+	+	41	0
+	+	44	0
+	+	43	0
+	+	47	0
+	+	45	0
+
+> ~/runs.py
+	"	1	0
+
+> ~/Documents/notes/blei_topic_models_2011.md
+	"	5	465
+	^	5	551
+	.	6	0
+	+	1	81
+	+	6	0
+	+	3	265
+	+	3	174
+	+	6	0
+	+	5	550
+	+	5	189
+	+	5	282
+	+	5	369
+	+	5	465
+	+	6	0
+
+> ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
+	"	42	140
+	^	42	141
+	.	42	140
+	+	53	104
+	+	52	153
+	+	51	0
+	+	41	181
+	+	42	140
+	t	39	0
+
 > ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
 	"	30	0
 	^	28	167
@@ -849,14 +1131,6 @@ $
 	"	8	0
 	.	1	0
 	+	1	0
-
-> ~/Documents/notes/foucault_order.md
-	"	3	0
-	^	3	201
-	.	4	0
-	+	5	305
-	+	3	200
-	+	4	0
 
 > ~/Documents/notes/bleit_topic_models_2011.md
 	"	2	58
@@ -967,11 +1241,6 @@ $
 
 > /usr/share/vim/vim74/doc/repeat.txt
 	"	156	11
-
-> ~/Documents/notes/badiou_number.md
-	"	2	0
-	.	2	0
-	+	2	0
 
 > ~/Dropbox/mcneil_fest.md
 	"	1	0
@@ -1226,114 +1495,6 @@ $
 	a	1	0
 	c	9	0
 
-> ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
-	"	207	9
-	^	207	41
-	.	207	40
-	+	194	0
-	+	199	0
-	+	199	1
-	+	209	12
-	+	81	0
-	+	132	250
-	+	133	150
-	+	140	108
-	+	5	0
-	+	30	0
-	+	34	0
-	+	39	0
-	+	43	0
-	+	43	814
-	+	65	0
-	+	140	148
-	+	141	215
-	+	145	132
-	+	146	78
-	+	147	77
-	+	148	154
-	+	149	26
-	+	152	108
-	+	153	194
-	+	154	0
-	+	155	84
-	+	156	0
-	+	157	0
-	+	159	57
-	+	168	7
-	+	159	0
-	+	171	0
-	+	170	0
-	+	162	0
-	+	163	121
-	+	167	121
-	+	168	44
-	+	169	245
-	+	182	118
-	+	182	0
-	+	182	165
-	+	184	1
-	+	183	1
-	+	186	228
-	+	199	0
-	+	196	134
-	+	196	0
-	+	199	231
-	+	186	354
-	+	176	0
-	+	177	0
-	+	3	6
-	+	14	60
-	+	24	88
-	+	27	32
-	+	28	0
-	+	37	300
-	+	63	187
-	+	67	46
-	+	194	2
-	+	194	106
-	+	188	0
-	+	188	0
-	+	186	228
-	+	188	0
-	+	188	0
-	+	187	0
-	+	197	0
-	+	199	1
-	+	199	0
-	+	182	0
-	+	173	0
-	+	182	0
-	+	177	0
-	+	174	0
-	+	175	0
-	+	187	0
-	+	185	97
-	+	190	74
-	+	194	0
-	+	192	0
-	+	191	0
-	+	199	0
-	+	198	0
-	+	189	0
-	+	209	0
-	+	200	13
-	+	206	121
-	+	207	0
-	+	207	72
-	+	200	9
-	+	202	128
-	+	202	0
-	+	206	0
-	+	203	69
-	+	205	141
-	+	206	109
-	+	206	0
-	+	204	0
-	+	207	40
-	a	7	0
-	b	65	0
-	c	120	0
-
 > ~/Documents/notes/lehningner_principles_biochemistry_2008.md
 	"	2	0
 
@@ -1345,9 +1506,6 @@ $
 
 > ~/Documents/notes/haraway_situated_1999.md
 	"	1	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ejors_nov2012.rmd
-	"	75	1072
 
 > ~/Documents/tcs_editing/aug2014/new_media.md
 	"	1	0
@@ -1519,53 +1677,6 @@ $
 > ~/Documents/notes/mitchell_machine_learning_1997.md
 	"	1	0
 
-> ~/Documents/notes/parisi_2013.md
-	"	7	0
-	^	1	171
-	.	1	170
-	+	1	280
-	+	21	0
-	+	3	304
-	+	21	0
-	+	4	0
-	+	5	380
-	+	21	0
-	+	6	0
-	+	7	68
-	+	7	290
-	+	21	0
-	+	21	0
-	+	9	531
-	+	21	0
-	+	11	294
-	+	21	0
-	+	11	244
-	+	11	93
-	+	11	292
-	+	11	1032
-	+	21	0
-	+	16	305
-	+	21	0
-	+	18	769
-	+	18	100
-	+	18	781
-	+	21	0
-	+	18	767
-	+	18	613
-	+	19	0
-	+	1	168
-	+	1	0
-	+	14	0
-	+	13	259
-	+	18	72
-	+	11	552
-	+	11	291
-	+	12	0
-	+	13	259
-	+	13	259
-	+	14	0
-	+	1	170
-
 > ~/Documents/notes/ross_no_collar_2004.md
 	"	1	0
 
@@ -1594,22 +1705,4 @@ $
 	"	1	0
 
 > ~/Documents/notes/whitehead_leclerc_.md
-	"	1	0
-
-> ~/Documents/notes/whitehead_misc.md
-	"	1	0
-
-> ~/Documents/notes/whitehead_modes_of_thought.md
-	"	1	0
-
-> ~/Documents/notes/whitehead_pr.md
-	"	1	0
-
-> ~/Documents/notes/whitehead_science_mw.md
-	"	1	0
-
-> ~/Documents/notes/whiteheadmodes.md
-	"	1	0
-
-> ~/Documents/notes/xue_svm_2009.md
 	"	1	0
