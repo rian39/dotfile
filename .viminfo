@@ -8,86 +8,122 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/tis
+~MSle0~/topic
 
 # Last Substitute Search Pattern:
-~MSle0&modelling
+~MSle0&# <codecell>
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:qa
+:waq
+:w
+:e ~/notes/blei_ng_jordan_lda_2003.md
+:b2
+:ls
+:b1
+:e ~/book/ch1_learning/ch1_notes.rmd
+:b4
+:bp4
+:bp
+:e ~/book/part1.rmd
+:q
+:e ~/book/part2.rmd
 :wq
+:bn
+:e ~/.vim/snippets/pandoc.snippets
+:
+:vertical resize+25
+:PluginUpdate
+:e ~/notes/lash_power_hegemony_cult_stud_2007.md
+:e ~/notes/lash_critique_of_information.md
+:%source ipython
+:!python ../ml_lit/topicmodel_lit_analysis.py
+:!python
+:vertical resize+30
+:set rnu false
+:set rnu=false
+:set rnu
+:set rnu='off'
+:set rnu off
+:set rnu=off
+:h 'relativenumber'
+:set relativenumber
+:set relativenumber=False
+:%s/# <codecell>//g
+:e ../ml_lit/topicmodel_lit_analysis.py
+:e ../ml_lit/
+:%s/DISTRIBUTION/trusty/gc
+:colorscheme jellybeans
+:q!
+:.,.+1!pandoc -t markdown --reference-links --no-wrap
+:SoftPencil
+:map
+:Pandoc! docx
+:Pandoc! doc
+:Pandoc! rtf
+:PandocHighlight
+:Pandoc! odt
+:w ~/Documents/google_analytics/publications/infrastructures_handbook/mackenzie_abstract.md
+:browse old
+:marks
+:set fdc=0
+:set spell
+:h spell
+:spellgood
+:spell
+:e mackenzie_abstract.md
 :e ~/book/preface.md
 :e ~/notes/badiou_number.md
 :sp
-:vertical resize+25
 :e ~/notes/parisi_2013.md
 :e 
-:q
-:qa
 :wa
 :e ~/book/ch4_probability/ejors_nov2012.rmd
 :nmap ,rv vertical resize +10
 :nmap  vertical resize +10
 :e ~/notes/foucault_order.md
-:marks
-:set fdc=0
 :set dfc=0
-:ls
 :e ~/notes/stengers_invention_modern_science.md
 :e ~/notes/stengers_d&g_2005.md
 :e ~/Documents/supervision/kilis/supervision_oct_2014.md
-:w
 :e ~/book/ch5_topologies/ch_genomic_topologies.rmd
-:e ~/book/ch1_learning/ch1_notes.rmd
-:browse old
 :browse recent
 :e ~/notes/blei_topic_models_2011.md
 :s/modelling/models/gc
 :s/modelling/model/gc
-:bn
-:bp
 :vertical resize +15
 :vertical resize -10
 :vertical resize-30
 :vertical resize=30
 :e ~/notes/bleit_topic_models_2011.md
 :split
-:vertical resize+30
 :b
 :e ../ch1_learning/ch1_notes.rmd
 :e ch2_curves/
 :Pandoc! pdf
-:b2
 :e test.rmd
 : e ch_naive_informed.md
-:set relativenumber
 :%s/cat(/#cat(/gc
 :%s/cat/#cat/gc
 :s/gas/sex/
 :s/gas/finance/
 :s/,/, /g
-:colorscheme jellybeans
 :colorscheme solarized
 :colorscheme pencil
 :e ch_naive_informed.md
-:map
 :RpluginConfig
 :so %
 :so
 :e Vim-R-plugin(1).vmb
 :set relativenumber=0
-:q!
 :read enron_naive_bayes.R
 :set fdc=5
 :h insert
 :h source
 :R
-:SoftPencil
-:Pandoc! docx
-:Pandoc! doc
-:Pandoc! rtf
 :nmap <S-Enter> O<Esc>
 :colo solarized
 :vertical resize +10
@@ -108,7 +144,6 @@ $
 :set relativenumber=off
 :set relativenumber=false
 :vertical resize+20
-:b4
 :h lock
 :%s/some/some\r/gc
 :%s/some/some\/r/gc
@@ -117,7 +152,6 @@ $
 :%s/\./\.:
 :%s/\./\.\n/gc
 :%s/./.\n/gc
-:Pandoc! odt
 :e test.md
 :e ~/test3.md
 :vertical resize +5
@@ -148,7 +182,6 @@ $
 :colo Jellybean
 :col pencil
 :colo pencil
-:b1
 :b19
 :e ~/.vim/snippets/
 :grep Bayes ~/notes/*.md
@@ -165,7 +198,6 @@ $
 :w mcneil_fest.md
 :colorscheme molokai
 :reg
-:PluginUpdate
 :w!
 :reg 2
 :reg 3
@@ -218,8 +250,6 @@ $
 :e ~/notes/appadurai.md
 :e ~/.viminfo
 :e ~/notes/galloway_cybernetic_dh_2014.md
-:h spell
-:set spell
 :e ~/notes/amoore_2011.md
 :e ~/notes/lanier_2012.md
 :set fdc=4
@@ -313,16 +343,35 @@ $
 :colorschemeshine
 
 # Search String History (newest to oldest):
-?/tis
-?/HERE
-? \Vml\%#
 ? \Vtm\%#
+? \Vnb\%#
+? \Vem\%#
+?/topic
+? \Vml\%#
+? \Vnn\%#
+? \Vlogr\%#
+? \Vdt\%#
+?/_Ele
+? \Veml\%#
+?/Ng
+? \Vusl\%#
+?/HERE
+?/generative
+? # <codecell>
+? DISTRIBUTION
+?/HER:
+?/asdfas
+?/film
+?/public
+?/commodity
+?/imitat
+?/reproduc
+?/copy
+?/tis
 ? \<secondly\>
 ?/asdf
 ?/event
 ?/random
-? \Vnb\%#
-? \Vlogr\%#
 ? \Vlr\%#
 ? modelling
 ? 
@@ -340,7 +389,6 @@ $
 ? cat(
 ? cat
 ? gas
-?/asdfas
 ?/The input
 ?/adfs
 ? ,
@@ -349,7 +397,6 @@ $
 ?/connect
 ?/nnore
 ? \Vsvm\%#
-? \Vdt\%#
 ?/data
 ? some
 ?/asdfasdf/
@@ -358,7 +405,6 @@ $
 ?/ancestral
 ?/Figure
 ?/Arendt
-? \Vnn\%#
 ?/Bayes
 ?/asdfsad
 ?/Kirk
@@ -436,34 +482,80 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	263
-<Instead, I take Chaitin‚Äôs computational proof of Omega or infinite probabilities, which are at once computably enumerable and algorithmically random, to explain that the automation of data implies an irreversible encounter with incomputable probabilities.  T
-"1	LINE	0
-	## The random variable $X$ and the random variable $G$
+"0	LINE	0
+	\begin {equation}
+	\label {eq: topic_model}
+	p(\theta, \mathbf{z, w} | \alpha, \beta) = p(\theta | \alpha) \prod p(z_n | \theta)p(w_n | z_n , \beta),
+	\end {equation}
+	[@Blei_2003, 996]
+""1	LINE	0
+	 
 "2	LINE	0
-	
+	- the article on the obama case
 "3	LINE	0
-	
-"4	LINE	0
-	j
-"5	LINE	0
 	jj
+"4	CHAR	0
+	
+	
+	672
+<Everywhere, numbers are increasingly in variation, and display increasingly distributional characteristics.  While some events have discrete outcomes (Obama was re-elected in 2012), many happenings are not. In Lancaster here in north-west England, the probability of rain on a given day would be say 70%, but days have very different amounts of rain.  Some days, it rains once briefly and lightly. Other days it rains frequently and heavily. A gamut of rain events can occur, and each would distribute different amounts of water on Lancaster. Given the amount of variation,  a much better way to face the weather is to say that Lancaster's rain is a *random variable*: 
+	
+	```{r  distributions2, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} 
+	
+		#*source('mcmc_examples.R')*/
+		#*generate_distributions()*/
+	```
+	
+"5	LINE	0
+	- add Lash 2007 on generative stuff, and perhaps media ontology more generally
 "6	LINE	0
 	
 "7	LINE	0
-	
+	# $N = all$: machine learning and the probabilistic event
 "8	LINE	0
-	
+	stoplist = stopwords.words('english')
 "9	LINE	0
+	for i in range(0, n_topics):
+	     temp = lda.show_topic(i, 10)
+	     terms = []
+	     for term in temp:
+	         terms.append(term[1])
+	         print "Top 10 terms for topic #" + str(i) + ": "+ ", ".join(terms)
+	         
+	
+	
+	
+	print 
+	
+	
+	
+	print 'Which LDA topic maximally describes a document?\n'
+	
+	
+	
+	print 'Original document: ' + documents[1]
+	
+	
+	
+	print 'Preprocessed document: ' + str(texts[1])
+	
+	
+	
+	print 'Matrix Market format: ' + str(corpus[1])
+	
+	
+	
+	print 'Topic probability mixture: ' + str(lda[corpus[1]])
+	
+	
+	
+	print 'Maximally probable topic: topic #' + str(max(lda[corpus[1]],key=itemgetter(1))[0])
 	
 "j	CHAR	0
 	kkk  lkkkokkkk12 +kkkkkkkkkkki12 + 34 kkkkkkkkkk
 "p	CHAR	0
 	6454
 <set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()    Plugin 'gmarik/Vundle.vim'    Plugin 'vim-pandoc/vim-pandoc'    Plugin 'vim-pandoc/vim-pandoc-syntax'    Plugin 'terryma/vim-multiple-cursors'    "Plugin 'reedes/vim-pencil'    Plugin 'scrooloose/nerdcommenter'    Plugin 'tpope/vim-fugitive'    Plugin 'scrooloose/nerdtree'    Plugin 'altercation/vim-colors-solarized'    Plugin 'nanotech/jellybeans.vim'    "Plugin 'bling/vim-airline'    Plugin 'itchyny/lightline.vim'    call vundle#end()            " requiredfiletype plugin indent on    " requiredexecute pathogen#infect()syntax enablesyntax onse t_Co=16let g:solarized_termcolors=256"set background=darkcolorscheme molokai"call togglebg#map("<F5>")set ruler  set tabstop=4set shiftwidth=4set expandtabset showcmdset hlsearchset incsearch"cursor show"set cursorline"set cursorcolumnset encoding=utf-8set foldmethod=markerset list listchars=tab:‚ñ∑‚ãÖ,trail:‚ãÖ,nbsp:‚ãÖset statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]"save keysnoremap <silent> <C-S>          :update<CR>vnoremap <silent> <C-S>         <C-C>:update<CR>inoremap <silent> <C-S>         <C-O>:update<CR>"python editingau FileType py set autoindentau FileType py set smartindentau FileType py set textwidth=79 " PEP-8 Friendlyhi comment ctermfg=blue "set linenumbers:nnoremap <C-M><C-N> :set invnumber<CR>:map <Up> gk:map <Down> gj"pandoc plugin files"let g:pandoc#filetypes#handled = ['let g:pandoc#biblio#sources = "bcg"let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:pandoc_use_bibtool = 1set grepprg=grep\ -nH\ $*"bibtexlet g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:Tex_BibtexFlavor = 'bibtex'let g:pandoc#folding#fold_fenced_codeblocks=1set omnifunc=pandoc#completion#Complete"let g:Tex_Flavor='latex'"let g:Tex_DefaultTargetFormat='pdf'" <leader>k Knits to MDnnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>"Rmd and Rpres are pandoc"autocmd BufRead,BufNewFile *.rmd,*.Rpres setfiletype pandoc"autocmd BufNewFile,BufReadPost *.md set filetype=markdownau BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc"""" New signs for the pandoc bundlelet g:pandoc_syntax_user_cchars = {'atx': '¬∂', 'codelang': '>', 'footnote': '¬ß', 'definition': '¬ª', 'newline': '¬¨'}" Format paragraphs with <leader>qmap <leader>q {!}fmt -w 105<CR>}<CR>" Place markers with {type} for markdown filesaugroup markers   autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'augroup ENDnnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>"let g:pencil#wrapModeDefault = 'soft'"augroup pencil      "autocmd!    "autocmd FileType markdown,mkd call pencil#init()    "autocmd FileType textile call pencil#init()    "autocmd FileType text call pencil#init({'wrap': 'hard'})"augroup ENDfunction! WordCount()      let s:old_status = v:statusmsg        let position = getpos(".")        exe ":silent normal g\<c-g>"            let stat = v:statusmsg              let s:word_count = 0                if stat != '--No lines in buffer--'                        let s:word_count = str2nr(split(v:statusmsg)[11])                            let v:statusmsg = s:old_status                              end                                call setpos('.', position)                                  return s:word_count endfunction" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):filetype plugin onlet vimrplugin_assign = 0" Change the <LocalLeader> key:let maplocalleader = ","" Use Ctrl+Space to do omnicompletion:if has("gui_running")    inoremap <C-Space> <C-x><C-o>else    inoremap <Nul> <C-x><C-o>endif"" Press the space bar to send lines (in Normal mode) and selections to R:vmap <Space> <Plug>RDSendSelectionnmap <Space> <Plug>RDSendLine"** airline related**let g:airline#extensions#tabline#enabled = 1" Show just the filename let g:airline#extensions#tabline#fnamemod = ':t' if !exists('g:airline_symbols')       let g:airline_symbols = {}   endif " unicode symbolslet g:airline_left_sep = '¬ª'let g:airline_left_sep = '‚ñ∂'let g:airline_right_sep = '¬´'let g:airline_right_sep = '‚óÄ'let g:airline_symbols.linenr = '‚êä'let g:airline_symbols.linenr = '‚ê§'let g:airline_symbols.linenr = '¬∂'let g:airline_symbols.branch = '‚éá'let g:airline_symbols.paste = 'œÅ'let g:airline_symbols.paste = '√û'let g:airline_symbols.paste = '‚à•'let g:airline_symbols.whitespace = 'Œû'"lightline configlet g:lightline = {      \ 'colorscheme': 'wombat',      \ 'active': {      \   'left': [ [ 'mode', 'paste' ],      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]      \ },      \ 'component_function': {      \   'fugitive': 'MyFugitive',      \   'readonly': 'MyReadonly',      \   'modified': 'MyModified',      \      'count': 'WordCount'      \ },      \ 'separator': { 'left':  '‚ñ∂', 'right':  '‚ñ∂'},      \ 'subseparator': { 'left':  '¬ª', 'right': '¬ª' }      \ }function! MyModified()if &filetype == "help"return ""elseif &modifiedreturn "+"elseif &modifiablereturn ""elsereturn ""endifendfunctionfunction! MyReadonly()if &filetype == "help"return ""  elseif &readonly  return "‚≠§"else    return ""endifendfunctionfunction! MyFugitive()return exists('*fugitive#head') ? fugitive#head() : ''endfunctionfunction! MyFilename()return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .\ ('' != MyModified() ? ' ' . MyModified() : '')endfunction
-"q	CHAR	0
-	wwwwwwlx
 "u	CHAR	0
 	estÄkb
 "w	CHAR	0
@@ -471,8 +563,8 @@ $
 <wwwwwwi[ÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkr]ÄkrÄklÄkrÄklxÄkrÄkbÄkbÄkdÄkdÄkuÄkdÄkuÄkuÄkdÄkdbbbÄkbÄkbÄkbbbbbbbbbbbbbbieither ÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkl or a support vector machineÄkrÄkrÄklÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkb,ÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄkbÄkbÄkbÄkbÄkbÄkbÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkdÄkrÄkrÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkuÄkuÄkdÄkdÄkdÄkdÄkuÄku
 "z	CHAR	0
 	Zq
-""-	CHAR	0
-	 
+"-	CHAR	0
+	‚àè
 
 # global variables:
 
@@ -503,119 +595,638 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  4  44  ~/Documents/data_intensive/book/preface.md
-'1  348  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'2  16  116  ~/Documents/notes/badiou_number.md
-'3  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'4  338  516  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'5  14  0  ~/Documents/bigdata_society/reviews/facebook.md
-'6  5  0  ~/Documents/notes/stengers_d&g_2005.md
-'7  1  0  ~/runs.py
-'8  5  465  ~/Documents/notes/blei_topic_models_2011.md
-'9  1  0  ~/Documents/tcs_editing/aug2014/toxins.md
+'0  85  268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'1  4  42  ~/.vim/snippets/pandoc.snippets
+'2  1  618  ~/Documents/notes/lash_power_hegemony_cult_stud_2007.md
+'3  6  19  ~/Documents/data_intensive/book/ch4_probability/topics.R
+'4  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'5  36  61  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'6  142  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'7  103  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'8  98  0  ~/Documents/notes/benjamin_work_of_art.md
+'9  10  490  ~/Documents/data_intensive/digitalmethods_exeter_dec2014/mackenzie_abstract.md
 
 # Jumplist (newest first):
--'  4  44  ~/Documents/data_intensive/book/preface.md
--'  1  0  ~/Documents/data_intensive/book/preface.md
--'  348  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  294  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  276  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  16  116  ~/Documents/notes/badiou_number.md
--'  12  224  ~/Documents/notes/badiou_number.md
--'  6  273  ~/Documents/notes/badiou_number.md
--'  4  134  ~/Documents/notes/badiou_number.md
--'  24  0  ~/Documents/notes/badiou_number.md
--'  18  43  ~/Documents/notes/parisi_2013.md
--'  338  511  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  336  569  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  330  562  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  332  48  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  333  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  85  268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  354  1186  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  109  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  332  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  314  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  298  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  280  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  257  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  383  253  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  381  1822  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  378  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  380  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  382  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  385  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  387  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  389  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  357  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  355  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  353  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  346  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  345  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  343  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  341  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  339  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  337  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  335  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  111  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  88  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  345  86  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  326  231  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  14  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  13  843  ~/Documents/bigdata_society/reviews/facebook.md
--'  11  88  ~/Documents/bigdata_society/reviews/facebook.md
--'  1  7  ~/Documents/bigdata_society/reviews/facebook.md
--'  5  0  ~/Documents/notes/stengers_d&g_2005.md
--'  5  0  ~/Documents/supervision/kilis/supervision_oct_2014.md
--'  10  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  5  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  4  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  1  0  ~/runs.py
--'  5  465  ~/Documents/notes/blei_topic_models_2011.md
--'  1  82  ~/Documents/notes/blei_topic_models_2011.md
--'  322  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  327  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  253  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  105  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  31  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  55  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  53  764  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/tcs_editing/aug2014/toxins.md
--'  323  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  320  149  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  333  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  330  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  312  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  319  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  360  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  314  1156  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  309  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  311  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  313  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  310  20  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  93  418  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  86  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  87  252  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  34  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  41  0  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
--'  33  25  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  350  224  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  300  344  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  296  95  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  266  257  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  264  312  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  3  198  ~/Documents/notes/foucault_order.md
--'  4  0  ~/Documents/notes/foucault_order.md
--'  261  534  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  270  228  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  32  79  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  77  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
--'  8  0  ~/Documents/data_intensive/book/NERD_tree_1
--'  12  2  ~/Documents/data_intensive/book/NERD_tree_1
--'  1  0  ~/Documents/data_intensive/book/NERD_tree_1
--'  20  4  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
--'  118  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  268  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  51  1336  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  2  36  ~/.git/MERGE_MSG
--'  1  0  ~/.git/MERGE_MSG
--'  1  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  1  0  ~/Documents/data_intensive/book/build.sh
--'  1  0  ~/Documents/data_intensive/book/chapter_overview.md
--'  66  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  100  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  220  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  112  147  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  58  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  90  377  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  14  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  13  843  ~/Documents/bigdata_society/reviews/facebook.md
--'  11  88  ~/Documents/bigdata_society/reviews/facebook.md
--'  1  7  ~/Documents/bigdata_society/reviews/facebook.md
--'  5  0  ~/Documents/notes/stengers_d&g_2005.md
--'  5  0  ~/Documents/supervision/kilis/supervision_oct_2014.md
--'  10  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  5  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  4  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  16  116  ~/Documents/notes/badiou_number.md
--'  12  224  ~/Documents/notes/badiou_number.md
+-'  296  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  278  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  255  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  358  1099  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  344  1121  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  342  259  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  328  181  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  318  175  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  316  1384  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  308  651  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  290  23  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  288  310  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  286  410  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  276  219  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  97  542  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  95  773  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  40  486  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
+-'  39  0  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
+-'  9  0  ~/Documents/data_intensive/book/part1.rmd
+-'  103  257  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  107  75  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  4  42  ~/.vim/snippets/pandoc.snippets
+-'  28  0  ~/.vim/snippets/pandoc.snippets
+-'  33  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  93  368  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  618  ~/Documents/notes/lash_power_hegemony_cult_stud_2007.md
 
 # History of marks within files (newest to oldest):
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+	"	85	268
+	^	354	1187
+	.	45	0
+	+	340	1320
+	+	340	1154
+	+	340	1297
+	+	340	1324
+	+	342	117
+	+	340	1676
+	+	342	0
+	+	342	0
+	+	341	0
+	+	342	127
+	+	342	280
+	+	342	128
+	+	342	261
+	+	342	283
+	+	343	0
+	+	342	0
+	+	367	0
+	+	358	668
+	+	357	0
+	+	100	0
+	+	1	46
+	+	94	0
+	+	92	0
+	+	93	0
+	+	91	298
+	+	92	0
+	+	93	0
+	+	93	683
+	+	93	1
+	+	93	681
+	+	95	0
+	+	95	256
+	+	95	77
+	+	95	284
+	+	95	0
+	+	95	460
+	+	95	361
+	+	93	0
+	+	95	500
+	+	95	0
+	+	95	647
+	+	95	0
+	+	95	0
+	+	95	575
+	+	95	0
+	+	95	594
+	+	95	694
+	+	95	1
+	+	95	1076
+	+	95	1767
+	+	33	0
+	+	95	763
+	+	95	0
+	+	95	853
+	+	95	1555
+	+	95	0
+	+	95	1574
+	+	95	0
+	+	95	1600
+	+	95	0
+	+	95	1643
+	+	95	1542
+	+	95	1766
+	+	96	0
+	+	97	515
+	+	97	316
+	+	97	0
+	+	97	352
+	+	97	134
+	+	107	0
+	+	108	0
+	+	107	90
+	+	276	118
+	+	276	0
+	+	276	147
+	+	356	0
+	+	354	2583
+	+	356	0
+	+	356	234
+	+	358	0
+	+	358	654
+	+	358	0
+	+	358	765
+	+	358	0
+	+	358	1032
+	+	368	0
+	+	365	28
+	+	366	0
+	+	358	1099
+	+	381	1670
+	+	381	0
+	+	381	1826
+	+	383	252
+	+	383	0
+	+	347	0
+	+	348	0
+	+	354	309
+	+	354	1187
+	+	44	0
+	+	45	0
+	a	85	0
+	b	109	0
+	c	257	0
+	d	280	0
+	e	298	0
+	f	314	0
+	g	332	0
+	h	346	0
+	o	8	0
+	p	32	0
+	q	52	0
+	t	31	0
+	z	375	0
+
+> ~/Documents/data_intensive/book/part2.rmd
+	"	10	0
+	^	10	1185
+	.	10	1184
+	+	8	129
+	+	8	0
+	+	10	134
+	+	10	0
+	+	10	370
+	+	10	0
+	+	10	440
+	+	10	0
+	+	10	519
+	+	10	0
+	+	10	1075
+	+	10	0
+	+	10	1131
+	+	10	0
+	+	10	1184
+
+> ~/Documents/data_intensive/book/part1.rmd
+	"	9	0
+	^	1	69
+	.	1	67
+	+	9	314
+	+	1	67
+
+> ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
+	"	40	486
+	^	40	487
+	.	40	486
+	+	54	104
+	+	53	153
+	+	52	0
+	+	42	181
+	+	43	140
+	+	39	0
+	+	40	486
+	t	39	0
+
+> ~/Documents/notes/blei_ng_jordan_lda_2003.md
+	"	17	16
+	^	21	17
+	.	21	16
+	+	8	0
+	+	17	17
+	+	18	24
+	+	20	14
+	+	19	66
+	+	20	15
+	+	19	22
+	+	20	15
+	+	21	16
+
+> ~/.vim/snippets/pandoc.snippets
+	"	4	42
+	^	4	43
+	.	4	42
+	+	21	11
+	+	22	29
+	+	24	0
+	+	28	21
+	+	4	42
+
+> ~/Documents/notes/lash_critique_of_information.md
+	"	30	0
+
+> ~/Documents/notes/lash_power_hegemony_cult_stud_2007.md
+	"	1	618
+	^	1	671
+	.	1	618
+	+	1	670
+	+	1	92
+	+	2	0
+	+	1	618
+
+> ~/Documents/notes/[Vundle] Installer
+	"	19	0
+	.	1	0
+	+	1	0
+
+> /tmp/vwAAzZ0/71
+	"	29	2
+
+> ~/Documents/data_intensive/book/ch4_probability/topics.R
+	"	6	19
+	^	6	20
+	.	6	19
+	+	6	19
+
+> ~/Documents/data_intensive/book/ch4_probability/NERD_tree_1
+	"	10	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/book/ml_lit/ml_lit_anal.py
+	"	21	0
+
+> ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+	"	13	3
+	^	13	4
+	.	13	4
+	+	1	0
+	+	1	0
+	+	3	0
+	+	14	0
+	+	1	0
+	+	15	0
+	+	5	0
+	+	4	0
+	+	15	0
+	+	5	0
+	+	15	0
+	+	6	0
+	+	15	0
+	+	7	0
+	+	15	0
+	+	16	0
+	+	20	0
+	+	21	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	8	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	27	0
+	+	35	0
+	+	33	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	0
+	+	40	0
+	+	41	0
+	+	14	0
+	+	21	0
+	+	17	0
+	+	14	0
+	+	10	30
+	+	32	0
+	+	14	41
+	+	15	0
+	+	13	4
+
+> /usr/share/vim/vim74/doc/options.txt
+	"	5581	0
+
+> ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+	"	1	0
+	^	36	62
+	.	36	61
+	+	59	55
+	+	75	46
+	+	218	0
+	+	218	0
+	+	217	0
+	+	239	0
+	+	209	468
+	+	211	0
+	+	211	688
+	+	211	509
+	+	211	1010
+	+	211	374
+	+	211	1129
+	+	207	855
+	+	211	2013
+	+	211	1012
+	+	214	0
+	+	217	75
+	+	215	1757
+	+	215	1007
+	+	211	1016
+	+	213	7
+	+	213	761
+	+	213	8
+	+	215	26
+	+	218	0
+	+	217	0
+	+	215	1120
+	+	215	969
+	+	215	1336
+	+	215	1079
+	+	215	0
+	+	215	1237
+	+	217	104
+	+	217	0
+	+	215	0
+	+	197	41
+	+	21	34
+	+	23	51
+	+	42	0
+	+	80	0
+	+	76	0
+	+	80	0
+	+	76	0
+	+	76	2
+	+	188	401
+	+	188	660
+	+	190	238
+	+	261	0
+	+	242	0
+	+	233	32
+	+	217	51
+	+	197	0
+	+	215	0
+	+	215	1569
+	+	217	19
+	+	219	98
+	+	219	0
+	+	219	335
+	+	219	0
+	+	219	613
+	+	227	447
+	+	229	2026
+	+	229	0
+	+	229	2561
+	+	231	1113
+	+	231	1419
+	+	232	0
+	+	231	1533
+	+	231	1275
+	+	231	1415
+	+	231	1648
+	+	227	1084
+	+	165	0
+	+	261	13
+	+	28	102
+	+	29	0
+	+	230	0
+	+	231	0
+	+	231	1112
+	+	231	1113
+	+	232	0
+	+	231	1766
+	+	231	0
+	+	231	1782
+	+	231	1236
+	+	231	1139
+	+	233	0
+	+	250	0
+	+	225	0
+	+	224	0
+	+	76	0
+	+	81	79
+	+	257	0
+	+	40	52
+	+	49	142
+	+	32	79
+	+	33	0
+	+	34	133
+	+	36	61
+	a	90	1
+	b	111	0
+	c	136	0
+	d	167	0
+	e	175	0
+	f	197	0
+	g	217	0
+	o	13	0
+	q	61	15
+	t	35	0
+
+> ~/Documents/document-archive/R_ref_docs/topic_models_social_science_2009.pdf
+	"	1	0
+
+> /etc/apt/sources.list
+	"	139	0
+	^	139	73
+	.	139	0
+	+	139	0
+	+	138	0
+	+	139	0
+
+> ~/.matplotlibrc
+	"	1	12
+	^	1	13
+	.	1	12
+	+	1	12
+
+> ~/Documents/notes/benjamin_work_of_art.md
+	"	98	0
+	^	59	3
+	.	59	2
+	+	91	247
+	+	91	702
+	+	91	1006
+	+	91	1247
+	+	91	1404
+	+	93	0
+	+	93	200
+	+	93	464
+	+	93	694
+	+	93	925
+	+	93	1155
+	+	94	1
+	+	96	208
+	+	96	353
+	+	96	535
+	+	96	743
+	+	96	1005
+	+	96	1105
+	+	96	1220
+	+	96	1380
+	+	96	1483
+	+	96	1612
+	+	96	1812
+	+	96	1987
+	+	98	424
+	+	98	506
+	+	98	780
+	+	98	963
+	+	98	1198
+	+	98	1893
+	+	99	3
+	+	101	116
+	+	101	727
+	+	103	83
+	+	103	298
+	+	103	427
+	+	103	715
+	+	103	907
+	+	103	1217
+	+	103	1384
+	+	105	313
+	+	105	396
+	+	105	980
+	+	105	1244
+	+	105	1382
+	+	106	2
+	+	108	147
+	+	108	356
+	+	108	517
+	+	108	698
+	+	108	974
+	+	108	1126
+	+	110	0
+	+	110	111
+	+	110	257
+	+	110	476
+	+	110	674
+	+	112	561
+	+	112	794
+	+	112	913
+	+	112	1172
+	+	112	1384
+	+	112	1628
+	+	114	50
+	+	114	169
+	+	114	358
+	+	114	525
+	+	114	748
+	+	114	997
+	+	115	8
+	+	117	120
+	+	117	498
+	+	117	672
+	+	117	780
+	+	119	69
+	+	119	407
+	+	119	567
+	+	121	3
+	+	121	293
+	+	121	377
+	+	121	828
+	+	121	976
+	+	123	166
+	+	123	390
+	+	123	513
+	+	123	1246
+	+	125	73
+	+	125	357
+	+	125	603
+	+	127	1
+	+	129	17
+	+	130	80
+	+	132	27
+	+	133	34
+	+	47	2
+	+	46	0
+	+	53	2
+	+	52	0
+	+	58	0
+	+	59	2
+
+> ~/Documents/reviews/nichols_panel_oct2014/general_comments.odt
+	"	132	0
+
+> ~/Documents/data_intensive/digitalmethods_exeter_dec2014/mackenzie_abstract.md
+	"	10	490
+	^	10	491
+	.	10	400
+	+	10	400
+
+> ~/Documents/google_analytics/publications/infrastructures_handbook/cfp.tex
+	"	1	0
+	^	7	28
+	.	7	28
+	+	7	28
+
+> ~/mackenzie_abstract.md
+	"	5	608
+	^	5	615
+	.	6	0
+	+	1	45
+	+	5	1431
+	+	5	0
+	+	5	1332
+	+	5	1531
+	+	1	14
+	+	5	1246
+	+	5	1970
+	+	5	553
+	+	5	1123
+	+	5	61
+	+	5	1339
+	+	5	2320
+	+	1	76
+	+	3	0
+	+	5	1027
+	+	3	67
+	+	5	496
+	+	5	0
+	+	5	614
+	+	6	0
+
+> ~/pandoc output
+	"	3	0
+	.	3	0
+	+	5	0
+	+	3	0
+
+> ~/NERD_tree_1
+	"	3	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> /usr/share/vim/vim74/doc/spell.txt
+	"	62	0
 
 > ~/Documents/data_intensive/book/preface.md
 	"	4	44
@@ -623,122 +1234,6 @@ $
 	.	4	44
 	+	4	153
 	+	4	44
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	348	0
-	^	348	0
-	.	347	0
-	+	329	0
-	+	327	0
-	+	326	0
-	+	330	117
-	+	330	0
-	+	330	198
-	+	330	0
-	+	330	252
-	+	330	0
-	+	330	457
-	+	345	91
-	+	326	231
-	+	330	770
-	+	349	0
-	+	330	874
-	+	330	914
-	+	330	610
-	+	332	48
-	+	336	114
-	+	336	0
-	+	336	121
-	+	336	452
-	+	332	48
-	+	332	188
-	+	336	157
-	+	332	189
-	+	332	546
-	+	332	189
-	+	332	433
-	+	336	0
-	+	330	0
-	+	330	562
-	+	331	0
-	+	332	47
-	+	333	0
-	+	332	132
-	+	336	1310
-	+	336	96
-	+	336	244
-	+	336	569
-	+	336	685
-	+	336	1241
-	+	338	264
-	+	338	0
-	+	338	276
-	+	338	183
-	+	338	478
-	+	338	392
-	+	338	853
-	+	338	860
-	+	338	1578
-	+	338	1800
-	+	340	117
-	+	340	118
-	+	341	0
-	+	340	272
-	+	340	280
-	+	340	734
-	+	338	860
-	+	338	1118
-	+	338	1146
-	+	338	1146
-	+	338	1136
-	+	338	860
-	+	338	854
-	+	338	1289
-	+	336	1244
-	+	338	5
-	+	338	859
-	+	338	1127
-	+	338	1146
-	+	338	1320
-	+	338	1146
-	+	340	117
-	+	340	280
-	+	338	862
-	+	338	1127
-	+	338	863
-	+	338	1109
-	+	338	1131
-	+	338	1154
-	+	338	1320
-	+	338	1154
-	+	338	1297
-	+	338	1324
-	+	340	117
-	+	338	1676
-	+	340	0
-	+	340	0
-	+	339	0
-	+	340	127
-	+	340	280
-	+	340	128
-	+	340	261
-	+	340	283
-	+	341	0
-	+	340	0
-	+	362	0
-	+	348	668
-	+	347	0
-	a	88	0
-	b	105	0
-	c	253	0
-	d	276	0
-	e	294	0
-	f	310	0
-	g	328	0
-	o	8	0
-	p	32	0
-	q	55	0
-	t	31	0
 
 > ~/Documents/notes/parisi_2013.md
 	"	15	0
@@ -799,121 +1294,6 @@ $
 > ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 	"	74	0
 	t	75	0
-
-> ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-	"	1	0
-	^	34	134
-	.	34	133
-	+	78	856
-	+	58	55
-	+	74	46
-	+	217	0
-	+	217	0
-	+	216	0
-	+	238	0
-	+	208	468
-	+	210	0
-	+	210	688
-	+	210	509
-	+	210	1010
-	+	210	374
-	+	210	1129
-	+	206	855
-	+	210	2013
-	+	210	1012
-	+	213	0
-	+	216	75
-	+	214	1757
-	+	214	1007
-	+	210	1016
-	+	212	7
-	+	212	761
-	+	212	8
-	+	214	26
-	+	217	0
-	+	216	0
-	+	214	1120
-	+	214	969
-	+	214	1336
-	+	214	1079
-	+	214	0
-	+	214	1237
-	+	216	104
-	+	216	0
-	+	214	0
-	+	196	41
-	+	21	34
-	+	23	51
-	+	41	0
-	+	79	0
-	+	75	0
-	+	79	0
-	+	75	0
-	+	75	2
-	+	187	401
-	+	187	660
-	+	189	238
-	+	260	0
-	+	241	0
-	+	232	32
-	+	216	51
-	+	196	0
-	+	214	0
-	+	214	1569
-	+	216	19
-	+	218	98
-	+	218	0
-	+	218	335
-	+	218	0
-	+	218	613
-	+	226	447
-	+	228	2026
-	+	228	0
-	+	228	2561
-	+	230	1113
-	+	230	1419
-	+	231	0
-	+	230	1533
-	+	230	1275
-	+	230	1415
-	+	230	1648
-	+	226	1084
-	+	164	0
-	+	260	13
-	+	28	102
-	+	29	0
-	+	229	0
-	+	230	0
-	+	230	1112
-	+	230	1113
-	+	231	0
-	+	230	1766
-	+	230	0
-	+	230	1782
-	+	230	1236
-	+	230	1139
-	+	232	0
-	+	249	0
-	+	224	0
-	+	223	0
-	+	75	0
-	+	80	79
-	+	256	0
-	+	39	52
-	+	48	142
-	+	32	79
-	+	33	0
-	+	34	133
-	a	89	1
-	b	110	0
-	c	135	0
-	d	166	0
-	e	174	0
-	f	196	0
-	g	216	0
-	o	13	0
-	q	60	15
-	t	35	0
 
 > ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
 	"	1	0
@@ -1105,17 +1485,6 @@ $
 	+	5	369
 	+	5	465
 	+	6	0
-
-> ~/Documents/data_intensive/book/ch1_learning/ch1_notes.rmd
-	"	42	140
-	^	42	141
-	.	42	140
-	+	53	104
-	+	52	153
-	+	51	0
-	+	41	181
-	+	42	140
-	t	39	0
 
 > ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
 	"	30	0
@@ -1634,75 +2003,3 @@ $
 	+	74	290
 	+	75	0
 	+	74	338
-
-> ~/Documents/notes/howard.md
-	"	1	0
-
-> ~/Documents/notes/kaufman & rousseeuw_1990.md
-	"	1	0
-
-> ~/Documents/notes/knuth_vol1.md
-	"	1	0
-
-> ~/Documents/notes/lash_critique_of_information.md
-	"	1	0
-
-> ~/Documents/notes/latour_parts_wholes_2012.md
-	"	1	0
-
-> ~/Documents/notes/lee_lipuma.md
-	"	1	0
-
-> ~/Documents/notes/leroy_hood.md
-	"	1	0
-
-> ~/Documents/notes/malley_statistical_learning_2011.md
-	"	1	0
-
-> ~/Documents/notes/manovich.md
-	"	1	0
-
-> ~/Documents/notes/manovich_digital_cinema_1999.md
-	"	1	0
-
-> ~/Documents/notes/manovich_language.md
-	"	1	0
-
-> ~/Documents/notes/marks_touch_2002.md
-	"	1	0
-
-> ~/Documents/notes/marres_weltverede_2012.md
-	"	1	0
-
-> ~/Documents/notes/mitchell_machine_learning_1997.md
-	"	1	0
-
-> ~/Documents/notes/ross_no_collar_2004.md
-	"	1	0
-
-> ~/Documents/notes/schutt_oneill_datascience_2013.md
-	"	1	0
-
-> ~/Documents/notes/sorting_things_out.md
-	"	1	0
-
-> ~/Documents/notes/stelarc_alternate_interfaces.md
-	"	1	0
-
-> ~/Documents/notes/tanenbaum.md
-	"	1	0
-
-> ~/Documents/notes/thacker_global_genome_2005.md
-	"	1	0
-
-> ~/Documents/notes/ullman_97.md
-	"	1	0
-
-> ~/Documents/notes/vandijk_network_society_2005.md
-	"	1	0
-
-> ~/Documents/notes/vapnik_nature_of_statistical_learning_theory_2000.md
-	"	1	0
-
-> ~/Documents/notes/whitehead_leclerc_.md
-	"	1	0
