@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/topic
+~MSle0~/lda
 
 # Last Substitute Search Pattern:
 ~MSle0&# <codecell>
@@ -17,9 +17,18 @@
 $
 
 # Command Line History (newest to oldest):
+:q
+:w
+:Gcommit
+:Gwrite
+:buffers
+:.,.+1:
+:e ~/book/ml_lit/topicmodel_lit_analysis.py
+:map
+:wq
+:set fdc=0
 :qa
 :waq
-:w
 :e ~/notes/blei_ng_jordan_lda_2003.md
 :b2
 :ls
@@ -29,9 +38,7 @@ $
 :bp4
 :bp
 :e ~/book/part1.rmd
-:q
 :e ~/book/part2.rmd
-:wq
 :bn
 :e ~/.vim/snippets/pandoc.snippets
 :
@@ -60,7 +67,6 @@ $
 :q!
 :.,.+1!pandoc -t markdown --reference-links --no-wrap
 :SoftPencil
-:map
 :Pandoc! docx
 :Pandoc! doc
 :Pandoc! rtf
@@ -69,7 +75,6 @@ $
 :w ~/Documents/google_analytics/publications/infrastructures_handbook/mackenzie_abstract.md
 :browse old
 :marks
-:set fdc=0
 :set spell
 :h spell
 :spellgood
@@ -343,6 +348,7 @@ $
 :colorschemeshine
 
 # Search String History (newest to oldest):
+?/lda
 ? \Vtm\%#
 ? \Vnb\%#
 ? \Vem\%#
@@ -482,75 +488,26 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	\begin {equation}
-	\label {eq: topic_model}
-	p(\theta, \mathbf{z, w} | \alpha, \beta) = p(\theta | \alpha) \prod p(z_n | \theta)p(w_n | z_n , \beta),
-	\end {equation}
-	[@Blei_2003, 996]
-""1	LINE	0
-	 
+"0	CHAR	0
+	max(model[corpus[document_to_display]],key=itemgetter(1))[0]
+"1	LINE	0
+	import wxversion
 "2	LINE	0
-	- the article on the obama case
+	    max_topic = model.show_topic(max(model[corpus[document_to_display]],key=itemgetter(1)))
 "3	LINE	0
-	jj
-"4	CHAR	0
-	
-	
-	672
-<Everywhere, numbers are increasingly in variation, and display increasingly distributional characteristics.  While some events have discrete outcomes (Obama was re-elected in 2012), many happenings are not. In Lancaster here in north-west England, the probability of rain on a given day would be say 70%, but days have very different amounts of rain.  Some days, it rains once briefly and lightly. Other days it rains frequently and heavily. A gamut of rain events can occur, and each would distribute different amounts of water on Lancaster. Given the amount of variation,  a much better way to face the weather is to say that Lancaster's rain is a *random variable*: 
-	
-	```{r  distributions2, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Distributions'} 
-	
-		#*source('mcmc_examples.R')*/
-		#*generate_distributions()*/
-	```
-	
+	    print 'lda topic: '+ ' '.join(terms
+"4	LINE	0
+	    #terms = [t[1] for t in max_topic]
 "5	LINE	0
-	- add Lash 2007 on generative stuff, and perhaps media ontology more generally
+	    terms = []
 "6	LINE	0
-	
+	    print 'lda topic: '+ ' '.join(terms.append(t) for t in )[0])])
 "7	LINE	0
-	# $N = all$: machine learning and the probabilistic event
+	
 "8	LINE	0
-	stoplist = stopwords.words('english')
+	        model
 "9	LINE	0
-	for i in range(0, n_topics):
-	     temp = lda.show_topic(i, 10)
-	     terms = []
-	     for term in temp:
-	         terms.append(term[1])
-	         print "Top 10 terms for topic #" + str(i) + ": "+ ", ".join(terms)
-	         
-	
-	
-	
-	print 
-	
-	
-	
-	print 'Which LDA topic maximally describes a document?\n'
-	
-	
-	
-	print 'Original document: ' + documents[1]
-	
-	
-	
-	print 'Preprocessed document: ' + str(texts[1])
-	
-	
-	
-	print 'Matrix Market format: ' + str(corpus[1])
-	
-	
-	
-	print 'Topic probability mixture: ' + str(lda[corpus[1]])
-	
-	
-	
-	print 'Maximally probable topic: topic #' + str(max(lda[corpus[1]],key=itemgetter(1))[0])
-	
+	            
 "j	CHAR	0
 	kkk  lkkkokkkk12 +kkkkkkkkkkki12 + 34 kkkkkkkkkk
 "p	CHAR	0
@@ -563,8 +520,8 @@ $
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 "z	CHAR	0
 	Zq
-"-	CHAR	0
-	âˆ
+""-	CHAR	0
+	_tfidf
 
 # global variables:
 
@@ -595,18 +552,45 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  85  268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'1  4  42  ~/.vim/snippets/pandoc.snippets
-'2  1  618  ~/Documents/notes/lash_power_hegemony_cult_stud_2007.md
-'3  6  19  ~/Documents/data_intensive/book/ch4_probability/topics.R
-'4  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'5  36  61  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'6  142  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'7  103  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'8  98  0  ~/Documents/notes/benjamin_work_of_art.md
-'9  10  490  ~/Documents/data_intensive/digitalmethods_exeter_dec2014/mackenzie_abstract.md
+'0  67  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'1  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'2  26  36  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+'3  4  21  ~/test.md
+'4  24  665  ~/Documents/notes/blei_ng_jordan_lda_2003.md
+'5  85  268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'6  4  42  ~/.vim/snippets/pandoc.snippets
+'7  1  618  ~/Documents/notes/lash_power_hegemony_cult_stud_2007.md
+'8  6  19  ~/Documents/data_intensive/book/ch4_probability/topics.R
+'9  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # Jumplist (newest first):
+-'  67  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  26  36  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  49  51  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  50  61  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  51  3  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  40  20  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  39  56  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  38  46  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  28  16  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  41  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  52  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  24  4  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  11  25  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  27  31  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  33  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  34  4  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  36  58  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  35  4  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  9  8  ~/Documents/data_intensive/book/ch4_probability/topics.R
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/topics.R
+-'  4  21  ~/test.md
+-'  1  0  ~/test.md
+-'  24  665  ~/Documents/notes/blei_ng_jordan_lda_2003.md
+-'  23  289  ~/Documents/notes/blei_ng_jordan_lda_2003.md
+-'  3  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
+-'  1  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
 -'  85  268  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  354  1186  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  109  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -664,11 +648,25 @@ $
 -'  33  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  93  368  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  618  ~/Documents/notes/lash_power_hegemony_cult_stud_2007.md
+-'  26  36  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  49  51  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  50  61  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  51  3  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  40  20  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  39  56  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  38  46  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  28  16  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  41  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  52  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  24  4  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  11  25  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  27  31  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  33  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
 
 # History of marks within files (newest to oldest):
 
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	85	268
+	"	67	0
 	^	354	1187
 	.	45	0
 	+	340	1320
@@ -785,6 +783,206 @@ $
 	t	31	0
 	z	375	0
 
+> ~/Documents/data_intensive/book/ch4_probability/topics.R
+	"	9	8
+	^	9	9
+	.	9	8
+	+	6	19
+	+	1	0
+	+	8	39
+	+	9	8
+
+> ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+	"	26	36
+	^	51	10
+	.	26	0
+	+	17	0
+	+	4	0
+	+	17	0
+	+	5	0
+	+	17	0
+	+	6	0
+	+	17	0
+	+	19	0
+	+	22	0
+	+	23	0
+	+	24	0
+	+	24	0
+	+	24	0
+	+	7	0
+	+	25	0
+	+	26	0
+	+	26	0
+	+	27	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	0
+	+	59	0
+	+	16	0
+	+	23	0
+	+	19	0
+	+	16	0
+	+	9	30
+	+	32	0
+	+	16	41
+	+	17	0
+	+	16	0
+	+	21	77
+	+	16	25
+	+	11	21
+	+	16	29
+	+	11	13
+	+	26	20
+	+	11	39
+	+	26	0
+	+	11	92
+	+	35	62
+	+	36	67
+	+	37	67
+	+	38	76
+	+	39	86
+	+	20	62
+	+	22	0
+	+	19	4
+	+	17	40
+	+	18	23
+	+	19	0
+	+	15	6
+	+	14	25
+	+	17	21
+	+	33	0
+	+	33	0
+	+	40	54
+	+	59	12
+	+	42	38
+	+	59	0
+	+	43	0
+	+	42	63
+	+	40	76
+	+	42	53
+	+	49	60
+	+	48	50
+	+	26	95
+	+	58	73
+	+	53	44
+	+	42	25
+	+	58	25
+	+	24	0
+	+	51	49
+	+	51	139
+	+	51	13
+	+	51	138
+	+	51	15
+	+	51	32
+	+	51	60
+	+	51	91
+	+	51	29
+	+	51	39
+	+	51	17
+	+	51	0
+	+	51	0
+	+	51	0
+	+	51	30
+	+	51	0
+	+	50	0
+	+	51	0
+	+	50	15
+	+	51	10
+	+	37	0
+	+	2	0
+	+	26	0
+
+> ~/Documents/data_intensive/book/.git/index
+	"	1	0
+
+> ~/Documents/supervision/nina_ellis/ch4_ghosts_oct2014.md
+	"	6	411
+	^	6	411
+	.	6	0
+	+	6	1
+	+	3	1
+	+	4	195
+	+	4	0
+	+	5	279
+	+	6	412
+	+	6	0
+	+	6	0
+
+> ~/test.md
+	"	4	21
+	^	4	22
+	.	4	21
+	+	1	0
+	+	121	0
+	+	122	12
+	+	117	0
+	+	118	38
+	+	120	46
+	+	109	12
+	+	6	0
+	+	6	1
+	+	6	1
+	+	6	835
+	+	6	0
+	+	6	0
+	+	30	0
+	+	27	0
+	+	28	0
+	+	26	502
+	+	26	0
+	+	47	46
+	+	70	33
+	+	72	26
+	+	75	27
+	+	109	0
+	+	109	33
+	+	109	0
+	+	109	0
+	+	109	37
+	+	109	0
+	+	100	95
+	+	100	0
+	+	3	35
+	+	4	21
+	a	1	0
+	c	10	0
+
+> ~/Documents/notes/blei_ng_jordan_lda_2003.md
+	"	24	665
+	^	23	0
+	.	25	0
+	+	8	0
+	+	17	17
+	+	18	24
+	+	20	14
+	+	19	66
+	+	20	15
+	+	19	22
+	+	20	15
+	+	21	16
+	+	24	665
+	+	23	84
+	+	23	290
+	+	23	196
+	+	23	282
+	+	23	206
+	+	22	0
+	+	23	0
+	+	23	195
+	+	23	308
+	+	24	0
+	+	24	186
+	+	24	284
+	+	24	383
+	+	24	482
+	+	24	584
+	+	25	0
+
 > ~/Documents/data_intensive/book/part2.rmd
 	"	10	0
 	^	10	1185
@@ -825,20 +1023,6 @@ $
 	+	40	486
 	t	39	0
 
-> ~/Documents/notes/blei_ng_jordan_lda_2003.md
-	"	17	16
-	^	21	17
-	.	21	16
-	+	8	0
-	+	17	17
-	+	18	24
-	+	20	14
-	+	19	66
-	+	20	15
-	+	19	22
-	+	20	15
-	+	21	16
-
 > ~/.vim/snippets/pandoc.snippets
 	"	4	42
 	^	4	43
@@ -869,12 +1053,6 @@ $
 > /tmp/vwAAzZ0/71
 	"	29	2
 
-> ~/Documents/data_intensive/book/ch4_probability/topics.R
-	"	6	19
-	^	6	20
-	.	6	19
-	+	6	19
-
 > ~/Documents/data_intensive/book/ch4_probability/NERD_tree_1
 	"	10	0
 	.	1	0
@@ -882,55 +1060,6 @@ $
 
 > ~/Documents/data_intensive/book/ml_lit/ml_lit_anal.py
 	"	21	0
-
-> ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
-	"	13	3
-	^	13	4
-	.	13	4
-	+	1	0
-	+	1	0
-	+	3	0
-	+	14	0
-	+	1	0
-	+	15	0
-	+	5	0
-	+	4	0
-	+	15	0
-	+	5	0
-	+	15	0
-	+	6	0
-	+	15	0
-	+	7	0
-	+	15	0
-	+	16	0
-	+	20	0
-	+	21	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	8	0
-	+	24	0
-	+	25	0
-	+	26	0
-	+	27	0
-	+	35	0
-	+	33	0
-	+	35	0
-	+	36	0
-	+	37	0
-	+	38	0
-	+	39	0
-	+	40	0
-	+	41	0
-	+	14	0
-	+	21	0
-	+	17	0
-	+	14	0
-	+	10	30
-	+	32	0
-	+	14	41
-	+	15	0
-	+	13	4
 
 > /usr/share/vim/vim74/doc/options.txt
 	"	5581	0
@@ -1826,44 +1955,6 @@ $
 	.	3	0
 	+	3	0
 
-> ~/test.md
-	"	225	0
-	^	3	36
-	.	3	35
-	+	1	0
-	+	120	0
-	+	121	12
-	+	116	0
-	+	117	38
-	+	119	46
-	+	108	12
-	+	5	0
-	+	5	1
-	+	5	1
-	+	5	835
-	+	5	0
-	+	5	0
-	+	29	0
-	+	26	0
-	+	27	0
-	+	25	502
-	+	25	0
-	+	46	46
-	+	69	33
-	+	71	26
-	+	74	27
-	+	108	0
-	+	108	33
-	+	108	0
-	+	108	0
-	+	108	37
-	+	108	0
-	+	99	95
-	+	99	0
-	+	3	35
-	a	1	0
-	c	9	0
-
 > ~/Documents/notes/lehningner_principles_biochemistry_2008.md
 	"	2	0
 
@@ -1987,19 +2078,3 @@ $
 
 > ~/Documents/notes/fuller_blip_2003.md
 	"	1	0
-
-> ~/Documents/notes/galloway_cybernetic_dh_2014.md
-	"	3	0
-
-> ~/Documents/notes/hastie_2008.md
-	"	62	3
-	^	74	339
-	.	74	338
-	+	71	36
-	+	73	106
-	+	73	68
-	+	75	0
-	+	73	68
-	+	74	290
-	+	75	0
-	+	74	338
