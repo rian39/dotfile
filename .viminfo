@@ -19,8 +19,13 @@ $
 # Command Line History (newest to oldest):
 :q
 :w
-:e ch1_praxis.rmd
+:Gstatus
+:Gstatus -s
+:h Gcommit
+:e ~/book/dataset_list.md
+:e ~/book/ch8_conclusion/ch8_conclusion.rmd
 :sp
+:e ch1_praxis.rmd
 :e ~/book/ch1_learning/ch1_notes.rmd
 :marks
 :e ~/book
@@ -41,17 +46,20 @@ $
 :bp
 
 # Search String History (newest to oldest):
+? \Vnb\%#
+? \Vrf\%#
+? \Vlr\%#
+? \Vsvm\%#
+? \Vnn\%#
+? \Vml\%#
+? \Vlogr\%#
+? \Vem\%#
+? \Vtm\%#
 ?/HERE
 ?/MCMC
-? \Vml\%#
 ? \Vlda\%#
-? \Vtm\%#
 ?/latent
-? \Vnb\%#
-? \Vem\%#
 ?/topic
-? \Vnn\%#
-? \Vlogr\%#
 ? \Vdt\%#
 ?/_Ele
 ? \Veml\%#
@@ -80,78 +88,26 @@ $
 
 # Registers:
 "0	LINE	0
-	# ch1_notes.rmd
-	
-	How to write about data and models
-	Making models of data
-	Associating with data: a praxiography of machine learning
-	
-	## from proposal
-	
-	1352
-<This chapter is primary a methodological discussion that addresses several different problems in working with machine learning. These problems range from quite philosophical issues through to quite practical ones. At the philosophical end, it draws on various pieces of recent and not-so-recent theoretical work (for instance, the anthropologist Paul Rabinow's work on the concept of 'equipment' [@rabinow_anthropos_2003]; the philosopher A.N. Whitehead on the spatial dimensionality of thought [@whitehead_modes_1958]; the philosopher Anne-Marie Mols' work praxiography -- writing about practices [@mol_body_2003])  to discuss how we might think about working on highly technical or scientific areas such as machine learning in ways that allow consideration of their more general situation.  It also draws on some cultural and psychoanalytic accounts of architecture and objects [@bollas_evocative_2009; @wilson_affect_2010] to suggest how the researcher him or herself relate to objects of research.  Finally in this vein, the chapter poses the methodological problem of working with large bodies of scientific and technical literature, and illustrates this by describing the growth of machine learning techniques in science and engineering research since the early 1960s, focusing on the growth of key techniques and algorithms [@kelty_ten_2009].
-	
-	762
-<With these questions about thinking, techniques, subjectivity and literature on the table, the chapter then presents a series of vignettes that display some of the ways in which research and writing critical accounts of data cultures and data economies can make use of the tools, techniques, instruments and services of 'data science' to generate textual, diagrammatic and modelised accounts of contemporary culture.  A standard teaching example -- house-price prediction -- links these vignettes, but the real focus here is on two foundational issues: how machine learning treats data as a dimensional material that it seeks to reshape or recase  in different dimensions ('models'); how implementing machine learning techniques shifts our relation to them.  
-	
-	1204
-<Woven throughout this discussion of a praxiography of data, [TBC] Via a discussion of the development of `R`, the chapter analyses the  transverse, cross-disciplinary implementation of machine learning techniques in recent decades. It describes some of the transformations in software, network and scientific cultures that underpin the recent growth in data techniques and methods. These range across transformations in statistical science associated with greater computational capacity; the mutations in network,  database and digital device architectures and infrastructures that yield much greater abundance of data in various forms; and the intermeshing of knowledge economies with the media, communication, transaction, transport and logistics systems. It will trace how the lateral associations and multivalencies of data have developed through key software artefacts such as the widely used `R` programming language, and in generic programming languages such as Python. Coming from  the author's own history of working with machine learning or online accounts of machine learning,  well as the ecology of thousands of software packages  associated with the statistical programming language `R`.
-	
-	
-	## Overview
-	
-	- reconstruction vs problematization -- Rabinow -- on equipment
-	- data: its giveness, abstraction and actuality
-	    - observant participation -- developing Wacquant; participating by observing
-	    - writing recursively -- developing Kelty w.r.t subjects
-	    - James on feeling of transition - and practicing radical empiricism - -see Massumi
-	- Implementing machine learning
-	    - the case of `R` -- the scientific
-	    - the case of Python -- the business/industry
-	    - the case of javascript -- popular culture
-	- convergence and learning: for fitting a line; but then for choosing which features to use to learn
-	- learning about learning --
-	    - the Literature - landecker and kelty on treating literature as the informant; examples such as Cover-Hart, Breiman, etc
-	- things to include:
-	    - my `R` books, libraries, papers, competitions, blogs, talking, courses
-	    - `knitr`/`ipython` notebooks - executable - some examples from python notebooks
-	    - the notion of repl -- read-evaluate-print-loop
-	    - Add in Animation and Automation – The Liveliness and Labours of Bodies and Machines Body & Society March 2012 18: 1-46, 
-	    - machine learning textbooks -- hastie, williams, manning, see document archive
-	    - the github version of the book
-	    -
-	
-	## Todo
-	319
-<- Michie, Spiegelhalter 1994 book has report on the Statlog project -- it tried to bring all method together; good that it mixes stats and computer scientists; managed by Daimler-Benz; shows that the problem of diversity of techniques has been discussed before; look at how they tried to bring  the methods together;
-	490
-<- the habit of recursive application of code to itself, or to something close by, without ever going too far -- I'll do that too -- use the algorithms to investigate the literature, to classify the examples, to see how things move; but I don't want to place too much weight on this recursion, as it is something that needs to be analsyed. See the recent Totaro article -- not recursion as an intrinsic formal property, but as a practice in certain domains that allows a form of movement.
-	- comment on the typography of the maths -- the use of bold, italics, of German capitals, greek letters, upper and lower case, brackets, 
-	
-	- add Foucault on the appearance of deep order in life/language/labour -- this is a really important thread to draw through - in this case through the reconstruction of the _table_. 
-	- add quotes from Foucault on the table of space of order, and ask how he thought about quantity, etc; and what is happening to tables today.
-	- done Bogost on carpentering, and the problems of writing -- I have a take on that ... 'source code itself often offers inroads in alien phenomenology -- particular when carpentered to reveal the internal experience of withdrawn units 105'
-	- Landecker & Kelty on the literature as informant;  -- very important to do more on this
-	- Cathy O'Neill writing about why big data is over -- doing one course is not enough ... 
-	- done? On the aridness of the textbooks and literature and what to do about that. 
-	- done - Domingos on feature engineering and why it is important -- article in ACM
+	[^12]: For an account of how Latent Semantic Indexing, and the transformation of documents into matrices itself mutates as it moves across disciplines, see [@Mackenzie_2013]
 ""1	LINE	0
-	[HERE]
+	[^12]: For an account of how Latent Semantic Indexing, and the transformation of documents into matrices itself mutates as it moves across disciplines, see [@Mackenzie_2013]
 "2	LINE	0
-	
+	[HERE]
 "3	LINE	0
+	
+"4	LINE	0
 	
 	stuff from parisi
 	
 	
-"4	LINE	0
+"5	LINE	0
 	745
 <> Instead, I take Chaitin’s computational proof of Omega or infinite probabilities, which are at once computably enumerable and algorithmically random, to explain that the automation of data implies an irreversible encounter with incomputable probabilities.  This is to say that the automated operations of prehension, and the mechanical procedures of computers, have their own blind spots, anomalies, and alien logic of calculation, which far from being computational failures are instead to be taken as symptoms of algorithmic thought. This is the point at which the sequential order of algorithms gives way to the conceptual prehension of computational infinities, when algorithms process data beyond what has already been programmed.192
-"5	LINE	0
-	## key points
 "6	LINE	0
+	## key points
+"7	LINE	0
 	
-"7	CHAR	0
+"8	CHAR	0
 	## Probability distributions
 	 
 	581
@@ -166,17 +122,13 @@ $
 <The diverse range of probability distributions — and we will see below some reasons why we can expect them to proliferate in certain settings — attests to the variety of ways in which events might be mapped to real numbers. Despite  the sometime forbidding mathematical equations, the term *distribution* emphasises a quite material or tangible way of thinking about how probabilities vary. The curves in both Figure 1 and Figure 2 are examples of the most common mathematical descriptions in any data analysis setting: they are  *probability density* functions (pdf). (There are also  *probability mass* functions for variables that have discrete values; for instance: 1,2,3,4,5). Pdfs such as the Gaussian function shown above are usually graphed as a curve that indicates how likely a random variable is to take on a particular value. In many cases, statistical practice seeks to estimate distribution functions such as pdfs (or their close relatives, cdfs — *cumulative distribution functions*) for the given data. Statisticians speak of 'fitting a density' to data, emphasising their assumption that events can be incorporated in the forms of probability distributions. The underlying probability distribution is in principle ‘unobservable’ as such, but a probability density function is  assumed to give rise to all the variations in data gathered through experiments and observations. The task is to estimate the shape of that curve, and its defining parameters (means, variance, etc.). Given that curve, areas under the pdf equate to the likely range of value of a variable. While the total 'probability mass' under the probability density function curve always must be equal to one (since the combined probability of all possible outcomes = 1), finding the area under particular parts of the curve is a key issue. Finding the area under probability density curves becomes the way in which many epistemic processes envisage lived states of affairs as random variables or as numbers in variation.
 	
 	
-"8	LINE	0
-	
 "9	LINE	0
-	- make sure to include the Parisi
+	
 "j	CHAR	0
 	kkk  lkkkokkkk12 +kkkkkkkkkkki12 + 34 kkkkkkkkkk
 "p	CHAR	0
 	6454
 <set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()    Plugin 'gmarik/Vundle.vim'    Plugin 'vim-pandoc/vim-pandoc'    Plugin 'vim-pandoc/vim-pandoc-syntax'    Plugin 'terryma/vim-multiple-cursors'    "Plugin 'reedes/vim-pencil'    Plugin 'scrooloose/nerdcommenter'    Plugin 'tpope/vim-fugitive'    Plugin 'scrooloose/nerdtree'    Plugin 'altercation/vim-colors-solarized'    Plugin 'nanotech/jellybeans.vim'    "Plugin 'bling/vim-airline'    Plugin 'itchyny/lightline.vim'    call vundle#end()            " requiredfiletype plugin indent on    " requiredexecute pathogen#infect()syntax enablesyntax onse t_Co=16let g:solarized_termcolors=256"set background=darkcolorscheme molokai"call togglebg#map("<F5>")set ruler  set tabstop=4set shiftwidth=4set expandtabset showcmdset hlsearchset incsearch"cursor show"set cursorline"set cursorcolumnset encoding=utf-8set foldmethod=markerset list listchars=tab:▷⋅,trail:⋅,nbsp:⋅set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]"save keysnoremap <silent> <C-S>          :update<CR>vnoremap <silent> <C-S>         <C-C>:update<CR>inoremap <silent> <C-S>         <C-O>:update<CR>"python editingau FileType py set autoindentau FileType py set smartindentau FileType py set textwidth=79 " PEP-8 Friendlyhi comment ctermfg=blue "set linenumbers:nnoremap <C-M><C-N> :set invnumber<CR>:map <Up> gk:map <Down> gj"pandoc plugin files"let g:pandoc#filetypes#handled = ['let g:pandoc#biblio#sources = "bcg"let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:pandoc_use_bibtool = 1set grepprg=grep\ -nH\ $*"bibtexlet g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:Tex_BibtexFlavor = 'bibtex'let g:pandoc#folding#fold_fenced_codeblocks=1set omnifunc=pandoc#completion#Complete"let g:Tex_Flavor='latex'"let g:Tex_DefaultTargetFormat='pdf'" <leader>k Knits to MDnnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>"Rmd and Rpres are pandoc"autocmd BufRead,BufNewFile *.rmd,*.Rpres setfiletype pandoc"autocmd BufNewFile,BufReadPost *.md set filetype=markdownau BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc"""" New signs for the pandoc bundlelet g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»', 'newline': '¬'}" Format paragraphs with <leader>qmap <leader>q {!}fmt -w 105<CR>}<CR>" Place markers with {type} for markdown filesaugroup markers   autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'augroup ENDnnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>"let g:pencil#wrapModeDefault = 'soft'"augroup pencil      "autocmd!    "autocmd FileType markdown,mkd call pencil#init()    "autocmd FileType textile call pencil#init()    "autocmd FileType text call pencil#init({'wrap': 'hard'})"augroup ENDfunction! WordCount()      let s:old_status = v:statusmsg        let position = getpos(".")        exe ":silent normal g\<c-g>"            let stat = v:statusmsg              let s:word_count = 0                if stat != '--No lines in buffer--'                        let s:word_count = str2nr(split(v:statusmsg)[11])                            let v:statusmsg = s:old_status                              end                                call setpos('.', position)                                  return s:word_count endfunction" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):filetype plugin onlet vimrplugin_assign = 0" Change the <LocalLeader> key:let maplocalleader = ","" Use Ctrl+Space to do omnicompletion:if has("gui_running")    inoremap <C-Space> <C-x><C-o>else    inoremap <Nul> <C-x><C-o>endif"" Press the space bar to send lines (in Normal mode) and selections to R:vmap <Space> <Plug>RDSendSelectionnmap <Space> <Plug>RDSendLine"** airline related**let g:airline#extensions#tabline#enabled = 1" Show just the filename let g:airline#extensions#tabline#fnamemod = ':t' if !exists('g:airline_symbols')       let g:airline_symbols = {}   endif " unicode symbolslet g:airline_left_sep = '»'let g:airline_left_sep = '▶'let g:airline_right_sep = '«'let g:airline_right_sep = '◀'let g:airline_symbols.linenr = '␊'let g:airline_symbols.linenr = '␤'let g:airline_symbols.linenr = '¶'let g:airline_symbols.branch = '⎇'let g:airline_symbols.paste = 'ρ'let g:airline_symbols.paste = 'Þ'let g:airline_symbols.paste = '∥'let g:airline_symbols.whitespace = 'Ξ'"lightline configlet g:lightline = {      \ 'colorscheme': 'wombat',      \ 'active': {      \   'left': [ [ 'mode', 'paste' ],      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]      \ },      \ 'component_function': {      \   'fugitive': 'MyFugitive',      \   'readonly': 'MyReadonly',      \   'modified': 'MyModified',      \      'count': 'WordCount'      \ },      \ 'separator': { 'left':  '▶', 'right':  '▶'},      \ 'subseparator': { 'left':  '»', 'right': '»' }      \ }function! MyModified()if &filetype == "help"return ""elseif &modifiedreturn "+"elseif &modifiablereturn ""elsereturn ""endifendfunctionfunction! MyReadonly()if &filetype == "help"return ""  elseif &readonly  return "⭤"else    return ""endifendfunctionfunction! MyFugitive()return exists('*fugitive#head') ? fugitive#head() : ''endfunctionfunction! MyFilename()return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .\ ('' != MyModified() ? ' ' . MyModified() : '')endfunction
-"q	CHAR	0
-	wwwwwwlx
 "u	CHAR	0
 	est�kb
 "w	CHAR	0
@@ -185,7 +137,7 @@ $
 "z	CHAR	0
 	Zq
 "-	CHAR	0
-	e
+	the 
 
 # global variables:
 
@@ -213,23 +165,44 @@ $
 'U  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'V  32  0  ~/.vimrc
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
-'X  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'X  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  363  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'1  1  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
-'2  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'3  383  330  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'4  349  314  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'5  4  44  ~/Documents/data_intensive/book/preface.md
-'6  359  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'7  16  116  ~/Documents/notes/badiou_number.md
-'8  343  516  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'9  14  0  ~/Documents/bigdata_society/reviews/facebook.md
+'0  21  1661  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+'1  1  0  ~/.vim/snippets/pandoc.snippets
+'2  363  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'3  1  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
+'4  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'5  396  330  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'6  349  314  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'7  4  44  ~/Documents/data_intensive/book/preface.md
+'8  359  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'9  16  116  ~/Documents/notes/badiou_number.md
 
 # Jumplist (newest first):
--'  363  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  21  1661  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  8  166  ~/Documents/data_intensive/book/dataset_list.md
+-'  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+-'  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
+-'  388  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  351  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  385  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  381  479  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  369  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  373  563  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  368  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  366  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  364  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  362  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  360  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  358  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  352  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  387  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/.vim/snippets/pandoc.snippets
+-'  363  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  305  65  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  307  75  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  309  134  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -249,8 +222,7 @@ $
 -'  33  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  285  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  55  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  383  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  351  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  396  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  262  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  114  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  78  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -260,13 +232,12 @@ $
 -'  261  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
--'  385  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  398  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  8  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  390  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  384  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  352  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  403  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  397  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  367  29  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  388  7  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  401  7  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  349  314  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  345  1123  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  341  1238  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -275,65 +246,33 @@ $
 -'  19  0  ~/Documents/data_intensive/book/[Vundle] Installer
 -'  4  44  ~/Documents/data_intensive/book/preface.md
 -'  1  0  ~/Documents/data_intensive/book/preface.md
--'  359  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  299  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  281  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  16  116  ~/Documents/notes/badiou_number.md
--'  12  224  ~/Documents/notes/badiou_number.md
--'  6  273  ~/Documents/notes/badiou_number.md
--'  4  134  ~/Documents/notes/badiou_number.md
--'  24  0  ~/Documents/notes/badiou_number.md
--'  18  43  ~/Documents/notes/parisi_2013.md
--'  343  511  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  335  562  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  337  48  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  338  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  340  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  116  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  83  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  356  86  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  331  231  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  14  0  ~/Documents/bigdata_society/reviews/facebook.md
--'  13  843  ~/Documents/bigdata_society/reviews/facebook.md
 
 # History of marks within files (newest to oldest):
 
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	363	82
-	^	301	240
-	.	362	0
-	+	383	127
-	+	383	640
-	+	383	127
-	+	383	787
-	+	383	17
-	+	383	1043
-	+	383	127
-	+	383	1188
-	+	383	1043
-	+	383	1143
-	+	383	321
-	+	383	1188
-	+	383	980
-	+	383	293
-	+	383	501
-	+	389	0
-	+	383	1242
-	+	383	172
-	+	383	0
-	+	384	0
-	+	383	0
-	+	383	0
-	+	383	1263
-	+	392	0
-	+	385	0
-	+	385	0
-	+	385	139
-	+	385	0
-	+	385	791
-	+	383	330
+	"	388	0
+	^	350	1
+	.	349	813
+	+	396	980
+	+	396	293
+	+	396	501
+	+	402	0
+	+	396	1242
+	+	396	172
+	+	396	0
+	+	397	0
+	+	396	0
+	+	396	0
+	+	396	1263
+	+	405	0
+	+	398	0
+	+	398	0
+	+	398	139
+	+	398	0
+	+	398	791
+	+	396	330
 	+	359	1461
-	+	378	172
+	+	392	172
 	+	364	0
 	+	359	1875
 	+	359	2172
@@ -350,10 +289,10 @@ $
 	+	369	774
 	+	369	0
 	+	369	869
-	+	375	110
-	+	374	0
+	+	389	110
+	+	387	0
 	+	369	999
-	+	384	0
+	+	397	0
 	+	96	0
 	+	95	0
 	+	92	373
@@ -402,6 +341,18 @@ $
 	+	305	65
 	+	301	239
 	+	362	0
+	+	369	742
+	+	373	0
+	+	373	1034
+	+	374	0
+	+	385	15
+	+	381	479
+	+	392	0
+	+	383	0
+	+	384	0
+	+	387	257
+	+	350	0
+	+	349	813
 	a	78	0
 	b	114	0
 	c	262	0
@@ -411,10 +362,46 @@ $
 	g	337	0
 	h	351	0
 	i	351	0
+	j	385	0
 	o	8	0
 	q	55	0
 	t	31	0
-	z	383	1
+	z	396	1
+
+> ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
+	"	74	0
+	t	75	0
+
+> ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+	"	21	1661
+	^	21	1662
+	.	21	1661
+	+	9	7
+	+	3	10
+	+	23	0
+	+	25	0
+	+	12	142
+	+	21	466
+	+	21	0
+	+	21	456
+	+	21	0
+	+	21	738
+	+	21	0
+	+	21	724
+	+	21	0
+	+	21	741
+	+	21	0
+	+	21	746
+	+	21	0
+	+	21	774
+	+	21	0
+	+	21	798
+	+	21	0
+	+	21	817
+	+	21	0
+	+	21	1661
+	o	3	0
+	t	9	0
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 	"	1	0
@@ -530,6 +517,37 @@ $
 	o	13	0
 	q	61	15
 	t	35	0
+
+> ~/Documents/data_intensive/book/dataset_list.md
+	"	8	166
+	^	8	167
+	.	8	166
+	+	8	92
+	+	8	0
+	+	8	105
+	+	8	0
+	+	8	118
+	+	8	0
+	+	8	146
+	+	8	0
+	+	8	166
+
+> ~/.vim/bundle/vim-fugitive/doc/fugitive.txt
+	"	27	48
+
+> ~/.vim/bundle/vim-fugitive/.git/index
+	"	1	0
+
+> ~/.vim/snippets/pandoc.snippets
+	"	1	0
+	^	30	28
+	.	30	27
+	+	21	11
+	+	22	29
+	+	24	0
+	+	28	21
+	+	4	42
+	+	30	27
 
 > ~/Dropbox/mcneil_fest.md
 	"	1	0
@@ -695,17 +713,6 @@ $
 > /usr/share/vim/vim74/doc/spell.txt
 	"	74	35
 
-> ~/.vim/snippets/pandoc.snippets
-	"	30	27
-	^	30	28
-	.	30	27
-	+	21	11
-	+	22	29
-	+	24	0
-	+	28	21
-	+	4	42
-	+	30	27
-
 > ~/Documents/data_intensive/book/ch4_probability/[Vundle] Installer
 	"	19	0
 	.	1	0
@@ -720,18 +727,6 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
-
-> ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
-	"	12	141
-	^	12	142
-	.	12	142
-	+	9	7
-	+	3	10
-	+	21	0
-	+	23	0
-	+	12	142
-	o	3	0
-	t	9	0
 
 > ~/Documents/data_intensive/book/part2.rmd
 	"	10	0
@@ -1078,10 +1073,6 @@ $
 	+	2	0
 	+	16	0
 	+	16	116
-
-> ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
-	"	74	0
-	t	75	0
 
 > ~/Documents/data_intensive/data_other_transformations_london_sept2014/presentation_nodes.md
 	"	1	0
@@ -1655,12 +1646,3 @@ $
 	.	5	187
 	+	7	367
 	+	5	187
-
-> ~/Documents/notes/dominos_ml_2012.md
-	"	1	0
-
-> ~/Documents/notes/flach_ml_2012.md
-	"	20	0
-
-> ~/Documents/notes/fortun_promising_2005.md
-	"	1	0
