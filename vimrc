@@ -34,7 +34,6 @@ if !has('gui_running')
 endif
 let g:solarized_termcolors=256
 "set background=dark
-colorscheme molokai
 "call togglebg#map("<F5>")
 set ruler  
 set tabstop=4
@@ -240,4 +239,5 @@ endfunction
 set laststatus=2
 let g:pencil#wrapModeDefault = 'soft'
 
+colorscheme molokai
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
