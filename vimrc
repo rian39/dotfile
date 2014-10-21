@@ -237,7 +237,7 @@ return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
 \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
-
+set laststatus=2
 let g:pencil#wrapModeDefault = 'soft'
 
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
