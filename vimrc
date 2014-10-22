@@ -91,7 +91,7 @@ set grepprg=grep\ -nH\ $*
 let g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 let g:pandoc#folding#fdc = 3
-let g:pandoc#formatting#mode = 'soft'
+let g:pandoc#formatting#mode = 'sa'
 let g:pandoc#folding#level = 2
 
 let g:pandoc#folding#fold_fenced_codeblocks=1
