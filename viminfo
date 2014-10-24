@@ -17,45 +17,38 @@
 $
 
 # Command Line History (newest to oldest):
-:q
-:w
-:Gstatus
-:Gstatus -s
-:h Gcommit
-:e ~/book/dataset_list.md
-:e ~/book/ch8_conclusion/ch8_conclusion.rmd
-:sp
-:e ch1_praxis.rmd
-:e ~/book/ch1_learning/ch1_notes.rmd
-:marks
-:e ~/book
-:vertical resize+25
-:PluginUpdate
-:e ~/.vim/snippets/pandoc.snippets
-:vertical resize -40
-:vertical resize +20
-:h spell
-:e ~/notes/blei_ng_jordan_lda_2003.md
 :qa
-:waq
-:b2
-:ls
-:b1
-:b4
-:bp4
-:bp
+:q
+:tabnew
+:gt
+:wa
+:sp
+:so all_chapters.session
+:marks
+:wq
+:e ~/book/ch7_subjects/ch_learning_subjects.rmd
+:w
+:e ~/book/ch6_reconstruction/ch_reconstruction_number.rmd
+:e ~/book/ch5_topologies/ch_genomic_topologies.rmd
+:mks! ~/book/all_chapters.session
+:q!
+:IPython
+:PluginUpdate
+:so ~/book/all_chapters.session
+:windo grep curse
+:grep curse 
 
 # Search String History (newest to oldest):
+? \Vml\%#
+?/HERE
 ? \Vnb\%#
 ? \Vrf\%#
 ? \Vlr\%#
 ? \Vsvm\%#
 ? \Vnn\%#
-? \Vml\%#
 ? \Vlogr\%#
 ? \Vem\%#
 ? \Vtm\%#
-?/HERE
 ?/MCMC
 ? \Vlda\%#
 ?/latent
@@ -66,10 +59,6 @@ $
 ?/Ng
 ? \Vusl\%#
 ?/generative
-? # <codecell>
-? DISTRIBUTION
-?/HER:
-?/asdfas
 
 # Expression History (newest to oldest):
 
@@ -88,39 +77,25 @@ $
 
 # Registers:
 "0	LINE	0
-	[^12]: For an account of how Latent Semantic Indexing, and the transformation of documents into matrices itself mutates as it moves across disciplines, see [@Mackenzie_2013]
+	474
+<First to be singled out from the thing-shapes are surfaces -- more or less "smooth," more or less perfect surfaces; edges, more or less rough or fairly "even"; in other words, more or less pure lines, angles, more or less perfect points; then again, among the lines, for examples, straight lines are especially preferred, and among surfaces, the even surfaces. ... Thus the production of even surfaces and their perfection (polishing) always plays its role in praxis. 178
 ""1	LINE	0
-	[^12]: For an account of how Latent Semantic Indexing, and the transformation of documents into matrices itself mutates as it moves across disciplines, see [@Mackenzie_2013]
+	
 "2	LINE	0
-	[HERE]
+	
 "3	LINE	0
-	
-"4	LINE	0
-	
-	stuff from parisi
-	
+	ddhistory
+"4	CHAR	0
+	 
 	
 "5	LINE	0
-	745
-<> Instead, I take Chaitin’s computational proof of Omega or infinite probabilities, which are at once computably enumerable and algorithmically random, to explain that the automation of data implies an irreversible encounter with incomputable probabilities.  This is to say that the automated operations of prehension, and the mechanical procedures of computers, have their own blind spots, anomalies, and alien logic of calculation, which far from being computational failures are instead to be taken as symptoms of algorithmic thought. This is the point at which the sequential order of algorithms gives way to the conceptual prehension of computational infinities, when algorithms process data beyond what has already been programmed.192
+	1364
+<Could a book function as a predictive model, or as a classifier? The problem with machine learning in general is that it is often quite predictable. I can say this now, after a couple of hundred pages of writing on machine learning, most of which has suggested the need to look to such techniques as ways of making unfamiliar sense of contemporary forms of knowledge, power, value and experience, without denigrating it too much. Maybe the distinction is too subtle, but it seems to me that machine learning is an uneasy mixture of massively repeated and familiar forms, and something that is not easily understood. On the one hand, the level of imitation, duplications, copying and reproduction associated with the techniques is rather  (For instance, in Chapter 4, we saw how Naive Bayes classifiers are almost demonstrated on spam classification problems.) The scientific and engineering literature, with its really frequent variations on similar themes, suggests that imitation and copying are very much  at the heart of the movements I have been describing. But machine learning is not entirely predictable. The advent of specific techniques (support vector machine, neural network, decision tree, random forest, logistic regression or expectation maximization, MCMC) are not entirely unanticipated, but in themselves they are not direct imitations. [HERE]
 "6	LINE	0
-	## key points
+	
 "7	LINE	0
 	
-"8	CHAR	0
-	## Probability distributions
-	 
-	581
-<Probability distributions are a common way of showing and  talking about random variables. The curves shown in Figure 2 could refer to almost anything (the chances of rain at different times of day in Lancaster, the seasonal variation in precipitation, etc.). These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:
-	
-	>$f(x;\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
-	
-	1832
-<This  function, whose mathematics were intensively worked over during the 18-19th centuries, has a power-laden biopolitical history closely tied with knowledges and governing of  national and other  populations. The key symbols here include $\mu$, the mean and $\sigma$, the variance. These two parameters together describe  the shape of the curve. Given $\mu$ and $\sigma$, it become possible to map different outcomes to probabilities. Given the normal distribution, it is possible, under certain circumstances, to effectively subjectify someone on the spot. For instance, if an educational psychologist indicates to someone that their intelligence lies towards the left-hand side of the normal curve peak in Figure 2 (and hence less than the population mean), they quickly render them somehow subject to the normal curve. But statistics uses dozens of different probability distributions to map continuous and discrete variations to real numbers. Other probability distributions abound — normal (Gaussian), uniform, Cauchy exponential, gamma, beta,  hypergeometric, binomial, Poisson, chi-squared, Boltzmann-Gibbs distributions, etc (see [@NIST_2012] for a gallery of distributions) — because outcomes occur in widely differing patterns. The  queuing times at airport check-ins do not, for instance, easily fit a normal distribution. Queues are usually modelled using a Poisson distribution, which unfortunately for travellers, distributes waiting times very differently.  Similarly, it might be better to think of the probability of rain today in Lancaster in terms of a Poisson distribution that models that queue of clouds in the Atlantic just waiting to land on the northwest coast of England. Rather than addressing the question of if it will rain or not, a Poisson-based model might address the question of how soon.
-	
-	2016
-<The diverse range of probability distributions — and we will see below some reasons why we can expect them to proliferate in certain settings — attests to the variety of ways in which events might be mapped to real numbers. Despite  the sometime forbidding mathematical equations, the term *distribution* emphasises a quite material or tangible way of thinking about how probabilities vary. The curves in both Figure 1 and Figure 2 are examples of the most common mathematical descriptions in any data analysis setting: they are  *probability density* functions (pdf). (There are also  *probability mass* functions for variables that have discrete values; for instance: 1,2,3,4,5). Pdfs such as the Gaussian function shown above are usually graphed as a curve that indicates how likely a random variable is to take on a particular value. In many cases, statistical practice seeks to estimate distribution functions such as pdfs (or their close relatives, cdfs — *cumulative distribution functions*) for the given data. Statisticians speak of 'fitting a density' to data, emphasising their assumption that events can be incorporated in the forms of probability distributions. The underlying probability distribution is in principle ‘unobservable’ as such, but a probability density function is  assumed to give rise to all the variations in data gathered through experiments and observations. The task is to estimate the shape of that curve, and its defining parameters (means, variance, etc.). Given that curve, areas under the pdf equate to the likely range of value of a variable. While the total 'probability mass' under the probability density function curve always must be equal to one (since the combined probability of all possible outcomes = 1), finding the area under particular parts of the curve is a key issue. Finding the area under probability density curves becomes the way in which many epistemic processes envisage lived states of affairs as random variables or as numbers in variation.
-	
+"8	LINE	0
 	
 "9	LINE	0
 	
@@ -137,19 +112,17 @@ $
 "z	CHAR	0
 	Zq
 "-	CHAR	0
-	the 
-
-# global variables:
+	 
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'B  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'B  1  0  ~/Documents/data_intensive/book/ch1_learning/ch1_praxis.rmd
 'C  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
-'D  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'E  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'F  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'G  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'H  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'D  1  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+'E  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'F  1  0  ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
+'G  1  0  ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
+'H  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
 'I  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'J  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'K  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
@@ -168,227 +141,106 @@ $
 'X  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  21  1661  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
-'1  1  0  ~/.vim/snippets/pandoc.snippets
-'2  363  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'3  1  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
-'4  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'5  396  330  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'6  349  314  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'7  4  44  ~/Documents/data_intensive/book/preface.md
-'8  359  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'9  16  116  ~/Documents/notes/badiou_number.md
+'0  41  436  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+'1  8  1  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'2  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'3  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'4  153  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+'5  1  0  ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
+'6  71  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+'7  38  2962  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+'8  9  38  ~/Documents/supervision/street_z/supnotes.md
+'9  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # Jumplist (newest first):
+-'  41  436  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  44  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  42  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  39  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  37  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  35  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  33  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  31  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  29  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  27  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  26  1  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+-'  8  1  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+-'  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch1_learning/ch1_praxis.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  153  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+-'  71  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  1  0  ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+-'  38  2962  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  36  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  46  1151  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
+-'  9  38  ~/Documents/supervision/street_z/supnotes.md
+-'  1  0  ~/Documents/supervision/street_z/supnotes.md
 -'  21  1661  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
 -'  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
 -'  8  166  ~/Documents/data_intensive/book/dataset_list.md
--'  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
--'  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
--'  388  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  351  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  385  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  381  479  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  369  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  373  563  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  368  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  366  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  364  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  362  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  360  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  358  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  352  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  387  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  350  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  384  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  380  479  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  368  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  372  563  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  367  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  365  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  363  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  361  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  359  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  357  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  351  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  2  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  386  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  0  ~/.vim/snippets/pandoc.snippets
--'  363  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  305  65  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  307  75  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  309  134  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  306  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  308  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  310  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  312  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  295  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  289  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  112  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  362  82  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  304  65  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  306  75  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  308  134  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  305  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  307  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  309  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  311  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  294  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  94  646  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  92  1813  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  73  44  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  51  1224  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  49  1431  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  33  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  285  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  55  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  396  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  262  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  114  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  78  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  95  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  113  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  230  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  288  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  111  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  293  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  93  646  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  91  1813  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  72  44  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  50  1224  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  48  1431  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  32  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  284  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  54  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  395  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  261  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  113  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  77  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  94  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  112  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  229  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  260  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  0  ~/Documents/notes/blei_ng_jordan_lda_2003.md
--'  398  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  8  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  403  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  397  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  367  29  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  401  7  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  349  314  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  345  1123  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  341  1238  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  344  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  /tmp/vKl6Isq/61
--'  19  0  ~/Documents/data_intensive/book/[Vundle] Installer
--'  4  44  ~/Documents/data_intensive/book/preface.md
--'  1  0  ~/Documents/data_intensive/book/preface.md
+-'  397  140  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  7  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  402  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  396  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # History of marks within files (newest to oldest):
 
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	388	0
-	^	350	1
-	.	349	813
-	+	396	980
-	+	396	293
-	+	396	501
-	+	402	0
-	+	396	1242
-	+	396	172
-	+	396	0
-	+	397	0
-	+	396	0
-	+	396	0
-	+	396	1263
-	+	405	0
-	+	398	0
-	+	398	0
-	+	398	139
-	+	398	0
-	+	398	791
-	+	396	330
-	+	359	1461
-	+	392	172
-	+	364	0
-	+	359	1875
-	+	359	2172
-	+	367	224
-	+	367	625
-	+	369	149
-	+	369	0
-	+	369	205
-	+	369	0
-	+	369	1116
-	+	369	0
-	+	369	284
-	+	369	128
-	+	369	774
-	+	369	0
-	+	369	869
-	+	389	110
-	+	387	0
-	+	369	999
-	+	397	0
-	+	96	0
-	+	95	0
-	+	92	373
-	+	351	42
-	+	317	1020
-	+	359	166
-	+	369	1251
-	+	371	0
-	+	370	0
-	+	371	399
-	+	369	1294
-	+	371	98
-	+	373	30
-	+	83	0
-	+	105	0
-	+	354	11
-	+	359	275
-	+	359	0
-	+	359	683
-	+	359	0
-	+	359	1009
-	+	359	0
-	+	359	1024
-	+	359	0
-	+	362	0
-	+	359	1440
-	+	359	1349
-	+	359	1547
-	+	359	0
-	+	359	1669
-	+	359	1651
-	+	362	6
-	+	361	0
-	+	361	70
-	+	359	1960
-	+	373	339
-	+	373	0
-	+	373	563
-	+	1	2
-	+	61	0
-	+	32	262
-	+	33	0
-	+	309	674
-	+	309	1267
-	+	309	438
-	+	305	65
-	+	301	239
-	+	362	0
-	+	369	742
-	+	373	0
-	+	373	1034
-	+	374	0
-	+	385	15
-	+	381	479
-	+	392	0
-	+	383	0
-	+	384	0
-	+	387	257
-	+	350	0
-	+	349	813
-	a	78	0
-	b	114	0
-	c	262	0
-	d	285	0
-	e	303	0
-	f	319	0
-	g	337	0
-	h	351	0
-	i	351	0
-	j	385	0
-	o	8	0
-	q	55	0
-	t	31	0
-	z	396	1
-
-> ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
-	"	74	0
-	t	75	0
-
 > ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
-	"	21	1661
-	^	21	1662
-	.	21	1661
-	+	9	7
-	+	3	10
-	+	23	0
-	+	25	0
-	+	12	142
-	+	21	466
-	+	21	0
-	+	21	456
-	+	21	0
-	+	21	738
-	+	21	0
-	+	21	724
-	+	21	0
+	"	41	436
+	^	41	437
+	.	41	436
 	+	21	741
 	+	21	0
 	+	21	746
@@ -400,123 +252,478 @@ $
 	+	21	817
 	+	21	0
 	+	21	1661
-	o	3	0
+	+	46	325
+	+	46	492
+	+	46	0
+	+	46	634
+	+	46	1072
+	+	46	737
+	+	28	0
+	+	28	815
+	+	28	1257
+	+	35	0
+	+	28	1255
+	+	34	0
+	+	34	1
+	+	35	0
+	+	34	488
+	+	36	277
+	+	36	134
+	+	36	434
+	+	36	1298
+	+	45	0
+	+	36	294
+	+	43	618
+	+	36	1320
+	+	36	0
+	+	36	1404
+	+	36	1226
+	+	36	1334
+	+	43	0
+	+	36	1478
+	+	51	0
+	+	53	0
+	+	42	0
+	+	36	1618
+	+	36	0
+	+	36	1799
+	+	36	0
+	+	36	2343
+	+	36	1845
+	+	36	2744
+	+	36	0
+	+	36	2825
+	+	36	824
+	+	36	0
+	+	36	1008
+	+	36	0
+	+	36	1008
+	+	38	819
+	+	38	2962
+	+	28	473
+	+	28	151
+	+	28	625
+	+	32	140
+	+	28	0
+	+	28	431
+	+	28	1536
+	+	30	311
+	+	32	136
+	+	36	427
+	+	38	214
+	+	36	335
+	+	36	845
+	+	38	214
+	+	38	572
+	+	38	214
+	+	38	930
+	+	38	1252
+	+	38	1335
+	+	38	1514
+	+	38	1318
+	+	36	631
+	+	37	0
+	+	38	214
+	+	38	819
+	+	28	1873
+	+	28	1654
+	+	28	2038
+	+	28	2132
+	+	28	2035
+	+	28	0
+	+	28	2052
+	+	28	2226
+	+	38	819
+	+	42	0
+	+	39	0
+	+	30	0
+	+	40	0
+	+	41	239
+	+	41	0
+	+	41	436
+	o	28	400
 	t	9	0
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-	"	1	0
-	^	36	62
-	.	36	61
-	+	59	55
-	+	75	46
+	"	51	0
+	^	51	28
+	.	51	27
+	+	219	0
 	+	218	0
-	+	218	0
-	+	217	0
-	+	239	0
-	+	209	468
-	+	211	0
-	+	211	688
-	+	211	509
-	+	211	1010
-	+	211	374
-	+	211	1129
-	+	207	855
-	+	211	2013
-	+	211	1012
-	+	214	0
-	+	217	75
-	+	215	1757
-	+	215	1007
-	+	211	1016
-	+	213	7
-	+	213	761
-	+	213	8
-	+	215	26
-	+	218	0
-	+	217	0
-	+	215	1120
-	+	215	969
-	+	215	1336
-	+	215	1079
+	+	240	0
+	+	210	468
+	+	212	0
+	+	212	688
+	+	212	509
+	+	212	1010
+	+	212	374
+	+	212	1129
+	+	208	855
+	+	212	2013
+	+	212	1012
 	+	215	0
-	+	215	1237
-	+	217	104
-	+	217	0
-	+	215	0
-	+	197	41
+	+	218	75
+	+	216	1757
+	+	216	1007
+	+	212	1016
+	+	214	7
+	+	214	761
+	+	214	8
+	+	216	26
+	+	219	0
+	+	218	0
+	+	216	1120
+	+	216	969
+	+	216	1336
+	+	216	1079
+	+	216	0
+	+	216	1237
+	+	218	104
+	+	218	0
+	+	216	0
+	+	198	41
 	+	21	34
 	+	23	51
-	+	42	0
-	+	80	0
-	+	76	0
-	+	80	0
-	+	76	0
-	+	76	2
-	+	188	401
-	+	188	660
-	+	190	238
-	+	261	0
-	+	242	0
-	+	233	32
-	+	217	51
-	+	197	0
-	+	215	0
-	+	215	1569
-	+	217	19
-	+	219	98
-	+	219	0
-	+	219	335
-	+	219	0
-	+	219	613
-	+	227	447
-	+	229	2026
-	+	229	0
-	+	229	2561
-	+	231	1113
-	+	231	1419
-	+	232	0
-	+	231	1533
-	+	231	1275
-	+	231	1415
-	+	231	1648
-	+	227	1084
-	+	165	0
-	+	261	13
+	+	43	0
+	+	81	0
+	+	77	0
+	+	81	0
+	+	77	0
+	+	77	2
+	+	189	401
+	+	189	660
+	+	191	238
+	+	262	0
+	+	243	0
+	+	234	32
+	+	218	51
+	+	198	0
+	+	216	0
+	+	216	1569
+	+	218	19
+	+	220	98
+	+	220	0
+	+	220	335
+	+	220	0
+	+	220	613
+	+	228	447
+	+	230	2026
+	+	230	0
+	+	230	2561
+	+	232	1113
+	+	232	1419
+	+	233	0
+	+	232	1533
+	+	232	1275
+	+	232	1415
+	+	232	1648
+	+	228	1084
+	+	166	0
+	+	262	13
 	+	28	102
 	+	29	0
-	+	230	0
 	+	231	0
-	+	231	1112
-	+	231	1113
 	+	232	0
-	+	231	1766
-	+	231	0
-	+	231	1782
-	+	231	1236
-	+	231	1139
+	+	232	1112
+	+	232	1113
 	+	233	0
-	+	250	0
+	+	232	1766
+	+	232	0
+	+	232	1782
+	+	232	1236
+	+	232	1139
+	+	234	0
+	+	251	0
+	+	226	0
 	+	225	0
-	+	224	0
-	+	76	0
-	+	81	79
-	+	257	0
-	+	40	52
-	+	49	142
-	+	32	79
-	+	33	0
-	+	34	133
-	+	36	61
-	a	90	1
-	b	111	0
-	c	136	0
-	d	167	0
-	e	175	0
-	f	197	0
-	g	217	0
+	+	77	0
+	+	82	79
+	+	258	0
+	+	41	52
+	+	50	142
+	+	33	79
+	+	34	0
+	+	35	133
+	+	37	61
+	+	32	100
+	+	33	21
+	+	51	27
+	a	91	1
+	b	112	0
+	c	137	0
+	d	168	0
+	e	176	0
+	f	198	0
+	g	218	0
 	o	13	0
-	q	61	15
-	t	35	0
+	q	62	15
+	t	36	0
+
+> ~/Documents/data_intensive/book/ch1_learning/ch1_praxis.rmd
+	"	1	0
+	^	2	1
+	.	2	0
+	+	2	0
+	+	2	0
+	+	59	15
+	+	2	1
+	+	2	0
+	a	59	0
+	b	65	0
+	c	75	0
+	d	126	0
+	e	132	0
+	f	185	0
+	g	195	0
+	h	238	0
+	i	243	0
+	o	17	0
+	t	40	0
+
+> ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
+	"	74	0
+	t	75	0
+
+> ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
+	"	153	0
+	.	8	0
+	+	2	0
+	+	4	0
+	+	8	0
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+	"	407	0
+	^	349	1
+	.	2	0
+	+	395	293
+	+	395	501
+	+	401	0
+	+	395	1242
+	+	395	172
+	+	395	0
+	+	396	0
+	+	395	0
+	+	395	0
+	+	395	1263
+	+	404	0
+	+	397	0
+	+	397	0
+	+	397	139
+	+	397	0
+	+	397	791
+	+	395	330
+	+	358	1461
+	+	391	172
+	+	363	0
+	+	358	1875
+	+	358	2172
+	+	366	224
+	+	366	625
+	+	368	149
+	+	368	0
+	+	368	205
+	+	368	0
+	+	368	1116
+	+	368	0
+	+	368	284
+	+	368	128
+	+	368	774
+	+	368	0
+	+	368	869
+	+	388	110
+	+	386	0
+	+	368	999
+	+	396	0
+	+	95	0
+	+	94	0
+	+	91	373
+	+	350	42
+	+	316	1020
+	+	358	166
+	+	368	1251
+	+	370	0
+	+	369	0
+	+	370	399
+	+	368	1294
+	+	370	98
+	+	372	30
+	+	82	0
+	+	104	0
+	+	353	11
+	+	358	275
+	+	358	0
+	+	358	683
+	+	358	0
+	+	358	1009
+	+	358	0
+	+	358	1024
+	+	358	0
+	+	361	0
+	+	358	1440
+	+	358	1349
+	+	358	1547
+	+	358	0
+	+	358	1669
+	+	358	1651
+	+	361	6
+	+	360	0
+	+	360	70
+	+	358	1960
+	+	372	339
+	+	372	0
+	+	372	563
+	+	1	2
+	+	60	0
+	+	31	262
+	+	32	0
+	+	308	674
+	+	308	1267
+	+	308	438
+	+	304	65
+	+	300	239
+	+	361	0
+	+	368	742
+	+	372	0
+	+	372	1034
+	+	373	0
+	+	384	15
+	+	380	479
+	+	391	0
+	+	382	0
+	+	383	0
+	+	386	257
+	+	349	0
+	+	348	813
+	+	2	0
+	a	77	0
+	b	113	0
+	c	261	0
+	d	284	0
+	e	302	0
+	f	318	0
+	g	336	0
+	h	350	0
+	i	350	0
+	j	384	0
+	o	7	0
+	q	54	0
+	t	30	0
+	z	395	1
+
+> ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
+	"	1	0
+	^	28	167
+	.	28	166
+	+	26	0
+	+	28	166
+
+> ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+	"	1	0
+	^	4	1441
+	.	4	1440
+	+	3	0
+	+	4	0
+	+	2	0
+	+	3	0
+	+	1	1
+	+	66	0
+	+	1	1
+	+	4	1440
+
+> ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
+	"	71	0
+	^	71	0
+	.	71	0
+	+	1	0
+	+	1	0
+	+	3	0
+	+	14	0
+	+	1	0
+	+	15	0
+	+	5	0
+	+	4	0
+	+	15	0
+	+	5	0
+	+	15	0
+	+	6	0
+	+	15	0
+	+	7	0
+	+	15	0
+	+	16	0
+	+	20	0
+	+	21	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	8	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	27	0
+	+	35	0
+	+	33	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	0
+	+	40	0
+	+	41	0
+	+	14	0
+	+	21	0
+	+	17	0
+	+	14	0
+	+	10	30
+	+	32	0
+	+	14	41
+	+	15	0
+	+	13	4
+	+	71	0
+
+> ~/Documents/data_intensive/book/ml_lit/vim-ipython
+	"	154	0
+	.	154	0
+	+	12	0
+	+	70	0
+	+	79	0
+	+	151	0
+	+	154	6
+	+	154	0
+	+	154	0
+
+> ~/dotfile/[Vundle] Installer
+	"	19	0
+	.	1	0
+	+	1	0
+
+> /tmp/v9TB4v7/65
+	"	1	0
+
+> /usr/share/vim/vim74/doc/starting.txt
+	"	1241	63
+
+> ~/Documents/notes/husserl_origins.md
+	"	1	0
+
+> ~/Documents/supervision/street_z/supnotes.md
+	"	9	38
+	^	9	39
+	.	9	38
+	+	4	2
+	+	4	1
+	+	3	1
+	+	11	0
+	+	5	53
+	+	6	76
+	+	14	42
+	+	8	15
+	+	14	16
+	+	16	3
+	+	8	28
+	+	9	38
 
 > ~/Documents/data_intensive/book/dataset_list.md
 	"	8	166
@@ -668,25 +875,6 @@ $
 	+	40	315
 	t	39	0
 
-> ~/Documents/data_intensive/book/ch1_learning/ch1_praxis.rmd
-	"	338	0
-	^	62	0
-	.	61	15
-	+	2	0
-	+	4	0
-	+	61	15
-	a	61	0
-	b	67	0
-	c	77	0
-	d	128	0
-	e	134	0
-	f	187	0
-	g	197	0
-	h	240	0
-	i	245	0
-	o	19	0
-	t	42	0
-
 > ~/Documents/notes/blei_ng_jordan_lda_2003.md
 	"	1	0
 	^	26	503
@@ -783,55 +971,6 @@ $
 
 > ~/Documents/data_intensive/book/ml_lit/ml_lit_anal.py
 	"	21	0
-
-> ~/Documents/data_intensive/book/ml_lit/topicmodel_lit_analysis.py
-	"	13	3
-	^	13	4
-	.	13	4
-	+	1	0
-	+	1	0
-	+	3	0
-	+	14	0
-	+	1	0
-	+	15	0
-	+	5	0
-	+	4	0
-	+	15	0
-	+	5	0
-	+	15	0
-	+	6	0
-	+	15	0
-	+	7	0
-	+	15	0
-	+	16	0
-	+	20	0
-	+	21	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	8	0
-	+	24	0
-	+	25	0
-	+	26	0
-	+	27	0
-	+	35	0
-	+	33	0
-	+	35	0
-	+	36	0
-	+	37	0
-	+	38	0
-	+	39	0
-	+	40	0
-	+	41	0
-	+	14	0
-	+	21	0
-	+	17	0
-	+	14	0
-	+	10	30
-	+	32	0
-	+	14	41
-	+	15	0
-	+	13	4
 
 > /usr/share/vim/vim74/doc/options.txt
 	"	5581	0
@@ -1265,13 +1404,6 @@ $
 	+	5	465
 	+	6	0
 
-> ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
-	"	30	0
-	^	28	167
-	.	28	166
-	+	26	0
-	+	28	166
-
 > ~/Documents/tcs_editing/aug2014/toxins.md
 	"	1	0
 
@@ -1615,34 +1747,3 @@ $
 
 > ~/Documents/notes/burges_svm_tutorial_1998.md
 	"	1	0
-
-> ~/Documents/notes/burkill_mathematical_1962.md
-	"	1	0
-
-> ~/Documents/notes/c_programming.md
-	"	1	0
-
-> ~/Documents/notes/campbell_kelly_software_2003.md
-	"	1	0
-
-> ~/Documents/notes/clark.md
-	"	1	0
-
-> ~/Documents/notes/classification.md
-	"	1	0
-
-> ~/Documents/notes/claverie_bioinformatic_dummies_2003.md
-	"	1	0
-
-> ~/Documents/notes/compendi.md
-	"	1	0
-
-> ~/Documents/notes/computerscience.md
-	"	1	0
-
-> ~/Documents/notes/conway_myles_white_machine_learning_2012.md
-	"	5	187
-	^	5	188
-	.	5	187
-	+	7	367
-	+	5	187
