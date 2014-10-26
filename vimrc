@@ -21,6 +21,7 @@ call vundle#begin()
     Bundle "MarcWeber/vim-addon-mw-utils"
     Bundle "tomtom/tlib_vim"
     Bundle "garbas/vim-snipmate"
+    Bundle "klen/python-mode"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
