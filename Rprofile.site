@@ -1,0 +1,2 @@
+
+options("repos" = c(CRAN = "http://www.stats.bris.ac.uk/R/"))
