@@ -152,3 +152,4 @@ fi
 stty stop undef 
 GPG_TTY=`tty`
 export GPG_TTY 
+alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'

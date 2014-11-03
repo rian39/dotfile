@@ -41,18 +41,19 @@ acoshfunctionfunctionbaseNO_ARGS
 addNAfunctionfunctionbasex	ifanyFALSE
 addTaskCallbackfunctionfunctionbasef	dataNULL	namecharacter()
 agrepfunctionfunctionbasepattern	x	max.distance0.1	costsNULL	ignore.caseFALSE	valueFALSE	fixedTRUE	useBytesFALSE
+agreplfunctionfunctionbasepattern	x	max.distance0.1	costsNULL	ignore.caseFALSE	fixedTRUE	useBytesFALSE
 alistfunctionfunctionbase...
 allfunctionfunctionbaseNO_ARGS
 all.equalfunctionfunctionbasetarget	current	...
-all.equal.characterfunctionfunctionbasetarget	current	check.attributesTRUE	...
+all.equal.characterfunctionfunctionbasetarget	current	...	check.attributesTRUE
 all.equal.defaultfunctionfunctionbasetarget	current	...
-all.equal.factorfunctionfunctionbasetarget	current	check.attributesTRUE	...
+all.equal.factorfunctionfunctionbasetarget	current	...	check.attributesTRUE
 all.equal.formulafunctionfunctionbasetarget	current	...
 all.equal.languagefunctionfunctionbasetarget	current	...
-all.equal.listfunctionfunctionbasetarget	current	check.attributesTRUE	...
-all.equal.numericfunctionfunctionbasetarget	current	tolerance.Machine$double.eps^0.5	scaleNULL	check.attributesTRUE	...
-all.equal.POSIXctfunctionfunctionbasetarget	current	...	tolerance0.001	scale1
-all.equal.rawfunctionfunctionbasetarget	current	check.attributesTRUE	...
+all.equal.listfunctionfunctionbasetarget	current	...	check.attributesTRUE	use.namesTRUE
+all.equal.numericfunctionfunctionbasetarget	current	tolerance.Machine$double.eps^0.5	scaleNULL	...	check.attributesTRUE
+all.equal.POSIXtfunctionfunctionbasetarget	current	...	tolerance0.001	scale
+all.equal.rawfunctionfunctionbasetarget	current	...	check.attributesTRUE
 all.namesfunctionfunctionbaseexpr	functionsTRUE	max.names-1L	uniqueFALSE
 all.varsfunctionfunctionbaseexpr	functionsFALSE	max.names-1L	uniqueTRUE
 anyfunctionfunctionbaseNO_ARGS
@@ -61,6 +62,9 @@ anyDuplicated.arrayfunctionfunctionbasex	incomparablesFALSE	fromLastFALSE	
 anyDuplicated.data.framefunctionfunctionbasex	incomparablesFALSE	fromLastFALSE	...
 anyDuplicated.defaultfunctionfunctionbasex	incomparablesFALSE	fromLastFALSE	...
 anyDuplicated.matrixfunctionfunctionbasex	incomparablesFALSE	fromLastFALSE	...
+anyNAfunctionfunctionbaseNO_ARGS
+anyNA.numeric_versionfunctionfunctionbasex
+anyNA.POSIXltfunctionfunctionbasex
 apermfunctionfunctionbasea	permNULL	resizeTRUE	...
 aperm.defaultfunctionfunctionbasea	permNULL	resizeTRUE	...
 aperm.tablefunctionfunctionbasea	permNULL	resizeTRUE	keep.classTRUE	...
@@ -106,7 +110,7 @@ as.data.frame.orderedfunctionfunctionbasex	row.namesNULL	optionalFALSE	...
 as.data.frame.POSIXctfunctionfunctionbasex	row.namesNULL	optionalFALSE	...	nmpaste(deparse(substitute(x), width.cutoff = 500L), collapse = " ")
 as.data.frame.POSIXltfunctionfunctionbasex	row.namesNULL	optionalFALSE	...
 as.data.frame.rawfunctionfunctionbasex	row.namesNULL	optionalFALSE	...	nmpaste(deparse(substitute(x), width.cutoff = 500L), collapse = " ")
-as.data.frame.tablefunctionfunctionbasex	row.namesNULL	...	responseName"Freq"	stringsAsFactorsTRUE
+as.data.frame.tablefunctionfunctionbasex	row.namesNULL	...	responseName"Freq"	stringsAsFactorsTRUE	sep""	baselist(LETTERS)
 as.data.frame.tsfunctionfunctionbasex	...
 as.data.frame.vectorfunctionfunctionbasex	row.namesNULL	optionalFALSE	...	nmpaste(deparse(substitute(x), width.cutoff = 500L), collapse = " ")
 as.Datefunctionfunctionbasex	...
@@ -194,7 +198,7 @@ attachfunctionfunctionbasewhat	namedeparse(substitute(what))	warn.conflicts
 attachNamespacefunctionfunctionbasens	dependsNULL
 attrfunctionfunctionbaseNO_ARGS
 attr<-functionfunctionbaseNO_ARGS
-attr.all.equalfunctionfunctionbasetarget	current	check.attributesTRUE	check.namesTRUE	...
+attr.all.equalfunctionfunctionbasetarget	current	...	check.attributesTRUE	check.namesTRUE
 attributesfunctionfunctionbaseNO_ARGS
 attributes<-functionfunctionbaseNO_ARGS
 autoloadfunctionfunctionbasename	package	resetFALSE	...
@@ -278,6 +282,7 @@ ConjfunctionfunctionbaseNO_ARGS
 contributorsfunctionfunctionbaseNO_ARGS
 cosfunctionfunctionbaseNO_ARGS
 coshfunctionfunctionbaseNO_ARGS
+cospifunctionfunctionbaseNO_ARGS
 c.POSIXctfunctionfunctionbase...	recursiveFALSE
 c.POSIXltfunctionfunctionbase...	recursiveFALSE
 crossprodfunctionfunctionbasex	yNULL
@@ -296,6 +301,7 @@ data.classfunctionfunctionbasex
 [[<-.data.framefunctionfunctionbasex	i	j	value
 [[.data.framefunctionfunctionbasex	...	exactTRUE
 $<-.data.framefunctionfunctionbasex	name	value
+$.data.framefunctionfunctionbasex	name
 data.framefunctionfunctionbase...	row.namesNULL	check.rowsFALSE	check.namesTRUE	stringsAsFactorsdefault.stringsAsFactors()
 data.matrixfunctionfunctionbaseframe	rownames.forceNA
 datefunctionfunctionbaseNO_ARGS
@@ -337,6 +343,7 @@ dir.createfunctionfunctionbasepath	showWarningsTRUE	recursiveFALSE	mode"0
 dirnamefunctionfunctionbasepath
 $.DLLInfofunctionfunctionbasex	name
 do.callfunctionfunctionbasewhat	args	quoteFALSE	envirparent.frame()
+dontCheckfunctionfunctionbasex
 doublefunctionfunctionbaseNO_ARGS
 dputfunctionfunctionbasex	file""	controlc("keepNA", "keepInteger", "showAttributes")
 dQuotefunctionfunctionbasex
@@ -388,7 +395,7 @@ filefunctionfunctionbasedescription""	open""	blockingTRUE	encodinggetOpt
 file.accessfunctionfunctionbasenames	mode0
 file.appendfunctionfunctionbasefile1	file2
 file.choosefunctionfunctionbasenewFALSE
-file.copyfunctionfunctionbasefrom	to	overwrite	recursiveFALSE	copy.modeTRUE
+file.copyfunctionfunctionbasefrom	to	overwrite	recursiveFALSE	copy.modeTRUE	copy.dateFALSE
 file.createfunctionfunctionbase...	showWarningsTRUE
 file.existsfunctionfunctionbase...
 file.infofunctionfunctionbase...
@@ -466,7 +473,7 @@ getTaskCallbackNamesfunctionfunctionbaseNO_ARGS
 gettextfunctionfunctionbase...	domainNULL
 gettextffunctionfunctionbasefmt	...	domainNULL
 getwdfunctionfunctionbaseNO_ARGS
-glfunctionfunctionbasen	k	lengthn * k	labels1:n	orderedFALSE
+glfunctionfunctionbasen	k	lengthn * k	labelsseq_len(n)	orderedFALSE
 globalenvfunctionfunctionbaseNO_ARGS
 gregexprfunctionfunctionbasepattern	text	ignore.caseFALSE	perlFALSE	fixedFALSE	useBytesFALSE
 grepfunctionfunctionbasepattern	x	ignore.caseFALSE	perlFALSE	valueFALSE	fixedFALSE	useBytesFALSE	invertFALSE
@@ -578,6 +585,7 @@ labelsfunctionfunctionbaseobject	...
 labels.defaultfunctionfunctionbaseobject	...
 lapplyfunctionfunctionbaseX	FUN	...
 La.svdfunctionfunctionbasex	numin(n, p)	nvmin(n, p)
+La_versionfunctionfunctionbaseNO_ARGS
 lazyLoadfunctionfunctionbasefilebase	envirparent.frame()	filter
 lazyLoadDBexecfunctionfunctionbasefilebase	fun	filter
 lazyLoadDBfetchfunctionfunctionbaseNO_ARGS
@@ -670,7 +678,7 @@ names<-functionfunctionbaseNO_ARGS
 namespaceExportfunctionfunctionbasens	vars
 namespaceImportfunctionfunctionbaseself	...	fromNULL
 namespaceImportClassesfunctionfunctionbaseself	ns	vars	fromNULL
-namespaceImportFromfunctionfunctionbaseself	ns	vars	generics	packages	fromNULL
+namespaceImportFromfunctionfunctionbaseself	ns	vars	generics	packages	from"non-package environment"
 namespaceImportMethodsfunctionfunctionbaseself	ns	vars	fromNULL
 names<-.POSIXltfunctionfunctionbasex	value
 names.POSIXltfunctionfunctionbasex
@@ -704,6 +712,7 @@ objectsfunctionfunctionbasename	pos-1L	enviras.environment(pos)	all.names
 &.octmodefunctionfunctionbasea	b
 oldClassfunctionfunctionbaseNO_ARGS
 oldClass<-functionfunctionbaseNO_ARGS
+OlsonNamesfunctionfunctionbaseNO_ARGS
 on.exitfunctionfunctionbaseNO_ARGS
 openfunctionfunctionbasecon	...
 open.connectionfunctionfunctionbasecon	open"r"	blockingTRUE	...
@@ -797,7 +806,7 @@ prodfunctionfunctionbaseNO_ARGS
 prop.tablefunctionfunctionbasex	marginNULL
 provideDimnamesfunctionfunctionbasex	sep""	baselist(LETTERS)
 psigammafunctionfunctionbasex
-pushBackfunctionfunctionbasedata	connection	newLineTRUE
+pushBackfunctionfunctionbasedata	connection	newLineTRUE	encodingc("", "bytes", "UTF-8")
 pushBackLengthfunctionfunctionbaseconnection
 qfunctionfunctionbasesave"default"	status0	runLastTRUE
 qrfunctionfunctionbasex	tol1e-07	LAPACKFALSE	...
@@ -834,7 +843,7 @@ readBinfunctionfunctionbasecon	what	signedTRUE	endian.Platform$endian
 readCharfunctionfunctionbasecon	nchars	useBytesFALSE
 read.dcffunctionfunctionbasefile	fieldsNULL	allFALSE	keep.whiteNULL
 readlinefunctionfunctionbaseprompt""
-readLinesfunctionfunctionbaseconstdin()	n-1L	okTRUE	warnTRUE	encoding"unknown"
+readLinesfunctionfunctionbaseconstdin()	n-1L	okTRUE	warnTRUE	encoding"unknown"	skipNulFALSE
 readRDSfunctionfunctionbasefile	refhookNULL
 readRenvironfunctionfunctionbasepath
 Recallfunctionfunctionbase...
@@ -915,7 +924,7 @@ save.imagefunctionfunctionbasefile".RData"	versionNULL	asciiFALSE	compres
 saveRDSfunctionfunctionbaseobject	file""	asciiFALSE	versionNULL	compressTRUE	refhookNULL
 scalefunctionfunctionbasex	centerTRUE	scaleTRUE
 scale.defaultfunctionfunctionbasex	centerTRUE	scaleTRUE
-scanfunctionfunctionbasefile""	whatdouble()	nmax-1L	n-1L	sep""	quoteif (identical(sep, "\n")) "" else "'\""	dec"."	na.strings"NA"	flushFALSE	fillFALSE	strip.whiteFALSE	quietFALSE	blank.lines.skipTRUE	multi.lineTRUE	comment.char""	allowEscapesFALSE	fileEncoding""	encoding"unknown"	text
+scanfunctionfunctionbasefile""	whatdouble()	nmax-1L	n-1L	sep""	quoteif (identical(sep, "\n")) "" else "'\""	dec"."	na.strings"NA"	flushFALSE	fillFALSE	strip.whiteFALSE	quietFALSE	blank.lines.skipTRUE	multi.lineTRUE	comment.char""	allowEscapesFALSE	fileEncoding""	encoding"unknown"	text	skipNulFALSE
 searchfunctionfunctionbaseNO_ARGS
 searchpathsfunctionfunctionbaseNO_ARGS
 seekfunctionfunctionbasecon	...
@@ -953,6 +962,7 @@ singlefunctionfunctionbaseNO_ARGS
 sinhfunctionfunctionbaseNO_ARGS
 sinkfunctionfunctionbasefileNULL	appendFALSE	typec("output", "message")	splitFALSE
 sink.numberfunctionfunctionbasetypec("output", "message")
+sinpifunctionfunctionbaseNO_ARGS
 slice.indexfunctionfunctionbasex	MARGIN
 socketConnectionfunctionfunctionbasehost"localhost"	port	serverFALSE	blockingFALSE	open"a+"	encodinggetOption("encoding")	timeoutgetOption("timeout")
 socketSelectfunctionfunctionbasesocklist	writeFALSE	timeoutNULL
@@ -1064,7 +1074,7 @@ system2functionfunctionbasecommand	argscharacter()	stdout""	stderr""	stdi
 system.filefunctionfunctionbase...	package"base"	lib.locNULL	mustWorkFALSE
 system.timefunctionfunctionbaseexpr	gcFirstTRUE
 Sys.timefunctionfunctionbaseNO_ARGS
-Sys.timezonefunctionfunctionbaseNO_ARGS
+Sys.timezonefunctionfunctionbaselocationTRUE
 Sys.umaskfunctionfunctionbasemodeNA
 Sys.unsetenvfunctionfunctionbasex
 Sys.whichfunctionfunctionbasenames
@@ -1074,6 +1084,7 @@ tablefunctionfunctionbase...	excludeif (useNA == "no") c(NA, NaN)	useNAc("
 tabulatefunctionfunctionbasebin	nbinsmax(1L, bin, na.rm = TRUE)
 tanfunctionfunctionbaseNO_ARGS
 tanhfunctionfunctionbaseNO_ARGS
+tanpifunctionfunctionbaseNO_ARGS
 tapplyfunctionfunctionbaseX	INDEX	FUNNULL	...	simplifyTRUE
 taskCallbackManagerfunctionfunctionbasehandlerslist()	registeredFALSE	verboseFALSE
 tcrossprodfunctionfunctionbasex	yNULL
@@ -1152,7 +1163,7 @@ version$svn revunknown baseNot a function
 version$languagecharactercharacterbaseNot a function
 version$version.stringcharactercharacterbaseNot a function
 version$nicknamecharactercharacterbaseNot a function
-warningfunctionfunctionbase...	call.TRUE	immediate.FALSE	domainNULL
+warningfunctionfunctionbase...	call.TRUE	immediate.FALSE	noBreaks.FALSE	domainNULL
 warningsfunctionfunctionbase...
 [.warningsfunctionfunctionbasex	...
 weekdaysfunctionfunctionbasex	abbreviate

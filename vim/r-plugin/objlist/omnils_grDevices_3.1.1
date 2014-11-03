@@ -15,7 +15,7 @@ cmfunctionfunctiongrDevicesx
 cm.colorsfunctionfunctiongrDevicesn	alpha1
 col2rgbfunctionfunctiongrDevicescol	alphaFALSE
 colorConverterfunctionfunctiongrDevicestoXYZ	fromXYZ	name	whiteNULL
-colorRampfunctionfunctiongrDevicescolors	bias1	spacec("rgb", "Lab")	interpolatec("linear", "spline")
+colorRampfunctionfunctiongrDevicescolors	bias1	spacec("rgb", "Lab")	interpolatec("linear", "spline")	alphaFALSE
 colorRampPalettefunctionfunctiongrDevicescolors	...
 colorsfunctionfunctiongrDevicesdistinctFALSE
 colorspaceslistlistgrDevicesNot a function
@@ -43,14 +43,14 @@ dev.holdfunctionfunctiongrDevicesNO_ARGS
 deviceIsInteractivefunctionfunctiongrDevicesnameNULL
 dev.interactivefunctionfunctiongrDevicesorNoneFALSE
 dev.listfunctionfunctiongrDevicesNO_ARGS
-dev.newfunctionfunctiongrDevices...
+dev.newfunctionfunctiongrDevices...	noRStudioGDFALSE
 dev.nextfunctionfunctiongrDeviceswhichdev.cur()
 dev.offfunctionfunctiongrDeviceswhichdev.cur()
 dev.prevfunctionfunctiongrDeviceswhichdev.cur()
 dev.printfunctionfunctiongrDevicesdevice	...
 dev.setfunctionfunctiongrDeviceswhichdev.next()
 dev.sizefunctionfunctiongrDevicesunitsc("in", "cm", "px")
-embedFontsfunctionfunctiongrDevicesfile	format	outfile	fontpaths""	options""
+embedFontsfunctionfunctiongrDevicesfile	format	outfile	fontpathscharacter()	options""
 extendrangefunctionfunctiongrDevicesx	rrange(x, na.rm = TRUE)	f0.05
 getGraphicsEventfunctionfunctiongrDevicesprompt"Waiting for input"	onMouseDownNULL	onMouseMoveNULL	onMouseUpNULL	onKeybdNULL	consolePrompt
 getGraphicsEventEnvfunctionfunctiongrDeviceswhichdev.cur()
@@ -100,7 +100,7 @@ setGraphicsEventHandlersfunctionfunctiongrDeviceswhichdev.cur()	...
 setPSfunctionfunctiongrDevices...
 svgfunctionfunctiongrDevicesfilenameif (onefile) "Rplots.svg" else "Rplot%03d.svg"	width7	height7	pointsize12	onefileFALSE	family"sans"	bg"white"	antialiasc("default", "none", "gray", "subpixel")
 terrain.colorsfunctionfunctiongrDevicesn	alpha1
-tifffunctionfunctiongrDevicesfilename"Rplot%03d.tiff"	width480	height480	units"px"	pointsize12	compressionc("none", "rle", "lzw", "jpeg", "zip")	bg"white"	resNA	...	typec("cairo", "Xlib", "quartz")	antialias
+tifffunctionfunctiongrDevicesfilename"Rplot%03d.tiff"	width480	height480	units"px"	pointsize12	compressionc("none", "rle", "lzw", "jpeg", "zip", "lzw+p", "zip+p")	bg"white"	resNA	...	typec("cairo", "Xlib", "quartz")	antialias
 topo.colorsfunctionfunctiongrDevicesn	alpha1
 trans3dfunctionfunctiongrDevicesx	y	z	pmat
 Type1FontfunctionfunctiongrDevicesfamily	metrics	encoding"default"
