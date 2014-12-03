@@ -1,0 +1,52 @@
+annotatefunctionfunctionNLPs	f	aAnnotation()
+AnnotatedPlainTextDocumentfunctionfunctionNLPx	annotations	metalist()
+AnnotationfunctionfunctionNLPidNULL	typeNULL	start	end	featuresNULL
+annotationsfunctionfunctionNLPx
+annotations_in_spansfunctionfunctionNLPx	y
+AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+as.AnnotationfunctionfunctionNLPx	...
+as.SpanfunctionfunctionNLPx
+as.StringfunctionfunctionNLPx
+blankline_tokenizerfunctionfunctionNLPs
+chunked_sentsfunctionfunctionNLPx	...
+CoNLLTextDocumentfunctionfunctionNLPcon	encoding"unknown"	metalist()
+contentfunctionfunctionNLPx
+content<-functionfunctionNLPx	value
+is.AnnotationfunctionfunctionNLPx
+is.SpanfunctionfunctionNLPx
+is.StringfunctionfunctionNLPx
+metafunctionfunctionNLPx	tagNULL	...
+meta<-functionfunctionNLPx	tagNULL	...	value
+next_idfunctionfunctionNLPid
+parasfunctionfunctionNLPx	...
+parsed_parasfunctionfunctionNLPx	...
+parsed_sentsfunctionfunctionNLPx	...
+parse_IETF_language_tagfunctionfunctionNLPx	expandFALSE
+parse_ISO_8601_datetimefunctionfunctionNLPx
+Penn_Treebank_POS_tagslistlistNLPNot a function
+Penn_Treebank_POS_tags$entrycharactercharacterNLPNot a function
+Penn_Treebank_POS_tags$descriptioncharactercharacterNLPNot a function
+Penn_Treebank_POS_tags$examplescharactercharacterNLPNot a function
+Regexp_TokenizerfunctionfunctionNLPpattern	descriptionNULL	invertFALSE	...
+sentsfunctionfunctionNLPx	...
+Simple_Chunk_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+Simple_Entity_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+Simple_Para_Token_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+Simple_POS_Tag_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+Simple_Sent_Token_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+Simple_Stem_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+Simple_Word_Token_AnnotatorfunctionfunctionNLPf	descriptionNULL	classesNULL
+single_featurefunctionfunctionNLPvalue	tag
+SpanfunctionfunctionNLPstart	end
+StringfunctionfunctionNLPx
+tagged_parasfunctionfunctionNLPx	...
+tagged_sentsfunctionfunctionNLPx	...
+TaggedTextDocumentfunctionfunctionNLPcon	encoding"unknown"	word_tokenizer	sent_tokenizerRegexp_Tokenizer("\n", invert = TRUE)	para_tokenizer	sep"/"	metalist()
+tagged_wordsfunctionfunctionNLPx	...
+TreefunctionfunctionNLPvalue	childrenlist()
+Tree_applyfunctionfunctionNLPx	f	recursiveFALSE
+Tree_parsefunctionfunctionNLPx	bracketsc("(", ")")
+whitespace_tokenizerfunctionfunctionNLPs
+WordListDocumentfunctionfunctionNLPcon	encoding"unknown"	metalist()
+wordpunct_tokenizerfunctionfunctionNLPs
+wordsfunctionfunctionNLPx	...
