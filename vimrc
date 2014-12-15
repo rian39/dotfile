@@ -23,6 +23,7 @@ call vundle#begin()
     Bundle "garbas/vim-snipmate"
     Bundle "klen/python-mode"
     Bundle "jamessan/vim-gnupg"
+    Bundle "jlervag/vim-latex"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required

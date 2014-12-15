@@ -132,23 +132,23 @@ if [ "$TERM" = "screen" ] && [ "$HAS_256_COLORS" = "yes" ]
 then
     export TERM=screen-256color
 fi
-#if [ "x$DISPLAY" != "x" ]
-#then
-    #alias vim="vim --servername VIM"
-    #if [ "$HAS_256_COLORS" = "yes" ]
-    #then
-        #function tvim(){ tmux new-session "TERM=screen-256color vim --servername VIM $@" ; }
-    #else
-        #function tvim(){ tmux new-session "vim --servername VIM $@" ; }
-    #fi
-#else
-    #if [ "$HAS_256_COLORS" = "yes" ]
-    #then
-        #function tvim(){ tmux new-session "TERM=screen-256color vim $@" ; }
-    #else
-        #function tvim(){ tmux new-session "vim $@" ; }
-    #fi
-#fi
+if [ "x$DISPLAY" != "x" ]
+then
+    alias vim="vim --servername VIM"
+    if [ "$HAS_256_COLORS" = "yes" ]
+    then
+        function tvim(){ tmux new-session "TERM=screen-256color vim --servername VIM $@" ; }
+    else
+        function tvim(){ tmux new-session "vim --servername VIM $@" ; }
+    fi
+else
+    if [ "$HAS_256_COLORS" = "yes" ]
+    then
+        function tvim(){ tmux new-session "TERM=screen-256color vim $@" ; }
+    else
+        function tvim(){ tmux new-session "vim $@" ; }
+    fi
+fi
 stty stop undef 
 GPG_TTY=`tty`
 export GPG_TTY 
