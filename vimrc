@@ -24,6 +24,7 @@ call vundle#begin()
     Bundle "klen/python-mode"
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vim-latex"
+    Bundle "kshenoy/vim-signature"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
