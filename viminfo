@@ -8,57 +8,57 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Mackenzie
+~MSle0~/Pr
 
 # Last Substitute Search Pattern:
-~MSle0&ALL
+~MSle0&Mat 
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :wq
-:e ~/book/ch3_curves/ch_curves_functions.rmd
-:Pandoc! pdf
-:e esrc_transform.md
-:sp esrc_transform.md
+:q!
 :q
-:Pandoc! odt
-:Pandoc! df
-:bp
-:Pandoc! pdf -H=options.sty
-:e .
-:Pandoc! pdf -H options.sty
-:e options.sty
-:Pandoc! pdf -Vdocumentclass=article -Vdocumentclassoptions=article
-:h pandoc
-:Pandoc! pdf -Vdocumentclass=report -Vdocumentclassoptions=article
-:Pandoc! pdf -Vdocumentclass=report 
-:Pandoc! pdf -Vdocumentclass=report
-:h Pandoc
-:Pandoc! --template=template.tex pdf
+:Git push
+:Git commit --amend -a -m 'adding logistic curve'
+:w
+:Git commit
+:Git commit -a -m 'adding logistic curve'
+:e ~/notes/hastie_2008.md
+:e ~/.vim/snippets/pandoc.snippets
+:e ch_curves_functions_old.rmd
+:tabnew
+:.,.+1!pandoc -t markdown --reference-links --no-wrap 
+:h tabs
+:tabn
+:tabn ch_curves_functions_old.rmd
+:qa
+:h tab
+:gt
+:tabnew ~/ref_bibs/data_forms_thought.bib
 
 # Search String History (newest to oldest):
-?/Mackenzie
-?/fork
-?/Overview
-?/affiliation
-?/bbm
-?/We should
-? \Vgbq\%#
-? \Vlabfig\%#
-? \Vgha\%#
-?/xtable
-?/As Table
-?/asdfasdf
-?/event_cou
-?/Xie
-?/objective
-?/uire
-? ALL
-?/of fitting a linear model to a given dataset using the m
 ? \Vml\%#
-?/_p_
+?/Pr
+?/figure
+? \Vlabfig\%#
+? \Vnn\%#
+? \Vesl\%#
+?/logistic
+?/asdfa
+? \<The\>
+?/S-shaped
+?/HERE
+?/[Dd]eep
+?/sigmoid
+?/adafd
+?/function
+?/map
+?/curve
+?/our goa
+?/concat
+? Mat 
 
 # Expression History (newest to oldest):
 
@@ -77,140 +77,36 @@ $
 
 # Registers:
 "0	LINE	0
-	```{r events, results='asis', echo=FALSE, warnings=FALSE, messages=FALSE}
-	    events = read.csv('~/metacommunities/data_analysis/github_data_infrastructures/github_eventtypes.csv')
-	    event_types = xtable(events, label='tab:gbq_eventtypes', caption= 'Event types on Github Events API')
-	    print(event_types)
-	```
-"1	LINE	0
-	```
+	The logistic regression model arises from the desire to model the posterior probabilities of the _K_ classes via linear functions in $x$, while at the same time ensuring that they sum to one and remain in $[0,1]$ 119
+""1	LINE	0
+	git config credential.helper 'cache --timeout=30'
 "2	LINE	0
-	    ```   /*fork - pull requests
-	    - only 1 month time window to deal with size of data
-	    - 3
-	    */
+	\end{figure}
 "3	LINE	0
-	    */
+	\begin{figure}
+	  \centering
+	      \includegraphics[width=0.5\textwidth]{figure/filename.pdf}
+	        \caption{Logistic curves}
+	  \label{fig:logistic_curve}
 "4	LINE	0
-	       /*fork - pull requests
-	    - only 1 month time window to deal with size of data
-	    - 3
+	
 "5	LINE	0
-	%\affiliation{Department of Physics, Reed College, Portland, Oregon,  97202, USA}
-	%\email[]{illing@reed.edu}
+	763
+<While functions are often diagrammatically written in formulae, they can often appear in different graphic or operational forms. Many of the functions listed above concern curves, and different ways of generating, moving along, finding or differentiating curves. The historical invention of the term 'function' by G.W. Leibniz in the 17th century relates to curves and their description. Functions for Leibniz describe variations in curves such as their slope, and these variations in curves still underpin key aspects of the function-finding done in machine learning. In contrast to the table, or even the generalized common vector space that encompasses, the curve and the many graphic genres that seek to show curves in different ways, relate to variations.
 "6	LINE	0
-	% As physicist we often submit to physical review journals which have
-	% the "revtex" environment as default. I therefore use revtex here.
-	% revtex is however very similar to the standard "article" documentclass environment so
-	% that there should be no compatibility issues.
-	%
-	% There are many options you can choose (in [  ] brackets) - see the revtex manual from
-	% the american physics society
-	%
-	\documentclass[aps,pre,preprint,nofootinbib]{revtex4}
 	
-	% You should use BibTeX and apsrev.bst for references
-	% Choosing a journal automatically selects the correct APS
-	% BibTeX style file (bst file), so only uncomment the line
-	% below if necessary.
-	%\bibliographystyle{apsrev} % standard revtex style 
-	%\bibliographystyle{plain} % shows titles
-	%
-	% apsrevlong.bst: Nonstandard style hacked by L. Illing to give journal titles
-	% but otherwise conform to apsrev bibliography style.
-	% You need to obtain "apsrevlong.bst" from the course webpage or me. 
-	% It is not contained in any standard LaTeX distribution.
-	\bibliographystyle{apsrevlong}
-	
-	% If your document is named foo.tex and if you use BibTeX, then you need to invoke
-	%   latex foo
-	%   bibtex foo
-	%   latex foo
-	%   latex foo
-	% to get the correct document out in the end. You may use 'pdflatex foo' instead of
-	% 'latex foo' to obtain a pdf file instead of a dvi file. (Note that in TeXShop PdfTeX is used by default)
-	
-	%
-	% some useful packages
-	%
-	\usepackage{amsmath,amssymb,amsfonts,amsthm}
-	\usepackage{graphicx}
-	\usepackage{bbm}
+"7	CHAR	0
+	So, a contemporary biostatistical machine learning textbook can write: When a biomedical experiment uses the  statistical procedure of _logistic regression
+"8	CHAR	0
+	634
+<Many of the functions listed above concern curves, and different ways of generating, moving along, finding or differentiating curves. The historical invention of the term 'function' by G.W. Leibniz in the 17th century relates to curves and their description. Functions for Leibniz describe variations in curves such as their slope, and these variations in curves still underpin key aspects of the function-finding done in machine learning. In contrast to the table, or even the generalized common vector space that encompasses, the curve and the many graphic genres that seek to show curves in different ways, relate to variations.
 	
 	
-	  % The switch below allows us to put the .pdf figures needed when 'pdflatex' is
-	  % used and the .eps figured required when 'latex' is used into different 
-	  % directories. The path to these directories is specified here and does not
-	  % have to be specified in the text
-	  %\ifx\pdfoutput\undefined
-	  %    \usepackage{graphicx}
-	  %    \graphicspath{{../epsfigs/}}	
-	  % \else
-	  %    \usepackage[pdftex]{graphicx}
-	  %    \graphicspath{{../pdffigs/}}	
-	  % \fi
-"7	LINE	0
-	% As physicist we often submit to physical review journals which have
-	% the "revtex" environment as default. I therefore use revtex here.
-	% revtex is however very similar to the standard "article" documentclass environment so
-	% that there should be no compatibility issues.
-	%
-	% There are many options you can choose (in [  ] brackets) - see the revtex manual from
-	% the american physics society
-	%
-	\documentclass[aps,pre,preprint,nofootinbib]{revtex4}
-	
-	% You should use BibTeX and apsrev.bst for references
-	% Choosing a journal automatically selects the correct APS
-	% BibTeX style file (bst file), so only uncomment the line
-	% below if necessary.
-	%\bibliographystyle{apsrev} % standard revtex style 
-	%\bibliographystyle{plain} % shows titles
-	%
-	% apsrevlong.bst: Nonstandard style hacked by L. Illing to give journal titles
-	% but otherwise conform to apsrev bibliography style.
-	% You need to obtain "apsrevlong.bst" from the course webpage or me. 
-	% It is not contained in any standard LaTeX distribution.
-	\bibliographystyle{apsrevlong}
-	
-	% If your document is named foo.tex and if you use BibTeX, then you need to invoke
-	%   latex foo
-	%   bibtex foo
-	%   latex foo
-	%   latex foo
-	% to get the correct document out in the end. You may use 'pdflatex foo' instead of
-	% 'latex foo' to obtain a pdf file instead of a dvi file. (Note that in TeXShop PdfTeX is used by default)
-	
-	%
-	% some useful packages
-	%
-	\usepackage{amsmath,amssymb,amsfonts,amsthm}
-	\usepackage{graphicx}
-	\usepackage{bbm}
-	
-	
-	  % The switch below allows us to put the .pdf figures needed when 'pdflatex' is
-	  % used and the .eps figured required when 'latex' is used into different 
-	  % directories. The path to these directories is specified here and does not
-	  % have to be specified in the text
-	  %\ifx\pdfoutput\undefined
-	  %    \usepackage{graphicx}
-	  %    \graphicspath{{../epsfigs/}}	
-	  % \else
-	  %    \usepackage[pdftex]{graphicx}
-	  %    \graphicspath{{../pdffigs/}}	
-	  % \fi
-"8	LINE	0
-	```{r events, results='asis', echo=FALSE, warnings=FALSE, messages=FALSE}
-	    events = read.csv('~/metacommunities/data_analysis/github_data_infrastructures/github_eventtypes.csv')
-	    event_types = xtable(events, label='tab:gbq_eventtypes', caption= 'Event types on Github Events API')
-	    print(event_types)
-	```
 "9	LINE	0
-	
+	## The history and philosophy of functions?
 "b	CHAR	0
 	bb\i,i/i\ivv
-"d@	CHAR	0
+"d	CHAR	0
 	j0f:D
 "f	CHAR	0
 	:€kbf:D
@@ -229,19 +125,19 @@ $
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 "z	CHAR	0
 	ZqZq
-""-	CHAR	0
-	2015
+"-	CHAR	0
+	"
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 'B  1  0  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
 'C  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 'D  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'E  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'F  1  0  ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
-'G  1  0  ~/Documents/data_intensive/book/ch6_reconstruction/ch_reconstruction_number.rmd
-'H  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'I  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
+'E  1  0  ~/Documents/data_intensive/book/ch4_dimensionality/ch_dimensional_exuberance.rmd
+'F  1  0  ~/Documents/data_intensive/book/ch5_probability/ch_naive_informed.rmd
+'G  1  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+'H  1  0  ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
+'I  1  0  ~/Documents/data_intensive/book/ch9_conclusion/ch_conclusion.rmd
 'J  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'K  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'L  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
@@ -254,753 +150,141 @@ $
 'S  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'T  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'U  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'V  32  0  ~/.vimrc
+'V  34  0  ~/.vimrc
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 'X  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'1  270  197  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
-'2  1  38  ~/R/metacommunities/publications/esrc_working_paper_dec2014/template.latex
-'3  17  3  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
-'4  277  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
-'5  266  499  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
-'6  1  0  ~/dotfile/.vimrc
-'7  1  0  ~/dotfile/vim/snippets/pandoc.snippets
-'8  29  0  ~/dotfile/.vim/snippets/pandoc.snippets
-'9  221  210  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
+'0  4  0  ~/gitpush.sh
+'1  3  20  ~/gitpush.sh
+'2  82  9  ~/.zshrc
+'3  11  7  ~/Documents/notes/hastie_2008.md
+'4  7  27  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'5  51  259  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'6  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
+'7  1  188  /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2014-10-14-4.json
+'8  1  0  /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2013-10-14-4.json
+'9  8  16  ~/.zshrc
 
 # Jumplist (newest first):
+-'  4  0  ~/gitpush.sh
+-'  1  0  ~/gitpush.sh
+-'  3  20  ~/gitpush.sh
+-'  82  9  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  11  7  ~/Documents/notes/hastie_2008.md
+-'  165  56  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  133  368  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  121  2208  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  35  2  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  28  778  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  22  19  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  159  5  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  1  0  ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
--'  270  197  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  207  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  30  247  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  285  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  284  44  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  170  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  1  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  32  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  1  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  1  38  ~/R/metacommunities/publications/esrc_working_paper_dec2014/template.latex
--'  2  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/template.latex
--'  17  3  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  20  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  307  0  ~/dotfile/vim/bundle/vim-pandoc/doc/pandoc.txt
--'  1  0  ~/dotfile/vim/bundle/vim-pandoc/doc/pandoc.txt
--'  287  648  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  210  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  219  318  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  166  256  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  167  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  168  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  27  0  ~/R/metacommunities/data_analysis/bq_queries.txt
--'  154  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  165  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  244  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  267  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  271  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  282  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  283  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  3  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  277  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  266  499  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  1  0  ~/R/metacommunities/data_analysis/github_repository_topics/repo-topics/tags
--'  7  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  2  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/extra_stuff.rmd
--'  16  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  158  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  146  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  260  6  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  285  95  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  215  18  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  212  4  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  152  16  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  147  34  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  38  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  221  650  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  1  0  ~/dotfile/.vimrc
--'  1  0  ~/dotfile/vim/snippets/pandoc.snippets
--'  29  0  ~/dotfile/.vim/snippets/pandoc.snippets
--'  1  0  ~/dotfile/.vim/snippets/pandoc.snippets
--'  227  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  214  58  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  224  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  216  21  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  252  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  248  123  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  2  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  241  4  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  246  295  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  255  414  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  162  101  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  278  270  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  218  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  276  263  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  280  399  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  274  648  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  236  184  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  249  47  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  88  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  6  1  ~/R/evsrc/scripts/NERD_tree_3
--'  10  2  ~/R/evsrc/scripts/NERD_tree_3
--'  1  3  ~/R/evsrc/scripts/NERD_tree_3
--'  11  0  ~/R/evsrc/scripts/evSource.sh
--'  5  0  ~/R/evsrc/scripts/NERD_tree_2
--'  7  2  ~/R/evsrc/scripts/NERD_tree_2
--'  1  0  ~/R/evsrc/scripts/NERD_tree_2
--'  1  0  ~/R/evsrc/scripts/extractChanges.sh
--'  6  0  ~/R/evsrc/scripts/NERD_tree_1
--'  7  2  ~/R/evsrc/scripts/NERD_tree_1
--'  1  0  ~/R/evsrc/scripts/NERD_tree_1
--'  1  0  ~/R/evsrc/scripts/evSource.sh
--'  274  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  104  77  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  102  106  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  26  2  /tmp/crontab.QPnvOi/crontab
--'  1  0  /tmp/crontab.QPnvOi/crontab
--'  25  129  /tmp/crontab.u5HzIO/crontab
--'  1  0  /tmp/crontab.u5HzIO/crontab
--'  94  931  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  108  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  109  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  101  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  96  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  98  0  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
--'  92  456  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
--'  90  947  ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
+-'  7  27  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  51  259  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  36  281  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  26  349  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  22  1221  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  24  6  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  20  1659  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  76  4  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  15  112  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  13  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  11  454  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  213  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
+-'  5  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  3  1357  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  1  188  /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2014-10-14-4.json
+-'  1  0  /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2013-10-14-4.json
+-'  8  16  ~/.zshrc
+-'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
+-'  1  0  ~/.tmux.conf
+-'  1  0  ~/.tmux
+-'  1  0  ~/customer.md
+-'  25  0  ~/customer.md
+-'  13  40  ~/.tmux.conf
+-'  12  41  ~/.tmux.conf
+-'  1  0  ~/vimtips.md
+-'  10  0  ~/Documents/bigdata_society/reviews_jan2015.md
+-'  1  0  ~/Documents/bigdata_society/reviews_jan2015.md
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  10  0  ~/Documents/bigdata_society/reviews_jan2015.md
+-'  1  0  ~/Documents/bigdata_society/reviews_jan2015.md
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  1  0  ~/vimtips.md
+-'  10  0  ~/Documents/bigdata_society/reviews_jan2015.md
+-'  1  0  ~/Documents/bigdata_society/reviews_jan2015.md
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  45  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  42  8  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  44  9  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  2  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+-'  40  0  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  43  76  ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+-'  1  188  /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2014-10-14-4.json
+-'  11  7  ~/Documents/notes/hastie_2008.md
+-'  165  56  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  133  368  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  121  2208  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  35  2  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
 
 # History of marks within files (newest to oldest):
 
-> ~/Documents/data_intensive/book/ch3_dimensionality/ch3_dimensional_exuberance.rmd
-	"	1	0
-
-> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-	"	1	0
-	^	82	0
-	.	74	0
-	+	12	89
-	+	12	0
-	+	12	88
-	+	82	0
-	+	16	0
-	+	82	0
-	+	68	0
-	+	74	0
-	t	9	6
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.rmd
-	"	270	197
-	^	270	197
-	.	270	197
-	+	215	17
-	+	216	21
-	+	215	64
-	+	166	0
-	+	166	125
-	+	167	0
-	+	165	0
-	+	214	58
-	+	215	64
-	+	156	19
-	+	141	0
-	+	221	649
-	+	221	0
-	+	221	800
-	+	223	6
-	+	147	34
-	+	165	0
-	+	212	0
-	+	240	0
-	+	285	468
-	+	287	397
-	+	287	397
-	+	287	837
-	+	287	620
-	+	289	134
-	+	289	0
-	+	289	615
-	+	291	0
-	+	270	198
-	+	257	956
-	+	258	722
-	+	259	0
-	+	266	490
-	+	266	361
-	+	266	645
-	+	260	0
-	+	264	12
-	+	262	66
-	+	263	23
-	+	266	1119
-	+	159	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	266	440
-	+	291	0
-	+	3	2
-	+	3	0
-	+	1	0
-	+	4	33
-	+	6	29
-	+	8	27
-	+	14	0
-	+	6	0
-	+	12	2
-	+	14	0
-	+	15	0
-	+	16	0
-	+	166	92
-	+	166	0
-	+	166	138
-	+	168	0
-	+	210	0
-	+	168	1
-	+	206	16
-	+	166	0
-	+	166	132
-	+	208	18
-	+	168	0
-	+	167	0
-	+	168	12
-	+	206	19
-	+	168	0
-	+	166	162
-	+	165	0
-	+	210	0
-	+	210	0
-	+	258	26
-	+	24	149
-	+	24	843
-	+	24	1070
-	+	25	0
-	+	26	25
-	+	26	954
-	+	30	120
-	+	166	13
-	+	168	2
-	+	207	2
-	+	168	0
-	+	181	57
-	+	17	14
-	+	2	19
-	+	14	42
-	+	31	0
-	+	30	247
-	+	168	0
-	+	207	0
-	+	270	197
-	e	280	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
-	"	289	0
-	^	171	4
-	.	171	4
-	+	36	2044
-	+	36	2175
-	+	36	2045
-	+	97	0
-	+	44	256
-	+	44	356
-	+	87	0
-	+	38	46
-	+	51	19
-	+	36	9
-	+	1	6
-	+	34	1
-	+	34	159
-	+	34	3
-	+	34	147
-	+	36	263
-	+	36	375
-	+	47	853
-	+	51	512
-	+	53	164
-	+	54	0
-	+	55	3
-	+	56	0
-	+	1	0
-	+	1	0
-	+	2	0
-	+	3	143
-	+	5	12
-	+	57	24
-	+	58	44
-	+	59	26
-	+	60	23
-	+	61	18
-	+	62	18
-	+	63	18
-	+	64	17
-	+	65	21
-	+	66	17
-	+	67	15
-	+	68	24
-	+	69	18
-	+	70	16
-	+	71	25
-	+	72	37
-	+	73	24
-	+	74	24
-	+	75	22
-	+	76	22
-	+	77	29
-	+	78	37
-	+	79	19
-	+	80	25
-	+	81	16
-	+	82	16
-	+	83	30
-	+	84	29
-	+	85	23
-	+	88	350
-	+	90	600
-	+	90	956
-	+	90	777
-	+	90	777
-	+	95	0
-	+	90	777
-	+	90	596
-	+	90	0
-	+	90	1262
-	+	92	244
-	+	90	921
-	+	90	1619
-	+	90	850
-	+	91	0
-	+	92	336
-	+	90	1705
-	+	92	377
-	+	92	248
-	+	92	0
-	+	95	0
-	+	92	378
-	+	92	0
-	+	92	399
-	+	92	0
-	+	92	444
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	629
-	+	92	497
-	+	92	1343
-	+	94	0
-	+	94	414
-	+	94	0
-	+	94	439
-	+	94	0
-	+	94	461
-	+	169	4
-	+	208	0
-	+	171	4
-	+	210	0
-	+	171	4
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/pandoc output
-	"	3	0
-	.	3	0
-	+	9	0
-	+	7	0
-	+	5	0
-	+	3	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/template.latex
-	"	1	38
-	^	1	39
-	.	1	38
-	+	2	0
-	+	1	38
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/NERD_tree_1
-	"	19	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/R/metacommunities/data_analysis/bq_queries.txt
-	"	27	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/latex.template
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/template.tex
-	"	97	1
-	^	11	23
-	.	39	0
-	+	2	0
-	+	39	0
-	+	10	0
-	+	11	23
-	+	39	0
-
-> ~/dotfile/vim/bundle/vim-pandoc/doc/pandoc.txt
-	"	569	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/options.sty
-	"	1	38
-	^	1	39
-	.	1	38
-	+	1	38
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/NERD_tree_2
-	"	15	0
-	.	1	0
-	+	1	0
-
-> ~/R/metacommunities/data_analysis/github_repository_topics/repo-topics/tags
-	"	1	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/extra_stuff.rmd
-	"	2	0
-	.	2	0
-	+	2	0
-
-> ~/dotfile/.vimrc
-	"	1	0
-
-> ~/dotfile/vim/snippets/pandoc.snippets
-	"	1	0
-	^	4	15
-	.	4	14
-	+	7	9
-	+	8	26
-	+	44	9
-	+	45	14
-	+	47	0
-	+	47	0
-	+	53	18
-	+	2	1
-	+	4	14
-
-> ~/dotfile/.vim/snippets/pandoc.snippets
-	"	29	0
-
-> ~/R/evsrc/scripts/evSource.sh
-	"	15	0
-
-> ~/R/evsrc/scripts/NERD_tree_1
-	"	6	0
-	.	1	0
-	+	1	0
-
-> ~/R/evsrc/scripts/extractChanges.sh
-	"	4	1
-	^	4	23
-	.	5	0
+> ~/gitpush.sh
+	"	4	0
+	^	3	21
+	.	4	0
+	+	3	20
 	+	4	0
-	+	5	0
 
-> ~/R/evsrc/scripts/NERD_tree_2
-	"	5	0
-	.	1	0
-	+	1	0
-
-> ~/R/evsrc/scripts/NERD_tree_3
-	"	6	1
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/R/evsrc/scripts/plmSrc.R
-	"	34	0
-	^	5	53
-	.	5	52
-	+	5	52
-
-> ~/R/evsrc/README.md
-	"	12	0
-
-> ~/R/metacommunities/publications/esrc_working_paper_dec2014/figures/powertime-wide.png
-	"	5	0
-
-> ~/R/evsrc/test/log.sif
-	"	1	0
-
-> ~/R/evsrc/test/changes.sif
-	"	1	0
-	.	1154	0
-	+	1154	0
-
-> ~/Documents/data_intensive/ejcs_data_mining_2014/predicting_desire_dec2014.md
-	"	1	0
-
-> ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
-	"	274	0
-	^	52	765
-	.	58	0
-	+	237	1406
-	+	239	1330
-	+	243	84
-	+	244	0
-	+	259	146
-	+	259	1618
-	+	259	240
-	+	259	369
-	+	259	0
-	+	259	1441
-	+	269	25
-	+	269	946
-	+	261	332
-	+	261	343
-	+	269	36
-	+	269	0
-	+	269	0
-	+	269	0
-	+	269	0
-	+	269	0
-	+	269	0
-	+	270	0
-	+	3	0
-	+	4	0
-	+	5	0
-	+	20	0
-	+	20	0
-	+	24	2
-	+	25	1
-	+	24	0
-	+	25	0
-	+	27	0
-	+	237	375
-	+	259	461
-	+	261	772
-	+	157	13
-	+	261	750
-	+	261	782
-	+	268	0
-	+	261	991
-	+	269	0
-	+	262	0
-	+	263	0
-	+	263	253
-	+	81	645
-	+	79	621
-	+	79	113
-	+	263	350
-	+	263	594
-	+	269	0
-	+	265	0
-	+	264	0
-	+	263	582
-	+	265	0
-	+	267	234
-	+	269	93
-	+	267	815
-	+	267	0
-	+	267	842
-	+	138	290
-	+	121	252
-	+	121	1305
-	+	121	1852
-	+	121	0
-	+	121	1924
-	+	269	0
-	+	128	0
-	+	130	31
-	+	130	163
-	+	130	0
-	+	130	179
-	+	130	568
-	+	130	398
-	+	130	561
-	+	130	1000
-	+	131	0
-	+	134	0
-	+	134	133
-	+	136	0
-	+	136	0
-	+	283	0
-	+	283	0
-	+	296	0
-	+	295	0
-	+	136	0
-	+	136	0
-	+	271	0
-	+	272	0
-	+	136	0
-	+	294	0
-	+	136	0
-	+	299	0
-	+	300	0
-	+	136	50
-	+	136	0
-	+	137	0
-	+	300	574
-	+	312	0
-	+	325	0
-	+	58	0
-
-> /tmp/crontab.QPnvOi/crontab
-	"	26	2
-	.	26	0
-	+	26	0
-
-> /tmp/crontab.u5HzIO/crontab
-	"	25	129
-	^	25	130
-	.	25	129
-	+	24	0
-	+	25	137
-	+	25	129
-
-> ~/dotfile/vim/doc/r-plugin.txt
-	"	2087	62
-
-> ~/Documents/notes/mayer-schonberger.md
-	"	9	0
-	^	15	191
-	.	15	192
-	+	15	285
-	+	15	192
-
-> ~/test.latex
-	"	1	0
-
-> /usr/share/vim/vim74/doc/undo.txt
-	"	174	7
-
-> ~/dotfile/vim/bundle/vim-latex/doc/latex.txt
-	"	1035	0
-
-> ~/test.md
-	"	1	8
-	^	1	9
-	.	1	8
-	+	6	0
-	+	5	0
-	+	1	0
-	+	1	15
-	+	2	13
-	+	1	20
-	+	1	9
-	+	1	0
-	+	2	11
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	2	6
-	+	1	237
-	+	2	7
-	+	2	0
-	+	2	10
-	+	2	0
-	+	1	205
-	+	1	20
-	+	2	0
-	+	1	236
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	1	8
-
-> ~/pandoc output
-	"	3	0
-	.	3	0
-	+	107	0
-	+	97	0
-	+	87	0
-	+	77	0
-	+	67	0
-	+	65	0
-	+	55	0
-	+	45	0
-	+	35	0
-	+	25	0
-	+	15	0
-	+	5	0
-	+	3	0
-
-> ~/NERD_tree_1
-	"	47	0
-	.	1	0
-	+	1	0
-
-> ~/test.tex
-	"	58	0
-
-> ~/template.latex
-	"	186	10
-	^	186	11
-	.	186	10
-	+	2	0
-	+	6	0
-	+	7	9
-	+	187	0
-	+	186	10
-
-> ~/test2.latex
-	"	27	0
-	.	1	0
-	+	1	0
-
-> ~/NERD_tree_2
-	"	50	0
-	.	1	0
-	+	1	0
-
-> ~/test2.ind
-	"	1	0
-
-> ~/test.ilg
-	"	1	0
-
-> ~/test.idx
-	"	1	0
-
-> ~/[Vundle] Installer
-	"	22	0
-	.	1	0
-	+	64	0
-	+	43	0
-	+	22	0
-	+	1	0
-
-> ~/.vimrc
-	"	26	12
-	.	26	12
-	+	52	0
-	+	242	0
-	+	96	33
-	+	26	12
-
-> /tmp/vdV0aMS/73
-	"	120	0
-
-> ~/R/dotfiles/[Vundle] Installer
-	"	21	0
-	.	1	0
-	+	1	0
-
-> /tmp/vENbGiI/75
-	"	1	0
+> ~/.zshrc
+	"	82	9
+	^	82	12
+	.	82	9
+	+	8	16
+	+	82	9
 
 > ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
-	"	1	0
+	"	185	253
 	^	38	112
 	.	38	111
 	+	335	0
@@ -1105,130 +389,897 @@ $
 	+	38	111
 	n	367	0
 
-> /usr/share/vim/vim74/doc/motion.txt
-	"	1094	27
+> ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
+	"	282	1280
+	^	290	203
+	.	275	0
+	+	259	240
+	+	259	369
+	+	259	0
+	+	259	1441
+	+	269	25
+	+	269	946
+	+	261	332
+	+	261	343
+	+	269	36
+	+	269	0
+	+	269	0
+	+	269	0
+	+	269	0
+	+	269	0
+	+	269	0
+	+	270	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	20	0
+	+	20	0
+	+	24	2
+	+	25	1
+	+	24	0
+	+	25	0
+	+	27	0
+	+	237	375
+	+	259	461
+	+	261	772
+	+	157	13
+	+	261	750
+	+	261	782
+	+	268	0
+	+	261	991
+	+	269	0
+	+	262	0
+	+	263	0
+	+	263	253
+	+	81	645
+	+	79	621
+	+	79	113
+	+	263	350
+	+	263	594
+	+	269	0
+	+	265	0
+	+	264	0
+	+	263	582
+	+	265	0
+	+	267	234
+	+	269	93
+	+	267	815
+	+	267	0
+	+	267	842
+	+	138	290
+	+	121	252
+	+	121	1305
+	+	121	1852
+	+	121	0
+	+	121	1924
+	+	269	0
+	+	128	0
+	+	130	31
+	+	130	163
+	+	130	0
+	+	130	179
+	+	130	568
+	+	130	398
+	+	130	561
+	+	130	1000
+	+	131	0
+	+	134	0
+	+	134	133
+	+	136	0
+	+	136	0
+	+	282	0
+	+	282	0
+	+	295	0
+	+	294	0
+	+	136	0
+	+	136	0
+	+	271	0
+	+	272	0
+	+	136	0
+	+	293	0
+	+	136	0
+	+	298	0
+	+	299	0
+	+	136	50
+	+	136	0
+	+	137	0
+	+	299	574
+	+	311	0
+	+	324	0
+	+	58	0
+	+	282	344
+	+	282	633
+	+	282	0
+	+	282	924
+	+	290	202
+	+	275	0
+	b	88	0
 
-> ~/Documents/data_intensive/book/ch2_vector/extra_stuff.md
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+	"	66	332
+	^	66	333
+	.	66	332
+	+	51	442
+	+	51	442
+	+	51	540
+	+	51	442
+	+	51	603
+	+	51	1028
+	+	53	1
+	+	53	160
+	+	58	0
+	+	53	1
+	+	54	0
+	+	53	0
+	+	51	0
+	+	53	196
+	+	55	608
+	+	58	326
+	+	58	0
+	+	58	322
+	+	58	408
+	+	55	743
+	+	45	6
+	+	36	154
+	+	51	319
+	+	51	233
+	+	51	0
+	+	36	129
+	+	51	366
+	+	51	0
+	+	36	106
+	+	36	306
+	+	51	417
+	+	52	0
+	+	56	0
+	+	55	1044
+	+	45	18
+	+	47	9
+	+	45	18
+	+	47	9
+	+	45	6
+	+	58	297
+	+	58	1216
+	+	58	0
+	+	58	1245
+	+	58	147
+	+	58	19
+	+	58	1258
+	+	58	1653
+	+	58	1294
+	+	58	0
+	+	58	1259
+	+	58	0
+	+	58	1360
+	+	58	0
+	+	58	1521
+	+	49	0
+	+	46	18
+	+	48	8
+	+	45	18
+	+	38	18
+	+	58	92
+	+	58	1898
+	+	36	0
+	+	28	0
+	+	33	0
+	+	30	186
+	+	32	0
+	+	32	95
+	+	30	247
+	+	30	25
+	+	30	1652
+	+	30	0
+	+	30	1720
+	+	36	68
+	+	51	130
+	+	36	45
+	+	30	1825
+	+	30	0
+	+	30	2106
+	+	30	0
+	+	30	2122
+	+	34	35
+	+	30	1687
+	+	30	2233
+	+	36	82
+	+	55	1407
+	+	58	86
+	+	41	0
+	+	41	12
+	+	41	31
+	+	41	27
+	+	42	74
+	+	41	0
+	+	58	1564
+	+	59	0
+	+	62	0
+	+	62	1
+	+	64	0
+	+	62	234
+	+	66	0
+	+	66	332
+	a	176	6
+	b	193	0
+	c	213	0
+	d	237	0
+	e	262	0
+	f	329	0
+	g	393	0
+	h	408	0
+	t	86	6
+	v	393	0
+
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+	"	165	56
+	^	165	57
+	.	165	56
+	+	165	56
+
+> ~/dotfile/vim/snippets/pandoc.snippets
 	"	1	0
+
+> ~/Documents/notes/hastie_2008.md
+	"	11	7
+
+> ~/.bashrc
+	"	155	4
+
+> /usr/share/vim/vim74/doc/tabpage.txt
+	"	47	0
+
+> ~/Documents/data_intensive/book/ch3_curves/function_notes.md
+	"	29	24
+
+> ~/Documents/notes/foucault_archaeology.md
+	"	1	0
+
+> ~/Documents/notes/foucault_order.md
+	"	28	372
+
+> ~/Documents/notes/deleuze_foucault.md
+	"	3	112
+
+> ~/Documents/data_intensive/book/ch3_curves/hastie_function.md
+	"	775	76
+
+> ~/Documents/data_intensive/book/ml_lit/data/hastie_elem/hastie_elements_2009.txt
+	"	6261	49
+
+> ~/Documents/ref_bibs/data_forms_thought.bib
+	"	394	11
+
+> /usr/share/vim/vim74/doc/intro.txt
+	"	480	56
+
+> ~/Documents/data_intensive/book/ml_lit/data/hastie_elem/hastie_references.txt
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch2_vector/[Vundle] Installer
+	"	24	0
 	.	1	0
 	+	1	0
 
-> ~/Documents/notes/guattari_molecular_rev_1984.md
-	"	5	84
-	^	9	85
-	.	9	84
-	+	4	513
-	+	7	192
-	+	4	0
-	+	9	84
+> /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2014-10-14-4.json
+	"	1	188
 
-> ~/Documents/digital_humanities/diagrammatic_intensities.md
-	"	133	428
-	^	109	804
-	.	109	803
-	+	63	570
-	+	63	570
-	+	63	726
-	+	63	570
-	+	63	1093
-	+	63	696
-	+	89	0
-	+	65	16
-	+	65	0
-	+	65	0
-	+	65	0
-	+	63	0
-	+	63	570
-	+	64	0
-	+	85	190
-	+	88	43
-	+	90	244
-	+	90	0
-	+	90	277
-	+	92	0
-	+	90	369
-	+	83	741
-	+	103	0
-	+	92	0
-	+	91	0
-	+	100	0
-	+	100	1400
-	+	100	0
-	+	102	177
-	+	102	0
-	+	102	256
-	+	102	0
-	+	102	289
-	+	103	0
-	+	102	0
-	+	100	1531
-	+	101	0
-	+	103	23
-	+	105	433
-	+	105	2341
-	+	109	132
-	+	109	132
-	+	109	132
-	+	109	132
-	+	137	0
-	+	109	169
-	+	57	0
-	+	61	0
-	+	63	0
-	+	67	0
-	+	85	0
-	+	90	0
-	+	92	0
-	+	100	0
-	+	102	0
-	+	105	269
-	+	109	166
-	+	109	639
+> /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2013-10-14-4.json
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
+	"	1	0
+	^	11	100
+	.	11	99
+	+	12	123
+	+	10	0
+	+	11	99
+
+> ~/.tmux.conf
+	"	1	0
+	^	13	41
+	.	13	0
+	+	14	0
+	+	13	0
+
+> ~/.tmux
+	"	1	0
+
+> ~/customer.md
+	"	1	0
+
+> ~/vimtips.md
+	"	1	0
+
+> ~/Documents/bigdata_society/reviews_jan2015.md
+	"	10	0
+	^	9	24
+	.	10	0
+	+	10	65
+	+	3	66
+	+	9	0
+	+	3	364
+	+	5	31
+	+	7	2
+	+	6	0
+	+	7	305
+	+	8	84
+	+	7	558
+	+	8	427
+	+	10	31
+	+	9	23
+	+	10	0
+
+> ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
+	"	40	0
+	^	44	76
+	.	45	0
+	+	48	6
+	+	48	0
+	+	48	98
+	+	48	8
+	+	48	65
+	+	53	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	45	0
+	+	45	0
+	+	45	0
+	+	43	0
+	+	42	73
+	+	42	74
+	+	43	0
+	+	42	75
+	+	43	75
+	+	43	76
+	+	43	0
+	+	44	0
+	+	43	76
+	+	44	75
+	+	45	0
+	+	44	76
+	+	45	0
+
+> ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/pandoc output
+	"	3	0
+	.	3	0
+	+	3	0
+
+> ~/Downloads/rfacer/testdata.tsv
+	"	1	1
+
+> ~/Downloads/rfacer/test_2by10_text_matrix.afm
+	"	1	1
+
+> ~/Downloads/rfacer/test_6by10_mixed_matrix.tsv
+	"	4	0
+
+> ~/Downloads/rfacer/test_3by10_categorical_matrix.tsv
+	"	1	1
+
+> ~/Downloads/rfacer/make_package.sh
+	"	1	0
+
+> ~/Downloads/rfacer/install_R.sh
+	"	1	0
+
+> ~/dotfile/gitpull.sh
+	"	9	0
+	^	9	0
+	.	8	0
+	+	8	0
+
+> ~/.viminfo
+	"	147	0
+
+> ~/Documents/reviews/ruppert_2014/mackenzie_endorsement.md
+	"	1	27
+	^	1	256
+	.	1	256
+	+	1	421
+	+	1	282
+	+	1	731
+	+	1	256
+
+> ~/reveal.js/README.md
+	"	726	0
+
+> ~/test_reveal.md
+	"	1	0
+	.	2	0
+	+	1	0
+	+	2	0
+
+> ~/.vimrc
+	"	250	0
+	^	250	51
+	.	250	0
+	+	54	0
+	+	244	0
+	+	98	33
+	+	26	12
+	+	27	34
+	+	28	36
+	+	250	0
+
+> ~/[Vundle] list
+	"	2	0
+	.	1	0
+	+	1	0
+
+> ~/[Vundle] clean
+	"	3	0
+	.	1	0
+	+	1	0
+
+> ~/reveal.js/[Vundle] list
+	"	2	0
+	.	1	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	"	24	0
+	.	1	0
+	+	1	0
+
+> ~/reveal.js/[Vundle] Installer
+	"	24	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/promise_of_infrastructure/deep.rmd
+	"	13	1229
+	^	13	1230
+	.	13	1229
+	+	5	340
+	+	5	527
+	+	5	703
+	+	7	434
+	+	6	0
+	+	7	749
+	+	5	455
+	+	5	821
+	+	11	34
+	+	2	0
+	+	5	11
+	+	5	333
+	+	11	400
+	+	11	746
+	+	13	400
+	+	13	610
+	+	7	757
+	+	7	302
+	+	13	687
+	+	13	814
+	+	13	1113
+	+	14	0
+	+	15	1293
+	+	7	136
+	+	9	3
+	+	10	0
+	+	11	4
+	+	8	0
+	+	13	665
+	+	13	1025
+	+	13	0
+	+	13	1229
+
+> ~/Documents/notes/ong_collier_global_2005.md
+	"	1	0
+
+> ~/Documents/notes/james_1996.md
+	"	52	593
+
+> /tmp/crontab.ma7Dx9/crontab
+	"	27	0
+	.	28	0
+	+	28	0
+	+	28	0
+
+> ~/R/metacommunities/publications/infrastructures_handbook/mackenzie_abstract_revised.md
+	"	2	0
+	^	22	0
+	.	22	0
+	+	45	597
+	+	45	203
+	+	44	0
+	+	46	0
+	+	45	0
+	+	45	11
+	+	45	0
+	+	45	0
+	+	45	508
+	+	45	306
+	+	45	508
+	+	45	393
+	+	45	504
+	+	45	507
+	+	45	103
+	+	45	635
+	+	45	0
+	+	45	1419
+	+	45	421
+	+	45	0
+	+	45	0
+	+	45	0
+	+	45	0
+	+	45	0
+	+	46	0
+	+	42	0
+	+	43	0
+	+	45	0
+	+	45	2
+	+	45	270
+	+	45	0
+	+	45	0
+	+	45	275
+	+	2	1
+	+	3	0
+	+	1	0
+	+	1	0
+	+	23	0
+	+	24	2
+	+	26	0
+	+	4	0
+	+	5	0
+	+	45	0
+	+	6	0
+	+	22	0
+
+> ~/R/metacommunities/publications/infrastructures_handbook/[Vundle] Installer
+	"	23	0
+	.	1	0
+	+	1	0
+
+> /tmp/vXcqHvs/79
+	"	111	0
+
+> ~/Documents/data_intensive/ngs_data_topography/ngs_paper/.gitignore
+	"	1	0
+
+> ~/R/metacommunities/publications/promise_of_infrastructure/deep.rmd
+	"	1	98
+	^	1	99
+	.	1	98
+	+	3	492
+	+	3	365
+	+	3	889
+	+	6	0
+	+	5	122
+	+	5	0
+	+	5	829
+	+	5	705
+	+	5	961
+	+	5	817
+	+	5	1056
+	+	5	384
+	+	5	581
+	+	5	1484
+	+	5	1253
+	+	7	435
+	+	5	740
+	+	3	387
+	+	3	279
+	+	5	79
+	+	5	480
+	+	7	426
+	+	7	0
+	+	7	704
+	+	12	2
+	+	11	61
+	+	12	189
+	+	13	154
+	+	14	63
+	+	1	98
+
+> ~/Documents/admin/sabbatical_leave_2012/mackenzie_post_sabb_report_dec2013.md
+	"	19	0
+
+> ~/Documents/teaching/socl923-mcs/sessions_ideas.md
+	"	1	0
+
+> ~/R/metacommunities/.git/MERGE_MSG
+	"	1	0
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/predicting_desire.md
+	"	130	189
+	^	132	1661
+	.	132	0
+	+	130	1449
+	+	130	1113
+	+	132	242
+	+	132	585
+	+	132	193
+	+	130	45
+	+	130	744
+	+	130	999
+	+	132	182
+	+	130	1366
+	+	131	0
+	+	132	181
+	+	132	1130
+	+	132	1130
+	+	132	274
+	+	132	674
+	+	132	274
+	+	132	521
+	+	132	287
+	+	132	0
+	+	132	323
+	+	132	837
+	+	132	0
+	+	132	875
+	+	132	1130
+	+	132	1130
+	+	132	1143
+	+	130	966
+	+	132	975
+	+	132	271
+	+	132	379
+	+	132	780
+	+	132	1130
+	+	132	1130
+	+	133	0
+	+	8	201
+	+	8	0
+	+	8	216
+	+	8	319
+	+	8	140
+	+	8	538
+	+	8	302
+	+	8	781
+	+	29	259
+	+	29	549
+	+	35	225
+	+	34	0
+	+	35	457
+	+	35	1101
+	+	8	311
+	+	8	0
+	+	8	90
+	+	8	930
+	+	8	1245
+	+	8	894
+	+	8	1270
+	+	8	951
+	+	7	0
+	+	8	0
+	+	7	0
+	+	8	120
+	+	8	425
+	+	8	825
+	+	9	0
+	+	8	850
+	+	8	0
+	+	8	870
+	+	8	1282
+	+	54	661
+	+	8	768
+	+	8	997
+	+	8	1080
+	+	8	0
+	+	8	1178
+	+	8	0
+	+	21	0
+	+	29	0
+	+	41	0
+	+	58	0
+	+	79	0
+	+	83	0
 	+	109	0
-	+	109	686
-	+	110	0
-	+	115	0
-	+	116	0
-	+	119	0
-	+	118	0
-	+	119	337
-	+	125	744
-	+	120	0
-	+	129	0
-	+	121	0
-	+	124	0
-	+	131	90
-	+	131	0
-	+	125	0
-	+	128	0
-	+	125	743
-	+	126	0
-	+	131	0
-	+	129	18
+	+	130	0
+	+	132	0
+	+	132	1583
+	+	132	1215
+	+	132	373
+	+	124	762
+	+	105	1267
+	+	105	801
+	+	105	717
+	+	105	501
+	+	99	1915
+	+	87	1148
+	+	79	38
+	+	49	1294
+	+	31	271
+	+	29	515
+	+	132	1660
+	+	132	0
+	a	8	0
+	h	29	1222
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/response_letter.md
+	"	1	0
+	^	5	270
+	.	5	482
+	+	5	990
+	+	5	838
+	+	9	15
+	+	5	219
+	+	5	0
+	+	5	269
+	+	5	482
+
+> ~/R/metacommunities/data_analysis/data/test.txt
+	"	4664	0
+
+> ~/R/metacommunities/data_analysis/data/2012-04-01-12.json
+	"	1	1
+
+> /tmp/.fr-JyjqbS/2011-09-22-10.json
+	"	10	419
+
+> ~/test.txt
+	"	1	1
+	^	1	2
+	.	1	1
+	+	1	1
+
+> ~/R/webcam-pulse-detector/README.md
+	"	126	0
+
+> ~/Downloads/JakeWharton-ActionBarSherlock-5a15d92/README.md
+	"	1	0
+
+> ~/Documents/document-archive/.git/MERGE_MSG
+	"	1	0
+
+> ~/.pam_environment
+	"	2	38
+	^	2	39
+	.	2	39
+	+	1	0
+	+	2	0
+	+	1	45
+	+	2	0
+	+	3	0
+	+	2	39
+
+> ~/Documents/teaching/socl201-methods/statistics/taking_part_data/data_extract.r
+	"	8	19
+	^	7	43
+	.	7	42
+	+	7	43
+	+	9	48
+	+	12	37
+	+	8	90
+	+	7	0
+	+	8	0
+	+	7	34
+	+	9	39
+	+	8	34
+	+	7	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	7	41
+	+	9	48
+	+	7	42
+
+> ~/R/webcam-pulse-detector/test_webcam.py
+	"	29	0
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/abstract.md
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/[Vundle] Installer
+	"	23	0
+	.	1	0
+	+	1	0
+
+> /tmp/vCQ5x81/84
+	"	1	0
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/[Vundle] list
+	"	2	0
+	.	1	0
+	+	1	0
+
+> /usr/share/vim/vim74/doc/spell.txt
+	"	157	35
+
+> ~/dotfile/vim/bundle/vim-pandoc/doc/pandoc.txt
+	"	416	40
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/build.sh
+	"	1	0
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/title_page.md
+	"	12	9
+	^	12	5
+	.	12	9
+	+	12	9
+
+> ~/Documents/data_intensive/ejcs_data_mining_2014/pandoc output
+	"	3	0
+	.	3	0
+	+	3	0
+
+> ~/Documents/computationaL_cultures/rhetorics/mackenzie_reviews.md
+	"	14	0
+	^	15	312
+	.	2	0
+	+	5	535
+	+	9	171
+	+	5	325
+	+	9	355
+	+	5	681
+	+	2	297
+	+	11	285
+	+	7	537
+	+	11	432
+	+	17	830
+	+	7	307
+	+	14	0
 	+	15	0
+	+	15	927
+	+	17	830
 	+	17	0
-	+	18	0
-	+	17	3
-	+	103	15
-	+	100	218
-	+	100	0
-	+	100	255
-	+	98	16
-	+	102	0
-	+	100	1806
-	+	102	218
-	+	102	0
-	+	105	0
-	+	108	0
-	+	105	638
-	+	106	0
-	+	107	569
-	+	137	0
-	+	137	0
-	+	109	803
+	+	17	768
+	+	17	370
+	+	17	830
+	+	2	0
+	+	19	572
+	+	21	503
+	+	17	144
+	+	15	261
+	+	19	617
+	+	15	311
+	+	2	0
+
+> ~/Documents/teaching/socl201-methods/statistics/UKDA-7222-spss/spss/spss14/data_extract.r
+	"	9	29
+	^	9	30
+	.	9	29
+	+	8	221
+	+	9	0
+	+	7	0
+	+	9	10
+	+	10	22
+	+	9	25
+	+	7	63
+	+	1	0
+	+	3	0
+	+	2	41
+	+	11	9
+	+	9	171
+	+	12	40
+	+	7	74
+	+	9	88
+	+	7	16
+	+	9	29
+
+> ~/Documents/teaching/socl201-methods/statistics/UKDA-7222-spss/spss/spss14/NERD_tree_1
+	"	6	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/book/ch5_probability/ch_naive_informed.rmd
+	"	34	0
+	^	32	58
+	.	32	57
+	+	1	1
+	+	2	0
+	+	7	0
+	+	34	80
+	+	32	57
+	z	1	0
+
+> ~/Documents/google_analytics/publications/infrastructures_handbook/mackenzie_abstract.md
+	"	1	0
 
 > ~/Documents/data_intensive/book/ch4_dimensionality/ch_dimensional_exuberance.rmd
-	"	586	0
+	"	1	0
 	^	2	0
 	.	2	0
 	+	224	0
@@ -1243,441 +1294,162 @@ $
 	+	11	0
 	+	2	0
 
-> ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
+> ~/template.latex
 	"	1	0
-
-> ~/Documents/data_intensive/book/ch5_probability/ch_naive_informed.rmd
-	"	407	0
-	^	2	0
-	.	7	0
-	+	1	1
+	^	186	11
+	.	186	10
 	+	2	0
-	+	7	0
-	z	1	0
+	+	6	0
+	+	7	9
+	+	187	0
+	+	186	10
 
-> ~/Documents/notes/hastie_2008.md
-	"	4	0
-	.	7	0
-	+	4	73
-	+	4	152
-	+	4	241
-	+	4	324
-	+	4	398
-	+	4	475
-	+	4	547
-	+	4	625
-	+	4	704
-	+	4	777
-	+	4	785
-	+	5	0
-	+	4	151
-	+	7	0
-	+	7	0
+> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+	"	1	0
 
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 	"	1	0
 
-> ~/Documents/notes/dominos_ml_2012.md
-	"	7	0
-
-> ~/Documents/notes/pentland_social_physics2014.md
-	"	1	0
-	^	3	21
-	.	3	20
-	+	3	20
-
-> ~/Documents/notes/jockers_macroanalysis_2013.md
-	"	5	0
-	^	5	190
-	.	5	189
-	+	1	166
-	+	3	59
-	+	5	327
-	+	5	189
-
-> ~/Documents/notes/peirce_essential_vol1.md
+> ~/Documents/data_intensive/book/ch5_topologies/ch_genomic_topologies.rmd
 	"	1	0
 
-> ~/Documents/notes/peirce_essential_vol2.md
-	"	10	86
-	^	22	0
-	.	21	0
-	+	10	350
-	+	12	524
-	+	14	201
-	+	16	113
-	+	1	493
-	+	3	0
-	+	2	0
-	+	5	22
-	+	6	0
-	+	7	106
-	+	3	0
-	+	7	107
-	+	8	0
-	+	7	105
-	+	5	7
-	+	6	7
-	+	21	0
-
-> ~/dotfile/add
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
 	"	1	0
 
-> ~/dotfile/.git/MERGE_MSG
+> ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 	"	1	0
 
-> ~/dotfile/.gitignore
-	"	1	0
-	^	1	26
-	.	1	26
-	+	1	26
-
-> ~/Documents/digital_humanities/.git/MERGE_MSG
+> ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 	"	1	0
 
-> ~/Documents/digital_humanities/.git/COMMIT_EDITMSG
-	"	1	24
-	^	1	24
-	.	1	23
-	+	1	23
+> ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
+	"	1	0
 
-> ~/Documents/data_intensive/book/ch1_learning/test.md
-	"	1	47
-	.	1	0
-	+	7	0
-	+	16	73
-	+	7	67
-	+	16	76
+> ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch9_conclusion/ch_conclusion.rmd
+	"	75	0
+	^	75	0
+	.	75	0
+	+	75	0
+
+> ~/R/metacommunities/publications/esrc_working_paper_dec2014/esrc_transform.md
+	"	14	0
+	^	13	35
+	.	14	0
+	+	17	143
+	+	19	12
+	+	71	24
+	+	72	44
+	+	73	26
+	+	74	23
+	+	75	18
+	+	76	18
+	+	77	18
+	+	78	17
+	+	79	21
+	+	80	17
+	+	81	15
+	+	82	24
+	+	83	18
+	+	84	16
+	+	85	25
+	+	86	37
+	+	87	24
+	+	88	24
+	+	89	22
+	+	90	22
+	+	91	29
+	+	92	37
+	+	93	19
+	+	94	25
+	+	95	16
+	+	96	16
+	+	97	30
+	+	98	29
+	+	99	23
+	+	102	350
+	+	104	600
+	+	104	956
+	+	104	777
+	+	104	777
+	+	109	0
+	+	104	777
+	+	104	596
+	+	104	0
+	+	104	1262
+	+	106	244
+	+	104	921
+	+	104	1619
+	+	104	850
+	+	105	0
+	+	106	336
+	+	104	1705
+	+	106	377
+	+	106	248
+	+	106	0
+	+	109	0
+	+	106	378
+	+	106	0
+	+	106	399
+	+	106	0
+	+	106	444
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	629
+	+	106	497
+	+	106	1343
+	+	108	0
+	+	108	414
+	+	108	0
+	+	108	439
+	+	108	0
+	+	108	461
+	+	183	4
+	+	222	0
+	+	185	4
+	+	224	0
+	+	185	4
 	+	16	0
-	+	16	0
-	+	7	0
+	+	1	0
 	+	15	0
-	+	14	0
-	+	11	79
-	+	9	14
-	+	11	78
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Documents/digital_humanities/exeter_dh_abstract_nov2014.md
-	"	58	0
-	^	58	0
-	.	58	0
-	+	2	355
-	+	2	179
-	+	2	0
+	+	16	1
+	+	16	1
 	+	3	0
-	+	7	147
-	+	8	153
-	+	9	150
-	+	1	26
-	+	8	108
-	+	5	82
-	+	9	198
-	+	9	0
-	+	9	214
-	+	1	1
-	+	21	168
-	+	21	0
-	+	21	325
-	+	21	0
-	+	22	0
-	+	23	145
-	+	23	0
-	+	34	0
-	+	23	378
-	+	23	285
-	+	24	0
-	+	23	479
-	+	27	367
-	+	27	384
-	+	33	0
-	+	33	1
-	+	34	0
-	+	29	217
-	+	31	1
-	+	32	0
-	+	59	1034
-	+	35	0
-	+	35	1031
-	+	37	217
-	+	39	1
-	+	39	345
-	+	31	234
-	+	39	345
-	+	41	241
-	+	42	0
-	+	43	0
-	+	41	250
-	+	43	21
-	+	43	162
-	+	43	350
-	+	45	286
-	+	47	211
-	+	45	58
-	+	49	0
-	+	59	0
-	+	49	0
-	+	59	0
-	+	49	4
-	+	49	4
-	+	59	0
-	+	50	0
-	+	51	0
-	+	51	119
-	+	51	0
-	+	51	453
-	+	51	375
-	+	51	459
-	+	51	371
-	+	52	0
-	+	53	242
-	+	53	0
-	+	53	336
-	+	48	0
-	+	53	792
-	+	53	0
-	+	53	936
-	+	53	0
-	+	53	1006
-	+	53	1296
-	+	55	370
-	+	55	0
-	+	55	386
-	+	55	277
-	+	17	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	58	0
-
-> ~/Documents/digital_humanities/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/ref_bibs/data_forms_thought.bib
-	"	1	0
-
-> ~/Documents/digital_humanities/NERD_tree_3
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> /tmp/crontab.taadA4/crontab
-	"	25	0
-	.	25	0
-	+	23	0
-	+	24	0
-	+	25	0
-
-> ~/Documents/reviews/mackenzie.md
-	"	9	172
-	^	9	173
-	.	9	172
-	+	2	0
+	+	2	82
+	+	4	23
+	+	5	24
+	+	20	3
+	+	6	0
+	+	20	3
+	+	6	0
+	+	7	0
+	+	6	21
+	+	7	39
+	+	8	0
 	+	10	0
-	+	3	535
-	+	5	1041
-	+	5	929
-	+	6	0
-	+	9	290
-	+	3	573
-	+	5	641
-	+	5	924
-	+	7	969
-	+	9	689
-	+	9	84
-	+	9	172
-
-> ~/Documents/document-archive/.gitignore
-	"	1	0
-	^	5	5
-	.	5	4
-	+	1	5
-	+	5	0
-	+	6	6
-	+	5	4
-
-> ~/Documents/data_intensive/book/[Vundle] Installer
-	"	21	0
-	.	1	0
-	+	21	0
-	+	1	0
-
-> ~/Documents/admin/sociology/fass_away_day_dec2014/_FASS - Faculty level.log
-	"	4096	0
-
-> /tmp/vYAz6vB/73
-	"	1	0
-
-> ~/Documents/ref_bibs/.git/MERGE_MSG
-	"	3	0
-	^	2	10
-	.	2	9
-	+	2	9
-
-> ~/dotfile/gitpull.sh
-	"	1	0
-	.	5	0
-	+	2	0
-	+	5	0
-
-> ~/dotfile/vim/bundle/python-mode/autoload/pymode/folding.vim
-	"	83	8
-	.	83	0
-	+	82	0
-	+	83	0
-
-> ~/dotfile/vim/spell/en.utf-8.add
-	"	65	0
-	.	65	0
-	+	47	0
-	+	48	0
-	+	51	0
-	+	45	0
-	+	46	0
-	+	56	0
-	+	73	0
-	+	65	0
-
-> ~/dotfile/vim/spell/en.utf-8.add.spl
-	"	1	0
-
-> ~/Documents/data_intensive/eurojourncultstud/mackenzie_abstract_ejcs2013.md
-	"	1	0
-
-> ~/Documents/css/css_board_minutes_oct2014.md
-	"	43	0
-	^	43	0
-	.	43	0
-	+	45	0
-	+	7	17
-	+	1	23
-	+	3	41
-	+	5	110
-	+	5	112
-	+	44	50
-	+	7	2
-	+	6	0
-	+	15	495
-	+	21	122
-	+	19	140
-	+	21	162
-	+	19	139
-	+	21	233
-	+	19	185
-	+	23	123
-	+	25	8
-	+	23	51
-	+	17	60
-	+	27	346
-	+	31	306
-	+	35	237
-	+	42	298
-	+	41	1
-	+	43	0
-
-> ~/Documents/notes/bowker_star_sorting_things.md
-	"	41	0
-
-> ~/Documents/notes/deleuze_foucault.md
-	"	20	152
-	^	31	0
-	.	30	183
-	+	3	119
-	+	5	43
-	+	9	238
-	+	7	136
-	+	13	45
-	+	37	82
-	+	13	48
-	+	18	356
-	+	22	82
-	+	24	77
-	+	26	268
-	+	28	84
-	+	34	88
-	+	36	160
-	+	26	80
-	+	30	183
-
-> /usr/share/vim/vim74/doc/options.txt
-	"	8214	6
-
-> ~/Documents/data_intensive/book/ch2_vector/pandoc output
-	"	1	0
-	.	3	0
-	+	3	0
-
-> ~/Documents/notes/foucault_archaeology.md
-	"	1	589
-	^	1	590
-	.	1	589
-	+	1	589
-
-> ~/test.rmd
-	"	8	0
-	^	8	0
-	.	8	0
-	+	1	2
-	+	1	13
-	+	1	16
-	+	1	15
-	+	1	0
-	+	1	0
-	+	1	23
-	+	1	0
-	+	1	13
-	+	13	11
-	+	12	53
-	+	7	2
+	+	12	0
+	+	8	20
+	+	9	38
+	+	10	20
+	+	11	37
+	+	12	22
+	+	13	34
 	+	14	0
-	+	1	0
-	+	1	9
-	+	12	24
+
+> ~/R/metacommunities/publications/esrc_working_paper_dec2014/template.latex
+	"	144	0
+	^	1	23
+	.	1	22
+	+	2	0
 	+	1	38
+	+	68	0
+	+	67	0
+	+	1	22
+
+> ~/Documents/data_intensive/book/ch3_curves/[Vundle] Installer
+	"	23	0
+	.	1	0
 	+	1	0
-	+	9	0
-	+	11	0
-	+	10	0
-	+	12	0
-	+	12	34
-	+	12	0
-	+	11	40
-	+	12	37
-	+	13	0
-	+	12	0
-	+	17	0
-	+	8	0
-
-> /tmp/vgYQyas/144
-	"	103	2
-
-> ~/dotfile/vim/bundle/vim-snipmate/doc/SnipMate.txt
-	"	334	68
-
-> ~/Documents/data_intensive/book/ch2_vector/test.rmd
-	"	17	0
-	^	8	44
-	.	8	43
-	+	18	0
-	+	8	0
-	+	18	0
-	+	17	39
-	+	8	46
-	+	17	27
-	+	8	0
-	+	9	0
-	+	6	3
-	+	5	0
-	+	3	7
-	+	4	0
-	+	5	21
-	+	3	0
-	+	8	43
-
-> ~/Documents/data_intensive/book/ch2_vector/test.md
-	"	13	1

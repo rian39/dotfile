@@ -4,6 +4,8 @@ echo ----------------------------
 cd ~/dotfile/
 git status -s
 git pull
+cp viminfo ~/.viminfo
+
 
 cd ~/ref_bibs/
 echo ----------------------------

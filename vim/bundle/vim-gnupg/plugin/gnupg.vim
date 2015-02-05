@@ -1,5 +1,5 @@
 " Name:    gnupg.vim
-" Last Change: 2014 Nov 20
+" Last Change: 2015 Jan 01
 " Maintainer:  James McCoy <vega.james@gmail.com>
 " Original Author:  Markus Braun <markus.braun@krawel.de>
 " Summary: Vim plugin for transparent editing of gpg encrypted files.
@@ -186,21 +186,16 @@ augroup GnuPG
 
   " do the decryption
   exe "autocmd BufReadCmd " . g:GPGFilePattern .  " call s:GPGInit(1) |" .
-                                                \ " call s:GPGDecrypt(1) |" .
-                                                \ " call s:GPGBufReadPost()"
+                                                \ " call s:GPGDecrypt(1) |"
   exe "autocmd FileReadCmd " . g:GPGFilePattern . " call s:GPGInit(0) |" .
                                                 \ " call s:GPGDecrypt(0)"
 
   " convert all text to encrypted text before writing
   " We check for GPGCorrespondingTo to avoid triggering on writes in GPG Options/Recipient windows
-  exe "autocmd BufWriteCmd " . g:GPGFilePattern . " if !exists('b:GPGCorrespondingTo') |" .
-                                                \ " call s:GPGBufWritePre() |" .
-                                                \ " endif"
-
   exe "autocmd BufWriteCmd,FileWriteCmd " . g:GPGFilePattern . " if !exists('b:GPGCorrespondingTo') |" .
-                                                \ " call s:GPGInit(0) |" .
-                                                \ " call s:GPGEncrypt() |" .
-                                                \ " endif"
+                                                             \ " call s:GPGInit(0) |" .
+                                                             \ " call s:GPGEncrypt() |" .
+                                                             \ " endif"
 
   " cleanup on leaving vim
   exe "autocmd VimLeave " . g:GPGFilePattern .    " call s:GPGCleanup()"
@@ -514,6 +509,14 @@ function s:GPGDecrypt(bufread)
     return
   endif
 
+  if a:bufread
+    silent execute ':doautocmd BufReadPre ' . fnameescape(expand('<afile>:r'))
+    call s:GPGDebug(2, 'called BufReadPre autocommand for ' . fnameescape(expand('<afile>:r')))
+  else
+    silent execute ':doautocmd FileReadPre ' . fnameescape(expand('<afile>:r'))
+    call s:GPGDebug(2, 'called FileReadPre autocommand for ' . fnameescape(expand('<afile>:r')))
+  endif
+
   " check if the message is armored
   if (match(output, "gpg: armor header") >= 0)
     call s:GPGDebug(1, "this file is armored")
@@ -541,47 +544,36 @@ function s:GPGDecrypt(bufread)
     return
   endif
 
+  if a:bufread
+    " In order to make :undo a no-op immediately after the buffer is read,
+    " we need to do this dance with 'undolevels'.  Actually discarding the undo
+    " history requires performing a change after setting 'undolevels' to -1 and,
+    " luckily, we have one we need to do (delete the extra line from the :r
+    " command)
+    let levels = &undolevels
+    set undolevels=-1
+    " :lockmarks doesn't actually prevent '[,'] from being overwritten, so we
+    " need to manually set them ourselves instead
+    silent 1delete
+    1mark [
+    $mark ]
+    let &undolevels = levels
+    " call the autocommand for the file minus .gpg$
+    silent execute ':doautocmd BufReadPost ' . fnameescape(expand('<afile>:r'))
+    call s:GPGDebug(2, 'called BufReadPost autocommand for ' . fnameescape(expand('<afile>:r')))
+  else
+    " call the autocommand for the file minus .gpg$
+    silent execute ':doautocmd FileReadPost ' . fnameescape(expand('<afile>:r'))
+    call s:GPGDebug(2, 'called FileReadPost autocommand for ' . fnameescape(expand('<afile>:r')))
+  endif
+
+  " Allow the user to define actions for GnuPG buffers
+  silent doautocmd User GnuPG
+
   " refresh screen
   redraw!
 
   call s:GPGDebug(3, "<<<<<<<< Leaving s:GPGDecrypt()")
-endfunction
-
-" Function: s:GPGBufReadPost() {{{2
-"
-" Handle functionality specific to opening a file for reading rather than
-" reading the contents of a file into a buffer
-"
-function s:GPGBufReadPost()
-  call s:GPGDebug(3, ">>>>>>>> Entering s:GPGBufReadPost()")
-  " In order to make :undo a no-op immediately after the buffer is read,
-  " we need to do this dance with 'undolevels'.  Actually discarding the undo
-  " history requires performing a change after setting 'undolevels' to -1 and,
-  " luckily, we have one we need to do (delete the extra line from the :r
-  " command)
-  let levels = &undolevels
-  set undolevels=-1
-  silent 1delete
-  let &undolevels = levels
-  " Allow the user to define actions for GnuPG buffers
-  silent doautocmd User GnuPG
-  " call the autocommand for the file minus .gpg$
-  silent execute ':doautocmd BufReadPost ' . fnameescape(expand('<afile>:r'))
-  call s:GPGDebug(2, 'called BufReadPost autocommand for ' . fnameescape(expand('<afile>:r')))
-  call s:GPGDebug(3, "<<<<<<<< Leaving s:GPGBufReadPost()")
-endfunction
-
-" Function: s:GPGBufWritePre() {{{2
-"
-" Handle functionality specific to saving an entire buffer to a file rather
-" than saving a partial buffer
-"
-function s:GPGBufWritePre()
-  call s:GPGDebug(3, ">>>>>>>> Entering s:GPGBufWritePre()")
-  " call the autocommand for the file minus .gpg$
-  silent execute ':doautocmd BufWritePre ' . fnameescape(expand('<afile>:r'))
-  call s:GPGDebug(2, 'called autocommand for ' . fnameescape(expand('<afile>:r')))
-  call s:GPGDebug(3, "<<<<<<<< Leaving s:GPGBufWritePre()")
 endfunction
 
 " Function: s:GPGEncrypt() {{{2
@@ -590,6 +582,19 @@ endfunction
 "
 function s:GPGEncrypt()
   call s:GPGDebug(3, ">>>>>>>> Entering s:GPGEncrypt()")
+
+  " FileWriteCmd is only called when a portion of a buffer is being written to
+  " disk.  Since Vim always sets the '[,'] marks to the part of a buffer that
+  " is being written, that can be used to determine whether BufWriteCmd or
+  " FileWriteCmd triggered us.
+  if [line("'["), line("']")] == [1, line('$')]
+    let auType = 'BufWrite'
+  else
+    let auType = 'FileWrite'
+  endif
+
+  silent exe ':doautocmd '. auType .'Pre '. fnameescape(expand('<afile>:r'))
+  call s:GPGDebug(2, 'called '. auType .'Pre autocommand for ' . fnameescape(expand('<afile>:r')))
 
   " store encoding and switch to a safe one
   if (&fileencoding != &encoding)
@@ -679,7 +684,13 @@ function s:GPGEncrypt()
   endif
 
   call rename(destfile, resolve(expand('<afile>')))
-  setl nomodified
+  if auType == 'BufWrite'
+    setl nomodified
+  endif
+
+  silent exe ':doautocmd '. auType .'Post '. fnameescape(expand('<afile>:r'))
+  call s:GPGDebug(2, 'called '. auType .'Post autocommand for ' . fnameescape(expand('<afile>:r')))
+
   call s:GPGDebug(3, "<<<<<<<< Leaving s:GPGEncrypt()")
 endfunction
 
