@@ -26,6 +26,7 @@ call vundle#begin()
     Bundle "lervag/vim-latex"
     Bundle "kshenoy/vim-signature"
     Bundle "farseer90718/vim-reveal"
+    Bundle "csexton/jekyll.vim"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
@@ -88,12 +89,12 @@ hi comment ctermfg=blue
 
 "let g:pandoc#filetypes#handled = ['
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 "bibtex
-let g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
