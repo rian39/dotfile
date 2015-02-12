@@ -252,3 +252,17 @@ colorscheme molokai
 
 "let g:reveal_root_path = '/home/mackenza/reveal.js'
 
+"jekyll stuff
+
+let g:jekyll_path = "/home/mackenza/rian39.github.io"
+let g:jekyll_post_suffix = "md"
+let g:jekyll_post_published = "false"
+let g:jekyll_post_created = "epoch"
+let g:jekyll_post_created = "%D %T"
+let g:jekyll_prompt_tags = "true"
+let g:jekyll_prompt_categories = "true"
+map <Leader>jb  :JekyllBuild<CR>
+map <Leader>jn  :JekyllPost<CR>
+map <Leader>jl  :JekyllList<CR>
+
+
