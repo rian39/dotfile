@@ -22,11 +22,13 @@ call vundle#begin()
     Bundle "tomtom/tlib_vim"
     Bundle "garbas/vim-snipmate"
     Bundle "klen/python-mode"
+    Bundle "ivanov/vim-ipython"
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vim-latex"
     Bundle "kshenoy/vim-signature"
     Bundle "farseer90718/vim-reveal"
     Bundle "csexton/jekyll.vim"
+    Bundle "vim-scripts/TwitVim"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
