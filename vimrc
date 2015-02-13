@@ -25,6 +25,7 @@ call vundle#begin()
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vim-latex"
     Bundle "kshenoy/vim-signature"
+    Bundle "farseer90718/vim-reveal"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
@@ -245,3 +246,6 @@ set laststatus=2
 
 colorscheme molokai
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
+
+"let g:reveal_root_path = '/home/mackenza/reveal.js'
+

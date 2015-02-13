@@ -1,5 +1,6 @@
 #!/bin/bash
-git config credential.helper 'cache --timeout=30'
+
+cp .viminfo ~/dotfile/viminfo
 echo pushing dotfile
 cd ~/dotfile/
 git status -s
