@@ -22,10 +22,13 @@ call vundle#begin()
     Bundle "tomtom/tlib_vim"
     Bundle "garbas/vim-snipmate"
     Bundle "klen/python-mode"
+    Bundle "ivanov/vim-ipython"
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vim-latex"
     Bundle "kshenoy/vim-signature"
     Bundle "farseer90718/vim-reveal"
+    Bundle "csexton/jekyll.vim"
+    Bundle "vim-scripts/TwitVim"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
@@ -88,12 +91,12 @@ hi comment ctermfg=blue
 
 "let g:pandoc#filetypes#handled = ['
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 "bibtex
-let g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
@@ -248,4 +251,18 @@ colorscheme molokai
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
 
 "let g:reveal_root_path = '/home/mackenza/reveal.js'
+
+"jekyll stuff
+
+let g:jekyll_path = "/home/mackenza/rian39.github.io"
+let g:jekyll_post_suffix = "md"
+let g:jekyll_post_published = "false"
+let g:jekyll_post_created = "epoch"
+let g:jekyll_post_created = "%D %T"
+let g:jekyll_prompt_tags = "true"
+let g:jekyll_prompt_categories = "true"
+map <Leader>jb  :JekyllBuild<CR>
+map <Leader>jn  :JekyllPost<CR>
+map <Leader>jl  :JekyllList<CR>
+
 
