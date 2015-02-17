@@ -131,8 +131,12 @@ augroup markers
 augroup END
 nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 
-"let g:pencil#wrapModeDefault = 'soft'
-
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
+      autocmd!
+        autocmd FileType markdown,mkd,md,rmd call pencil#init()
+          autocmd FileType text         call pencil#init()
+      augroup END
 "augroup pencil
       "autocmd!
     "autocmd FileType markdown,mkd call pencil#init()
