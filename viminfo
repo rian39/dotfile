@@ -8,61 +8,68 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/skl
+~MSle0~/With sup
 
 # Last Substitute Search Pattern:
 ~MSle0&theta
 
 # Last Substitute String:
-$beta
+$
 
 # Command Line History (newest to oldest):
+:sp ~/.vim/snippets/
+:tabe ch_curves_functions_old.rmd
 :q
-:q!
-:h :Tweetburner
-:BPosttoTwitter
-:new
+:tabnew ~/.vim/snippets/pandoc.snippets
+:gt
+:set modifiable
+:h
+:h pencil
+:h 'pencil'
+:TOC
+:reg
+:lpf
+:set smartcase
+:set ignorecase
+:h 'smartcase'
 :sp
-::wq
-:wq
-:e machin.md
-:PluginUpdate
-:NERDTree
-:%s/theta/beta/gc
-:%s/theta/beta/guc
-:IPython
-:e ~/book/ml_lit/youtube_comments.py
-:w
-:IPython --existing kernel-9808.json
-:--existing kernel-9808.json
-:echo has('python')
-:qa
+:sp lazzarato_signs_machines_2014.md
+:lnf
+:lnfile
+:lNfile
 
 # Search String History (newest to oldest):
+? \Vml\%#
+? \Vpca\%#
+? \Vkm\%#
+? \Vmlr\%#
+?/With sup
+? \Vlr\%#
+?/penc
+?/penci
+? \v^([^|]*\|){2,2} #
+?/stengers
+?/asdfasd
+?/diagram
+? \Vlogr\%#
+?/lkk
 ?/skl
 ?/skle
 ?/SA
 ? theta
 ?/$$\\
-? \Vlogr\%#
 ? \Vlabfig\%#
-? \Vml\%#
-? \Vlabeq\%#
-?/One wi
-? \s\+$
-? \v^([^|]*\|){2,2} #
-? \Vlr\%#
-?/HERE
-? \Vknn\%#
-? \Vsvm\%#
-? \Vlda\%#
-??Verh
-?/\\hat
-?/SAh
 
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@infrastructure
+@test
+@don't know
+@machine learning, google
+@test2
+@The Wilding of Chance
+@8556586
 @test_today
 @n
 @y
@@ -77,28 +84,52 @@ $beta
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	1361
-<In the code snippet above, the implementation of gradient descent is quite brief. It occurs in one line: `beta_temp = beta - alpha/m *sum ( apply(X, MARGIN=2, FUN = function(x) {x*(h-Y)}))`. The brevity of this code again demonstrates the simplicity of the partial observer in many machine learning functions. refers to the direction and steepness of values on this slope.  The only structure that gradient descent takes into account is the value of the cost function, $J(\beta)$. It explores this surface by always trying to move downwards and given that the cost function is a parabolic curve, it is hard to move in the wrong direction. But the algorithm can move too quickly. It can overshoot the minimum value -- the base of the bowl   - and start climbing the other side, heading for even higher ground.  The value of the key parameter of the gradient descent algorithm itself $\alpha$  matters here. If $\alpha$ is too high, the algorithm might stride over the minimum value of $J(\beta)$. If $\alpha$ is too low, the algorithm might crawl too slowly down the gradient, and still be somewhere on the side of the parabolic curve before the algorithm ends.  When does the algorithm end?  In the simple implementation shown here, the algorithm ends after a certain number of iterations, typically several thousand times around  the gradient descent step. 
+"0	CHAR	0
+	[
 "1	LINE	0
-	http://niclane.org/pubs/lane_hotmobile15.pdf: paper describing deep learning on an android phone focused on experience and exercise; article: http://niclane.org/pubs/lane_hotmobile15.pdf
-"2	LINE	0
-	*.png
+	
+"2	CHAR	0
+	
+	
 "3	LINE	0
-	 Repeat until convergence:
+	
 "4	LINE	0
-	$$\hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}$$
+	
 "5	LINE	0
-	 Repeat until convergence:
-	$$\beta_j := \beta_j + \alpha (y_i - h_\beta(x_i))x_{\beta j}
+	
 "6	LINE	0
+	## Supervised or unsupervised?
 	
+	485
+<There is deep disturbance in the practice of machine learning around the problem of knowing whether it works or not. While the field is almost despotically pragmatic in its concerns with classification and prediction (although in certain ways, curiously idealistic too), it is troubled by the persistence of two broadly different kinds of _learning_: supervised and unsupervised (as well as hybrid kinds such as semi-supervised learning). Writing around 2000, Hastie et. al. state: 
+	
+	655
+<> With supervised learning there is a clear measure of success or lack thereof, that can be used to judge adequacy in particular situations and to compare the effectiveness of different methods over various situations. Lack of success is directly measured by expected loss over the  joint distribution $Pr(X,Y)$. This can be estimated in a variety of ways including cross-validation. In the context of unsupervised learning, there is no such direct measure of success. ... This uncomfortable situation has led to heavy proliferation of proposed methods, since effectiveness is a matter of opinion and cannot be verified directly.  [@Hastie_2009, 486-7]
 "7	LINE	0
-	```
-"8	LINE	0
+	## Supervised or unsupervised?
 	
+	485
+<There is deep disturbance in the practice of machine learning around the problem of knowing whether it works or not. While the field is almost despotically pragmatic in its concerns with classification and prediction (although in certain ways, curiously idealistic too), it is troubled by the persistence of two broadly different kinds of _learning_: supervised and unsupervised (as well as hybrid kinds such as semi-supervised learning). Writing around 2000, Hastie et. al. state: 
+"8	LINE	0
+	## Supervised or unsupervised?
+	
+	485
+<There is deep disturbance in the practice of machine learning around the problem of knowing whether it works or not. While the field is almost despotically pragmatic in its concerns with classification and prediction (although in certain ways, curiously idealistic too), it is troubled by the persistence of two broadly different kinds of _learning_: supervised and unsupervised (as well as hybrid kinds such as semi-supervised learning). Writing around 2000, Hastie et. al. state: 
+	
+	655
+<> With supervised learning there is a clear measure of success or lack thereof, that can be used to judge adequacy in particular situations and to compare the effectiveness of different methods over various situations. Lack of success is directly measured by expected loss over the  joint distribution $Pr(X,Y)$. This can be estimated in a variety of ways including cross-validation. In the context of unsupervised learning, there is no such direct measure of success. ... This uncomfortable situation has led to heavy proliferation of proposed methods, since effectiveness is a matter of opinion and cannot be verified directly.  [@Hastie_2009, 486-7]
 "9	LINE	0
 	
+	263
+<.  -- this is what the partial observer stuff helps us think about; but also what the different senses of function do -- they are all needed to get this dance going ... And this is an old thing in the history of automata, devices and things more generally ... 
+	
+	336
+<[[want to get to the point where I can say the power of the machine learning to learn, and hence appetite for data, for infrastructural transformations, etc, can all be understood in terms of this form of movement that pulls lines around the curve -- a kind of constraint; this is an antidote to the mythologised power of algorithms]
+	
+	
+	[]
+	338
+<[HERE] - want to go to say that the process of fitting the curve to the data is sometimes stated just straight out, as it is obvious. But in many ways not. Various techniques try to deal with this as a problem of optimisation. Means we need to look more at the function from a different more operational angle -- the function in code. 
 "b	CHAR	0
 	bb\i,i/i\ivv
 "d	CHAR	0
@@ -109,6 +140,14 @@ $beta
 	gb
 "j	CHAR	0
 	kkk  lkkkokkkk12 +kkkkkkkkkkki12 + 34 kkkkkkkkkk
+"k	LINE	0
+	## Supervised or unsupervised?
+	
+	485
+<There is deep disturbance in the practice of machine learning around the problem of knowing whether it works or not. While the field is almost despotically pragmatic in its concerns with classification and prediction (although in certain ways, curiously idealistic too), it is troubled by the persistence of two broadly different kinds of _learning_: supervised and unsupervised (as well as hybrid kinds such as semi-supervised learning). Writing around 2000, Hastie et. al. state: 
+	
+	655
+<> With supervised learning there is a clear measure of success or lack thereof, that can be used to judge adequacy in particular situations and to compare the effectiveness of different methods over various situations. Lack of success is directly measured by expected loss over the  joint distribution $Pr(X,Y)$. This can be estimated in a variety of ways including cross-validation. In the context of unsupervised learning, there is no such direct measure of success. ... This uncomfortable situation has led to heavy proliferation of proposed methods, since effectiveness is a matter of opinion and cannot be verified directly.  [@Hastie_2009, 486-7]
 "p	CHAR	0
 	6454
 <set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()    Plugin 'gmarik/Vundle.vim'    Plugin 'vim-pandoc/vim-pandoc'    Plugin 'vim-pandoc/vim-pandoc-syntax'    Plugin 'terryma/vim-multiple-cursors'    "Plugin 'reedes/vim-pencil'    Plugin 'scrooloose/nerdcommenter'    Plugin 'tpope/vim-fugitive'    Plugin 'scrooloose/nerdtree'    Plugin 'altercation/vim-colors-solarized'    Plugin 'nanotech/jellybeans.vim'    "Plugin 'bling/vim-airline'    Plugin 'itchyny/lightline.vim'    call vundle#end()            " requiredfiletype plugin indent on    " requiredexecute pathogen#infect()syntax enablesyntax onse t_Co=16let g:solarized_termcolors=256"set background=darkcolorscheme molokai"call togglebg#map("<F5>")set ruler  set tabstop=4set shiftwidth=4set expandtabset showcmdset hlsearchset incsearch"cursor show"set cursorline"set cursorcolumnset encoding=utf-8set foldmethod=markerset list listchars=tab:▷⋅,trail:⋅,nbsp:⋅set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]"save keysnoremap <silent> <C-S>          :update<CR>vnoremap <silent> <C-S>         <C-C>:update<CR>inoremap <silent> <C-S>         <C-O>:update<CR>"python editingau FileType py set autoindentau FileType py set smartindentau FileType py set textwidth=79 " PEP-8 Friendlyhi comment ctermfg=blue "set linenumbers:nnoremap <C-M><C-N> :set invnumber<CR>:map <Up> gk:map <Down> gj"pandoc plugin files"let g:pandoc#filetypes#handled = ['let g:pandoc#biblio#sources = "bcg"let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:pandoc_use_bibtool = 1set grepprg=grep\ -nH\ $*"bibtexlet g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:Tex_BibtexFlavor = 'bibtex'let g:pandoc#folding#fold_fenced_codeblocks=1set omnifunc=pandoc#completion#Complete"let g:Tex_Flavor='latex'"let g:Tex_DefaultTargetFormat='pdf'" <leader>k Knits to MDnnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>"Rmd and Rpres are pandoc"autocmd BufRead,BufNewFile *.rmd,*.Rpres setfiletype pandoc"autocmd BufNewFile,BufReadPost *.md set filetype=markdownau BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc"""" New signs for the pandoc bundlelet g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»', 'newline': '¬'}" Format paragraphs with <leader>qmap <leader>q {!}fmt -w 105<CR>}<CR>" Place markers with {type} for markdown filesaugroup markers   autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'augroup ENDnnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>"let g:pencil#wrapModeDefault = 'soft'"augroup pencil      "autocmd!    "autocmd FileType markdown,mkd call pencil#init()    "autocmd FileType textile call pencil#init()    "autocmd FileType text call pencil#init({'wrap': 'hard'})"augroup ENDfunction! WordCount()      let s:old_status = v:statusmsg        let position = getpos(".")        exe ":silent normal g\<c-g>"            let stat = v:statusmsg              let s:word_count = 0                if stat != '--No lines in buffer--'                        let s:word_count = str2nr(split(v:statusmsg)[11])                            let v:statusmsg = s:old_status                              end                                call setpos('.', position)                                  return s:word_count endfunction" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):filetype plugin onlet vimrplugin_assign = 0" Change the <LocalLeader> key:let maplocalleader = ","" Use Ctrl+Space to do omnicompletion:if has("gui_running")    inoremap <C-Space> <C-x><C-o>else    inoremap <Nul> <C-x><C-o>endif"" Press the space bar to send lines (in Normal mode) and selections to R:vmap <Space> <Plug>RDSendSelectionnmap <Space> <Plug>RDSendLine"** airline related**let g:airline#extensions#tabline#enabled = 1" Show just the filename let g:airline#extensions#tabline#fnamemod = ':t' if !exists('g:airline_symbols')       let g:airline_symbols = {}   endif " unicode symbolslet g:airline_left_sep = '»'let g:airline_left_sep = '▶'let g:airline_right_sep = '«'let g:airline_right_sep = '◀'let g:airline_symbols.linenr = '␊'let g:airline_symbols.linenr = '␤'let g:airline_symbols.linenr = '¶'let g:airline_symbols.branch = '⎇'let g:airline_symbols.paste = 'ρ'let g:airline_symbols.paste = 'Þ'let g:airline_symbols.paste = '∥'let g:airline_symbols.whitespace = 'Ξ'"lightline configlet g:lightline = {      \ 'colorscheme': 'wombat',      \ 'active': {      \   'left': [ [ 'mode', 'paste' ],      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]      \ },      \ 'component_function': {      \   'fugitive': 'MyFugitive',      \   'readonly': 'MyReadonly',      \   'modified': 'MyModified',      \      'count': 'WordCount'      \ },      \ 'separator': { 'left':  '▶', 'right':  '▶'},      \ 'subseparator': { 'left':  '»', 'right': '»' }      \ }function! MyModified()if &filetype == "help"return ""elseif &modifiedreturn "+"elseif &modifiablereturn ""elsereturn ""endifendfunctionfunction! MyReadonly()if &filetype == "help"return ""  elseif &readonly  return "⭤"else    return ""endifendfunctionfunction! MyFugitive()return exists('*fugitive#head') ? fugitive#head() : ''endfunctionfunction! MyFilename()return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .\ ('' != MyModified() ? ' ' . MyModified() : '')endfunction
@@ -121,7 +160,7 @@ $beta
 "z	CHAR	0
 	ZqZq
 ""-	CHAR	0
-	Cfocused on emotion and exercise; article: http://niclane.org/pubs/lane_hotmobile15.pdf
+	do 
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -145,256 +184,262 @@ $beta
 'S  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'T  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'U  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'V  37  0  ~/.vimrc
+'V  1  0  ~/.vimrc
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 'X  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch8_conclusion.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  7  73  /tmp/diagram.md
-'1  8  64  /tmp/diagram.md
-'2  1  28  ~/Documents/data_intensive/book/.git/COMMIT_EDITMSG
-'3  1  4  ~/Documents/data_intensive/book/.gitignore
-'4  2  0  ~/Documents/data_intensive/book/.gitignore
-'5  29  7  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'6  25  30  ~/.vimrc
-'7  99  0  ~/.tmux/.tmux.conf
-'8  5  378  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'9  2  0  ~/dotfile/.git/COMMIT_EDITMSG
+'0  115  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+'1  137  41  ~/.vimrc
+'2  6  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+'3  1  0  ~/Documents/document-archive/.git/MERGE_MSG
+'4  1  0  ~/dotfile/.gitconfig
+'5  4  10  ~/rian39.github.io/_posts/2015-02-12-test.md
+'6  9  0  ~/rian39.github.io/_posts/2015-02-12-test.md
+'7  262  0  ~/.vimrc
+'8  1  0  ~/rian39.github.io/.gitignore
+'9  22  48  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
 
 # Jumplist (newest first):
--'  7  73  /tmp/diagram.md
--'  1  0  /tmp/diagram.md
--'  8  64  /tmp/diagram.md
+-'  115  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+-'  41  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  37  371  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  35  168  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  118  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  137  41  ~/.vimrc
+-'  45  0  ~/.vimrc
+-'  36  0  ~/.vimrc
+-'  3  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  2  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  6  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+-'  18  0  ~/Documents/notes/deleuze_guattari_mille.md
+-'  17  0  ~/Documents/notes/guattari_molecular_rev_1984.md
+-'  75  0  ~/Documents/notes/hastie_2008.md
+-'  7  0  ~/Documents/notes/jockers_macroanalysis_2013.md
+-'  127  0  ~/Documents/notes/latour_aramis.md
+-'  3  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+-'  76  0  ~/Documents/notes/hastie_2008.md
+-'  5  0  ~/Documents/notes/guattari_molecular_rev_1984.md
+-'  2  0  ~/Documents/notes/deleuze_guattari_mille.md
+-'  26  0  ~/Documents/notes/deleuze_foucault.md
+-'  4  0  ~/Documents/notes/deleuze_guattari_mille.md
+-'  35  0  ~/Documents/notes/deleuze_foucault.md
+-'  20  0  ~/Documents/notes/deleuze_foucault.md
+-'  18  0  ~/Documents/notes/deleuze_foucault.md
+-'  15  0  ~/Documents/notes/deleuze_foucault.md
+-'  3  400  ~/Documents/notes/deirdre_boden.md
+-'  41  23  ~/Documents/notes/bowker_star_sorting_things.md
+-'  43  0  ~/Documents/notes/bowker_star_sorting_things.md
+-'  267  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  262  320  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  258  1456  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  256  1176  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  87  48  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  213  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  253  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  27  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  1  0  ~/Documents/document-archive/.git/MERGE_MSG
+-'  1  0  ~/dotfile/.gitconfig
+-'  4  10  ~/rian39.github.io/_posts/2015-02-12-test.md
+-'  1  0  ~/rian39.github.io/_posts/2015-02-12-test.md
+-'  1  0  ~/rian39.github.io/publications.md
+-'  9  0  ~/rian39.github.io/_posts/2015-02-12-test.md
+-'  262  0  ~/.vimrc
+-'  267  34  ~/.vimrc
+-'  69  0  ~/.vimrc
+-'  16  45  ~/dotfile/vim/bundle/jekyll.vim/doc/jekyll.txt
+-'  1  0  ~/rian39.github.io/.gitignore
+-'  22  48  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  23  0  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  16  964  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  14  0  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  8  0  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  3  8  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  1  0  ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+-'  1  0  ~/Documents/data_intensive/promise_of_infrastructure/deep.md
+-'  1  0  ~/Documents/notes/Twitter_1423758575
 -'  1  28  ~/Documents/data_intensive/book/.git/COMMIT_EDITMSG
 -'  1  4  ~/Documents/data_intensive/book/.gitignore
 -'  2  0  ~/Documents/data_intensive/book/.gitignore
 -'  29  7  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  93  950  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  176  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  199  1550  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  197  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  182  4  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  194  31  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  195  41  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  192  6  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  190  264  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  184  5  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  212  378  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  211  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  222  1  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  103  950  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  186  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  209  1550  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  207  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  192  4  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  204  31  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  205  41  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  202  6  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  200  264  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  194  5  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  222  378  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  221  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  232  1  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
 -'  25  30  ~/.vimrc
 -'  2  0  ~/Documents/data_intensive/book/ch3_curves/[Vundle] list
 -'  22  0  ~/Documents/data_intensive/book/ml_lit/youtube_comments.py
 -'  1  0  ~/Documents/data_intensive/book/ml_lit/youtube_comments.py
--'  174  53  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  178  163  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  177  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  172  211  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  160  436  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  170  11  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  156  152  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  163  5  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  162  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  15  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  99  0  ~/.tmux/.tmux.conf
--'  1  0  ~/.tmux/.tmux.conf
--'  5  378  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  2  0  ~/dotfile/.git/COMMIT_EDITMSG
--'  1  0  ~/dotfile/.git/COMMIT_EDITMSG
--'  55  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  32  543  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  36  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  19  750  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  33  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  22  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  37  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  12  6  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  89  727  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  57  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  145  62  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  133  1111  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  118  14  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  144  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  95  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  64  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  143  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  99  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  142  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  148  1  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  119  5  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  121  125  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  66  19  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  103  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  108  27  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  207  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  3  1  ~/dotfile/.git/COMMIT_EDITMSG
--'  14  6  ~/rian39.github.io/_layouts/page.html
--'  8  1  ~/rian39.github.io/NERD_tree_1
--'  25  2  ~/rian39.github.io/NERD_tree_1
--'  1  3  ~/rian39.github.io/NERD_tree_1
--'  4  2  ~/rian39.github.io/publications.md
--'  2  0  ~/rian39.github.io/publications.md
--'  23  0  ~/rian39.github.io/publications.md
--'  8  202  ~/rian39.github.io/publications.md
--'  26  0  ~/rian39.github.io/publications.md
--'  1  0  ~/rian39.github.io/publications.md
--'  99  72  ~/.vimrc
--'  94  82  ~/.vimrc
--'  37  0  ~/.vimrc
--'  26  12  /tmp/crontab.q5IE46/crontab
--'  1  0  /tmp/crontab.q5IE46/crontab
--'  27  0  /tmp/crontab.q5IE46/crontab
--'  64  18  ~/.zshrc
--'  1  0  ~/.zshrc
--'  60  12  ~/.zshrc
--'  61  0  ~/.zshrc
--'  2  0  ~/Documents/ref_bibs/.git/COMMIT_EDITMSG
--'  1  0  ~/Documents/ref_bibs/.git/COMMIT_EDITMSG
--'  1  0  ~/Documents/ref_bibs/mackenzie.bib
--'  1  0  ~/Documents/ref_bibs/machine_learning.bib
--'  1  0  ~/src/blog/_posts
--'  2  0  ~/Documents/data_intensive/book/ch3_curves/[Vundle] list
--'  1  4  ~/Documents/data_intensive/book/.gitignore
--'  2  0  ~/Documents/data_intensive/book/.gitignore
--'  1  28  ~/Documents/data_intensive/book/.git/COMMIT_EDITMSG
--'  1  4  ~/Documents/data_intensive/book/.gitignore
--'  2  0  ~/Documents/data_intensive/book/.gitignore
+-'  184  53  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  188  163  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  187  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  182  211  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  170  436  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+-'  6  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+-'  18  0  ~/Documents/notes/deleuze_guattari_mille.md
+-'  17  0  ~/Documents/notes/guattari_molecular_rev_1984.md
+-'  75  0  ~/Documents/notes/hastie_2008.md
+-'  7  0  ~/Documents/notes/jockers_macroanalysis_2013.md
 
 # History of marks within files (newest to oldest):
 
-> /tmp/diagram.md
-	"	7	73
-	^	7	74
-	.	7	74
-	+	6	20
-	+	7	74
-
-> ~/dotfile/vim/bundle/TwitVim/doc/twitvim.txt
-	"	1527	18
-
 > ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-	"	32	0
-	^	202	0
-	.	201	6
-	+	174	0
-	+	172	96
-	+	160	436
-	+	160	0
-	+	160	604
-	+	160	748
-	+	172	220
-	+	172	188
-	+	172	370
-	+	172	1000
-	+	173	0
-	+	174	0
-	+	176	226
-	+	176	510
-	+	176	0
-	+	176	97
-	+	176	564
-	+	176	658
-	+	178	205
-	+	178	0
-	+	179	0
-	+	178	162
-	+	178	0
-	+	178	178
-	+	174	53
-	+	180	100
-	+	178	111
-	+	203	0
-	+	180	406
-	+	221	147
-	+	221	356
-	+	222	0
-	+	239	0
-	+	240	0
-	+	175	0
-	+	248	0
-	+	248	0
-	+	174	0
-	+	174	0
-	+	247	0
-	+	246	0
-	+	174	0
-	+	156	340
-	+	156	0
-	+	156	416
-	+	156	0
-	+	157	0
-	+	156	0
-	+	156	870
-	+	156	0
-	+	156	872
-	+	214	801
-	+	218	0
-	+	222	335
-	+	222	627
-	+	227	29
-	+	223	28
-	+	224	0
-	+	222	0
-	+	225	0
-	+	222	0
-	+	225	0
-	+	210	0
-	+	189	61
-	+	184	0
-	+	185	0
-	+	189	0
-	+	189	0
-	+	186	0
-	+	185	36
-	+	190	263
-	+	190	0
-	+	190	294
-	+	190	517
-	+	199	199
-	+	199	344
-	+	192	0
-	+	197	12
-	+	198	0
-	+	199	430
-	+	199	0
-	+	199	491
-	+	194	80
-	+	195	0
-	+	196	28
-	+	199	530
-	+	194	31
-	+	186	0
-	+	182	5
-	+	197	0
-	+	182	0
-	+	183	0
-	+	203	798
-	+	199	0
-	+	203	0
-	+	212	0
-	+	214	0
-	+	216	0
-	+	219	0
-	+	201	6
-	b	214	0
-	e	256	0
-	f	323	0
-	g	387	0
-	h	203	0
-	v	387	0
+	"	110	374
+	^	110	374
+	.	110	374
+	+	262	0
+	+	262	1089
+	+	266	89
+	+	266	89
+	+	266	90
+	+	263	0
+	+	264	0
+	+	262	452
+	+	262	788
+	+	264	435
+	+	264	0
+	+	264	651
+	+	264	653
+	+	264	653
+	+	264	653
+	+	264	652
+	+	264	653
+	+	266	89
+	+	264	652
+	+	264	929
+	+	264	653
+	+	264	1013
+	+	264	0
+	+	264	1214
+	+	265	0
+	+	264	48
+	+	266	13
+	+	264	631
+	+	266	86
+	+	266	89
+	+	271	0
+	+	266	89
+	+	267	0
+	+	270	126
+	+	270	332
+	+	266	0
+	+	267	0
+	+	270	358
+	+	270	1
+	+	270	595
+	+	270	0
+	+	270	703
+	+	270	0
+	+	270	790
+	+	271	0
+	+	253	0
+	+	253	0
+	+	33	46
+	+	35	0
+	+	35	167
+	+	35	0
+	+	35	685
+	+	37	0
+	+	37	212
+	+	37	0
+	+	37	339
+	+	37	0
+	+	37	370
+	+	37	0
+	+	37	420
+	+	37	675
+	+	40	0
+	+	41	87
+	+	41	158
+	+	41	441
+	+	41	0
+	+	41	664
+	+	41	0
+	+	41	864
+	+	31	735
+	+	31	890
+	+	31	0
+	+	31	913
+	+	35	695
+	+	35	0
+	+	35	725
+	+	37	637
+	+	41	563
+	+	41	0
+	+	41	577
+	+	41	0
+	+	41	676
+	+	41	1085
+	+	42	0
+	+	71	317
+	+	83	5
+	+	83	0
+	+	83	0
+	+	83	281
+	+	77	668
+	+	77	1162
+	+	83	467
+	+	83	759
+	+	83	0
+	+	83	981
+	+	83	1234
+	+	83	1799
+	+	89	0
+	+	89	367
+	+	110	374
+	b	224	0
+	e	254	12
+	f	326	0
+	g	390	0
+	h	213	0
+	j	41	373
+	v	390	0
+
+> ~/dotfile/vim/snippets/pandoc.snippets
+	"	34	9
+	^	34	10
+	.	34	9
+	+	16	22
+	+	28	28
+	+	11	11
+	+	12	0
+	+	34	9
+
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+	"	115	0
+	^	165	57
+	.	165	56
+	+	165	56
+
+> ~/Documents/data_intensive/book/ch3_curves/NERD_tree_1
+	"	5	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
 > ~/.vimrc
-	"	31	12
-	^	31	11
-	.	31	11
+	"	137	41
+	^	137	46
+	.	137	41
 	+	57	0
-	+	247	0
+	+	251	0
 	+	101	33
 	+	27	12
 	+	28	34
 	+	29	36
-	+	253	0
+	+	257	0
 	+	30	30
 	+	94	78
 	+	99	23
@@ -404,6 +449,283 @@ $beta
 	+	99	72
 	+	25	30
 	+	31	11
+	+	259	0
+	+	260	0
+	+	261	52
+	+	262	33
+	+	273	0
+	+	268	0
+	+	262	0
+	+	261	52
+	+	140	0
+	+	140	0
+	+	139	0
+	+	137	45
+	+	134	0
+	+	137	41
+
+> ~/Documents/data_intensive/book/ch3_curves/[Vundle] Installer
+	"	27	0
+	.	1	0
+	+	1	0
+
+> /tmp/vEVFadV/97
+	"	63	0
+
+> ~/Documents/notes/bowker_star_sorting_things.md
+	"	41	23
+
+> ~/Documents/notes/deirdre_boden.md
+	"	3	400
+
+> ~/Documents/notes/deleuze_foucault.md
+	"	26	0
+
+> ~/Documents/notes/deleuze_guattari_mille.md
+	"	18	0
+
+> ~/Documents/notes/guattari_molecular_rev_1984.md
+	"	17	0
+
+> ~/Documents/notes/hastie_2008.md
+	"	75	0
+
+> ~/Documents/notes/jockers_macroanalysis_2013.md
+	"	7	0
+
+> ~/Documents/notes/latour_aramis.md
+	"	127	0
+
+> ~/Documents/notes/lazzarato_signs_machines_2014.md
+	"	6	0
+
+> /usr/share/vim/vim74/doc/options.txt
+	"	6412	3
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	1	0
+
+> /tmp/crontab.Gga4Wf/crontab
+	"	27	3
+	^	27	4
+	.	27	3
+	+	25	3
+	+	26	3
+	+	27	3
+
+> ~/Documents/document-archive/.git/MERGE_MSG
+	"	1	0
+
+> ~/dotfile/.gitconfig
+	"	1	0
+
+> ~/rian39.github.io/_posts/2015-02-12-test.md
+	"	4	10
+	^	4	10
+	.	4	10
+	+	1	0
+	+	9	13
+	+	6	25
+	+	4	10
+
+> ~/rian39.github.io/publications.md
+	"	7	0
+	^	7	0
+	.	7	0
+	+	28	8
+	+	28	13
+	+	28	0
+	+	28	0
+	+	28	8
+	+	28	0
+	+	28	0
+	+	28	92
+	+	28	8
+	+	28	0
+	+	28	8
+	+	28	8
+	+	28	63
+	+	28	53
+	+	28	62
+	+	28	57
+	+	28	59
+	+	28	127
+	+	28	235
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	9	0
+	+	10	0
+	+	10	203
+	+	28	0
+	+	15	0
+	+	14	183
+	+	28	0
+	+	25	0
+	+	23	0
+	+	22	183
+	+	26	183
+	+	8	7
+	+	10	0
+	+	5	0
+	+	25	0
+	+	28	0
+	+	2	19
+	+	2	20
+	+	3	0
+	+	6	169
+	+	7	0
+
+> ~/rian39.github.io/.git/index
+	"	1	0
+
+> ~/rian39.github.io/.git/refs/heads/master
+	"	1	0
+	^	2	0
+	.	1	11
+	+	1	11
+
+> ~/dotfile/vim/bundle/jekyll.vim/doc/jekyll.txt
+	"	54	0
+
+> ~/src/blog/_posts
+	"	1	0
+
+> ~/rian39.github.io/.gitignore
+	"	1	0
+
+> ~/rian39.github.io/_posts/2015-02-06-Welcome-to-the-blog.md
+	"	22	48
+	^	43	0
+	.	35	0
+	+	3	31
+	+	44	17
+	+	19	0
+	+	21	0
+	+	8	0
+	+	3	0
+	+	8	0
+	+	3	0
+	+	8	0
+	+	3	9
+	+	3	8
+	+	4	0
+	+	3	58
+	+	5	24
+	+	15	0
+	+	14	0
+	+	14	503
+	+	14	1095
+	+	14	1383
+	+	9	0
+	+	11	0
+	+	13	0
+	+	17	0
+	+	4	18
+	+	5	11
+	+	8	86
+	+	8	198
+	+	8	895
+	+	3	24
+	+	43	0
+	+	23	0
+	+	21	0
+	+	23	0
+	+	25	0
+	+	27	0
+	+	29	0
+	+	31	0
+	+	33	0
+	+	35	0
+
+> ~/rian39.github.io/about.md
+	"	16	0
+	^	16	0
+	.	16	0
+	+	5	22
+	+	11	0
+	+	11	0
+	+	20	0
+	+	11	0
+	+	11	0
+	+	11	230
+	+	11	61
+	+	6	0
+	+	3	12
+	+	11	271
+	+	11	455
+	+	11	41
+	+	7	0
+	+	8	0
+	+	11	159
+	+	11	248
+	+	11	545
+	+	11	0
+	+	11	502
+	+	20	140
+	+	11	845
+	+	11	0
+	+	11	20
+	+	10	0
+	+	11	1326
+	+	20	233
+	+	11	74
+	+	20	0
+	+	11	0
+	+	12	0
+	+	13	199
+	+	13	282
+	+	13	700
+	+	13	946
+	+	13	417
+	+	14	0
+	+	15	527
+	+	18	0
+	+	16	0
+
+> ~/src/blog/_posts/2015-02-12-the-wilding-of-chance.markdown
+	"	5	0
+	^	4	16
+	.	4	15
+	+	1	0
+	+	4	15
+
+> ~/Documents/data_intensive/promise_of_infrastructure/deep.rmd
+	"	1	0
+	^	7	1464
+	.	8	0
+	+	7	1205
+	+	7	1292
+	+	7	1404
+	+	7	1208
+	+	7	1207
+	+	8	0
+	+	7	1499
+	+	7	0
+	+	7	1455
+	+	8	0
+
+> ~/Documents/notes/rabinow_anthropos_2003.md
+	"	11	0
+
+> ~/Documents/data_intensive/promise_of_infrastructure/deep.md
+	"	1	0
+
+> ~/Documents/notes/Twitter_1423758575
+	"	1	0
+	.	2	0
+	+	2	0
+
+> ~/dotfile/vim/bundle/TwitVim/doc/twitvim.txt
+	"	892	0
+
+> /tmp/diagram.md
+	"	7	73
+	^	7	74
+	.	7	74
+	+	6	20
+	+	7	74
 
 > /tmp/machin.md
 	"	18	21
@@ -485,12 +807,6 @@ $beta
 	+	80	0
 	+	112	0
 	+	114	0
-
-> ~/Documents/data_intensive/book/ch3_curves/NERD_tree_1
-	"	38	0
-	.	1	0
-	+	1	0
-	+	1	0
 
 > ~/Documents/data_intensive/book/preface.rmd
 	"	6	130
@@ -580,13 +896,6 @@ $beta
 > ~/Documents/notes/cooper_surplus_life_2008.md
 	"	4	0
 
-> ~/dotfile/vim/snippets/pandoc.snippets
-	"	26	28
-	^	26	29
-	.	26	28
-	+	14	22
-	+	26	28
-
 > ~/Documents/ref_bibs/data_forms_thought.bib
 	"	1	0
 
@@ -632,52 +941,6 @@ $beta
 	+	65	0
 	+	64	18
 	+	8	17
-
-> ~/rian39.github.io/publications.md
-	"	1	2
-	.	3	0
-	+	26	8
-	+	26	13
-	+	26	0
-	+	26	0
-	+	26	8
-	+	26	0
-	+	26	0
-	+	26	92
-	+	26	8
-	+	26	0
-	+	26	8
-	+	26	8
-	+	26	63
-	+	26	53
-	+	26	62
-	+	26	57
-	+	26	59
-	+	26	127
-	+	26	235
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	7	0
-	+	8	0
-	+	8	203
-	+	26	0
-	+	13	0
-	+	12	183
-	+	26	0
-	+	23	0
-	+	21	0
-	+	20	183
-	+	24	183
-	+	6	7
-	+	8	0
-	+	5	0
-	+	23	0
-	+	26	0
-	+	2	19
-	+	2	20
-	+	3	0
 
 > ~/rian39.github.io/NERD_tree_1
 	"	8	1
@@ -746,40 +1009,6 @@ $beta
 > ~/rian39.github.io/test.md
 	"	1	0
 
-> ~/rian39.github.io/about.md
-	"	1	0
-	^	12	74
-	.	14	0
-	+	5	22
-	+	12	0
-	+	12	0
-	+	14	0
-	+	12	0
-	+	12	0
-	+	12	230
-	+	12	61
-	+	6	0
-	+	3	12
-	+	12	271
-	+	12	455
-	+	12	41
-	+	7	0
-	+	8	0
-	+	12	159
-	+	12	248
-	+	12	545
-	+	12	0
-	+	12	502
-	+	14	140
-	+	12	845
-	+	11	0
-	+	11	20
-	+	10	0
-	+	12	1326
-	+	14	233
-	+	12	74
-	+	14	0
-
 > ~/src/blog/_posts/2015-02-07-test_today.markdown
 	"	6	0
 	.	1	0
@@ -826,9 +1055,6 @@ $beta
 	^	2	0
 	.	1	9
 	+	1	9
-
-> ~/src/blog/_posts
-	"	1	0
 
 > ~/rian39.github.io/[Vundle] Installer
 	"	25	0
@@ -1111,15 +1337,6 @@ $beta
 	+	275	0
 	b	88	0
 
-> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
-	"	165	56
-	^	165	57
-	.	165	56
-	+	165	56
-
-> ~/Documents/notes/hastie_2008.md
-	"	11	7
-
 > ~/.bashrc
 	"	155	4
 
@@ -1131,142 +1348,3 @@ $beta
 
 > ~/Documents/notes/foucault_archaeology.md
 	"	1	0
-
-> ~/Documents/notes/foucault_order.md
-	"	28	372
-
-> ~/Documents/notes/deleuze_foucault.md
-	"	3	112
-
-> ~/Documents/data_intensive/book/ch3_curves/hastie_function.md
-	"	775	76
-
-> ~/Documents/data_intensive/book/ml_lit/data/hastie_elem/hastie_elements_2009.txt
-	"	6261	49
-
-> /usr/share/vim/vim74/doc/intro.txt
-	"	480	56
-
-> ~/Documents/data_intensive/book/ml_lit/data/hastie_elem/hastie_references.txt
-	"	1	0
-
-> ~/Documents/data_intensive/book/ch2_vector/[Vundle] Installer
-	"	24	0
-	.	1	0
-	+	1	0
-
-> /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2014-10-14-4.json
-	"	1	188
-
-> /media/mackenza/3562f1d6-afa4-45bb-b267-ff0c66524b8e/githubdata/2013-10-14-4.json
-	"	1	0
-
-> ~/.tmux.conf
-	"	1	0
-	^	13	41
-	.	13	0
-	+	14	0
-	+	13	0
-
-> ~/.tmux
-	"	1	0
-
-> ~/vimtips.md
-	"	1	0
-
-> ~/Documents/bigdata_society/reviews_jan2015.md
-	"	10	0
-	^	9	24
-	.	10	0
-	+	10	65
-	+	3	66
-	+	9	0
-	+	3	364
-	+	5	31
-	+	7	2
-	+	6	0
-	+	7	305
-	+	8	84
-	+	7	558
-	+	8	427
-	+	10	31
-	+	9	23
-	+	10	0
-
-> ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/genome_topology_nov2013.rmd
-	"	40	0
-	^	44	76
-	.	45	0
-	+	48	6
-	+	48	0
-	+	48	98
-	+	48	8
-	+	48	65
-	+	53	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	45	0
-	+	45	0
-	+	45	0
-	+	43	0
-	+	42	73
-	+	42	74
-	+	43	0
-	+	42	75
-	+	43	75
-	+	43	76
-	+	43	0
-	+	44	0
-	+	43	76
-	+	44	75
-	+	45	0
-	+	44	76
-	+	45	0
-
-> ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/table.md
-	"	2	0
-	.	2	0
-	+	2	0
-
-> ~/Documents/data_intensive/post_genome_book_stevens_etc_2012/pandoc output
-	"	3	0
-	.	3	0
-	+	3	0
-
-> ~/Downloads/rfacer/testdata.tsv
-	"	1	1
-
-> ~/Downloads/rfacer/test_2by10_text_matrix.afm
-	"	1	1
-
-> ~/Downloads/rfacer/test_6by10_mixed_matrix.tsv
-	"	4	0
-
-> ~/Downloads/rfacer/test_3by10_categorical_matrix.tsv
-	"	1	1
-
-> ~/Downloads/rfacer/make_package.sh
-	"	1	0
-
-> ~/Downloads/rfacer/install_R.sh
-	"	1	0
-
-> ~/dotfile/gitpull.sh
-	"	9	0
-	^	9	0
-	.	8	0
-	+	8	0
-
-> ~/.viminfo
-	"	147	0
-
-> ~/reveal.js/README.md
-	"	726	0
-
-> ~/test_reveal.md
-	"	1	0
-	.	2	0
-	+	1	0
-	+	2	0

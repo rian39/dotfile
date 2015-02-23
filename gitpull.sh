@@ -27,3 +27,9 @@ echo fetching notes
 echo ----------------------------
 git status -s
 git pull
+
+echo ---------------------------
+echo copying pandoc templates
+echo ---------------------------
+
+cp pandoc/default.latex ~/.pandoc/
