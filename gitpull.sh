@@ -32,4 +32,4 @@ echo ---------------------------
 echo copying pandoc templates
 echo ---------------------------
 
-cp pandoc/default.latex ~/.pandoc/
+cp ~/dotfile/pandoc/default.latex ~/.pandoc/
