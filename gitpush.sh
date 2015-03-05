@@ -24,3 +24,10 @@ cd ~/ref_bibs/
 echo pushing ref_bibs
 git status -s
 git push
+
+cd ~/rian39.github.io/
+echo pushing posts
+git add _posts/*.md
+git commit -a -m 'adding new posts'
+git status -s
+git push
