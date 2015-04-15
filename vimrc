@@ -23,6 +23,7 @@ call vundle#begin()
     Bundle "garbas/vim-snipmate"
     Bundle "klen/python-mode"
     Bundle "ivanov/vim-ipython"
+    Bundle "julienr/vim-cellmode"
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vim-latex"
     Bundle "kshenoy/vim-signature"
