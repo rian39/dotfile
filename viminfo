@@ -8,61 +8,62 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/cross
+~MSle0~/HERE
 
 # Last Substitute Search Pattern:
-~MSle0&author_yr
+~MSle0&network
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:w
-:IPython
-:q
 :wq
-:e book.rmd
-:TOC
-:set modifiable
-:sp 
-:Git push
-:Git commit -a -m 'mf notes'
-:Git add %
-:bn
+:e ~/notes/hastie_2008.md
+:w
+:Pandoc! pdf
+:reg
+:registers
+:sp ~/notes/alpaydin_machine_learning_2010.md
+:e ~/notes/lazzarato_signs_machines_2014.md
+:history
+:b 15
+:ls
 :bp
-:e ~/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
+:q
 :sp
-:set fdc=0
-:set dfc=0
-:!ls ~
-:Git add mackenzie_report.md
-:q!
+:e ~/notes/alpaydin_machine_learning_2010.md
+:e ~/notes/suchman_human_machine.md
+:
+:e ~/notes/suchman_artificial_intelligence.md
+:e ch_learning_subjects_old.rmd
+:w tut1.lua
 
 # Search String History (newest to oldest):
-? \s\+$
-? \v^([^|]*\|){2,2} #
-?/cross
-?/supervised
-?/test
-?/blurred
-?/influe
-?/asdfa
-?/Knorr
-?/dpi
-?/Figure
-?/fig.cap
 ?/HERE
-?/double
-?/line
-? author_yr
-?/author
-? \<author\>
-?/use.cur
-?/Sar
+? \Vlabeq\%#
+? \Vmlr\%#
+? \Vnn\%#
+? \Vmlrs\%#
+? \Vml\%#
+? \Vlogr\%#
+? \Vlr\%#
+?/nonlinear
+?/diagram
+?/paydin
+?/8.1
+?/percept
+?/You have
+?/Richert
+? \Vlabfig\%#
+? \~
+? ~
+? ..\/references
+? \Vesl\%#
 
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@Y
 @infrastructure
 @test
 @don't know
@@ -85,28 +86,37 @@ $
 
 # Registers:
 "0	LINE	0
-	dictionary = gensim.corpora.Dictionary(texts)
-	dictionary.save('data/all_texts.dict')
-	corpus = [dictionary.doc2bow(text) for text in texts]
-	model = gensim.models.ldamodel.LdaModel(corpus, id2word=dictionary, num_topics=100)
-"1	LINE	0
-	print(corpus)
+	\\begin {equation}
+	\label {eq:linear_model}
+	\hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}
+	\end {equation}
+	Z_m = \sigma(\alpha_0m + \alpha_m^TX) m = 1, ...,M
+	T_k = \beta_0k + \beta_k^TZ, k = 1, ..., K,
+	(11.5)
+	f_k (X) = g_k (T), k = 1, ..., K,
+	where Z = (Z_1 , Z_2, ..., Z_M ), and T = (T_1 , T_2 ,..., T_K ).
+	The activation function \sigma(v) is usually chosen to be the sigmoid \sigma(v) =
+	1/(1 + e ‚àív )
+	392
+""1	LINE	0
+	\end {equation}
 "2	LINE	0
-	print(dictionary.token2id)
+	\hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}
 "3	LINE	0
-	model.print_topic?
+	
 "4	LINE	0
-	model.print_topics()
+	
 "5	LINE	0
-	model.print_topics
+	
 "6	LINE	0
-	print(model)
+	]
 "7	LINE	0
-	%notebook -e data_clean.py
+	\hat{Y} = \hat{\beta_0}  + \sum^p_{j=1} X_j \hat{\beta_j}
 "8	LINE	0
-	%notebook?
+	## References
+	
 "9	LINE	0
-	model = gensim.models.ldamodel.LdaModel(bow_corpus, id2word=dictionary, num_topics=100)
+	
 "b	CHAR	0
 	bb\i,i/i\ivv
 "d	CHAR	0
@@ -119,14 +129,6 @@ $
 	gb
 "j	CHAR	0
 	kkk  lkkkokkkk12 +kkkkkkkkkkki12 + 34 kkkkkkkkkk
-"k	LINE	0
-	## Supervised or unsupervised?
-	
-	485
-<There is deep disturbance in the practice of machine learning around the problem of knowing whether it works or not. While the field is almost despotically pragmatic in its concerns with classification and prediction (although in certain ways, curiously idealistic too), it is troubled by the persistence of two broadly different kinds of _learning_: supervised and unsupervised (as well as hybrid kinds such as semi-supervised learning). Writing around 2000, Hastie et. al. state: 
-	
-	655
-<> With supervised learning there is a clear measure of success or lack thereof, that can be used to judge adequacy in particular situations and to compare the effectiveness of different methods over various situations. Lack of success is directly measured by expected loss over the  joint distribution $Pr(X,Y)$. This can be estimated in a variety of ways including cross-validation. In the context of unsupervised learning, there is no such direct measure of success. ... This uncomfortable situation has led to heavy proliferation of proposed methods, since effectiveness is a matter of opinion and cannot be verified directly.  [@Hastie_2009, 486-7]
 "p	CHAR	0
 	6454
 <set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()    Plugin 'gmarik/Vundle.vim'    Plugin 'vim-pandoc/vim-pandoc'    Plugin 'vim-pandoc/vim-pandoc-syntax'    Plugin 'terryma/vim-multiple-cursors'    "Plugin 'reedes/vim-pencil'    Plugin 'scrooloose/nerdcommenter'    Plugin 'tpope/vim-fugitive'    Plugin 'scrooloose/nerdtree'    Plugin 'altercation/vim-colors-solarized'    Plugin 'nanotech/jellybeans.vim'    "Plugin 'bling/vim-airline'    Plugin 'itchyny/lightline.vim'    call vundle#end()            " requiredfiletype plugin indent on    " requiredexecute pathogen#infect()syntax enablesyntax onse t_Co=16let g:solarized_termcolors=256"set background=darkcolorscheme molokai"call togglebg#map("<F5>")set ruler  set tabstop=4set shiftwidth=4set expandtabset showcmdset hlsearchset incsearch"cursor show"set cursorline"set cursorcolumnset encoding=utf-8set foldmethod=markerset list listchars=tab:‚ñ∑‚ãÖ,trail:‚ãÖ,nbsp:‚ãÖset statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]"save keysnoremap <silent> <C-S>          :update<CR>vnoremap <silent> <C-S>         <C-C>:update<CR>inoremap <silent> <C-S>         <C-O>:update<CR>"python editingau FileType py set autoindentau FileType py set smartindentau FileType py set textwidth=79 " PEP-8 Friendlyhi comment ctermfg=blue "set linenumbers:nnoremap <C-M><C-N> :set invnumber<CR>:map <Up> gk:map <Down> gj"pandoc plugin files"let g:pandoc#filetypes#handled = ['let g:pandoc#biblio#sources = "bcg"let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:pandoc_use_bibtool = 1set grepprg=grep\ -nH\ $*"bibtexlet g:Tex_BIBINPUTS = [ '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']let g:Tex_BibtexFlavor = 'bibtex'let g:pandoc#folding#fold_fenced_codeblocks=1set omnifunc=pandoc#completion#Complete"let g:Tex_Flavor='latex'"let g:Tex_DefaultTargetFormat='pdf'" <leader>k Knits to MDnnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>"Rmd and Rpres are pandoc"autocmd BufRead,BufNewFile *.rmd,*.Rpres setfiletype pandoc"autocmd BufNewFile,BufReadPost *.md set filetype=markdownau BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc"""" New signs for the pandoc bundlelet g:pandoc_syntax_user_cchars = {'atx': '¬∂', 'codelang': '>', 'footnote': '¬ß', 'definition': '¬ª', 'newline': '¬¨'}" Format paragraphs with <leader>qmap <leader>q {!}fmt -w 105<CR>}<CR>" Place markers with {type} for markdown filesaugroup markers   autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'augroup ENDnnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>"let g:pencil#wrapModeDefault = 'soft'"augroup pencil      "autocmd!    "autocmd FileType markdown,mkd call pencil#init()    "autocmd FileType textile call pencil#init()    "autocmd FileType text call pencil#init({'wrap': 'hard'})"augroup ENDfunction! WordCount()      let s:old_status = v:statusmsg        let position = getpos(".")        exe ":silent normal g\<c-g>"            let stat = v:statusmsg              let s:word_count = 0                if stat != '--No lines in buffer--'                        let s:word_count = str2nr(split(v:statusmsg)[11])                            let v:statusmsg = s:old_status                              end                                call setpos('.', position)                                  return s:word_count endfunction" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):filetype plugin onlet vimrplugin_assign = 0" Change the <LocalLeader> key:let maplocalleader = ","" Use Ctrl+Space to do omnicompletion:if has("gui_running")    inoremap <C-Space> <C-x><C-o>else    inoremap <Nul> <C-x><C-o>endif"" Press the space bar to send lines (in Normal mode) and selections to R:vmap <Space> <Plug>RDSendSelectionnmap <Space> <Plug>RDSendLine"** airline related**let g:airline#extensions#tabline#enabled = 1" Show just the filename let g:airline#extensions#tabline#fnamemod = ':t' if !exists('g:airline_symbols')       let g:airline_symbols = {}   endif " unicode symbolslet g:airline_left_sep = '¬ª'let g:airline_left_sep = '‚ñ∂'let g:airline_right_sep = '¬´'let g:airline_right_sep = '‚óÄ'let g:airline_symbols.linenr = '‚êä'let g:airline_symbols.linenr = '‚ê§'let g:airline_symbols.linenr = '¬∂'let g:airline_symbols.branch = '‚éá'let g:airline_symbols.paste = 'œÅ'let g:airline_symbols.paste = '√û'let g:airline_symbols.paste = '‚à•'let g:airline_symbols.whitespace = 'Œû'"lightline configlet g:lightline = {      \ 'colorscheme': 'wombat',      \ 'active': {      \   'left': [ [ 'mode', 'paste' ],      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]      \ },      \ 'component_function': {      \   'fugitive': 'MyFugitive',      \   'readonly': 'MyReadonly',      \   'modified': 'MyModified',      \      'count': 'WordCount'      \ },      \ 'separator': { 'left':  '‚ñ∂', 'right':  '‚ñ∂'},      \ 'subseparator': { 'left':  '¬ª', 'right': '¬ª' }      \ }function! MyModified()if &filetype == "help"return ""elseif &modifiedreturn "+"elseif &modifiablereturn ""elsereturn ""endifendfunctionfunction! MyReadonly()if &filetype == "help"return ""  elseif &readonly  return "‚≠§"else    return ""endifendfunctionfunction! MyFugitive()return exists('*fugitive#head') ? fugitive#head() : ''endfunctionfunction! MyFilename()return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .\ ('' != MyModified() ? ' ' . MyModified() : '')endfunction
@@ -137,9 +139,9 @@ $
 	1449
 <wwwwwwi[ÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkr]ÄkrÄklÄkrÄklxÄkrÄkbÄkbÄkdÄkdÄkuÄkdÄkuÄkuÄkdÄkdbbbÄkbÄkbÄkbbbbbbbbbbbbbbieither ÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkl or a support vector machineÄkrÄkrÄklÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkb,ÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄkbÄkbÄkbÄkbÄkbÄkbÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄkrÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄklÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkdÄkrÄkrÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkdÄkuÄkuÄkdÄkdÄkdÄkdÄkuÄku
 "z	CHAR	0
-	ZqZqZqZqZq
+	ZqZqZqZqZqZqZZqZq
 "-	CHAR	0
-	plist
+	linear_model
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -150,7 +152,7 @@ $
 'F  2  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
 'G  2  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 'H  2  0  ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
-'I  2  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+'I  1  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
 'J  2  0  ~/Documents/data_intensive/book/ch9_conclusion/ch_conclusion.rmd
 'K  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'L  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
@@ -168,178 +170,1808 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  50  ~/Documents/data_intensive/book/book.rmd
-'0  16  27  ~/R/impact/impact.py
-'1  17  9  ~/R/impact/impact.py
-'2  1  0  ~/Documents/ref_bibs/update.sh
-'3  1  0  ~/Documents/data_intensive/book/book.rmd
-'4  13  408  ~/Documents/notes/foucault_discipline_1977.md
-'5  28  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
-'6  272  0  ~/.vimrc
-'7  117  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
-'8  11  64  ~/Documents/reviews/maldonado_2015/mackenzie_report.md
-'9  5  1732  ~/Documents/data_intensive/algorithm_device_power/mackenzie_abstract.md
+'0  1  260  ~/Documents/notes/lazzarato_signs_machines_2014.md
+'1  21  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+'2  1  0  ~/Downloads/tut1.txt
+'3  50  1  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/hbase_inputformat.py
+'4  69  0  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+'5  97  68  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+'6  142  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+'7  59  127  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+'8  1  0  ~/R/metacommunities/google_bigquery_access.py
+'9  1  0  ~/R/metacommunities/google_bigquery_access.pyc
 
 # Jumplist (newest first):
--'  16  27  ~/R/impact/impact.py
--'  1  0  ~/R/impact/impact.py
--'  17  9  ~/R/impact/impact.py
--'  1  0  ~/Documents/ref_bibs/update.sh
--'  1  0  ~/Documents/data_intensive/book/book.rmd
--'  338  0  ~/Documents/data_intensive/book/book.rmd
--'  13  408  ~/Documents/notes/foucault_discipline_1977.md
--'  4  0  ~/Documents/notes/foucault_discipline_1977.md
--'  5  9  ~/Documents/notes/foucault_discipline_1977.md
--'  1  0  ~/Documents/notes/foucault_discipline_1977.md
--'  28  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  23  1872  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  96  739  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  216  439  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  110  1438  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  49  3  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  49  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  71  828  ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
--'  9  0  ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
--'  131  546  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  51  20  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  59  963  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  65  24  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  79  565  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  86  575  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  94  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  98  172  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  106  115  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  125  3  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  60  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  45  398  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  1  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  86  295  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  1  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  163  44  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  131  57  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  112  73  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  68  24  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  218  737  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  226  1069  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  222  490  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  220  1227  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  272  0  ~/.vimrc
+-'  1  260  ~/Documents/notes/lazzarato_signs_machines_2014.md
 -'  1  0  ~/.vimrc
--'  117  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  118  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  100  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  106  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  105  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  11  64  ~/Documents/reviews/maldonado_2015/mackenzie_report.md
--'  4  16  ~/Documents/reviews/maldonado_2015/mackenzie_report.md
--'  1  0  ~/Documents/reviews/maldonado_2015/mackenzie_report.md
--'  5  1732  ~/Documents/data_intensive/algorithm_device_power/mackenzie_abstract.md
--'  1  0  ~/Documents/data_intensive/algorithm_device_power/mackenzie_abstract.md
--'  3  0  ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
--'  2502  0  ~/Documents/data_intensive/book/book.rmd
--'  1  0  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
--'  2505  39  ~/Documents/data_intensive/book/book.rmd
--'  330  0  ~/Documents/data_intensive/book/book.rmd
--'  28  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  23  1872  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  96  739  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  216  439  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  110  1438  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  49  3  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  49  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  131  546  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  51  20  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  59  963  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  65  24  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  79  565  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  86  575  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  94  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  98  172  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  106  115  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  125  3  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  60  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  45  398  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  1  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
--'  86  295  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  1  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  163  44  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  131  57  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  112  73  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  68  24  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  218  737  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  226  1069  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  222  490  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  220  1227  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  117  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  118  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  13  408  ~/Documents/notes/foucault_discipline_1977.md
--'  4  0  ~/Documents/notes/foucault_discipline_1977.md
--'  5  9  ~/Documents/notes/foucault_discipline_1977.md
--'  1  0  ~/Documents/notes/foucault_discipline_1977.md
--'  28  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  23  1872  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
--'  96  739  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  21  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+-'  19  0  ~/Documents/notes/lazzarato_signs_machines_2014.md
+-'  14  0  ~/Documents/notes/alpaydin_machine_learning_2010.md
+-'  39  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  49  89  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  31  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+-'  1  0  ~/Documents/notes/suchman_artificial_intelligence.md
+-'  5  0  ~/Documents/notes/suchman_human_machine.md
+-'  11  5  ~/Documents/notes/alpaydin_machine_learning_2010.md
+-'  59  1150  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  26  1123  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  55  75  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  61  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  62  16  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  63  196  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  32  1690  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  30  42  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  28  1466  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  38  68  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  25  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  27  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  37  2260  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+-'  69  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/Downloads/tut1.txt
+-'  50  1  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/hbase_inputformat.py
+-'  1  0  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/hbase_inputformat.py
+-'  69  0  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+-'  1  0  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+-'  97  68  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  32  325  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  34  321  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  28  147  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  1  65  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  42  94  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  142  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  89  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/dotfile/vim/snippets/pandoc.snippets
+-'  219  0  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+-'  2  0  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+-'  3  1  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+-'  77  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  1  9  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+-'  88  9  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  94  17  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  87  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  8  166  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  91  6  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  70  432  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  103  4  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  79  10  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  68  64  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  104  4  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  105  4  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  13  0  ~/Documents/notes/alpaydin_machine_learning_2010.md
+-'  31  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+-'  1  0  ~/Documents/notes/suchman_artificial_intelligence.md
+-'  5  0  ~/Documents/notes/suchman_human_machine.md
+-'  37  2260  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+-'  69  0  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+-'  1  0  ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+-'  97  68  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  32  325  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  34  321  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  28  147  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  1  65  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  42  94  ~/Documents/interdisciplinary/interdisciplinary_notes.md
+-'  122  0  ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/dotfile/vim/snippets/pandoc.snippets
+-'  219  0  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+-'  2  0  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+-'  3  1  ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
 
 # History of marks within files (newest to oldest):
 
-> ~/R/impact/impact.py
-	"	16	27
-	^	16	28
-	.	16	27
-	+	22	22
+> ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
+	"	132	5
+	^	132	6
+	.	132	5
+	+	49	129
+	+	50	0
+	+	51	0
+	+	51	264
+	+	49	295
+	+	49	117
+	+	49	300
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	148
+	+	49	372
+	+	49	0
+	+	49	413
+	+	53	0
+	+	5	0
+	+	11	0
+	+	51	122
+	+	53	32
+	+	72	105
+	+	72	0
+	+	72	191
+	+	72	0
+	+	72	225
+	+	72	0
+	+	72	226
+	+	72	0
+	+	72	240
 	+	1	0
-	+	6	0
-	+	6	0
-	+	8	0
+	+	32	507
+	+	160	33
+	+	162	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	176	0
+	+	162	1
+	+	176	0
+	+	162	145
+	+	163	0
+	+	164	0
+	+	165	27
+	+	166	78
+	+	166	76
+	+	168	0
+	+	170	0
+	+	171	0
+	+	168	20
+	+	171	23
+	+	174	0
+	+	175	20
+	+	172	53
+	+	72	722
+	+	72	0
+	+	72	841
+	+	74	0
+	+	72	968
+	+	72	0
+	+	72	970
+	+	72	0
+	+	72	997
+	+	72	0
+	+	72	975
+	+	72	0
+	+	72	1195
+	+	72	0
+	+	72	1285
+	+	72	0
+	+	72	1408
+	+	73	0
+	+	74	5
+	+	92	257
+	+	92	0
+	+	92	274
+	+	134	0
+	+	74	0
+	+	74	75
+	+	134	0
+	+	134	28
+	+	135	1
+	+	135	0
+	+	135	0
+	+	135	0
+	+	102	14
+	+	117	0
+	+	119	0
+	+	120	22
+	+	121	0
+	+	125	0
+	+	126	0
+	+	130	18
+	+	131	0
+	+	132	5
+
+> ~/.vimrc
+	"	1	0
+	.	72	0
+	+	1	0
+	+	52	22
+	+	302	0
+	+	299	0
+	+	57	34
+	+	300	30
+	+	301	36
+	+	300	31
+	+	301	36
+	+	302	3
+	+	132	0
+	+	302	0
+	+	297	0
+	+	298	12
+	+	132	0
+	+	126	0
+	+	132	0
+	+	26	28
+	+	106	0
+	+	98	0
+	+	102	0
+	+	105	0
+	+	107	0
+	+	108	0
+	+	72	0
+	+	72	0
+
+> ~/Documents/notes/lazzarato_signs_machines_2014.md
+	"	1	260
+	^	1	261
+	.	1	260
+	+	1	260
+
+> ~/Documents/notes/alpaydin_machine_learning_2010.md
+	"	27	0
+	^	15	0
+	.	27	0
 	+	9	0
+	+	11	0
+	+	28	0
+	+	11	14
+	+	14	0
+	+	14	200
+	+	14	0
+	+	14	243
+	+	12	123
+	+	15	0
+	+	16	0
+	+	27	0
+
+> ~/Documents/notes/hastie_2008.md
+	"	84	0
+	^	83	0
+	.	83	0
+	+	88	0
+	+	91	15
+	+	95	2
+	+	88	1
+	+	89	1
+	+	91	1
+	+	92	68
+	+	89	20
+	+	88	19
+	+	91	31
+	+	88	37
+	+	89	20
+	+	91	29
+	+	89	33
+	+	92	57
+	+	82	216
+	+	88	25
+	+	89	17
+	+	93	70
+	+	94	14
+	+	84	0
+	+	85	0
+	+	83	0
+
+> ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects_old.rmd
+	"	31	0
+
+> ~/Documents/notes/suchman_artificial_intelligence.md
+	"	1	0
+
+> ~/Documents/notes/suchman_human_machine.md
+	"	5	0
+
+> ~/Downloads/tut1.txt
+	"	1	0
+
+> ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/hbase_inputformat.py
+	"	50	1
+
+> ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+	"	69	0
+
+> ~/Documents/interdisciplinary/interdisciplinary_notes.md
+	"	97	68
+	^	97	69
+	.	97	68
+	+	43	81
+	+	45	0
+	+	42	0
+	+	29	0
+	+	30	0
+	+	42	0
+	+	31	0
+	+	32	0
+	+	42	0
+	+	33	0
+	+	34	0
+	+	42	0
+	+	37	0
+	+	38	126
+	+	38	174
+	+	39	133
+	+	40	278
+	+	40	321
+	+	1	65
+	+	49	4
+	+	44	140
+	+	28	0
+	+	32	325
+	+	32	82
+	+	46	293
+	+	47	320
+	+	48	287
+	+	42	28
+	+	25	0
+	+	49	101
+	+	51	0
+	+	54	188
+	+	55	2
+	+	89	0
+	+	93	46
+	+	59	75
+	+	60	0
+	+	42	8
+	+	59	7
+	+	89	8
+	+	93	1
+	+	93	0
+	+	70	0
+	+	61	174
+	+	62	227
+	+	63	121
+	+	64	249
+	+	66	48
+	+	67	111
+	+	68	117
+	+	65	130
+	+	70	0
+	+	68	133
+	+	70	149
+	+	71	0
+	+	72	0
+	+	59	7
+	+	42	7
+	+	51	8
+	+	57	8
+	+	70	0
+	+	72	8
+	+	87	231
+	+	64	186
+	+	68	0
+	+	69	140
+	+	72	47
+	+	74	67
+	+	70	208
+	+	74	69
+	+	70	303
+	+	74	187
+	+	75	105
+	+	75	106
+	+	76	165
+	+	77	23
+	+	78	36
+	+	80	17
+	+	81	101
+	+	82	5
+	+	81	5
+	+	82	176
+	+	83	172
+	+	87	231
+	+	84	227
+	+	84	298
+	+	87	231
+	+	78	106
+	+	79	126
+	+	88	0
+	+	85	143
+	+	86	9
+	+	87	230
+	+	87	231
+	+	88	0
+	+	79	184
+	+	93	14
+	+	95	202
+	+	96	168
+	+	97	68
+
+> ~/R/spark-1.0.0-bin-hadoop1/README.md
+	"	11	0
+
+> ~/R/spark-1.0.0-bin-hadoop1/RELEASE
+	"	1	0
+
+> ~/R/metacommunities/data_analysis/git_history/README.md
+	"	1	0
+
+> /usr/share/vim/vim74/doc/insert.txt
+	"	1849	16
+
+> /usr/share/vim/vim74/doc/autocmd.txt
+	"	700	38
+
+> ~/dotfile/vim/snippets/pandoc.snippets
+	"	1	0
+	^	22	12
+	.	22	11
+	+	13	12
+	+	14	17
+	+	22	11
+
+> ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+	"	219	0
+	^	219	4
+	.	219	3
+	+	1	9
+	+	3	0
+	+	219	3
+
+> ~/Documents/data_intensive/book/ch8_subjects/build.sh
+	"	13	0
+	^	13	0
+	.	12	31
+	+	12	31
+
+> ~/Documents/data_intensive/book/ch8_subjects/knitall.sh
+	"	10	0
+
+> ~/Documents/data_intensive/book/ch8_subjects/pandoc.sh
+	"	11	228
+	^	11	229
+	.	11	228
+	+	11	149
+	+	11	0
+	+	11	250
+	+	11	119
+	+	11	0
+	+	11	228
+
+> ~/Documents/data_intensive/book/ch8_subjects/pandoc output
+	"	4	15
+	.	3	0
 	+	10	0
 	+	3	0
-	+	10	0
-	+	10	0
-	+	4	0
+
+> ~/R/spark_gce/startup.sh
+	"	1	7
+	^	1	120
+	.	1	0
+	+	1	119
+	+	1	0
+
+> ~/R/spark_gce/spark_gce.py
+	"	508	2
+	.	509	0
+	+	1	0
+	+	508	0
+	+	509	0
+
+> ~/R/spark_gce/google_compute_startup.sh
+	"	1	1
+	^	1	15
+	.	1	0
+	+	1	0
+
+> ~/R/metacommunities/google_bigquery_access.py
+	"	1	0
+
+> ~/R/metacommunities/google_bigquery_access.pyc
+	"	1	0
+
+> ~/R/spark_gce/README.md
+	"	1	0
+
+> ~/Documents/data_intensive/data_science_19may2015.md
+	"	198	127
+	^	198	128
+	.	198	127
+	+	97	80
+	+	100	0
+	+	100	17
+	+	102	22
+	+	103	47
+	+	104	22
+	+	69	0
+	+	74	0
+	+	81	0
+	+	104	0
+	+	200	0
+	+	104	23
+	+	106	39
+	+	108	11
+	+	110	78
+	+	111	2
+	+	110	1
+	+	111	77
+	+	112	31
+	+	113	35
+	+	114	108
+	+	115	87
+	+	116	53
+	+	117	63
+	+	118	56
+	+	119	96
+	+	121	41
+	+	200	0
+	+	123	28
+	+	124	0
+	+	125	129
+	+	126	41
+	+	127	117
+	+	128	40
+	+	129	53
+	+	130	33
+	+	131	54
+	+	132	41
+	+	133	88
+	+	134	81
+	+	135	52
+	+	136	53
+	+	136	74
+	+	138	18
+	+	140	28
+	+	142	52
+	+	143	75
+	+	144	1
+	+	64	0
+	+	65	39
+	+	145	0
+	+	146	28
+	+	148	22
+	+	150	70
+	+	151	48
+	+	152	37
+	+	152	37
+	+	152	64
+	+	200	0
+	+	153	105
+	+	154	4
+	+	156	42
+	+	157	136
+	+	158	0
+	+	160	16
+	+	162	31
+	+	164	28
+	+	165	0
+	+	166	29
+	+	167	0
+	+	168	28
+	+	170	144
+	+	170	1
+	+	171	200
+	+	170	167
+	+	171	325
+	+	172	400
+	+	173	183
+	+	174	0
+	+	175	26
+	+	177	159
+	+	178	323
+	+	179	97
+	+	180	285
+	+	181	121
+	+	182	156
+	+	183	29
+	+	184	0
+	+	186	28
+	+	188	24
+	+	190	62
+	+	191	0
+	+	192	16
+	+	194	175
+	+	195	71
+	+	195	91
+	+	196	167
+	+	196	10
+	+	197	91
+	+	198	127
+
+> /etc/default/keyboard
+	"	11	49
+	^	11	50
+	.	11	0
+	+	11	25
 	+	11	0
+
+> /usr/share/X11/xkb/symbols/pc
+	"	36	26
+	.	23	0
+	+	22	0
+	+	23	0
+	+	22	5
+	+	23	27
+	+	22	4
+	+	23	0
+
+> ~/test/test.md
+	"	1	0
+
+> ~/test/test.py
+	"	11	0
+	.	12	0
+	+	1	18
+	+	3	24
+	+	9	12
+	+	12	0
+	+	9	5
+	+	9	0
+	+	12	0
+
+> ~/R/metacommunities/.gitignore
+	"	15	9
+	^	15	10
+	.	15	9
+	+	14	5
+	+	15	9
+
+> ~/R/metacommunities/data_analysis/github_social_practices/fork_plotting.py
+	"	50	0
+
+> ~/R/metacommunities/data_analysis/github_social_practices/NERD_tree_1
+	"	13	0
+	.	1	0
+	+	1	0
+
+> ~/R/metacommunities/data_analysis/github_social_practices/3_fork_analysis.py
+	"	34	0
+
+> ~/R/metacommunities/data_analysis/fork-patterns/1_forks_to_transaction.r2
+	"	158	0
+
+> ~/R/metacommunities/data_analysis/github_repository_topics/bootstrap.py
+	"	529	0
+	^	6	0
+	.	3	0
+	+	3	0
+	+	399	0
+	+	4	63
+	+	5	61
+	+	3	0
+
+> ~/R/metacommunities/adrian/fork_plotting.py
+	"	44	0
+
+> ~/R/metacommunities/adrian/events.py
+	"	79	0
+
+> ~/R/metacommunities/adrian/code_cities.py
+	"	67	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/code_cities.py
+	"	72	0
+
+> ~/R/metacommunities/data_analysis/github_repository_topics/__run__
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/dotfile/vim/bundle/python-mode/doc/pymode.txt
+	"	235	23
+
+> ~/Desktop/sim_SIM_00004.vcf
+	"	1	0
+
+> ~/Desktop/pcsc_pcsc_00003.vcf
+	"	1	0
+
+> ~/Desktop/meditation-sittings.txt
+	"	1	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/mackenzie_code_city.md
+	"	84	335
+	^	84	336
+	.	84	335
+	+	148	0
+	+	127	0
+	+	128	0
+	+	129	0
+	+	130	0
+	+	131	0
+	+	132	0
+	+	133	0
+	+	134	0
+	+	135	0
+	+	136	0
+	+	137	0
+	+	138	0
+	+	139	0
+	+	140	0
+	+	141	0
+	+	142	0
+	+	143	0
+	+	144	0
+	+	145	0
+	+	146	0
+	+	148	0
+	+	127	0
+	+	128	0
+	+	129	0
+	+	130	0
+	+	131	0
+	+	132	0
+	+	133	0
+	+	134	0
+	+	135	0
+	+	136	0
+	+	137	0
+	+	138	0
+	+	139	0
+	+	140	0
+	+	141	0
+	+	142	0
+	+	143	0
+	+	144	0
+	+	145	0
+	+	146	0
+	+	126	34
+	+	125	88
+	+	126	34
+	+	125	39
+	+	147	64
+	+	147	70
+	+	147	66
+	+	147	74
+	+	147	75
+	+	147	64
+	+	147	79
+	+	147	78
+	+	147	77
+	+	147	84
+	+	147	80
+	+	147	84
+	+	147	93
+	+	147	79
+	+	147	78
+	+	147	76
+	+	147	80
+	+	147	73
+	+	147	76
+	+	147	80
+	+	147	0
+	+	125	0
+	+	148	0
+	+	156	9
+	+	162	11
+	+	167	9
+	+	176	12
+	+	178	13
+	+	193	11
+	+	203	352
+	+	205	3
+	+	16	0
+	+	16	397
+	+	16	0
+	+	16	439
+	+	32	451
+	+	38	84
+	+	42	29
+	+	42	733
+	+	4	0
+	+	6	0
+	+	7	0
+	+	42	97
+	+	43	0
+	+	44	0
+	+	44	396
+	+	45	0
+	+	46	203
+	+	46	0
+	+	46	457
+	+	51	676
+	+	55	757
+	+	56	0
+	+	84	335
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/[Vundle] Installer
+	"	28	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/notes/foucault_discipline_1977.md
+	"	1	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/test_table.md
+	"	23	0
+	.	24	0
+	+	2	0
+	+	24	0
+
+> ~/Documents/ref_bibs/getrefs.sh
+	"	6	0
+	^	6	0
+	.	6	0
+	+	6	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/make.sh
+	"	1	133
+	^	1	134
+	.	1	133
+	+	1	319
+	+	2	14
+	+	1	133
+
+> ~/Documents/teaching/socl360/marking_2014_15/dissertation_comments.md
+	"	5	0
+	^	29	240
+	.	29	239
+	+	13	124
+	+	13	65
+	+	17	211
+	+	17	51
+	+	17	207
+	+	17	206
+	+	13	14
+	+	17	202
+	+	13	865
+	+	17	206
+	+	19	42
+	+	13	744
+	+	13	1442
+	+	13	1340
+	+	15	146
+	+	13	0
+	+	13	537
+	+	15	0
+	+	14	0
+	+	20	0
+	+	21	1
+	+	23	15
+	+	25	7
+	+	27	333
+	+	14	0
+	+	13	18
+	+	27	1107
+	+	28	0
+	+	29	239
+	+	31	0
+	+	29	239
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/mackenzie_code_city_old.md
+	"	307	0
+	.	303	0
+	+	316	0
+	+	303	0
+
+> ~/Documents/teaching/socl923-mcs/marking/marking_other.md
+	"	25	0
+	^	25	0
+	.	24	0
+	+	1	15
+	+	3	9
+	+	4	0
+	+	5	0
+	+	10	14
+	+	12	3
+	+	17	0
+	+	19	17
+	+	21	4
+	+	5	160
+	+	6	688
+	+	5	239
+	+	6	45
+	+	12	4
+	+	14	323
+	+	14	979
+	+	21	6
+	+	22	0
+	+	23	1006
+	+	26	0
+	+	27	100
+	+	22	0
+	+	23	225
+	+	26	0
+	+	27	159
+	+	28	0
+	+	6	566
+	+	7	0
+	+	8	1
+	+	15	0
+	+	16	1
+	+	29	1
+	+	16	1
+	+	23	582
+	+	23	383
+	+	24	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/mackenze_code_city.md
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+	"	16	68
+	^	16	69
+	.	16	68
+	+	247	57
+	+	248	62
+	+	249	55
+	+	264	1385
+	+	264	0
+	+	264	1500
+	+	264	1108
+	+	264	1007
+	+	264	1259
+	+	264	1143
+	+	264	0
+	+	264	0
+	+	264	1007
+	+	264	1007
+	+	264	1187
+	+	265	0
+	+	266	52
+	+	266	723
+	+	266	0
+	+	266	1030
+	+	266	0
+	+	266	1146
+	+	268	0
+	+	269	18
+	+	271	0
+	+	270	0
+	+	266	1036
+	+	270	5
+	+	270	9
+	+	270	18
+	+	270	20
+	+	270	22
+	+	270	24
+	+	270	26
+	+	270	53
+	+	270	26
+	+	271	0
+	+	272	18
+	+	262	18
+	+	274	348
+	+	274	0
+	+	274	229
+	+	274	314
+	+	278	64
+	+	289	0
+	+	278	79
+	+	278	316
+	+	278	427
+	+	278	0
+	+	278	916
+	+	295	0
+	+	296	0
+	+	295	0
+	+	352	0
+	+	279	0
+	+	280	38
+	+	282	43
+	+	282	248
+	+	283	0
+	+	284	81
+	+	284	0
+	+	284	229
+	+	352	0
+	+	284	476
+	+	285	0
+	+	286	0
+	+	287	0
+	+	289	16
+	+	286	2
+	+	287	0
+	+	289	0
+	+	288	0
+	+	289	370
+	+	299	228
+	+	299	738
+	+	300	0
+	+	293	240
+	+	293	348
+	+	294	0
+	+	300	0
+	+	289	372
+	+	289	457
+	+	292	0
+	+	289	568
+	+	350	0
+	+	350	863
+	+	299	0
+	+	289	247
+	+	289	684
+	+	291	0
+	+	291	0
+	+	291	156
+	+	291	0
+	+	291	291
+	+	352	0
+	+	22	0
+	+	348	46
+	+	347	0
+	+	1	0
+	+	16	68
+	h	223	1139
+	i	256	0
+	l	223	32
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/table1.md
+	"	1	2
+	.	1	0
+	+	1	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/table2.md
+	"	20	0
+	.	21	0
+	+	1	0
+	+	21	0
+	+	21	0
+
+> ~/R/metacommunities/publications/code_city_maynooth_sept2014/table3.md
+	"	20	1
+
+> ~/test.R
+	"	6	6
+	^	6	7
+	.	6	6
+	+	1	11
+	+	6	6
+
+> ~/.tmux.conf
+	"	79	0
+
+> ~/Documents/data_intensive/book/ml_lit/web_of_science.R
+	"	202	0
+	^	2	14
+	.	2	13
+	+	69	0
+	+	2	13
+
+> ~/Documents/data_intensive/book/ml_lit/svm.trans
+	"	1	0
+
+> ~/R/kittydar/README.md
+	"	49	0
+
+> ~/R/kittydar/training/svm/cross-validate.js
+	"	239	4
+
+> ~/R/kittydar/testing/TEST/506407837_5c15ab57db.jpg.cat
+	"	1	0
+
+> ~/R/kittydar/kittydar.js
+	"	190	0
+
+> ~/Documents/data_intensive/algorithm_device_power/mackenzie_sorting_value.rmd
+	"	1	0
+	^	56	267
+	.	56	266
+	+	28	398
+	+	30	24
+	+	32	0
+	+	32	145
+	+	32	0
+	+	32	213
+	+	32	0
+	+	32	316
+	+	32	0
+	+	32	378
+	+	18	441
+	+	32	438
+	+	32	0
+	+	32	646
+	+	33	39
+	+	32	0
+	+	32	321
+	+	33	137
+	+	33	0
+	+	33	134
+	+	37	1
+	+	36	0
+	+	33	109
+	+	34	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	37	199
+	+	37	0
+	+	37	440
+	+	37	0
+	+	37	570
+	+	38	0
+	+	41	0
+	+	41	42
+	+	35	42
+	+	41	43
+	+	43	0
+	+	43	67
+	+	43	435
+	+	41	74
+	+	39	0
+	+	39	80
+	+	58	0
+	+	43	279
+	+	48	0
+	+	49	0
+	+	50	0
+	+	49	47
+	+	51	181
+	+	51	0
+	+	51	197
+	+	58	0
+	+	51	0
+	+	52	83
+	+	43	278
+	+	45	0
+	+	43	1
+	+	44	0
+	+	44	400
+	+	45	0
+	+	45	141
+	+	45	0
+	+	45	261
+	+	46	164
+	+	46	0
+	+	46	293
+	+	47	109
+	+	47	0
+	+	47	171
+	+	47	0
+	+	47	480
+	+	47	0
+	+	47	500
+	+	47	0
+	+	47	523
+	+	47	0
+	+	47	524
+	+	47	0
+	+	47	555
+	+	47	0
+	+	47	574
+	+	47	482
+	+	47	658
+	+	39	298
+	+	39	0
+	+	39	340
+	+	52	236
+	+	53	144
+	+	54	84
+	+	54	0
+	+	54	284
+	+	47	313
+	+	54	0
+	+	54	317
+	+	55	236
+	+	55	0
+	+	55	490
+	+	56	0
+	+	56	266
+
+> ~/R/kittydar/classifiers/network.js
+	"	1	180
+
+> ~/Documents/data_intensive/algorithm_device_power/mackenzie_abstract.md
+	"	1	0
+	^	24	98
+	.	24	97
+	+	6	0
+	+	8	57
+	+	9	0
+	+	10	11
+	+	18	0
+	+	26	91
+	+	18	1
+	+	13	69
+	+	13	69
+	+	18	0
+	+	14	222
+	+	15	160
+	+	16	66
+	+	19	0
+	+	10	20
+	+	17	0
+	+	18	24
+	+	21	0
+	+	21	0
+	+	21	63
+	+	21	259
+	+	23	74
+	+	12	60
+	+	23	176
+	+	25	87
+	+	26	90
+	+	26	114
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	191
+	+	26	587
+	+	26	0
+	+	26	603
+	+	27	18
+	+	27	375
+	+	27	0
+	+	27	390
+	+	20	0
+	+	20	0
+	+	20	32
+	+	21	259
+	+	22	0
+	+	22	113
+	+	22	0
+	+	22	128
+	+	23	126
+	+	24	60
+	+	12	102
+	+	21	431
+	+	22	269
+	+	22	0
+	+	22	310
+	+	23	77
+	+	24	97
+
+> ~/glogin.txt
+	"	1	0
+
+> ~/customer.md
+	"	22	0
+
+> ~/Documents/data_intensive/digital_ontology/papers/presentation_notes.md
+	"	68	0
+	^	68	2
+	.	68	1
+	+	1	3
+	+	1	5
+	+	3	31
+	+	4	32
+	+	1	20
+	+	4	48
+	+	5	39
+	+	6	0
+	+	8	6
+	+	10	47
+	+	11	53
 	+	12	0
 	+	13	0
+	+	71	9
+	+	74	34
+	+	13	8
+	+	15	29
+	+	16	70
+	+	17	53
+	+	18	107
+	+	19	68
+	+	20	42
+	+	22	11
+	+	24	95
+	+	27	0
+	+	25	62
+	+	26	88
+	+	72	0
+	+	28	0
+	+	47	0
+	+	28	7
+	+	29	0
+	+	30	71
+	+	31	35
+	+	75	27
+	+	31	0
+	+	47	0
+	+	31	36
+	+	33	9
+	+	35	31
+	+	36	19
+	+	76	0
+	+	37	35
+	+	32	0
+	+	38	0
+	+	39	15
+	+	41	7
+	+	43	63
+	+	44	52
+	+	45	39
+	+	39	4
+	+	76	66
+	+	77	40
+	+	47	8
+	+	49	204
+	+	50	190
+	+	51	283
+	+	52	0
+	+	53	7
+	+	55	51
+	+	56	63
+	+	57	0
+	+	58	9
+	+	59	0
+	+	62	8
+	+	63	11
+	+	64	3
+	+	63	31
+	+	64	12
+	+	60	17
+	+	70	0
+	+	64	39
+	+	66	57
+	+	69	0
+	+	66	1
+	+	67	107
+	+	68	1
+
+> ~/Documents/data_intensive/digital_ontology/papers/[Vundle] Installer
+	"	28	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/digital_ontology/presentation_notes_may2015.rmd
+	"	6	134
+	^	14	77
+	.	14	76
+	+	2	18
+	+	4	118
+	+	6	134
+	+	7	97
+	+	8	0
+	+	8	0
+	+	8	29
+	+	36	0
+	+	8	106
+	+	9	72
+	+	10	25
+	+	11	240
+	+	15	29
+	+	10	20
+	+	11	0
+	+	10	21
+	+	15	220
+	+	17	229
+	+	15	221
+	+	16	49
+	+	15	243
+	+	16	245
+	+	17	0
+	+	17	144
+	+	17	339
+	+	29	0
+	+	17	339
+	+	18	155
+	+	19	0
+	+	20	19
+	+	22	125
+	+	22	20
+	+	22	325
+	+	22	1
+	+	23	61
+	+	4	201
+	+	23	140
+	+	24	81
+	+	9	0
+	+	31	206
+	+	28	0
+	+	24	271
+	+	25	229
+	+	27	0
+	+	29	18
+	+	31	70
+	+	33	1
+	+	32	59
+	+	26	193
+	+	32	185
+	+	33	136
+	+	33	98
+	+	33	181
+	+	34	77
+	+	29	19
+	+	37	0
+	+	34	78
+	+	35	460
+	+	13	196
+	+	11	0
+	+	12	1
+	+	4	158
+	+	14	76
+
+> ~/Documents/data_intensive/digital_ontology/presentation_nodes.tex
+	"	1	0
+	^	1	0
+
+> ~/Documents/data_intensive/digital_ontology/mackenzie_digital_ontology.rmd
+	"	33	12
+	^	31	40
+	.	31	0
+	+	31	0
+
+> ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
+	"	2	0
+
+> ~/Documents/data_intensive/book/ch0_introduction/figure/catplot.py
+	"	1	0
+	^	1	1
+	.	1	1
 	+	5	0
-	+	14	32
-	+	16	59
+	+	7	0
+	+	22	0
+	+	24	0
+	+	24	0
+	+	24	0
+	+	25	0
+	+	24	0
+	+	5	0
+	+	8	0
+	+	7	1
 	+	18	0
-	+	19	0
 	+	20	0
+	+	24	0
+	+	24	0
+	+	24	0
+	+	11	0
+	+	4	13
+	+	3	20
+	+	1	1
+
+> ~/Documents/data_intensive/book/ch6_topologies/gwas_clustering.r
+	"	31	4
+	^	16	41
+	.	10	0
+	+	7	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	23	0
+	+	24	0
+	+	26	0
+	+	26	0
+	+	26	0
+	+	26	0
+	+	29	41
+	+	35	0
+	+	22	48
+	+	28	0
+	+	50	31
+	+	53	0
+	+	53	0
+	+	51	50
+	+	53	0
+	+	52	16
+	+	49	42
+	+	6	11
+	+	7	29
+	+	48	26
+	+	50	0
+	+	49	7
+	+	30	22
+	+	35	22
+	+	49	10
+	+	50	0
+	+	51	21
+	+	50	22
+	+	26	57
+	+	27	33
+	+	3	11
+	+	57	33
+	+	7	0
+	+	59	43
+	+	2	14
+	+	26	57
+	+	28	0
+	+	33	0
+	+	27	35
+	+	7	38
+	+	22	48
+	+	26	57
+	+	33	42
+	+	22	48
+	+	26	57
+	+	22	48
+	+	37	0
+	+	47	2
+	+	40	27
+	+	47	0
+	+	39	0
+	+	41	20
+	+	42	53
+	+	45	0
+	+	43	7
+	+	44	21
+	+	45	0
+	+	9	3
+	+	8	35
+	+	4	15
+	+	11	30
+	+	12	37
+	+	11	29
+	+	12	24
+	+	11	26
+	+	12	13
+	+	12	17
+	+	13	18
+	+	12	0
+	+	20	0
+	+	21	8
+	+	13	0
+	+	20	0
+	+	14	30
+	+	17	35
+	+	18	43
+	+	19	66
+	+	16	28
+	+	22	0
+	+	36	0
+	+	33	0
+	+	34	81
+	+	31	37
+	+	32	69
+	+	22	48
+	+	25	28
+	+	10	23
+	+	16	40
+	+	7	0
+	+	15	0
+	+	10	0
+
+> ~/Documents/data_intensive/book/ch6_topologies/nci60.r
+	"	41	0
+	.	31	0
+	+	5	0
+	+	4	0
+	+	2	0
+	+	1	0
+	+	4	0
+	+	7	0
+	+	31	0
+	+	31	0
+
+> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+	"	143	232
+	^	143	224
+	.	143	232
+	+	151	74
+	+	189	0
+	+	205	357
+	+	215	0
+	+	36	198
+	+	35	0
+	+	35	147
+	+	35	0
+	+	35	369
+	+	34	76
+	+	151	63
+	+	151	209
+	+	153	271
+	+	153	0
+	+	153	292
+	+	153	540
+	+	109	0
+	+	140	0
+	+	141	0
+	+	142	94
+	+	143	34
+	+	143	70
+	+	144	16
+	+	143	34
+	+	144	0
+	+	110	0
+	+	110	44
+	+	111	0
+	+	136	0
+	+	138	3
+	+	112	0
+	+	142	62
+	+	143	189
+	+	110	81
+	+	143	232
+
+> ~/Documents/data_intensive/book/latex/mystyle.sty
+	"	13	0
+	^	13	15
+	.	13	0
+	+	3	20
+	+	8	39
+	+	9	15
+	+	14	18
+	+	13	20
+	+	14	0
+	+	14	17
+	+	11	0
+	+	12	19
+	+	8	0
+	+	6	0
+	+	13	14
+	+	14	0
+	+	13	0
+
+> ~/Documents/data_intensive/book/latex/book.tex
+	"	39	0
+	^	11	13
+	.	39	0
+	+	6	11
+	+	18	0
+	+	12	10
+	+	31	10
+	+	29	15
+	+	8	20
+	+	18	0
+	+	13	0
+	+	23	0
+	+	17	0
+	+	26	13
+	+	9	15
+	+	1	22
+	+	33	31
+	+	15	41
+	+	34	33
+	+	34	17
+	+	33	0
+	+	34	0
+	+	4	0
+	+	4	0
+	+	20	50
+	+	20	50
+	+	20	50
+	+	22	0
+	+	22	0
+	+	5	0
+	+	22	0
 	+	21	0
-	+	19	0
-	+	20	0
-	+	15	34
-	+	16	27
+	+	40	26
+	+	39	15
+	+	37	34
+	+	38	37
+	+	10	13
+	+	11	12
+	+	39	0
 
-> ~/Documents/ref_bibs/update.sh
+> ~/Documents/data_intensive/book/ch0_introduction/build.sh
+	"	4	0
+	^	6	26
+	.	4	0
+	+	4	91
+	+	5	0
+	+	5	509
+	+	5	0
+	+	5	526
+	+	6	0
+	+	4	0
+
+> ~/Documents/data_intensive/book/ch6_topologies/pandoc.sh
 	"	1	0
 
-> ~/Documents/data_intensive/book/book.rmd
+> ~/Documents/data_intensive/book/ch0_introduction/knit_all.sh
+	"	5	26
+	^	5	27
+	.	5	26
+	+	5	26
+
+> ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+	"	233	261
+	^	233	234
+	.	233	233
+	+	322	0
+	+	322	522
+	+	322	0
+	+	322	576
+	+	34	562
+	+	34	665
+	+	43	95
+	+	43	575
+	+	55	175
+	+	113	33
+	+	117	208
+	+	115	512
+	+	115	727
+	+	115	413
+	+	115	61
+	+	115	667
+	+	121	242
+	+	121	402
+	+	121	861
+	+	121	1020
+	+	123	211
+	+	130	570
+	+	20	706
+	+	218	706
+	+	218	0
+	+	219	0
+	+	218	726
+	+	4	7
+	+	6	45
+	+	7	116
+	+	9	111
+	+	10	49
+	+	7	151
+	+	8	71
+	+	101	516
+	+	248	27
+	+	249	15
+	+	255	11
+	+	255	11
+	+	255	7
+	+	255	7
+	+	254	34
+	+	254	0
+	+	255	0
+	+	256	0
+	+	256	22
+	+	257	20
+	+	256	21
+	+	257	12
+	+	262	0
+	+	258	22
+	+	259	20
+	+	262	0
+	+	262	0
+	+	260	0
+	+	261	0
+	+	256	0
+	+	253	0
+	+	245	0
+	+	260	0
+	+	269	0
+	+	7	191
+	+	276	0
+	+	279	38
+	+	280	21
+	+	282	55
+	+	288	24
+	+	290	0
+	+	291	0
+	+	290	27
+	+	291	27
+	+	294	22
+	+	298	0
+	+	300	28
+	+	301	22
+	+	276	3
+	+	278	52
+	+	279	0
+	+	276	0
+	+	269	29
+	+	262	0
+	+	256	16
+	+	257	18
+	+	255	0
+	+	14	1153
+	+	233	250
+	+	222	233
+	+	32	105
+	+	35	0
+	+	36	6
+	+	42	0
+	+	36	0
+	+	37	0
+	+	38	73
+	+	39	250
+	+	40	19
+	+	38	61
+	+	24	16
+	+	14	1121
+	+	233	233
+
+> ~/Documents/ref_bibs/data_forms_thought.bib
 	"	1	0
-	^	2502	0
-	.	2502	0
-	+	1	51
-	+	1790	0
-	+	1789	0
-	+	1480	0
-	+	2168	0
-	+	2167	0
-	+	2166	0
-	+	334	0
-	+	313	0
-	+	311	0
-	+	2506	0
-	+	2504	0
-	+	2503	0
-	+	2502	0
-	+	2506	0
-	+	2502	0
-	g	776	2499
-	n	92	18
-	z	1	0
+
+> ~/Documents/ref_bibs/ngs.bib
+	"	246	0
+
+> ~/Documents/data_intensive/book/ch6_topologies/genomic.R
+	"	142	0
+
+> ~/Documents/data_intensive/book/ch6_topologies/test.md
+	"	5	8
+	^	4	62
+	.	4	61
+	+	8	0
+	+	8	115
+	+	8	0
+	+	9	0
+	+	2	0
+	+	4	61
+
+> ~/Documents/data_intensive/book/ch6_topologies/pandoc output
+	"	3	0
+	.	3	0
+	+	24	0
+	+	17	0
+	+	10	0
+	+	3	0
 
 > ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	263	131
+	"	2	0
 	^	1	0
 	.	1	0
 	+	263	1403
@@ -444,1728 +2076,13 @@ $
 	+	1	0
 	h	265	863
 
-> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
-	"	2	0
-	^	1	0
-	.	1	0
-	+	250	0
-	+	246	57
-	+	247	62
-	+	248	55
-	+	263	1385
-	+	263	0
-	+	263	1500
-	+	263	1108
-	+	263	1007
-	+	263	1259
-	+	263	1143
-	+	263	0
-	+	263	0
-	+	263	1007
-	+	263	1007
-	+	263	1187
-	+	264	0
-	+	265	52
-	+	265	723
-	+	265	0
-	+	265	1030
-	+	265	0
-	+	265	1146
-	+	267	0
-	+	268	18
-	+	270	0
-	+	269	0
-	+	265	1036
-	+	269	5
-	+	269	9
-	+	269	18
-	+	269	20
-	+	269	22
-	+	269	24
-	+	269	26
-	+	269	53
-	+	269	26
-	+	270	0
-	+	271	18
-	+	261	18
-	+	273	348
-	+	273	0
-	+	273	229
-	+	273	314
-	+	277	64
-	+	288	0
-	+	277	79
-	+	277	316
-	+	277	427
-	+	277	0
-	+	277	916
-	+	294	0
-	+	295	0
-	+	294	0
-	+	351	0
-	+	278	0
-	+	279	38
-	+	281	43
-	+	281	248
-	+	282	0
-	+	283	81
-	+	283	0
-	+	283	229
-	+	351	0
-	+	283	476
-	+	284	0
-	+	285	0
-	+	286	0
-	+	288	16
-	+	285	2
-	+	286	0
-	+	288	0
-	+	287	0
-	+	288	370
-	+	298	228
-	+	298	738
-	+	299	0
-	+	292	240
-	+	292	348
-	+	293	0
-	+	299	0
-	+	288	372
-	+	288	457
-	+	291	0
-	+	288	568
-	+	349	0
-	+	349	863
-	+	298	0
-	+	288	247
-	+	288	684
-	+	290	0
-	+	290	0
-	+	290	156
-	+	290	0
-	+	290	291
-	+	351	0
-	+	21	0
-	+	347	46
-	+	346	0
-	+	1	0
-	h	222	1139
-	i	255	0
-	l	222	32
+> ~/Documents/ref_bibs/mackenzie.bib
+	"	846	35
 
-> ~/Documents/data_intensive/book/ch8_subjects/ch_learning_subjects.rmd
-	"	6	118
-	^	6	119
-	.	6	118
-	+	2	4
-	+	7	97
-	+	8	1
-	+	7	1
-	+	5	0
+> ~/Documents/data_intensive/book/preface.md
+	"	5	147
+	^	10	165
+	.	10	164
 	+	4	0
-	+	12	78
-	+	1	0
-	+	6	118
-
-> ~/Documents/notes/foucault_discipline_1977.md
-	"	13	408
-	^	15	479
-	.	13	408
-	+	1	10
-	+	2	72
-	+	16	0
-	+	2	145
-	+	3	64
-	+	3	64
-	+	16	0
-	+	3	128
-	+	5	69
-	+	5	136
-	+	5	203
-	+	5	276
-	+	5	136
-	+	5	203
-	+	16	0
-	+	5	67
-	+	4	0
-	+	6	0
-	+	7	64
-	+	7	135
-	+	7	200
-	+	7	270
-	+	7	337
-	+	7	406
-	+	7	476
-	+	7	477
-	+	7	337
-	+	7	476
-	+	16	0
-	+	7	486
-	+	9	65
-	+	9	138
-	+	9	174
-	+	9	138
-	+	16	0
-	+	9	136
-	+	10	0
-	+	11	35
-	+	11	106
-	+	11	179
-	+	11	253
-	+	11	267
-	+	11	321
-	+	11	391
-	+	11	458
-	+	11	459
-	+	11	254
-	+	11	458
-	+	16	0
-	+	11	526
-	+	13	57
-	+	13	127
-	+	13	198
-	+	13	271
-	+	13	340
-	+	13	408
-	+	13	483
-	+	13	547
-	+	13	613
-	+	13	687
-	+	13	752
-	+	13	815
-	+	13	883
-	+	13	949
-	+	13	1015
-	+	13	1081
-	+	13	1150
-	+	13	1220
-	+	13	1292
-	+	13	1360
-	+	13	1420
-	+	13	1488
-	+	13	1557
-	+	13	1571
-	+	13	1015
-	+	16	0
-	+	13	298
-	+	13	1572
-	+	14	0
-	+	15	10
-	+	15	78
-	+	15	148
-	+	15	210
-	+	15	278
-	+	15	351
-	+	15	419
-	+	15	478
-	+	15	148
-	+	15	210
-	+	15	278
-	+	15	351
-	+	15	419
-	+	16	0
-	+	16	0
-	+	13	408
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
-	"	28	0
-	^	23	1772
-	.	23	1771
-	+	222	566
-	+	125	370
-	+	155	0
-	+	150	0
-	+	155	63
-	+	125	371
-	+	216	926
-	+	216	840
-	+	216	839
-	+	217	0
-	+	218	89
-	+	218	89
-	+	220	0
-	+	218	443
-	+	86	36
-	+	86	0
-	+	218	521
-	+	218	875
-	+	218	812
-	+	218	0
-	+	218	1086
-	+	218	0
-	+	218	1193
-	+	218	1071
-	+	218	1193
-	+	219	0
-	+	220	0
-	+	228	0
-	+	228	0
-	+	94	978
-	+	100	39
-	+	125	602
-	+	220	6
-	+	23	2080
-	+	23	2216
-	+	43	620
-	+	45	379
-	+	23	2039
-	+	27	0
-	+	31	430
-	+	37	131
-	+	41	178
-	+	43	385
-	+	43	1381
-	+	43	1662
-	+	117	0
-	+	23	1748
-	+	23	2156
-	+	220	0
-	+	216	583
-	+	102	3
-	+	216	1120
-	+	216	903
-	+	216	1297
-	+	218	360
-	+	218	1558
-	+	218	89
-	+	220	103
-	+	220	730
-	+	220	452
-	+	220	938
-	+	220	1201
-	+	222	747
-	+	127	5
-	+	220	1494
-	+	222	242
-	+	222	534
-	+	222	584
-	+	222	567
-	+	222	566
-	+	228	183
-	+	228	0
-	+	222	2359
-	+	228	0
-	+	222	567
-	+	223	0
-	+	222	634
-	+	226	7
-	+	23	1709
-	+	23	1889
-	+	226	210
-	+	226	409
-	+	226	590
-	+	228	0
-	+	226	1094
-	+	226	673
-	+	226	826
-	+	227	0
-	+	226	808
-	+	228	0
-	+	226	996
-	+	112	73
-	+	163	45
-	+	49	90
-	+	110	0
-	+	110	1438
-	+	216	439
-	+	96	739
-	+	23	2019
-	+	23	1771
-	e	23	1472
-
-> ~/Documents/data_intensive/book/ch7_reconstruction/ch_reconstruction_number.rmd
-	"	71	828
-	^	9	176
-	.	9	175
-	+	2	3
-	+	1	0
-	+	5	0
-	+	3	0
-	+	9	175
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
-	"	49	0
-
-> ~/template.latex
-	"	8	13
-	^	8	14
-	.	8	13
-	+	8	13
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
-	"	8	294
-	^	8	52
-	.	8	294
-	+	9	0
-	+	8	214
-	+	9	40
-	+	9	0
-	+	8	27
-	+	8	256
-	+	8	107
-	+	6	52
-	+	10	0
-	+	8	108
-	+	8	0
-	+	8	290
-	+	8	76
-	+	6	0
-	+	8	92
-	+	8	294
-	+	8	51
-	+	8	294
-	p	6	0
-
-> ~/.vimrc
-	"	272	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/reviews/maldonado_2015/mackenzie_report.md
-	"	11	64
-	^	11	65
-	.	11	64
-	+	13	8
-	+	15	11
-	+	3	59
-	+	4	69
-	+	4	48
-	+	4	522
-	+	4	842
-	+	4	1081
-	+	4	1375
-	+	4	1476
-	+	4	1941
-	+	4	2041
-	+	4	2139
-	+	4	84
-	+	4	85
-	+	4	184
-	+	4	183
-	+	12	0
-	+	1	31
-	+	5	0
-	+	6	27
-	+	7	0
-	+	9	13
-	+	11	64
-
-> ~/Documents/data_intensive/algorithm_device_power/mackenzie_abstract.md
-	"	5	1732
-	^	5	1242
-	.	5	1241
-	+	5	348
-	+	5	192
-	+	5	598
-	+	5	435
-	+	5	481
-	+	5	198
-	+	5	352
-	+	5	620
-	+	5	1038
-	+	5	316
-	+	5	1529
-	+	3	46
-	+	5	627
-	+	5	900
-	+	5	1085
-	+	5	1550
-	+	5	1691
-	+	5	232
-	+	5	538
-	+	5	1234
-	+	5	0
-	+	5	777
-	+	5	1241
-
-> ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
-	"	1	0
-	^	1	0
-	.	1	0
-	+	385	0
-	+	395	5
-	+	397	0
-	+	399	0
-	+	393	1021
-	+	393	0
-	+	393	1059
-	+	399	0
-	+	401	0
-	+	401	138
-	+	401	0
-	+	401	0
-	+	401	0
-	+	401	126
-	+	401	348
-	+	401	0
-	+	401	371
-	+	360	15
-	+	360	10
-	+	360	32
-	+	360	14
-	+	360	53
-	+	360	33
-	+	360	15
-	+	360	41
-	+	360	20
-	+	360	86
-	+	360	491
-	+	360	0
-	+	360	645
-	+	360	6
-	+	360	0
-	+	360	7
-	+	360	0
-	+	360	682
-	+	360	16
-	+	360	20
-	+	360	53
-	+	360	69
-	+	360	77
-	+	360	68
-	+	360	222
-	+	360	391
-	+	360	897
-	+	375	0
-	+	360	100
-	+	360	0
-	+	445	0
-	+	447	0
-	+	447	699
-	+	213	0
-	+	404	179
-	+	399	0
-	+	400	76
-	+	364	0
-	+	380	52
-	+	393	56
-	+	517	0
-	+	519	0
-	+	519	92
-	+	519	0
-	+	519	340
-	+	517	685
-	+	517	0
-	+	517	717
-	+	519	17
-	+	500	18
-	+	517	1309
-	+	519	619
-	+	425	0
-	+	519	857
-	+	519	0
-	+	520	0
-	+	517	0
-	+	517	1258
-	+	415	0
-	+	521	322
-	+	521	0
-	+	521	575
-	+	521	0
-	+	521	670
-	+	521	486
-	+	521	841
-	+	521	0
-	+	521	842
-	+	521	0
-	+	521	982
-	+	521	0
-	+	521	1068
-	+	521	0
-	+	521	1317
-	+	219	76
-	+	212	553
-	+	42	111
-	+	39	0
-	+	41	82
-	+	40	90
-	+	2	5
-	+	465	74
-	+	1	0
-	n	371	0
-	t	38	0
-
-> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-	"	1	0
-	^	261	94
-	.	261	94
-	+	269	653
-	+	271	89
-	+	269	652
-	+	269	929
-	+	269	653
-	+	269	1013
-	+	269	0
-	+	269	1214
-	+	270	0
-	+	269	48
-	+	271	13
-	+	269	631
-	+	271	86
-	+	271	89
-	+	276	0
-	+	271	89
-	+	272	0
-	+	275	126
-	+	275	332
-	+	271	0
-	+	272	0
-	+	275	358
-	+	275	1
-	+	275	595
-	+	275	0
-	+	275	703
-	+	275	0
-	+	275	790
-	+	276	0
-	+	258	0
-	+	258	0
-	+	38	46
-	+	40	0
-	+	40	167
-	+	40	0
-	+	40	685
-	+	42	0
-	+	42	212
-	+	42	0
-	+	42	339
-	+	42	0
-	+	42	370
-	+	42	0
-	+	42	420
-	+	42	675
-	+	45	0
-	+	46	87
-	+	46	158
-	+	46	441
-	+	46	0
-	+	46	664
-	+	46	0
-	+	46	864
-	+	36	735
-	+	36	890
-	+	36	0
-	+	36	913
-	+	40	695
-	+	40	0
-	+	40	725
-	+	42	637
-	+	46	563
-	+	46	0
-	+	46	577
-	+	46	0
-	+	46	676
-	+	46	1085
-	+	47	0
-	+	76	317
-	+	88	5
-	+	88	0
-	+	88	0
-	+	88	281
-	+	82	668
-	+	82	1162
-	+	88	467
-	+	88	759
-	+	88	0
-	+	88	981
-	+	88	1234
-	+	88	1799
-	+	94	0
-	+	94	367
-	+	115	374
-	+	3	8
-	+	6	89
-	+	7	25
-	+	8	42
-	+	1	3
-	+	1	4
-	+	2	0
-	+	1	3
-	+	5	51
-	+	11	0
-	+	11	212
-	+	12	0
-	+	10	160
-	+	10	343
-	+	11	0
-	+	261	94
-	b	229	0
-	e	259	12
-	f	331	0
-	g	395	0
-	h	218	0
-	j	46	373
-	t	3	0
-	v	395	0
-
-> ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
-	"	1	0
-	^	1	0
-	.	1	0
-	+	2	4
-	+	1	0
-
-> ~/Documents/data_intensive/book/ch9_conclusion/ch_conclusion.rmd
-	"	1	0
-	^	1	0
-	.	1	0
-	+	2	3
-	+	3	0
-	+	2	3
-	+	1	0
-
-> ~/[Vundle] Installer
-	"	27	0
-	.	1	0
-	+	27	0
-	+	1	0
-
-> ~/Documents/admin/ernest-st/NatWest-10june2005
-	"	1	0
-
-> ~/5050.md
-	"	1	0
-	^	20	150
-	.	20	149
-	+	1	234
-	+	2	98
-	+	3	52
-	+	4	66
-	+	5	46
-	+	10	30
-	+	6	94
-	+	7	38
-	+	8	96
-	+	9	33
-	+	8	114
-	+	11	0
-	+	12	64
-	+	13	37
-	+	14	96
-	+	15	0
-	+	16	182
-	+	17	0
-	+	18	90
-	+	20	149
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/ngram.r
-	"	1	0
-	^	23	25
-	.	23	22
-	+	12	0
-	+	25	24
-	+	30	92
-	+	29	69
-	+	8	76
-	+	11	49
-	+	8	10
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	11	0
-	+	12	53
-	+	8	62
-	+	3	33
-	+	4	49
-	+	8	2
-	+	11	18
-	+	4	0
-	+	12	62
-	+	6	39
-	+	12	40
-	+	12	75
-	+	12	57
-	+	7	28
-	+	11	74
-	+	5	16
-	+	8	60
-	+	12	79
-	+	5	17
-	+	11	81
-	+	25	0
-	+	12	62
-	+	11	104
-	+	25	19
-	+	13	18
-	+	25	0
-	+	13	66
-	+	12	3
-	+	13	88
-	+	12	34
-	+	15	0
-	+	13	3
-	+	15	121
-	+	12	116
-	+	11	128
-	+	25	24
-	+	11	82
-	+	11	0
-	+	11	109
-	+	15	117
-	+	9	18
-	+	15	115
-	+	13	92
-	+	12	80
-	+	12	79
-	+	12	113
-	+	12	0
-	+	12	0
-	+	10	0
-	+	12	0
-	+	12	122
-	+	19	0
-	+	15	3
-	+	19	180
-	+	19	60
-	+	14	0
-	+	14	92
-	+	19	26
-	+	17	50
-	+	21	74
-	+	19	4
-	+	19	145
-	+	21	29
-	+	19	46
-	+	21	56
-	+	19	33
-	+	21	44
-	+	18	2
-	+	19	38
-	+	21	34
-	+	18	10
-	+	16	159
-	+	16	67
-	+	20	0
-	+	21	43
-	+	20	138
-	+	16	59
-	+	19	151
-	+	20	139
-	+	21	150
-	+	21	3
-	+	23	0
-	+	25	29
-	+	21	130
-	+	25	0
-	+	22	0
-	+	23	89
-	+	24	0
-	+	23	22
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/network.r
-	"	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/network4.r
-	"	1	0
-	^	12	3
-	.	46	12
-	+	29	11
-	+	33	166
-	+	30	92
-	+	33	151
-	+	33	45
-	+	30	88
-	+	33	49
-	+	31	59
-	+	33	49
-	+	32	66
-	+	33	137
-	+	33	26
-	+	33	253
-	+	34	46
-	+	33	60
-	+	32	68
-	+	33	6
-	+	34	55
-	+	41	83
-	+	41	0
-	+	34	0
-	+	42	56
-	+	8	0
-	+	4	0
-	+	32	63
-	+	29	50
-	+	20	0
-	+	15	39
-	+	16	37
-	+	20	51
-	+	23	29
-	+	44	0
-	+	4	0
-	+	41	45
-	+	42	66
-	+	41	160
-	+	41	128
-	+	33	33
-	+	41	286
-	+	42	6
-	+	43	57
-	+	42	66
-	+	43	68
-	+	41	33
-	+	18	64
-	+	20	88
-	+	18	0
-	+	24	27
-	+	26	27
-	+	30	53
-	+	31	54
-	+	32	61
-	+	31	59
-	+	29	49
-	+	16	53
-	+	20	0
-	+	24	0
-	+	26	0
-	+	29	0
-	+	30	0
-	+	31	0
-	+	32	0
-	+	36	0
-	+	37	0
-	+	38	0
-	+	39	0
-	+	38	0
-	+	37	88
-	+	42	66
-	+	41	211
-	+	41	0
-	+	41	211
-	+	41	0
-	+	41	209
-	+	41	0
-	+	41	222
-	+	42	55
-	+	41	55
-	+	43	75
-	+	40	23
-	+	41	0
-	+	44	0
-	+	40	32
-	+	42	64
-	+	43	80
-	+	42	66
-	+	43	81
-	+	42	65
-	+	43	81
-	+	42	61
-	+	43	76
-	+	40	32
-	+	45	0
-	+	44	0
-	+	42	60
-	+	43	76
-	+	41	31
-	+	40	28
-	+	41	32
-	+	46	12
-	m	78	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/combined_diagram.r
-	"	73	0
-	^	64	19
-	.	64	19
-	+	32	0
-	+	5	0
-	+	32	0
-	+	2	0
-	+	31	27
-	+	67	0
-	+	60	0
-	+	64	19
-
-> ~/Documents/imaginaries_cesagen_2010/imaginary_data.csv
-	"	21	17
-	.	21	0
-	+	21	0
-
-> ~/Documents/data_intensive/book/ch1_learning/pandoc.sh
-	"	3	27
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mcmc_examples.R
-	"	289	0
-	.	95	0
-	+	109	0
-	+	110	0
-	+	95	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/build.sh
-	"	3	0
-	.	3	0
-	+	3	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/knit.sh
-	"	16	38
-	^	16	39
-	.	16	38
-	+	16	38
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/ejors.rmd
-	"	1	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/ejors_nov2012.rmd
-	"	162	0
-	^	128	1919
-	.	128	1919
-	+	128	513
-	+	128	1919
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mcmc.rmd
-	"	141	0
-
-> ~/Documents/notes/hacking_1990.md
-	"	14	115
-
-> ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
-	"	7	60
-	^	7	61
-	.	7	60
-	+	1	3
-	+	187	447
-	+	7	60
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/knitall.R
-	"	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/R_doc
-	"	67	0
-	^	1	1
-	.	1	1
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	537	0
-	+	1	0
-	+	756	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	286	0
-	+	1	0
-	+	34	0
-	+	1	1
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/NERD_tree_1
-	"	28	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/treemap3.r
-	"	54	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/NERD_tree_2
-	"	9	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/dendrogram.r
-	"	21	0
-	^	21	20
-	.	24	0
-	+	26	0
-	+	1	0
-	+	7	0
-	+	10	0
-	+	12	14
-	+	17	49
-	+	18	0
-	+	19	0
-	+	18	21
-	+	19	63
-	+	26	0
-	+	27	0
-	+	18	31
-	+	13	5
-	+	15	5
-	+	18	28
-	+	15	20
-	+	13	36
-	+	19	75
-	+	18	37
-	+	19	154
-	+	19	122
-	+	21	0
-	+	19	114
-	+	21	16
-	+	19	86
-	+	20	30
-	+	21	79
-	+	20	28
-	+	21	12
-	+	19	84
-	+	16	4
-	+	18	39
-	+	16	21
-	+	14	27
-	+	16	25
-	+	23	137
-	+	22	27
-	+	23	75
-	+	23	94
-	+	23	0
-	+	23	93
-	+	19	73
-	+	21	20
-	+	25	0
-	+	24	0
-
-> ~/R/ISLR/resampling.r
-	"	11	0
-	^	11	12
-	.	11	11
-	+	5	0
-	+	8	13
-	+	9	6
-	+	10	29
-	+	11	11
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/timeline.r
-	"	1	0
-	^	2	62
-	.	30	0
-	+	1	0
-	+	2	61
-	+	6	0
-	+	7	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-	+	18	0
-	+	23	0
-	+	29	0
-	+	30	0
-
-> ~/Documents/imaginaries_cesagen_2010/scripts/1_clean_data.r
-	"	1	0
-	^	9	29
-	.	9	28
-	+	9	28
-
-> ~/Documents/data_intensive/book/.git/MERGE_MSG
-	"	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/R_doc
-	"	88	0
-	^	1	1
-	.	1	1
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	13	0
-	+	1	1
-
-> ~/Documents/imaginaries_cesagen_2010/ngram.r
-	"	9	0
-	^	10	39
-	.	10	38
-	+	2	30
-	+	6	4
-	+	7	15
-	+	7	9
-	+	6	9
-	+	7	79
-	+	3	41
-	+	7	66
-	+	7	0
-	+	6	0
-	+	7	0
-	+	5	30
-	+	7	62
-	+	6	37
-	+	3	38
-	+	4	38
-	+	6	33
-	+	7	76
-	+	4	22
-	+	7	0
-	+	1	0
-	+	4	19
-	+	7	3
-	+	8	3
-	+	7	55
-	+	8	49
-	+	7	43
-	+	9	68
-	+	8	3
-	+	7	4
-	+	8	5
-	+	4	16
-	+	6	43
-	+	7	141
-	+	7	33
-	+	6	27
-	+	6	98
-	+	7	17
-	+	7	30
-	+	6	82
-	+	6	0
-	+	7	0
-	+	6	80
-	+	8	0
-	+	9	61
-	+	4	21
-	+	10	38
-
-> ~/Documents/imaginaries_cesagen_2010/1_clean_data.r
-	"	1	36
-	^	1	37
-	.	2	0
-	+	7	19
-	+	5	0
-	+	2	0
-	+	2	0
-
-> ~/Documents/imaginaries_cesagen_2010/query.txt
-	"	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/treemap.r
-	"	16	0
-	^	14	0
-	.	14	0
-	+	3	0
-	+	4	0
-	+	1	0
-	+	4	0
-	+	5	0
-	+	5	0
-	+	6	0
-	+	9	0
-	+	2	0
-	+	9	0
-	+	11	0
-	+	18	0
-	+	14	400
-	+	14	0
-	+	14	401
-	+	14	0
-	+	14	375
-	+	4	0
-	+	5	0
-	+	10	0
-	+	11	0
-	+	13	0
-	+	12	0
-	+	15	0
-	+	15	145
-	+	9	33
-	+	6	33
-	+	2	16
-	+	6	23
-	+	5	29
-	+	6	34
-	+	14	0
-	+	15	420
-	+	4	0
-	+	15	303
-	+	8	16
-	+	7	16
-	+	8	0
-	+	7	17
-	+	8	0
-	+	15	31
-	+	8	0
-	+	15	455
-	+	15	316
-	+	15	0
-	+	15	310
-	+	15	0
-	+	15	309
-	+	16	63
-	+	15	0
-	+	16	146
-	+	14	0
-
-> ~/Documents/imaginaries_cesagen_2010/dendrogram.r
-	"	18	0
-	.	21	0
-	+	1	0
-	+	8	0
-	+	7	0
-	+	8	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	5	14
-	+	19	0
-	+	32	0
-	+	15	0
-	+	18	0
-	+	7	0
-	+	21	0
-
-> ~/Documents/imaginaries_cesagen_2010/network.r
-	"	10	0
-	.	4	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	0
-	+	4	0
-
-> ~/Documents/imaginaries_cesagen_2010/NERD_tree_1
-	"	50	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/network1.r
-	"	55	0
-	.	56	0
-	+	1	0
-	+	3	0
-	+	53	0
-	+	56	0
-
-> ~/Documents/imaginaries_cesagen_2010/timeline.r
-	"	33	112
-	^	32	16
-	.	32	15
-	+	1	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	3	0
-	+	4	0
-	+	4	0
-	+	34	0
-	+	5	0
-	+	4	0
-	+	7	0
-	+	33	0
-	+	32	15
-
-> ~/Documents/imaginaries_cesagen_2010/imag_grep.md
-	"	338	0
-	.	1	0
-	+	1	0
-
-> /usr/share/vim/vim74/doc/windows.txt
-	"	1102	34
-
-> /usr/share/vim/vim74/doc/cmdline.txt
-	"	503	63
-
-> ~/Documents/teaching/socl101/session_description.md
-	"	12	173
-	^	12	174
-	.	12	173
-	+	3	352
-	+	12	7
-	+	12	5
-	+	12	188
-	+	14	13
-	+	16	174
-	+	17	171
-	+	3	189
-	+	4	0
-	+	1	53
-	+	2	0
-	+	17	0
-	+	14	2
-	+	12	2
-	+	8	0
-	+	17	0
-	+	3	184
-	+	9	26
-	+	11	55
-	+	12	4
-	+	12	5
-	+	13	0
-	+	3	276
-	+	12	173
-
-> ~/Documents/het/het_ideas.md
-	"	10	84
-	^	10	85
-	.	10	84
-	+	1	24
-	+	5	133
-	+	6	173
-	+	7	103
-	+	8	134
-	+	9	47
-	+	10	84
-
-> ~/Documents/teaching/socl101/mascul_essay_questions.md
-	"	1	0
-
-> ~/Documents/document-archive/.git/MERGE_MSG
-	"	1	0
-
-> ~/Documents/document-archive/.git/COMMIT_EDITMSG
-	"	1	0
-
-> ~/Documents/het/het_ideas
-	"	3	1
-	^	3	2
-	.	3	1
-	+	3	1
-
-> ~/Documents/reviews/bigdata_society/reviews/facebook_politics_2015.md
-	"	5	392
-	^	5	393
-	.	4	92
-	+	5	107
-	+	1	111
-	+	1	759
-	+	5	0
-	+	5	233
-	+	4	148
-	+	5	146
-	+	5	0
-	+	6	129
-	+	7	0
-	+	1	123
-	+	6	129
-	+	1	265
-	+	5	392
-	+	6	0
-	+	1	46
-	+	4	92
-
-> /usr/share/vim/vim74/doc/insert.txt
-	"	481	0
-
-> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
-	"	482	0
-	^	494	0
-	.	494	0
-	+	494	0
-
-> ~/Documents/notes/foucault_archaeology.md
-	"	12	31
-	^	12	1155
-	.	12	31
-	+	2	1080
-	+	6	7
-	+	6	77
-	+	10	0
-	+	6	0
-	+	2	0
-	+	2	491
-	+	6	0
-	+	2	492
-	+	2	563
-	+	6	0
-	+	2	562
-	+	6	0
-	+	2	165
-	+	6	0
-	+	4	0
-	+	6	149
-	+	6	231
-	+	6	306
-	+	6	307
-	+	6	306
-	+	6	307
-	+	6	306
-	+	6	383
-	+	6	461
-	+	6	542
-	+	6	617
-	+	6	689
-	+	6	766
-	+	10	0
-	+	6	799
-	+	6	425
-	+	6	321
-	+	6	98
-	+	7	0
-	+	8	51
-	+	8	127
-	+	8	201
-	+	10	0
-	+	8	234
-	+	8	125
-	+	4	0
-	+	3	0
-	+	4	124
-	+	4	202
-	+	4	284
-	+	4	366
-	+	4	439
-	+	4	517
-	+	4	590
-	+	4	667
-	+	4	748
-	+	4	820
-	+	6	0
-	+	4	818
-	+	6	792
-	+	10	0
-	+	9	0
-	+	10	82
-	+	10	162
-	+	10	246
-	+	14	0
-	+	10	302
-	+	11	0
-	+	12	5
-	+	12	81
-	+	12	156
-	+	12	225
-	+	12	297
-	+	12	372
-	+	12	447
-	+	12	523
-	+	12	598
-	+	12	676
-	+	12	750
-	+	12	824
-	+	12	894
-	+	12	968
-	+	12	1037
-	+	12	1105
-	+	12	1113
-	+	12	81
-	+	12	156
-	+	12	225
-	+	12	297
-	+	12	372
-	+	12	447
-	+	12	523
-	+	12	598
-	+	12	676
-	+	12	750
-	+	12	824
-	+	12	894
-	+	12	968
-	+	12	1037
-	+	12	1105
-	+	13	0
-	+	12	1155
-	+	12	378
-	+	12	31
-	u	2	0
-
-> ~/Downloads/savedrecs(14).txt
-	"	1	0
-
-> ~/Documents/data_intensive/book/[Vundle] Installer
-	"	27	0
-	.	1	0
-	+	53	0
-	+	27	0
-	+	1	0
-
-> ~/Documents/notes/bowker_star_sorting_things.md
-	"	43	0
-	.	41	98
-	+	41	98
-
-> ~/Documents/data_intensive/book/ch5_dimensionality/knit_all.sh
-	"	4	72
-	^	4	76
-	.	4	72
-	+	4	72
-
-> ~/Documents/data_intensive/book/ch5_dimensionality/pandoc.sh
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/book/build_book.sh
-	"	1	0
-	^	1	12
-	.	1	11
-	+	4	39
-	+	3	10
-	+	1	11
-
-> ~/Documents/imaginaries_cesagen_2010/.git/MERGE_MSG
-	"	1	0
-
-> ~/dotfile/.gitignore
-	"	1	0
-
-> ~/Documents/reviews/body_soc_measure_jan2015/bs_measure.md
-	"	7	537
-	^	7	538
-	.	7	537
-	+	1	519
-	+	1	570
-	+	3	0
-	+	3	1100
-	+	3	765
-	+	5	124
-	+	3	641
-	+	4	0
-	+	5	124
-	+	8	0
-	+	5	122
-	+	5	726
-	+	5	623
-	+	5	965
-	+	1	299
-	+	3	303
-	+	3	403
-	+	1	753
-	+	5	1029
-	+	7	296
-	+	1	291
-	+	5	364
-	+	7	537
-
-> ~/Documents/imaginaries_cesagen_2010/history.wos
-	"	34	0
-
-> ~/Documents/imaginaries_cesagen_2010/.git/config
-	"	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/ref_counts.csv
-	"	1	0
-
-> ~/Documents/imaginaries_cesagen_2010/ref_counts.
-	"	1	0
-
-> ~/Documents/data_intensive/book/.gitmodules
-	"	1	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-	"	418	1
-	^	92	255
-	.	319	0
-	+	92	255
-	+	319	0
-
-> ~/Documents/data_intensive/book/title.md
-	"	2	0
-	^	2	1
-	.	2	0
-	+	3	2
-	+	2	2
-	+	1	47
-	+	2	0
-
-> ~/dotfile/vim/snippets/pandoc.snippets
-	"	63	28
-	^	63	29
-	.	63	28
-	+	16	22
-	+	28	28
-	+	11	11
-	+	12	0
-	+	34	9
-	+	63	27
-	+	10	17
-	+	12	16
-	+	63	28
-
-> /tmp/crontab.7NtgQj/crontab
-	"	1	0
-
-> /tmp/crontab.vTlz7Y/crontab
-	"	27	0
-	.	27	0
-	+	24	0
-	+	25	0
-	+	26	0
-	+	27	0
-
-> ~/Documents/ref_bibs/getrefs.sh
-	"	1	0
-	^	1	9
-	.	1	8
-	+	2	0
-	+	5	0
-	+	2	0
-	+	3	0
-	+	5	0
-	+	4	12
-	+	3	12
-	+	2	12
-	+	5	12
-	+	4	0
-	+	3	0
-	+	2	0
-	+	5	0
-	+	1	8
-
-> ~/.zshrc
-	"	83	40
-	^	83	41
-	.	83	41
-	+	83	41
-
-> /tmp/crontab.CEjY53/crontab
-	"	24	0
-
-> /tmp/crontab.7m0Mfa/crontab
-	"	24	0
-
-> /tmp/ref_fetch.sh
-	"	1	8
-	^	1	9
-	.	1	8
-	+	2	0
-	+	5	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	5	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	1	8
-
-> ~/Documents/data_intensive/book/.git/config
-	"	1	0
-
-> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
-	"	1	0
-	^	165	57
-	.	165	56
-	+	165	56
-
-> ~/Documents/teaching/socl923-mcs/session_objectives_quotes_examples.md
-	"	204	0
-	^	209	765
-	.	209	764
-	+	209	0
-	+	208	0
-	+	209	306
-	+	209	564
-	+	209	764
-
-> ~/Dropbox/mcs_methods/session_objectives_quotes_examples.md
-	"	177	1
-
-> ~/Dropbox/mcs_methods/presentatinos_18Mar2014.md
-	"	16	0
-
-> ~/Dropbox/mcs_methods/presentatinos_18Mar2014
-	"	20	0
-
-> ~/Documents/teaching/socl923-mcs/sessions_ideas.md
-	"	1	0
+	+	5	147
+	+	10	164
