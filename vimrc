@@ -14,7 +14,6 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'nanotech/jellybeans.vim'
-    "Plugin 'bling/vim-airline'
     Plugin 'itchyny/lightline.vim'
     Plugin 'vim-scripts/Vim-R-plugin'
     Plugin 'vim-scripts/Screen-vim---gnu-screentmux'
@@ -23,13 +22,13 @@ call vundle#begin()
     Bundle "garbas/vim-snipmate"
     Bundle "klen/python-mode"
     Bundle "ivanov/vim-ipython"
-    Bundle "julienr/vim-cellmode"
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vimtex"
     Bundle "kshenoy/vim-signature"
     Bundle "farseer90718/vim-reveal"
     Bundle "csexton/jekyll.vim"
     Bundle "vim-scripts/TwitVim"
+    Bundle "Shougo/neocomplete.vim"
     "Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
@@ -96,18 +95,18 @@ let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
-"bibtex
-let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
-let g:Tex_BibtexFlavor = 'bibtex'
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
 let g:pandoc#completion#bib#mode='fallback'
-
 let g:pandoc#folding#fold_fenced_codeblocks=1
+"
+"bibtex
+let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:Tex_BibtexFlavor = 'bibtex'
 set omnifunc=pandoc#completion#Complete
-"let g:Tex_Flavor='latex'
-"let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_Flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
 
 " <leader>k Knits to MD
 nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
@@ -271,4 +270,7 @@ map <Leader>jb  :JekyllBuild<CR>
 map <Leader>jn  :JekyllPost<CR>
 map <Leader>jl  :JekyllList<CR>
 
-
+"vimtex stuff
+let g:tex_flavor = 'latex'
+let g:vimtex_complete_enabled = 1
+let g:vimtex_complete_recursive_bib = 1
