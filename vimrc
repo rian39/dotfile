@@ -25,7 +25,7 @@ call vundle#begin()
     Bundle "ivanov/vim-ipython"
     Bundle "julienr/vim-cellmode"
     Bundle "jamessan/vim-gnupg"
-    Bundle "lervag/vim-latex"
+    Bundle "lervag/vimtex"
     Bundle "kshenoy/vim-signature"
     Bundle "farseer90718/vim-reveal"
     Bundle "csexton/jekyll.vim"
@@ -102,6 +102,7 @@ let g:Tex_BibtexFlavor = 'bibtex'
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
+let g:pandoc#completion#bib#mode='fallback'
 
 let g:pandoc#folding#fold_fenced_codeblocks=1
 set omnifunc=pandoc#completion#Complete
