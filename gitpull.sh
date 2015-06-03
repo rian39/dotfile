@@ -13,12 +13,13 @@ echo fetching ref_bibs
 echo ----------------------------
 git status -s
 git pull
+echo done ref_bibs ok
 
 cd ~/document-archive/
 echo ----------------------------
 echo fetching document-archive
 echo ----------------------------
-git status -s
+#git status -s
 git pull
 
 cd ~/notes/
