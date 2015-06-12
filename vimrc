@@ -11,6 +11,7 @@ call vundle#begin()
     Plugin 'reedes/vim-pencil'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-surround'
     Plugin 'scrooloose/nerdtree'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'nanotech/jellybeans.vim'
