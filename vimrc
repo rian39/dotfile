@@ -304,3 +304,12 @@ function! WordFrequency() range
   sort i
 endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
+
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+    let g:neocomplete#sources#omni#input_patterns = {}
+  endif
+let g:neocomplete#sources#omni#input_patterns.tex =
+        \ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
