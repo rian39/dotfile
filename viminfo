@@ -8,117 +8,101 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/asdfas
+~MSle0~/employment
 
 # Last Substitute Search Pattern:
-~MSle0&.png
+~MSle0&\^8.
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:q
-:cw
-:grep pattern ~/notes/*.md
-:grep pattern ~/notes.md
+:regist
 :sp
-:e please_wait.rmd
-:e data_science_19may2015.md
-:colorscheme hemisu
-:set background=light
-:colorscheme desert
-:colorscheme darkblue
-:set fdc=0
-:set background light
-:colorscheme blue
-:sp please_wait.rmd
-:e .
-:e sql.py
-:bp
-:bn
-:e ~/.tmux.conf
-:e! ~/.zshrc
-:e ~/.zshrc
-:nnoremap <Leader>w :w<CR>
-:nnoremap <Leader>o :CtrlP<CR>
-:let mapleader = "\<Space>"
-:Pandoc! pdf
-:%s//.pdf/gc
-:delmarks j
-:b 1
-:b 23
+:b 20
 :ls
-:b$p
-:e simulate_optimise_cluster.md
-:sort
-:WordFrequency
-:@"
-:Pandoc! docx
-:Pandoc! odt
-:technique
-: "Untitled"
-:map
+:buff
 :bu
-:bprevious
-:w!
-:sp test.md
-:e test.rmd
-:e test.
-:%s/- //gc
-:e ~/notes/foucault_will_to_knowledge.md
-:sp ~/notes/lazzarato_signs_machines_2014.md
+:bp
+:e ~/notes/lazzarato_signs_machines_2014.md
+:q
+:e ~/.zshrc
+:set background = dark
+:colorscheme solarized
+:colorscheme hemisu
+:PluginUpdate
+:w
+:IPython
+:map
+:pyfile %
+:Git commit -a -m 'added Pauls comments'
+:2010,169
+:sp mackenzie_mattering_jun2015.rmd
+:buffer 
+:NeoCompleteEnable
+:help vimtex
+:help latex-syntax
+:help tex
+:regi
+:%s//\^7./gc
+:s//\^7./gc
+:registers
+:TOC
+:q!
+:e ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+:echo has('python')
+:Pandoc! pdf
+:e acknowledgments.rmd
+:delmarks J
+:delmarks I
+:bp!
+:e ../ch8_conclusion/ch_conclusion.rmd
+:e ~/book/chapter_list.txt
+:bn
+:w ~/book/ch_to_do.md
+:Git add ch_to_do.md
+:e ~/book/preface.rmd
+:sp ch_to_do.md
+:e ~/notes/foucault_discipline_1977.md
+:sp 
+:e todo_extract.py
 
 # Search String History (newest to oldest):
+?/employment
+? \Vmlrs\%#
 ? \Vml\%#
-?/asdfas
-?/pattern
-? \Vpca\%#
-? \Vtm\%#
-? \Vlda\%#
+?/drive dow
+?/Lazza
+? \s\+$
+?/If that state
+?/2010, 169
+?/2010:169
+?/that multiplying a 
+?/finding the distri
+?/Poisson
+?/The diagram shows the con
+? \."
 ? \Vnn\%#
-? \Vrf\%#
-?/optimisation
-?/Boyd
-?/Conclusion
-?/echo
-?/tee
-?/text
-?/As the 
-?/tree1
-?/.png
-??{r
-?/png
-?/different form
-??```
-?/decision_tree
-?/A Monte
-?/2 x 2
-?/Markoff
-?/Dahl
-?/minsky
-?/vapnik
-?/malley
-?/2 x
-?/vapni
-? \Vlabfig\%#
-? \Vdt\%#
-?/Clustering
-?/ as 
-?/as
-?/ is 
-?/asdfasdfas
-?/it
-?/sometim
+?/\^8.
+? \v^([^|]*\|){2,2} #
+?/execute
 ?/HERE
-? \<pStep\>
-? \<classify\>
-??activate
-?/train
-? \Vknn\%#
-? \Vsvm\%#
-?/substrate
-?/asdf
-? - 
+? \Vmlr\%#
+? \Vlabfig\%#
+?/Parisi
+?/Face
+?/elem_stat
+?/In a 
+?/Todo
+?/todo
+?/Kaggle
+? \Vesl\%#
+?/split
+?/\\split
+? \\sigma
+? \<-\>
+?/Adams
+?/fig:titanic_net
 
 # Expression History (newest to oldest):
 
@@ -146,38 +130,36 @@ $
 
 # Registers:
 "0	LINE	0
-	285
-<Thus beyond all questions of quantity, there lie questions of pattern, which are essential for the understanding of nature. Apart from a presupposed pattern, quantity determines nothing. Indeed quantity itself is nothing other than analogy of functions within analogous patterns 195
-"1	LINE	0
+	385
+<The thought and consciousness of the individuated subject come into play when there is an obstacle, a disturbance, or an "event." Then the subject, consciousness, and representation are used in order to modify the feedback relations among the human and non-human components of the automobile "machine," in order to reestablish the automatic mechanisms and machinic operations. 89-90
+""1	LINE	0
 	
-"2	CHAR	0
-	medium and 
-	These 
+"2	LINE	0
+	- use Lazzarato here -- semiotics, etc
 "3	LINE	0
-	
+	df['Competition'] = df['Competition Name'].str.strip().str.replace('\W+', ' ')
 "4	LINE	0
-	## todo
+	import seaborn
 "5	LINE	0
-	- bowker on cybernetic strategy
+	df[['Teams', 'Reward']].plot()
 "6	LINE	0
-	- get Halpern
+	df.head()
 "7	LINE	0
-	
+	df.unique()
 "8	LINE	0
-	# 'please wait a moment while we refresh your assets': the promise of cognitive computing
-	
-	## the title of this paper
-	
-	For the last five years or so, I've been working on machine learning techniques in a couple of different ways. 
-	- as power objects
-	- as transformations in software cultures
-	- as transformations in the empirical
-	
-	Most of the research has been based on a kind of discourse analysis, but a sts-media-cultural studies hybrid in which making -- software carpentry -- is a key part of the method. 
-	515
-<I've studied quite a few high-technology fields previously -- network infrastructures, video algorithms, etc. -- but this is the first time that I have felt that the object of my research is very closely tied to my own way of thinking and knowing the world. The machine learning techniques I've been researching are sometimes difficult to understand. They have quite a bit of mathematical, statistical and computational complexity attached to them. They are not necessarily new -- some are almost a century old. 
+	df[1]
+	df.icol[1]
+	df.icol(1)
+	df.icol(0)
+	%hist
+	%pwd
+	%hist kaggle.py
+	?%hist
+	%history?
+	%history -f kaggle.py
 "9	LINE	0
-	## BlueMix
+	url ='https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Ascending'
+	r = requests.get(url)
 "b	CHAR	0
 	bb\i,i/i\ivv
 "d	CHAR	0
@@ -201,8 +183,8 @@ $
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZqZq
-""-	CHAR	0
-	will have
+"-	CHAR	0
+	[@KaggleInc_
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -231,624 +213,120 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  50  ~/Documents/data_intensive/book/book.rmd
-'0  1  0  ~/Documents/notes/abbott_time_matters.md
-'1  16  0  ~/Documents/data_intensive/data_power/data_science_19may2015.md
-'2  13  0  ~/Documents/data_intensive/data_power/foucault_will_to_knowledge.md
-'3  23  0  ~/Documents/data_intensive/data_power/data_science_19may2015.md
-'4  11  1  ~/Documents/data_intensive/data_power/mackenzie_data_power_abstract.md
-'5  47  4  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/logistic_regression.py
-'6  37  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/r/dataframe.R
-'7  1  0  ~/Documents/data_intensive/data_power/data_science_19may2015.md
-'8  221  188  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
-'9  7  0  ~/test/test.rnw
+'0  271  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'1  3  32  ~/.zshrc
+'2  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'3  38  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'4  2  0  ~/Documents/ref_bibs/getrefs.sh
+'5  24  0  ~/Documents/data_intensive/book/test.txt
+'6  5  0  ~/test/book.tex
+'7  294  5  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'8  33  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'9  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
 
 # Jumplist (newest first):
--'  1  0  ~/Documents/notes/abbott_time_matters.md
--'  196  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  194  1062  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  150  417  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  145  177  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  20  218  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  13  629  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  155  620  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  3  9  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  1  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  16  0  ~/Documents/data_intensive/data_power/data_science_19may2015.md
--'  1  0  ~/Documents/data_intensive/data_power/data_science_19may2015.md
--'  13  0  ~/Documents/data_intensive/data_power/foucault_will_to_knowledge.md
--'  1  0  ~/Documents/data_intensive/data_power/foucault_will_to_knowledge.md
--'  23  0  ~/Documents/data_intensive/data_power/data_science_19may2015.md
--'  49  146  ~/Documents/data_intensive/data_power/please_wait.rmd
--'  32  990  ~/Documents/data_intensive/data_power/please_wait.rmd
--'  2  0  ~/Documents/data_intensive/data_power/please_wait.rmd
--'  1  0  ~/Documents/data_intensive/data_power/please_wait.rmd
--'  11  1023  ~/Documents/data_intensive/data_power/please_wait.rmd
--'  11  1  ~/Documents/data_intensive/data_power/mackenzie_data_power_abstract.md
--'  13  0  ~/Documents/data_intensive/data_power/mackenzie_data_power_abstract.md
--'  1  0  ~/Documents/data_intensive/data_power/mackenzie_data_power_abstract.md
--'  47  4  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/logistic_regression.py
--'  13  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_4
--'  35  2  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_4
--'  1  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_4
--'  41  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/kmeans.py
--'  12  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_3
--'  34  2  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_3
--'  1  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_3
--'  87  5  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/sampled_rdds.py
--'  16  2  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_2
--'  34  2  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_2
--'  1  4  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_2
--'  80  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/sql.py
--'  82  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/logistic_regression.py
--'  71  1  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/logistic_regression.py
--'  15  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_1
--'  23  2  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_1
--'  1  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_1
--'  59  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/kmeans.py
--'  25  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/kmeans.py
--'  1  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/kmeans.py
--'  37  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/r/dataframe.R
--'  1  0  ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/r/dataframe.R
--'  221  188  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  64  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster_old.rmd
--'  1  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster_old.rmd
--'  7  0  ~/test/test.rnw
--'  28  0  ~/test/NERD_tree_1
--'  38  2  ~/test/NERD_tree_1
--'  1  0  ~/test/NERD_tree_1
--'  12  0  ~/test/test.md
--'  1  0  ~/test/test.md
--'  1  0  ~/Documents/data_intensive/cold_war_systems_feb2014/test.md
--'  101  0  ~/.tmux.conf
--'  1  0  ~/.tmux.conf
--'  96  0  ~/.zshrc
+-'  271  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  263  290  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  249  580  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  232  1864  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  19  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  291  237  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  287  189  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  285  724  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  289  2  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  292  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  20  90  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  3  32  ~/.zshrc
 -'  1  0  ~/.zshrc
--'  2  4  ~/Documents/data_intensive/cold_war_systems_feb2014/test.md
--'  3  0  ~/Documents/data_intensive/cold_war_systems_feb2014/test.md
--'  5  0  ~/Documents/data_intensive/cold_war_systems_feb2014/test.md
--'  143  543  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  3  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
--'  185  1031  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  182  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  54  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster_old.rmd
--'  1  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
--'  52  0  ~/Documents/data_intensive/cold_war_systems_feb2014/pandoc output
--'  1  0  ~/Documents/data_intensive/cold_war_systems_feb2014/pandoc output
--'  36  918  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
--'  40  2  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
--'  133  1030  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
--'  103  1001  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
--'  177  29  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  174  6  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  168  1  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  159  718  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  157  939  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  181  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  57  820  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster_old.rmd
--'  14  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
--'  2  23  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
+-'  1  0  ~/.tmux.conf
+-'  38  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch7_subjects/kaggle.py
+-'  23  0  ~/Documents/data_intensive/book/kaggle.py
+-'  1  0  ~/Documents/data_intensive/book/kaggle.py
+-'  2  0  ~/Documents/ref_bibs/getrefs.sh
+-'  1  0  ~/Documents/ref_bibs/getrefs.sh
+-'  24  0  ~/Documents/data_intensive/book/test.txt
+-'  1  0  ~/Documents/data_intensive/book/test.txt
+-'  5  0  ~/test/book.tex
+-'  3  9  ~/test/book.tex
+-'  2  64  ~/test/book.tex
+-'  6  0  ~/test/book.tex
+-'  34  0  ~/test/book.tex
+-'  1  0  ~/test/book.tex
+-'  9482  0  ~/test/book.tex
+-'  294  5  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  284  721  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  256  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  257  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  273  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  275  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  261  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  259  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  240  379  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  229  701  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  104  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  35  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  1  2  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  231  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  206  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  33  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+-'  1  0  ~/Documents/data_intensive/book/ch7_subjects/kaggle.r
+-'  3  32  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  1  0  ~/.tmux.conf
+-'  39  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch7_subjects/kaggle.py
+-'  23  0  ~/Documents/data_intensive/book/kaggle.py
+-'  1  0  ~/Documents/data_intensive/book/kaggle.py
+-'  2  0  ~/Documents/ref_bibs/getrefs.sh
 
 # History of marks within files (newest to oldest):
 
-> ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
-	"	206	3
-	^	206	4
-	.	206	3
-	+	178	21
-	+	182	50
-	+	185	1031
-	+	143	312
-	+	145	74
-	+	143	543
-	+	143	1001
-	+	12	0
-	+	9	280
-	+	31	918
-	+	50	49
-	+	176	32
-	+	182	144
-	+	58	40
-	+	33	22
-	+	31	0
-	+	56	0
-	+	57	0
-	+	56	929
-	+	30	0
-	+	54	0
-	+	55	0
-	+	157	483
-	+	157	426
-	+	158	72
-	+	158	44
-	+	158	0
-	+	157	426
-	+	157	783
-	+	157	666
-	+	157	850
-	+	157	965
-	+	161	56
-	+	176	70
-	+	169	47
-	+	165	55
-	+	121	4
-	+	122	72
-	+	122	44
-	+	122	0
-	+	122	0
-	+	121	53
-	+	58	119
-	+	33	108
-	+	49	0
-	+	101	0
-	+	137	0
-	+	169	39
-	+	165	50
-	+	169	49
-	+	182	215
-	+	182	215
-	+	183	0
-	+	192	14
-	+	192	14
-	+	193	0
-	+	192	15
-	+	220	0
-	+	3	0
-	+	4	0
-	+	3	0
-	+	194	198
-	+	194	0
-	+	194	325
-	+	194	134
-	+	194	0
-	+	194	148
-	+	194	357
-	+	194	0
-	+	194	353
-	+	210	0
-	+	194	394
-	+	194	751
-	+	194	0
-	+	194	780
-	+	194	0
-	+	194	795
-	+	194	0
-	+	194	1077
-	+	194	928
-	+	195	0
-	+	196	262
-	+	196	427
-	+	197	0
-	+	198	0
-	+	198	302
-	+	200	104
-	+	200	408
-	+	200	0
-	+	200	565
-	+	200	714
-	+	200	1618
-	+	201	0
-	+	202	1040
-	+	207	0
-	+	202	287
-	+	203	0
-	+	204	431
-	+	205	0
-	+	206	3
-	h	182	209
-
-> ~/Documents/notes/abbott_time_matters.md
-	"	1	0
-
-> ~/Documents/notes/whiteheadmodes.md
-	"	40	62
-
-> ~/Documents/data_intensive/data_power/data_science_19may2015.md
-	"	16	0
-
-> ~/Documents/data_intensive/data_power/foucault_will_to_knowledge.md
-	"	13	0
-
-> ~/Documents/data_intensive/data_power/please_wait.rmd
-	"	28	136
-	^	28	137
-	.	28	136
-	+	11	538
-	+	32	773
-	+	29	0
-	+	30	21
-	+	32	1373
-	+	52	10
-	+	52	138
-	+	32	1899
-	+	32	2069
-	+	32	0
-	+	32	1898
-	+	33	0
-	+	36	0
-	+	52	0
-	+	52	0
-	+	52	144
-	+	52	507
-	+	52	0
-	+	52	979
-	+	52	0
-	+	52	1198
-	+	52	0
-	+	52	1595
-	+	52	1723
-	+	52	0
-	+	37	0
-	+	42	0
-	+	44	0
-	+	36	22
-	+	41	0
-	+	37	0
-	+	38	7
-	+	1	0
-	+	11	512
-	+	11	512
-	+	11	512
-	+	11	623
-	+	11	530
-	+	11	553
-	+	11	549
-	+	11	622
-	+	11	512
-	+	11	691
-	+	11	775
-	+	11	512
-	+	11	1023
-	+	2	0
-	+	11	512
-	+	29	0
-	+	12	0
-	+	13	283
-	+	13	112
-	+	13	283
-	+	15	50
-	+	29	0
-	+	15	7
-	+	16	42
-	+	17	42
-	+	18	0
-	+	29	0
-	+	19	521
-	+	32	991
-	+	34	110
-	+	45	0
-	+	46	111
-	+	47	173
-	+	48	280
-	+	49	404
-	+	50	0
-	+	19	123
-	+	19	310
-	+	21	2
-	+	21	94
-	+	22	3
-	+	21	0
-	+	23	1
-	+	24	98
-	+	20	1
-	+	25	140
-	+	26	131
-	+	28	136
-
-> ~/Documents/data_intensive/data_power/mackenzie_data_power_abstract.md
-	"	11	1
-	^	11	2
-	.	11	1
-	+	14	0
-	+	15	0
-	+	13	0
-	+	14	0
-	+	12	0
-	+	11	1
-
-> ~/dotfile/vim/colors/hemisu.vim
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/kmeans.py
-	"	59	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_1
-	"	15	0
-	.	1	0
-	+	1	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/logistic_regression.py
-	"	82	0
-	^	71	2
-	.	71	0
-	+	71	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/sql.py
-	"	80	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_2
-	"	16	2
-	.	1	0
-	+	1	0
-	+	1	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/sampled_rdds.py
-	"	87	5
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_3
-	"	12	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/kmeans.py
-	"	41	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/NERD_tree_4
-	"	13	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/python/mllib/logistic_regression.py
-	"	47	4
-	.	33	4
-	+	33	4
-
-> ~/R/spark-1.4.0-bin-hadoop2.6/examples/src/main/r/dataframe.R
-	"	37	0
-	.	7	0
-	+	7	0
-
-> ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster_old.rmd
-	"	64	0
-	^	1	7
-	.	1	0
-	+	6	0
-	+	8	0
-	+	1	0
-
-> ~/test/test.md
-	"	12	0
-	^	1	1
-	.	7	0
-	+	1	0
-	+	15	0
-	+	15	0
-	+	15	0
-	+	13	0
-	+	15	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	1	0
-	+	7	0
-
-> ~/test/NERD_tree_1
-	"	28	0
-	.	1	0
-	+	1	0
-
-> ~/test/test.rnw
-	"	7	0
-	^	7	0
-	.	7	0
-	+	7	0
-
-> ~/Documents/data_intensive/cold_war_systems_feb2014/test.md
-	"	1	0
-	^	3	6
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	9
-	+	1	0
-	+	1	0
-	+	1	13
-	+	1	8
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	4
-	+	1	0
-	+	1	0
-	+	1	0
-	+	30	0
-	+	29	40
-	+	1	17
-	+	4	0
-	+	1	13
-	+	2	4
-	+	3	0
-	+	1	35
-	+	2	25
-	+	3	23
-	+	1	18
-	+	2	4
-	+	1	0
-
-> ~/.tmux.conf
-	"	101	0
-	^	101	0
-	.	101	0
-	+	100	0
-	+	101	9
-	+	104	0
-	+	101	0
-
-> ~/.zshrc
-	"	96	0
-	^	96	0
-	.	85	0
-	+	67	0
-	+	66	0
-	+	86	0
-	+	76	0
-	+	77	0
-	+	84	0
-	+	86	0
-	+	85	0
-
-> ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.md
-	"	3	0
-	^	36	911
-	.	36	918
-	+	103	311
-	+	103	543
-	+	103	1001
-	+	133	1030
-	+	133	0
-	+	36	918
-
-> ~/Documents/data_intensive/cold_war_systems_feb2014/pandoc output
-	"	7	0
-	.	3	0
-	+	90	0
-	+	85	0
-	+	80	0
-	+	75	0
-	+	70	0
-	+	65	0
-	+	60	0
-	+	40	0
-	+	52	0
-	+	31	0
-	+	24	0
-	+	17	0
-	+	10	0
-	+	3	0
-
-> ~/.vimrc
-	"	293	0
-	^	293	1
-	.	293	0
-	+	1	0
-	+	53	22
-	+	332	0
-	+	329	0
-	+	58	34
-	+	330	30
-	+	331	36
-	+	330	31
-	+	331	36
-	+	332	3
-	+	146	0
-	+	332	0
-	+	327	0
-	+	328	12
-	+	146	0
-	+	140	0
-	+	146	0
-	+	27	28
-	+	120	0
-	+	112	0
-	+	116	0
-	+	119	0
-	+	121	0
-	+	122	0
-	+	86	0
-	+	86	0
-	+	75	0
-	+	14	29
-	+	292	21
-	+	293	0
-
-> ~/Documents/data_intensive/deep/mackenzie_deep_shortened.md
-	"	5	226
-	^	5	227
-	.	5	226
-	+	3	627
-	+	7	181
-	+	11	798
-	+	9	323
-	+	9	1175
-	+	9	1396
-	+	11	30
-	+	11	161
-	+	11	353
-	+	11	474
-	+	3	241
-	+	3	592
-	+	3	708
-	+	11	617
-	+	11	753
-	+	9	79
-	+	9	18
-	+	9	7
-	+	9	15
-	+	9	22
-	+	11	0
-	+	11	806
-	+	11	1034
-	+	3	486
-	+	5	258
-	+	5	0
-	+	9	4
-	+	9	214
-	+	9	401
-	+	9	731
-	+	11	450
-	+	11	928
-	+	13	629
-	+	13	1265
-	+	9	1142
-	+	9	1311
-	+	11	1459
-	+	9	96
-	+	9	0
-	+	9	95
-	+	13	267
-	+	13	994
-	+	13	1104
-	+	13	154
-	+	3	595
-	+	3	794
-	+	3	88
-	+	7	257
-	+	7	58
-	+	7	168
-	+	7	374
-	+	8	0
-	+	7	63
-	+	7	773
-	+	7	1229
-	+	9	0
-	+	7	1245
-	+	9	0
-	+	3	680
-	+	13	1105
-	+	9	75
-	+	9	260
-	+	3	833
-	+	3	0
-	+	3	872
-	+	3	968
-	+	3	338
-	+	3	462
-	+	3	630
-	+	7	1081
-	+	9	634
-	+	9	0
-	+	9	696
-	+	13	965
-	+	13	1084
-	+	9	502
-	+	9	864
-	+	5	0
-	+	5	175
-	+	7	3
-	+	5	226
-
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-	"	70	0
+	"	1	0
 	^	69	379
 	.	69	379
 	+	71	0
@@ -952,400 +430,560 @@ $
 	+	69	0
 	+	69	379
 
-> ~/Documents/data_intensive/book/ch_to_do.md
-	"	19	0
-	^	19	0
-	.	19	0
-	+	16	18
-	+	18	514
-	+	19	0
+> ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
+	"	35	0
+	^	20	1
+	.	20	0
+	+	1	0
+	+	2	17
+	+	63	449
+	+	209	1088
+	+	448	0
+	+	389	0
+	+	391	290
+	+	59	0
+	+	17	0
+	+	21	60
+	+	525	910
+	+	521	332
+	+	19	26
+	+	20	0
 
-> ~/Documents/data_intensive/cold_war_systems_feb2014/perceptron.r
-	"	258	4
-	^	446	1
-	.	258	0
-	+	2	0
-	+	380	0
-	+	257	23
-	+	446	0
-	+	258	0
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+	"	271	0
+	^	270	23
+	.	271	0
+	+	273	0
+	+	273	0
+	+	1	0
+	+	272	0
+	+	30	0
+	+	31	0
+	+	36	995
+	+	36	0
+	+	36	1010
+	+	36	1393
+	+	36	1506
+	+	36	1887
+	+	42	728
+	+	42	0
+	+	42	819
+	+	42	0
+	+	42	906
+	+	42	1314
+	+	43	0
+	+	44	182
+	+	44	97
+	+	48	110
+	+	48	0
+	+	48	139
+	+	48	49
+	+	65	285
+	+	8	0
+	+	277	207
+	+	277	0
+	+	277	236
+	+	277	0
+	+	277	254
+	+	277	0
+	+	277	702
+	+	277	0
+	+	277	882
+	+	281	130
+	+	281	0
+	+	281	147
+	+	281	147
+	+	282	0
+	+	285	319
+	+	285	489
+	+	285	0
+	+	285	500
+	+	285	0
+	+	285	525
+	+	285	0
+	+	285	694
+	+	30	102
+	+	285	285
+	+	285	796
+	+	285	840
+	+	286	0
+	+	287	222
+	+	287	0
+	+	287	497
+	+	292	0
+	+	292	0
+	+	289	0
+	+	287	498
+	+	287	601
+	+	285	723
+	+	285	0
+	+	285	816
+	+	287	225
+	+	287	0
+	+	287	0
+	+	287	198
+	+	287	120
+	+	288	0
+	+	289	401
+	+	291	0
+	+	291	236
+	+	291	0
+	+	291	689
+	+	15	0
+	+	228	3
+	+	263	290
+	+	232	1848
+	+	232	0
+	+	232	1880
+	+	232	1879
+	+	233	0
+	+	232	1864
+	+	232	0
+	+	232	1880
+	+	263	291
+	+	263	0
+	+	264	0
+	+	265	73
+	+	266	0
+	+	270	0
+	+	271	2
+	+	266	19
+	+	267	20
+	+	268	31
+	+	269	9
+	+	270	22
+	+	271	0
+	h	263	290
 
 > ~/Documents/notes/lazzarato_signs_machines_2014.md
-	"	9	0
+	"	17	0
 	^	1	261
-	.	9	168
+	.	11	18
 	+	1	260
-	+	9	168
+	+	11	18
 
-> ~/Documents/notes/foucault_will_to_knowledge.md
-	"	15	0
-	^	24	38
-	.	34	0
-	+	4	467
-	+	14	0
-	+	4	8
-	+	5	0
-	+	6	95
-	+	8	107
-	+	12	90
-	+	13	0
-	+	10	168
-	+	1	0
-	+	2	572
-	+	14	46
-	+	14	109
-	+	14	172
-	+	14	230
-	+	14	285
-	+	14	348
-	+	14	408
-	+	14	469
-	+	14	531
-	+	14	592
-	+	14	650
-	+	14	712
-	+	35	0
-	+	14	838
-	+	14	899
-	+	14	960
-	+	14	1024
-	+	14	1086
-	+	14	1145
-	+	14	1211
-	+	14	1271
-	+	14	1329
-	+	14	1389
-	+	14	1453
-	+	14	1515
-	+	35	0
-	+	14	1532
-	+	14	959
-	+	14	1142
-	+	14	1324
-	+	14	1420
-	+	14	317
-	+	14	469
-	+	14	648
-	+	14	863
-	+	14	1414
-	+	15	0
-	+	16	24
-	+	18	20
-	+	19	0
-	+	20	21
-	+	20	81
-	+	20	145
-	+	20	208
-	+	35	0
-	+	20	263
-	+	22	31
-	+	23	0
-	+	24	48
-	+	24	103
-	+	24	165
-	+	24	226
-	+	24	288
-	+	24	349
-	+	24	397
-	+	35	0
-	+	24	401
-	+	26	30
-	+	27	0
-	+	28	39
-	+	28	102
-	+	28	165
-	+	35	0
-	+	28	174
-	+	29	0
-	+	30	50
-	+	31	0
-	+	32	10
-	+	32	72
-	+	32	130
-	+	32	190
-	+	35	0
-	+	32	223
-	+	33	0
-	+	34	2
-	+	34	59
-	+	34	117
-	+	34	179
-	+	34	242
-	+	34	301
-	+	34	362
-	+	35	0
-	+	34	391
-	+	14	0
-	+	24	0
-	+	28	0
-	+	34	0
-
-> ~/Documents/data_intensive/cold_war_systems_feb2014/test.rmd
-	"	22	11
-	^	23	30
-	.	23	30
-	+	1	0
-	+	10	23
-	+	11	0
-	+	15	2
-	+	12	14
-	+	13	14
-	+	14	8
-	+	15	3
-	+	17	20
-	+	10	26
-	+	18	0
-	+	19	0
-	+	37	33
-	+	23	55
-	+	1	0
-	+	23	30
-
-> ~/Documents/data_intensive/data_power/.git/MERGE_MSG
+> ~/Documents/data_intensive/book/ch7_subjects/kaggle.r
 	"	1	0
 
-> ~/Documents/data_intensive/deep/deep.rmd
-	"	3	269
+> ~/.zshrc
+	"	3	32
+	^	3	33
+	.	3	32
+	+	3	0
+	+	4	0
+	+	3	32
 
-> ~/Documents/data_intensive/promise_of_infrastructure/deep.rmd
+> ~/.tmux.conf
 	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.md
-	"	140	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/NERD_tree_1
-	"	26	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_march2015.rmd
-	"	47	0
-
-> ~/dotfile/vim/bundle/vim-surround/doc/surround.txt
-	"	59	0
-
-> ~/[Vundle] Installer
+> ~/Documents/data_intensive/book/ch7_subjects/[Vundle] Installer
 	"	29	0
 	.	1	0
 	+	1	0
 
-> /usr/share/vim/vim74/doc/various.txt
-	"	285	13
+> ~/dotfile/vim/bundle/Vim-R-plugin/[Vundle] Installer
+	"	29	0
+	.	1	0
+	+	1	0
 
-> /usr/share/vim/vim74/doc/version7.txt
-	"	606	0
-
-> ~/dotfile/gitpush.sh
-	"	13	0
-	.	13	0
-	+	13	0
-
-> ~/dotfile/gitpull.sh
-	"	10	0
-
-> ~/Documents/reviews/esrc_machine_learning/report.md
-	"	3	0
-	^	21	9
-	.	3	0
-	+	1	30
-	+	15	223
-	+	16	0
-	+	17	94
-	+	17	0
-	+	17	152
-	+	17	114
-	+	17	466
-	+	17	140
-	+	17	606
-	+	17	250
-	+	17	406
-	+	18	0
-	+	19	23
-	+	19	214
-	+	19	0
-	+	19	474
-	+	19	0
-	+	19	890
-	+	24	357
-	+	19	1056
-	+	19	1585
-	+	19	1055
-	+	20	0
-	+	19	1293
-	+	21	4
-	+	21	205
-	+	21	0
-	+	21	514
-	+	24	444
-	+	25	0
-	+	26	393
-	+	24	564
-	+	24	0
-	+	24	687
-	+	25	0
-	+	24	894
-	+	21	911
-	+	26	454
-	+	22	0
-	+	21	8
-	+	3	0
-
-> ~/Documents/teaching/socl491_cybercrime/cybercrime_notes.md
-	"	11	22
-	^	11	23
-	.	11	22
-	+	1	19
-	+	3	15
-	+	4	32
-	+	5	8
-	+	6	7
-	+	6	7
-	+	7	13
-	+	8	1
-	+	3	38
-	+	18	0
-	+	8	47
-	+	9	27
-	+	10	0
-	+	13	10
-	+	15	46
-	+	16	41
-	+	10	26
-	+	12	0
-	+	11	22
-
-> ~/Documents/document-archive/.git/MERGE_MSG
-	"	1	0
-
-> ~/Documents/reviews/.git/MERGE_MSG
-	"	1	0
-
-> ~/Documents/notes/foucault_archaeology.md
+> ~/Documents/data_intensive/book/ch7_subjects/kaggle.py
 	"	22	0
+	^	17	1
+	.	23	0
+	+	6	75
+	+	7	20
+	+	23	22
+	+	17	0
+	+	22	0
+	+	23	0
 
-> /usr/share/vim/vim74/doc/motion.txt
-	"	927	41
-
-> ~/Documents/notes/bowker.md
-	"	1	0
-
-> ~/Documents/notes/bowker_second_nature.md
-	"	24	0
-
-> ~/Documents/notes/bowker_things_change_1996.md
-	"	1	0
-
-> ~/Documents/notes/bowker_memory_practices_2005.md
-	"	1	0
-
-> ~/Documents/notes/fuller_goffey.md
-	"	4	0
-	^	4	0
-	.	2	0
-	+	5	458
-	+	6	0
-	+	7	0
+> ~/Documents/data_intensive/book/ch7_subjects/vim-ipython
+	"	4358	0
+	.	4358	0
+	+	3	0
 	+	5	0
-	+	1	303
+	+	7	0
+	+	9	0
+	+	11	0
+	+	13	0
+	+	15	0
+	+	22	0
+	+	24	0
+	+	26	0
+	+	28	0
+	+	754	0
+	+	3743	0
+	+	3745	0
+	+	3874	0
+	+	3882	0
+	+	4011	0
+	+	4014	0
+	+	4023	0
+	+	4032	0
+	+	4035	0
+	+	4038	0
+	+	4053	0
+	+	4062	0
+	+	4096	0
+	+	4130	0
+	+	4166	0
+	+	4202	0
+	+	4331	0
+	+	4346	0
+	+	4349	0
+	+	4357	0
+	+	4358	0
+
+> ~/test/test.py
+	"	1	0
+	^	2	0
+	.	2	0
+	+	1	18
+	+	4	24
+	+	10	12
+	+	13	0
+	+	10	5
+	+	10	0
+	+	13	0
 	+	2	0
 
-> ~/Documents/notes/NERD_tree_1
-	"	19	0
+> ~/test/vim-ipython
+	"	1	0
+
+> ~/Documents/data_intensive/book/kaggle.py
+	"	22	0
+	^	14	17
+	.	2	0
+	+	2	0
+	+	1	1
+	+	2	0
+	+	8	0
+	+	3	19
+	+	23	0
+	+	4	0
+	+	23	0
+	+	16	9
+	+	16	23
+	+	16	53
+	+	17	32
+	+	22	65
+	+	17	33
+	+	2	13
+	+	22	29
+	+	22	45
+	+	4	9
+	+	5	218
+	+	6	20
+	+	16	0
+	+	22	0
+	+	18	18
+	+	20	68
+	+	21	0
+	+	19	33
+	+	16	77
+	+	21	16
+	+	14	17
+	+	2	0
+
+> ~/Documents/data_intensive/book/vim-ipython
+	"	972	0
+	^	731	0
+	.	972	0
+	+	3	0
+	+	5	0
+	+	7	0
+	+	9	0
+	+	11	0
+	+	13	0
+	+	15	0
+	+	17	0
+	+	19	0
+	+	21	0
+	+	23	0
+	+	25	0
+	+	32	0
+	+	39	0
+	+	41	0
+	+	174	0
+	+	303	0
+	+	318	0
+	+	321	0
+	+	323	0
+	+	325	0
+	+	327	0
+	+	361	0
+	+	376	0
+	+	378	0
+	+	380	0
+	+	382	0
+	+	384	0
+	+	386	0
+	+	388	0
+	+	390	0
+	+	392	0
+	+	394	0
+	+	396	0
+	+	398	0
+	+	400	0
+	+	529	0
+	+	532	0
+	+	561	0
+	+	627	0
+	+	630	0
+	+	635	0
+	+	639	0
+	+	641	0
+	+	645	0
+	+	679	0
+	+	724	0
+	+	726	0
+	+	727	0
+	+	730	0
+	+	732	0
+	+	734	0
+	+	736	0
+	+	738	0
+	+	740	0
+	+	742	0
+	+	744	0
+	+	778	0
+	+	812	0
+	+	846	0
+	+	900	0
+	+	902	0
+	+	904	0
+	+	906	0
+	+	908	0
+	+	942	0
+	+	944	0
+	+	946	0
+	+	948	0
+	+	950	0
+	+	952	0
+	+	954	0
+	+	956	0
+	+	958	0
+	+	960	0
+	+	962	0
+	+	964	0
+	+	966	0
+	+	968	0
+	+	970	0
+	+	972	0
+
+> ~/Documents/data_intensive/baroque_mattering_2013_4/fearnhead_comments.md
+	"	13	7
+	^	5	2
+	.	5	0
+	+	2	0
+	+	9	2
+	+	11	1
+	+	5	0
+
+> ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering_jun2015.rmd
+	"	241	1625
+	^	241	1626
+	.	241	1626
+	+	91	399
+	+	91	350
+	+	123	8
+	+	125	41
+	+	138	956
+	+	149	920
+	+	149	1383
+	+	149	0
+	+	150	0
+	+	149	1449
+	+	178	135
+	+	182	64
+	+	241	247
+	+	241	1626
+
+> ~/Documents/ref_bibs/getrefs.sh
+	"	2	0
+
+> ~/Documents/data_intensive/book/test.txt
+	"	24	0
+	^	1	0
+	.	2	0
+	+	2	0
+
+> ~/test/book.tex
+	"	5	0
+	^	5	0
+	.	5	0
+	+	6	0
+	+	2	65
+	+	3	15
+	+	3	17
+	+	4	15
+	+	4	23
+	+	4	14
+	+	5	0
+
+> /usr/share/vim/vim74/doc/syntax.txt
+	"	2962	33
+
+> ~/dotfile/vim/bundle/vimtex/doc/vimtex.txt
+	"	1382	0
+
+> ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+	"	2	0
+	^	3	17
+	.	3	16
+	+	45	95
+	+	45	575
+	+	57	175
+	+	115	33
+	+	119	208
+	+	117	512
+	+	117	727
+	+	117	413
+	+	117	61
+	+	117	667
+	+	123	242
+	+	123	402
+	+	123	861
+	+	123	1020
+	+	125	211
+	+	132	570
+	+	22	706
+	+	220	706
+	+	220	0
+	+	221	0
+	+	220	726
+	+	5	7
+	+	8	45
+	+	9	116
+	+	11	111
+	+	12	49
+	+	9	151
+	+	10	71
+	+	103	516
+	+	250	27
+	+	251	15
+	+	257	11
+	+	257	11
+	+	257	7
+	+	257	7
+	+	256	34
+	+	256	0
+	+	257	0
+	+	258	0
+	+	258	22
+	+	259	20
+	+	258	21
+	+	259	12
+	+	264	0
+	+	260	22
+	+	261	20
+	+	264	0
+	+	264	0
+	+	262	0
+	+	263	0
+	+	258	0
+	+	255	0
+	+	247	0
+	+	262	0
+	+	271	0
+	+	9	191
+	+	278	0
+	+	281	38
+	+	282	21
+	+	284	55
+	+	290	24
+	+	292	0
+	+	293	0
+	+	292	27
+	+	293	27
+	+	296	22
+	+	300	0
+	+	302	28
+	+	303	22
+	+	278	3
+	+	280	52
+	+	281	0
+	+	278	0
+	+	271	29
+	+	264	0
+	+	258	16
+	+	259	18
+	+	257	0
+	+	16	1153
+	+	235	250
+	+	224	233
+	+	34	105
+	+	37	0
+	+	38	6
+	+	44	0
+	+	38	0
+	+	39	0
+	+	40	73
+	+	41	250
+	+	42	19
+	+	40	61
+	+	26	16
+	+	16	1121
+	+	235	233
+	+	99	983
+	+	7	82
+	+	16	714
+	+	47	410
+	+	47	694
+	+	3	16
+
+> ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+	"	177	24
+	^	177	25
+	.	177	0
+	+	175	0
+	+	177	0
+	+	175	0
+	+	177	0
+
+> ~/vim-ipython
+	"	88	0
+	.	88	0
+	+	3	0
+	+	9	0
+	+	12	0
+	+	14	0
+	+	16	0
+	+	18	0
+	+	21	0
+	+	24	0
+	+	28	0
+	+	31	0
+	+	34	0
+	+	37	0
+	+	40	0
+	+	43	0
+	+	46	0
+	+	49	0
+	+	52	0
+	+	55	0
+	+	58	0
+	+	61	0
+	+	64	0
+	+	67	0
+	+	70	0
+	+	73	0
+	+	76	0
+	+	79	0
+	+	82	0
+	+	84	0
+	+	86	0
+	+	88	0
+
+> ~/__run__
+	"	1	0
 	.	1	0
 	+	1	0
 	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/cold_war_systems_feb2014/revisions.md
-	"	3	0
-
-> ~/Documents/ref_bibs/getrefs.sh
-	"	6	74
-	^	6	75
-	.	6	74
-	+	7	0
-	+	6	5
-	+	6	74
-
-> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-	"	239	654
-	^	239	655
-	.	239	654
-	+	249	21
-	+	235	0
-	+	243	58
-	+	245	118
-	+	245	293
-	+	245	0
-	+	245	312
-	+	247	0
-	+	244	0
-	+	245	0
-	+	207	0
-	+	205	13
-	+	208	11
-	+	205	12
-	+	208	6
-	+	207	19
-	+	205	12
-	+	208	6
-	+	206	112
-	+	224	0
-	+	225	0
-	+	225	0
-	+	225	142
-	+	225	0
-	+	225	177
-	+	110	13
-	+	111	51
-	+	112	44
-	+	114	11
-	+	119	0
-	+	211	1
-	+	243	59
-	+	225	229
-	+	225	0
-	+	225	309
-	+	226	0
-	+	229	0
-	+	230	0
-	+	231	56
-	+	232	48
-	+	233	18
-	+	225	608
-	+	225	0
-	+	225	704
-	+	225	0
-	+	225	730
-	+	225	0
-	+	225	906
-	+	225	327
-	+	225	697
-	+	227	46
-	+	244	0
-	+	236	88
-	+	236	0
-	+	236	123
-	+	236	0
-	+	236	125
-	+	236	0
-	+	236	351
-	+	225	755
-	+	225	1034
-	+	225	0
-	+	225	1197
-	+	225	448
-	+	225	864
-	+	225	710
-	+	225	922
-	+	225	1572
-	+	236	503
-	+	237	0
-	+	239	2
-	+	239	654
-	h	225	1424
 
 > ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 	"	59	620
@@ -1357,23 +995,6 @@ $
 	+	9	144
 	+	40	251
 	+	59	620
-
-> ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
-	"	519	332
-	^	519	333
-	.	519	332
-	+	1	0
-	+	2	17
-	+	61	449
-	+	207	1088
-	+	446	0
-	+	387	0
-	+	389	290
-	+	57	0
-	+	17	0
-	+	19	60
-	+	523	910
-	+	519	332
 
 > ~/Documents/data_intensive/book/ch7_subjects/pandoc output
 	"	15	0
@@ -1508,111 +1129,6 @@ $
 	h	224	1139
 	i	257	0
 	l	224	32
-
-> ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
-	"	2	0
-	^	3	17
-	.	3	16
-	+	45	95
-	+	45	575
-	+	57	175
-	+	115	33
-	+	119	208
-	+	117	512
-	+	117	727
-	+	117	413
-	+	117	61
-	+	117	667
-	+	123	242
-	+	123	402
-	+	123	861
-	+	123	1020
-	+	125	211
-	+	132	570
-	+	22	706
-	+	220	706
-	+	220	0
-	+	221	0
-	+	220	726
-	+	5	7
-	+	8	45
-	+	9	116
-	+	11	111
-	+	12	49
-	+	9	151
-	+	10	71
-	+	103	516
-	+	250	27
-	+	251	15
-	+	257	11
-	+	257	11
-	+	257	7
-	+	257	7
-	+	256	34
-	+	256	0
-	+	257	0
-	+	258	0
-	+	258	22
-	+	259	20
-	+	258	21
-	+	259	12
-	+	264	0
-	+	260	22
-	+	261	20
-	+	264	0
-	+	264	0
-	+	262	0
-	+	263	0
-	+	258	0
-	+	255	0
-	+	247	0
-	+	262	0
-	+	271	0
-	+	9	191
-	+	278	0
-	+	281	38
-	+	282	21
-	+	284	55
-	+	290	24
-	+	292	0
-	+	293	0
-	+	292	27
-	+	293	27
-	+	296	22
-	+	300	0
-	+	302	28
-	+	303	22
-	+	278	3
-	+	280	52
-	+	281	0
-	+	278	0
-	+	271	29
-	+	264	0
-	+	258	16
-	+	259	18
-	+	257	0
-	+	16	1153
-	+	235	250
-	+	224	233
-	+	34	105
-	+	37	0
-	+	38	6
-	+	44	0
-	+	38	0
-	+	39	0
-	+	40	73
-	+	41	250
-	+	42	19
-	+	40	61
-	+	26	16
-	+	16	1121
-	+	235	233
-	+	99	983
-	+	7	82
-	+	16	714
-	+	47	410
-	+	47	694
-	+	3	16
 
 > ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
 	"	2	0
@@ -2113,3 +1629,443 @@ $
 
 > ~/R/SparkR-pkg/SparkR_prep-0.1.sh
 	"	1	0
+
+> ~/R/SparkR-pkg/examples/kmeans.R
+	"	75	0
+
+> ~/R/SparkR-pkg/install-dev.sh
+	"	11	0
+
+> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_old.rmd
+	"	101	0
+
+> ~/Documents/notes/foucault_archaeology.md
+	"	9	0
+
+> /usr/share/vim/vim74/doc/motion.txt
+	"	793	6
+
+> ~/Documents/ref_bibs/doall.sh
+	"	1	6
+	^	5	0
+	.	1	3
+	+	4	11
+	+	1	3
+
+> ~/Documents/data_intensive/book/[Vundle] Installer
+	"	28	0
+	.	1	0
+	+	1	0
+
+> /tmp/vSX4eVT/99
+	"	1	0
+
+> ~/.vimrc
+	"	1	0
+	.	72	0
+	+	1	0
+	+	52	22
+	+	302	0
+	+	299	0
+	+	57	34
+	+	300	30
+	+	301	36
+	+	300	31
+	+	301	36
+	+	302	3
+	+	132	0
+	+	302	0
+	+	297	0
+	+	298	12
+	+	132	0
+	+	126	0
+	+	132	0
+	+	26	28
+	+	106	0
+	+	98	0
+	+	102	0
+	+	105	0
+	+	107	0
+	+	108	0
+	+	72	0
+	+	72	0
+
+> ~/Documents/notes/alpaydin_machine_learning_2010.md
+	"	27	0
+	^	15	0
+	.	27	0
+	+	9	0
+	+	11	0
+	+	28	0
+	+	11	14
+	+	14	0
+	+	14	200
+	+	14	0
+	+	14	243
+	+	12	123
+	+	15	0
+	+	16	0
+	+	27	0
+
+> ~/Documents/notes/hastie_2008.md
+	"	84	0
+	^	83	0
+	.	83	0
+	+	88	0
+	+	91	15
+	+	95	2
+	+	88	1
+	+	89	1
+	+	91	1
+	+	92	68
+	+	89	20
+	+	88	19
+	+	91	31
+	+	88	37
+	+	89	20
+	+	91	29
+	+	89	33
+	+	92	57
+	+	82	216
+	+	88	25
+	+	89	17
+	+	93	70
+	+	94	14
+	+	84	0
+	+	85	0
+	+	83	0
+
+> ~/Documents/notes/suchman_artificial_intelligence.md
+	"	1	0
+
+> ~/Documents/notes/suchman_human_machine.md
+	"	5	0
+
+> ~/Downloads/tut1.txt
+	"	1	0
+
+> ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/hbase_inputformat.py
+	"	50	1
+
+> ~/R/spark-1.3.1-bin-hadoop2.4/examples/src/main/python/sql.py
+	"	69	0
+
+> ~/Documents/interdisciplinary/interdisciplinary_notes.md
+	"	97	68
+	^	97	69
+	.	97	68
+	+	43	81
+	+	45	0
+	+	42	0
+	+	29	0
+	+	30	0
+	+	42	0
+	+	31	0
+	+	32	0
+	+	42	0
+	+	33	0
+	+	34	0
+	+	42	0
+	+	37	0
+	+	38	126
+	+	38	174
+	+	39	133
+	+	40	278
+	+	40	321
+	+	1	65
+	+	49	4
+	+	44	140
+	+	28	0
+	+	32	325
+	+	32	82
+	+	46	293
+	+	47	320
+	+	48	287
+	+	42	28
+	+	25	0
+	+	49	101
+	+	51	0
+	+	54	188
+	+	55	2
+	+	89	0
+	+	93	46
+	+	59	75
+	+	60	0
+	+	42	8
+	+	59	7
+	+	89	8
+	+	93	1
+	+	93	0
+	+	70	0
+	+	61	174
+	+	62	227
+	+	63	121
+	+	64	249
+	+	66	48
+	+	67	111
+	+	68	117
+	+	65	130
+	+	70	0
+	+	68	133
+	+	70	149
+	+	71	0
+	+	72	0
+	+	59	7
+	+	42	7
+	+	51	8
+	+	57	8
+	+	70	0
+	+	72	8
+	+	87	231
+	+	64	186
+	+	68	0
+	+	69	140
+	+	72	47
+	+	74	67
+	+	70	208
+	+	74	69
+	+	70	303
+	+	74	187
+	+	75	105
+	+	75	106
+	+	76	165
+	+	77	23
+	+	78	36
+	+	80	17
+	+	81	101
+	+	82	5
+	+	81	5
+	+	82	176
+	+	83	172
+	+	87	231
+	+	84	227
+	+	84	298
+	+	87	231
+	+	78	106
+	+	79	126
+	+	88	0
+	+	85	143
+	+	86	9
+	+	87	230
+	+	87	231
+	+	88	0
+	+	79	184
+	+	93	14
+	+	95	202
+	+	96	168
+	+	97	68
+
+> ~/R/spark-1.0.0-bin-hadoop1/README.md
+	"	11	0
+
+> ~/R/spark-1.0.0-bin-hadoop1/RELEASE
+	"	1	0
+
+> ~/R/metacommunities/data_analysis/git_history/README.md
+	"	1	0
+
+> /usr/share/vim/vim74/doc/insert.txt
+	"	1849	16
+
+> /usr/share/vim/vim74/doc/autocmd.txt
+	"	700	38
+
+> ~/dotfile/vim/snippets/pandoc.snippets
+	"	1	0
+	^	22	12
+	.	22	11
+	+	13	12
+	+	14	17
+	+	22	11
+
+> ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
+	"	219	0
+	^	219	4
+	.	219	3
+	+	1	9
+	+	3	0
+	+	219	3
+
+> ~/Documents/data_intensive/book/ch8_subjects/build.sh
+	"	13	0
+	^	13	0
+	.	12	31
+	+	12	31
+
+> ~/Documents/data_intensive/book/ch8_subjects/knitall.sh
+	"	10	0
+
+> ~/Documents/data_intensive/book/ch8_subjects/pandoc.sh
+	"	11	228
+	^	11	229
+	.	11	228
+	+	11	149
+	+	11	0
+	+	11	250
+	+	11	119
+	+	11	0
+	+	11	228
+
+> ~/R/spark_gce/startup.sh
+	"	1	7
+	^	1	120
+	.	1	0
+	+	1	119
+	+	1	0
+
+> ~/R/spark_gce/spark_gce.py
+	"	508	2
+	.	509	0
+	+	1	0
+	+	508	0
+	+	509	0
+
+> ~/R/spark_gce/google_compute_startup.sh
+	"	1	1
+	^	1	15
+	.	1	0
+	+	1	0
+
+> ~/R/metacommunities/google_bigquery_access.py
+	"	1	0
+
+> ~/R/metacommunities/google_bigquery_access.pyc
+	"	1	0
+
+> ~/R/spark_gce/README.md
+	"	1	0
+
+> ~/Documents/data_intensive/data_science_19may2015.md
+	"	198	127
+	^	198	128
+	.	198	127
+	+	97	80
+	+	100	0
+	+	100	17
+	+	102	22
+	+	103	47
+	+	104	22
+	+	69	0
+	+	74	0
+	+	81	0
+	+	104	0
+	+	200	0
+	+	104	23
+	+	106	39
+	+	108	11
+	+	110	78
+	+	111	2
+	+	110	1
+	+	111	77
+	+	112	31
+	+	113	35
+	+	114	108
+	+	115	87
+	+	116	53
+	+	117	63
+	+	118	56
+	+	119	96
+	+	121	41
+	+	200	0
+	+	123	28
+	+	124	0
+	+	125	129
+	+	126	41
+	+	127	117
+	+	128	40
+	+	129	53
+	+	130	33
+	+	131	54
+	+	132	41
+	+	133	88
+	+	134	81
+	+	135	52
+	+	136	53
+	+	136	74
+	+	138	18
+	+	140	28
+	+	142	52
+	+	143	75
+	+	144	1
+	+	64	0
+	+	65	39
+	+	145	0
+	+	146	28
+	+	148	22
+	+	150	70
+	+	151	48
+	+	152	37
+	+	152	37
+	+	152	64
+	+	200	0
+	+	153	105
+	+	154	4
+	+	156	42
+	+	157	136
+	+	158	0
+	+	160	16
+	+	162	31
+	+	164	28
+	+	165	0
+	+	166	29
+	+	167	0
+	+	168	28
+	+	170	144
+	+	170	1
+	+	171	200
+	+	170	167
+	+	171	325
+	+	172	400
+	+	173	183
+	+	174	0
+	+	175	26
+	+	177	159
+	+	178	323
+	+	179	97
+	+	180	285
+	+	181	121
+	+	182	156
+	+	183	29
+	+	184	0
+	+	186	28
+	+	188	24
+	+	190	62
+	+	191	0
+	+	192	16
+	+	194	175
+	+	195	71
+	+	195	91
+	+	196	167
+	+	196	10
+	+	197	91
+	+	198	127
+
+> /etc/default/keyboard
+	"	11	49
+	^	11	50
+	.	11	0
+	+	11	25
+	+	11	0
+
+> /usr/share/X11/xkb/symbols/pc
+	"	36	26
+	.	23	0
+	+	22	0
+	+	23	0
+	+	22	5
+	+	23	27
+	+	22	4
+	+	23	0
+
+> ~/test/test.md
+	"	1	0
+
+> ~/R/metacommunities/.gitignore
+	"	15	9
+	^	15	10
+	.	15	9
+	+	14	5
+	+	15	9
+
+> ~/R/metacommunities/data_analysis/github_social_practices/fork_plotting.py
+	"	50	0
