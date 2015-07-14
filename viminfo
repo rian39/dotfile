@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/employment
+~Msle0~/\<config\>
 
 # Last Substitute Search Pattern:
 ~MSle0&\^8.
@@ -17,13 +17,21 @@
 $
 
 # Command Line History (newest to oldest):
-:regist
+:e .
+:map
+:bp
+:marks
 :sp
+:set fdc=0
+:e mnist_conv.py
+:s
+:%s//grepl/gc
+:s//grepl/gc
+:regist
 :b 20
 :ls
 :buff
 :bu
-:bp
 :e ~/notes/lazzarato_signs_machines_2014.md
 :q
 :e ~/.zshrc
@@ -33,7 +41,6 @@ $
 :PluginUpdate
 :w
 :IPython
-:map
 :pyfile %
 :Git commit -a -m 'added Pauls comments'
 :2010,169
@@ -60,17 +67,24 @@ $
 :e ~/book/chapter_list.txt
 :bn
 :w ~/book/ch_to_do.md
-:Git add ch_to_do.md
-:e ~/book/preface.rmd
-:sp ch_to_do.md
-:e ~/notes/foucault_discipline_1977.md
-:sp 
-:e todo_extract.py
 
 # Search String History (newest to oldest):
-?/employment
+? \<config\>
+? \<build_model\>
+? \<nn_plankton\>
+??deep_sea
+?/examinat
 ? \Vmlrs\%#
 ? \Vml\%#
+? \<Dieleman\>
+? \Vnn\%#
+? \Vmlr\%#
+?/KDD
+? \<BATCH_SIZE\>
+? \<create_iter_functions\>
+? \<_load_data\>
+?/grep
+?/employment
 ?/drive dow
 ?/Lazza
 ? \s\+$
@@ -82,12 +96,10 @@ $
 ?/Poisson
 ?/The diagram shows the con
 ? \."
-? \Vnn\%#
 ?/\^8.
 ? \v^([^|]*\|){2,2} #
 ?/execute
 ?/HERE
-? \Vmlr\%#
 ? \Vlabfig\%#
 ?/Parisi
 ?/Face
@@ -129,24 +141,74 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	385
-<The thought and consciousness of the individuated subject come into play when there is an obstacle, a disturbance, or an "event." Then the subject, consciousness, and representation are used in order to modify the feedback relations among the human and non-human components of the automobile "machine," in order to reestablish the automatic mechanisms and machinic operations. 89-90
-""1	LINE	0
+"0	CHAR	0
+	    l0_variable = nn.layers.InputLayer((batch_size, 1, patch_sizes[0][0], patch_sizes[0][1]))
+	    l0c = dihedral.CyclicSliceLayer(l0_variable)
+	
+	    l1a = Conv2DLayer(l0c, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l1b = Conv2DLayer(l1a, num_filters=16, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l1 = MaxPool2DLayer(l1b, ds=(3, 3), strides=(2, 2))
+	    l1r = dihedral.CyclicConvRollLayer(l1)
+	
+	    l2a = Conv2DLayer(l1r, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l2b = Conv2DLayer(l2a, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l2 = MaxPool2DLayer(l2b, ds=(3, 3), strides=(2, 2))
+	    l2r = dihedral.CyclicConvRollLayer(l2)
+	
+	    l3a = Conv2DLayer(l2r, num_filters=128, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l3b = Conv2DLayer(l3a, num_filters=128, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l3c = Conv2DLayer(l3b, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l3 = MaxPool2DLayer(l3c, ds=(3, 3), strides=(2, 2))
+	    l3r = dihedral.CyclicConvRollLayer(l3)
+	
+	    l4a = Conv2DLayer(l3r, num_filters=256, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l4b = Conv2DLayer(l4a, num_filters=256, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l4c = Conv2DLayer(l4b, num_filters=128, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)    
+	    l4 = MaxPool2DLayer(l4c, ds=(3, 3), strides=(2, 2))
+	    l4r = dihedral.CyclicConvRollLayer(l4)
+	    l4f = nn.layers.flatten(l4r)
+	
+	    l5 = nn.layers.DenseLayer(l4f, num_units=256, W=nn_plankton.Orthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l5r = dihedral.CyclicRollLayer(l5)
+	
+	    l6 = nn.layers.DenseLayer(l5r, num_units=256, W=nn_plankton.Orthogonal(1.0), b=nn.init.Constant(0.1), nonlinearity=nn_plankton.leaky_relu)
+	    l_variable = dihedral.CyclicPoolLayer(l6, pool_function=nn_plankton.rms)
+	
+	
+	    # fixed scale part
+	    l0_fixed = nn.layers.InputLayer((batch_size, 1, patch_sizes[1][0], patch_sizes[1][1]))
+	    l0c = dihedral.CyclicSliceLayer(l0_fixed)
+	
+	    l1a = Conv2DLayer(l0c, num_filters=16, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+	    l1b = Conv2DLayer(l1a, num_filters=8, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+	    l1 = MaxPool2DLayer(l1b, ds=(3, 3), strides=(2, 2))
+	    l1r = dihedral.CyclicConvRollLayer(l1)
+	
+	    l2a = Conv2DLayer(l1r, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+	    l2b = Conv2DLayer(l2a, num_filters=16, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+	    l2 = MaxPool2DLayer(l2b, ds=(3, 3), strides=(2, 2))
+	    l2r = dihedral.CyclicConvRollLayer(l2)
+	
+	    l3a = Conv2DLayer(l2r, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+	    l3b = Conv2DLayer(l3a, num_filters=64, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+	    l3c = Conv2DLayer(l3b, num_filters=32, filter_size=(3, 3), border_mode="same", W=nn_plankton.Conv2DOrthogonal(1.0), b=nn.init.Constant(0.1))
+"1	LINE	0
 	
 "2	LINE	0
-	- use Lazzarato here -- semiotics, etc
+	
 "3	LINE	0
-	df['Competition'] = df['Competition Name'].str.strip().str.replace('\W+', ' ')
+	- use Lazzarato here -- semiotics, etc
 "4	LINE	0
-	import seaborn
+	df['Competition'] = df['Competition Name'].str.strip().str.replace('\W+', ' ')
 "5	LINE	0
-	df[['Teams', 'Reward']].plot()
+	import seaborn
 "6	LINE	0
-	df.head()
+	df[['Teams', 'Reward']].plot()
 "7	LINE	0
-	df.unique()
+	df.head()
 "8	LINE	0
+	df.unique()
+"9	LINE	0
 	df[1]
 	df.icol[1]
 	df.icol(1)
@@ -157,9 +219,6 @@ $
 	?%hist
 	%history?
 	%history -f kaggle.py
-"9	LINE	0
-	url ='https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Ascending'
-	r = requests.get(url)
 "b	CHAR	0
 	bb\i,i/i\ivv
 "d	CHAR	0
@@ -213,18 +272,55 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  50  ~/Documents/data_intensive/book/book.rmd
-'0  271  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'1  3  32  ~/.zshrc
-'2  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'3  38  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'4  2  0  ~/Documents/ref_bibs/getrefs.sh
-'5  24  0  ~/Documents/data_intensive/book/test.txt
-'6  5  0  ~/test/book.tex
-'7  294  5  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'8  33  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'9  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
+'0  82  43  ~/R/kaggle-ndsb/predict_convnet.py
+'1  1  0  ~/R/kaggle-ndsb/README.md
+'2  151  0  ~/.tmux/README.md
+'3  61  0  ~/R/Lasagne/examples/mnist_conv.py
+'4  87  0  ~/R/Lasagne/examples/mnist.py
+'5  271  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'6  3  32  ~/.zshrc
+'7  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'8  38  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'9  2  0  ~/Documents/ref_bibs/getrefs.sh
 
 # Jumplist (newest first):
+-'  82  43  ~/R/kaggle-ndsb/predict_convnet.py
+-'  55  15  ~/R/kaggle-ndsb/predict_convnet.py
+-'  15  7  ~/R/kaggle-ndsb/predict_convnet.py
+-'  58  29  ~/R/kaggle-ndsb/predict_convnet.py
+-'  34  0  ~/R/kaggle-ndsb/NERD_tree_4
+-'  42  2  ~/R/kaggle-ndsb/NERD_tree_4
+-'  1  0  ~/R/kaggle-ndsb/NERD_tree_4
+-'  458  0  ~/R/kaggle-ndsb/nn_plankton.py
+-'  33  0  ~/R/kaggle-ndsb/NERD_tree_3
+-'  42  2  ~/R/kaggle-ndsb/NERD_tree_3
+-'  1  0  ~/R/kaggle-ndsb/NERD_tree_3
+-'  597  0  ~/R/kaggle-ndsb/data.py
+-'  20  0  ~/R/kaggle-ndsb/NERD_tree_2
+-'  42  2  ~/R/kaggle-ndsb/NERD_tree_2
+-'  1  0  ~/R/kaggle-ndsb/NERD_tree_2
+-'  4  0  ~/R/kaggle-ndsb/load.py
+-'  31  0  ~/R/kaggle-ndsb/NERD_tree_1
+-'  40  2  ~/R/kaggle-ndsb/NERD_tree_1
+-'  1  0  ~/R/kaggle-ndsb/NERD_tree_1
+-'  1  7  ~/R/kaggle-ndsb/create_data_files.py
+-'  1  0  ~/R/kaggle-ndsb/README.md
+-'  151  0  ~/.tmux/README.md
+-'  1  0  ~/.tmux/README.md
+-'  61  0  ~/R/Lasagne/examples/mnist_conv.py
+-'  82  1  ~/R/Lasagne/examples/mnist.py
+-'  51  0  ~/R/Lasagne/examples/mnist.py
+-'  73  0  ~/R/Lasagne/examples/mnist.py
+-'  99  0  ~/R/Lasagne/examples/mnist.py
+-'  1  0  ~/R/Lasagne/examples/mnist.py
+-'  87  0  ~/R/Lasagne/examples/mnist.py
+-'  175  0  ~/R/Lasagne/examples/mnist.py
+-'  193  0  ~/R/Lasagne/examples/mnist.py
+-'  106  0  ~/R/Lasagne/examples/mnist_conv.py
+-'  93  0  ~/R/Lasagne/examples/mnist_conv.py
+-'  233  0  ~/R/Lasagne/examples/mnist.py
+-'  217  19  ~/R/Lasagne/examples/mnist.py
+-'  41  6  ~/R/Lasagne/examples/mnist.py
 -'  271  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
 -'  263  290  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
 -'  249  580  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
@@ -280,50 +376,265 @@ $
 -'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
 -'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
 -'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  177  24  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  175  0  ~/dotfile/vim/bundle/vim-ipython/ftplugin/python/vim_ipython.py
--'  1  0  ~/Documents/data_intensive/book/ch7_subjects/kaggle.r
--'  3  32  ~/.zshrc
--'  1  0  ~/.zshrc
--'  1  0  ~/.tmux.conf
--'  39  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  1  0  ~/Documents/data_intensive/book/ch7_subjects/kaggle.py
--'  23  0  ~/Documents/data_intensive/book/kaggle.py
--'  1  0  ~/Documents/data_intensive/book/kaggle.py
--'  2  0  ~/Documents/ref_bibs/getrefs.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/R/kaggle-ndsb/create_data_files.py
+	"	1	7
+
+> ~/R/kaggle-ndsb/NERD_tree_1
+	"	31	0
+	.	1	0
+	+	1	0
+
+> ~/R/kaggle-ndsb/load.py
+	"	4	0
+	a	11	0
+
+> ~/R/kaggle-ndsb/__run__
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/R/kaggle-ndsb/data.py
+	"	597	0
+
+> ~/R/kaggle-ndsb/NERD_tree_2
+	"	20	0
+	.	1	0
+	+	1	0
+
+> ~/R/kaggle-ndsb/NERD_tree_3
+	"	33	0
+	.	1	0
+	+	1	0
+
+> ~/R/kaggle-ndsb/nn_plankton.py
+	"	458	0
+
+> ~/R/kaggle-ndsb/NERD_tree_4
+	"	34	0
+	.	1	0
+	+	1	0
+
+> ~/R/kaggle-ndsb/predict_convnet.py
+	"	82	43
+
+> ~/R/kaggle-ndsb/NERD_tree_5
+	"	112	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~/R/kaggle-ndsb/configurations/pl_blend4_convroll4_doublescale_fs5_no_dropout_33_66_sharded_0.py
+	"	86	0
+
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+	"	242	442
+	^	283	6
+	.	283	5
+	+	366	31
+	+	367	9
+	+	368	22
+	+	369	0
+	+	6	0
+	+	6	200
+	+	6	0
+	+	6	214
+	+	6	0
+	+	6	269
+	+	6	0
+	+	6	325
+	+	250	0
+	+	271	3
+	+	279	0
+	+	357	0
+	+	358	0
+	+	271	870
+	+	271	3
+	+	271	1127
+	+	271	1241
+	+	271	3
+	+	271	1253
+	+	273	347
+	+	271	1255
+	+	271	3
+	+	271	1346
+	+	274	0
+	+	275	69
+	+	219	964
+	+	275	172
+	+	275	0
+	+	275	419
+	+	275	0
+	+	275	947
+	+	279	0
+	+	357	1
+	+	356	0
+	+	357	1
+	+	356	0
+	+	279	1
+	+	279	192
+	+	280	0
+	+	271	3
+	+	272	0
+	+	272	0
+	+	271	0
+	+	275	1014
+	+	275	0
+	+	275	1034
+	+	277	0
+	+	277	303
+	+	279	117
+	+	279	1
+	+	281	663
+	+	281	605
+	+	281	1082
+	+	273	346
+	+	281	893
+	+	355	0
+	+	356	58
+	+	356	0
+	+	356	0
+	+	356	0
+	+	356	2
+	+	356	44
+	+	356	19
+	+	356	49
+	+	356	22
+	+	356	0
+	+	357	0
+	+	356	0
+	+	257	3
+	+	272	0
+	+	259	0
+	+	269	0
+	+	260	0
+	+	271	0
+	+	281	1069
+	+	281	0
+	+	281	1110
+	+	281	0
+	+	281	1169
+	+	281	0
+	+	281	1658
+	+	354	253
+	+	281	395
+	+	265	36
+	+	281	1957
+	+	281	833
+	+	281	2188
+	+	282	0
+	+	285	3
+	+	286	0
+	+	352	2
+	+	351	0
+	+	286	0
+	+	351	0
+	+	284	0
+	+	283	5
+	h	285	0
+
+> ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
+	"	14	75
+	^	14	76
+	.	14	75
+	+	14	75
+
+> ~/Documents/reviews/compu_cult/abm_reviews.md
+	"	1	0
+	^	2	0
+	.	2	0
+	+	1	1
+	+	4	0
+	+	5	6
+	+	8	0
+	+	9	8
+	+	6	0
+	+	2	0
+
+> ~/R/kaggle-ndsb/README.md
+	"	1	0
+
+> ~/.tmux/README.md
+	"	151	0
+
+> ~/R/Lasagne/examples/mnist.py
+	"	82	1
+
+> ~/R/Lasagne/examples/mnist_conv.py
+	"	61	0
+
+> ~/torch/README.md
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch7_subjects/kaggle_plots.r
+	"	114	0
+	^	113	96
+	.	113	95
+	+	115	0
+	+	83	43
+	+	81	28
+	+	86	0
+	+	86	34
+	+	87	25
+	+	115	0
+	+	89	33
+	+	90	23
+	+	105	0
+	+	80	18
+	+	104	16
+	+	79	41
+	+	108	21
+	+	83	36
+	+	86	35
+	+	89	34
+	+	83	0
+	+	86	0
+	+	83	0
+	+	86	0
+	+	89	0
+	+	83	68
+	+	86	38
+	+	89	37
+	+	83	13
+	+	82	23
+	+	83	0
+	+	103	0
+	+	92	10
+	+	102	8
+	+	86	0
+	+	93	43
+	+	96	42
+	+	99	41
+	+	94	26
+	+	97	26
+	+	100	26
+	+	102	7
+	+	83	28
+	+	108	0
+	+	109	3
+	+	110	6
+	+	108	6
+	+	83	0
+	+	110	30
+	+	111	0
+	+	110	11
+	+	111	23
+	+	112	58
+	+	114	0
+	+	112	81
+	+	106	17
+	+	110	34
+	+	108	3
+	+	110	36
+	+	81	20
+	+	112	122
+	+	112	54
+	+	112	145
+	+	107	14
+	+	113	0
+	+	113	95
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 	"	1	0
@@ -448,112 +759,6 @@ $
 	+	521	332
 	+	19	26
 	+	20	0
-
-> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-	"	271	0
-	^	270	23
-	.	271	0
-	+	273	0
-	+	273	0
-	+	1	0
-	+	272	0
-	+	30	0
-	+	31	0
-	+	36	995
-	+	36	0
-	+	36	1010
-	+	36	1393
-	+	36	1506
-	+	36	1887
-	+	42	728
-	+	42	0
-	+	42	819
-	+	42	0
-	+	42	906
-	+	42	1314
-	+	43	0
-	+	44	182
-	+	44	97
-	+	48	110
-	+	48	0
-	+	48	139
-	+	48	49
-	+	65	285
-	+	8	0
-	+	277	207
-	+	277	0
-	+	277	236
-	+	277	0
-	+	277	254
-	+	277	0
-	+	277	702
-	+	277	0
-	+	277	882
-	+	281	130
-	+	281	0
-	+	281	147
-	+	281	147
-	+	282	0
-	+	285	319
-	+	285	489
-	+	285	0
-	+	285	500
-	+	285	0
-	+	285	525
-	+	285	0
-	+	285	694
-	+	30	102
-	+	285	285
-	+	285	796
-	+	285	840
-	+	286	0
-	+	287	222
-	+	287	0
-	+	287	497
-	+	292	0
-	+	292	0
-	+	289	0
-	+	287	498
-	+	287	601
-	+	285	723
-	+	285	0
-	+	285	816
-	+	287	225
-	+	287	0
-	+	287	0
-	+	287	198
-	+	287	120
-	+	288	0
-	+	289	401
-	+	291	0
-	+	291	236
-	+	291	0
-	+	291	689
-	+	15	0
-	+	228	3
-	+	263	290
-	+	232	1848
-	+	232	0
-	+	232	1880
-	+	232	1879
-	+	233	0
-	+	232	1864
-	+	232	0
-	+	232	1880
-	+	263	291
-	+	263	0
-	+	264	0
-	+	265	73
-	+	266	0
-	+	270	0
-	+	271	2
-	+	266	19
-	+	267	20
-	+	268	31
-	+	269	9
-	+	270	22
-	+	271	0
-	h	263	290
 
 > ~/Documents/notes/lazzarato_signs_machines_2014.md
 	"	17	0
@@ -1129,9 +1334,6 @@ $
 	h	224	1139
 	i	257	0
 	l	224	32
-
-> ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
-	"	2	0
 
 > ~/Documents/data_intensive/book/preface.rmd
 	"	1	0
@@ -1863,209 +2065,3 @@ $
 
 > ~/R/metacommunities/data_analysis/git_history/README.md
 	"	1	0
-
-> /usr/share/vim/vim74/doc/insert.txt
-	"	1849	16
-
-> /usr/share/vim/vim74/doc/autocmd.txt
-	"	700	38
-
-> ~/dotfile/vim/snippets/pandoc.snippets
-	"	1	0
-	^	22	12
-	.	22	11
-	+	13	12
-	+	14	17
-	+	22	11
-
-> ~/Documents/data_intensive/book/ch8_subjects/plot_nn.r
-	"	219	0
-	^	219	4
-	.	219	3
-	+	1	9
-	+	3	0
-	+	219	3
-
-> ~/Documents/data_intensive/book/ch8_subjects/build.sh
-	"	13	0
-	^	13	0
-	.	12	31
-	+	12	31
-
-> ~/Documents/data_intensive/book/ch8_subjects/knitall.sh
-	"	10	0
-
-> ~/Documents/data_intensive/book/ch8_subjects/pandoc.sh
-	"	11	228
-	^	11	229
-	.	11	228
-	+	11	149
-	+	11	0
-	+	11	250
-	+	11	119
-	+	11	0
-	+	11	228
-
-> ~/R/spark_gce/startup.sh
-	"	1	7
-	^	1	120
-	.	1	0
-	+	1	119
-	+	1	0
-
-> ~/R/spark_gce/spark_gce.py
-	"	508	2
-	.	509	0
-	+	1	0
-	+	508	0
-	+	509	0
-
-> ~/R/spark_gce/google_compute_startup.sh
-	"	1	1
-	^	1	15
-	.	1	0
-	+	1	0
-
-> ~/R/metacommunities/google_bigquery_access.py
-	"	1	0
-
-> ~/R/metacommunities/google_bigquery_access.pyc
-	"	1	0
-
-> ~/R/spark_gce/README.md
-	"	1	0
-
-> ~/Documents/data_intensive/data_science_19may2015.md
-	"	198	127
-	^	198	128
-	.	198	127
-	+	97	80
-	+	100	0
-	+	100	17
-	+	102	22
-	+	103	47
-	+	104	22
-	+	69	0
-	+	74	0
-	+	81	0
-	+	104	0
-	+	200	0
-	+	104	23
-	+	106	39
-	+	108	11
-	+	110	78
-	+	111	2
-	+	110	1
-	+	111	77
-	+	112	31
-	+	113	35
-	+	114	108
-	+	115	87
-	+	116	53
-	+	117	63
-	+	118	56
-	+	119	96
-	+	121	41
-	+	200	0
-	+	123	28
-	+	124	0
-	+	125	129
-	+	126	41
-	+	127	117
-	+	128	40
-	+	129	53
-	+	130	33
-	+	131	54
-	+	132	41
-	+	133	88
-	+	134	81
-	+	135	52
-	+	136	53
-	+	136	74
-	+	138	18
-	+	140	28
-	+	142	52
-	+	143	75
-	+	144	1
-	+	64	0
-	+	65	39
-	+	145	0
-	+	146	28
-	+	148	22
-	+	150	70
-	+	151	48
-	+	152	37
-	+	152	37
-	+	152	64
-	+	200	0
-	+	153	105
-	+	154	4
-	+	156	42
-	+	157	136
-	+	158	0
-	+	160	16
-	+	162	31
-	+	164	28
-	+	165	0
-	+	166	29
-	+	167	0
-	+	168	28
-	+	170	144
-	+	170	1
-	+	171	200
-	+	170	167
-	+	171	325
-	+	172	400
-	+	173	183
-	+	174	0
-	+	175	26
-	+	177	159
-	+	178	323
-	+	179	97
-	+	180	285
-	+	181	121
-	+	182	156
-	+	183	29
-	+	184	0
-	+	186	28
-	+	188	24
-	+	190	62
-	+	191	0
-	+	192	16
-	+	194	175
-	+	195	71
-	+	195	91
-	+	196	167
-	+	196	10
-	+	197	91
-	+	198	127
-
-> /etc/default/keyboard
-	"	11	49
-	^	11	50
-	.	11	0
-	+	11	25
-	+	11	0
-
-> /usr/share/X11/xkb/symbols/pc
-	"	36	26
-	.	23	0
-	+	22	0
-	+	23	0
-	+	22	5
-	+	23	27
-	+	22	4
-	+	23	0
-
-> ~/test/test.md
-	"	1	0
-
-> ~/R/metacommunities/.gitignore
-	"	15	9
-	^	15	10
-	.	15	9
-	+	14	5
-	+	15	9
-
-> ~/R/metacommunities/data_analysis/github_social_practices/fork_plotting.py
-	"	50	0
