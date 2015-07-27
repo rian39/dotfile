@@ -61,7 +61,7 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
 
 set foldcolumn=6
-
+set autoread
 
 "map leader
 
