@@ -3,6 +3,7 @@ cp .viminfo ~/dotfile/viminfo
 echo pushing dotfile
 cd ~/dotfile/
 git status -s
+git commit -a -m 'adding viminfo again'
 git push
 
 
