@@ -5,7 +5,7 @@ cd ~/dotfile/
 git status -s
 git pull
 rm ~/.viminfo 
-cp ~/dotfile/.viminfo ~/.viminfo
+cp ~/dotfile/viminfo ~/.viminfo
 
 
 cd ~/ref_bibs/
