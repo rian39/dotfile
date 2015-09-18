@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/mark
+~MSle0~/marks
 
 # Last Substitute Search Pattern:
 ~MSle0&\\
@@ -17,6 +17,40 @@
 $
 
 # Command Line History (newest to oldest):
+:colorscheme jellybeans
+:colorscheme industry
+:colorscheme hemisu
+:colorscheme delek
+:colorscheme default
+:colorscheme blue
+:Wordy weak
+:colorscheme pencil
+:Wordy contractions
+:Wordy business-jargon
+:Wordy being
+:NoWordy
+:q
+:WordFrequency
+:Wordy
+:set fdc=0
+:fdc=0
+:let g:pencil_terminal_italics = 1
+:let g:pencil_spell_undercurl = 1
+:q!
+:PluginUpdate
+:Wordy redundant
+:Wordy art-jargon
+:wordy weak
+:WordyWordy
+:h word-count
+:map
+:WeakWordy
+:h vim-wordy
+:h wordy
+:wordy
+:Pencil
+:h vimpencil
+:h vim-pencil
 :h viminfo-file
 :b2
 :s/\\/\r\\/g
@@ -33,44 +67,10 @@ $
 :e ~/book/index_terms.md
 :registers
 :buffer 21
-:bp
-:%s/)/)	/gc
-:%s/\\/\n\\/gc
-:e index.md
-:%s/\\index{\w\+}/\=setreg('A', submatch(0))/n
-:b1
-:b26
-:buffer 26
-:marks
-:reg
-:e ~/notes/foucault_will_to_knowledge.md
-:match indy /index{/
-:getmatches()
-:q
-:highlight indy guibg=green
-::highlight indy guibg=green
-:match /index{/
-:match /\\index{\(\w\+\)[|!]*\w\+}/
-:h match
-:match '\\index{\(\w\+\)[|!]*\w\+}'
-:match \\index{\(\w\+\)[|!]*\w\+}
-:1
-:e ~/dotfile/vim/snippets/pandoc.snippets
-:grep '\\index{\(\w\+\)[|!]*\w\+'
-:vimgrep \\index{\(\w\+\)[|!]*\w\+
-:grep \\index{\(\w\+\)[|!]*\w\+
-:copen
-:h include-search
-:h hl-search
-:[I
-:vimgrep \\index
-:vimgrep \index
-:vimgrep \\index{
-:vimgrep 
 
 # Search String History (newest to oldest):
-?/mark
 ?/marks
+?/mark
 ? \Vie\%#
 ? \Vmlr\%#
 ? \Vmlrs\%#
@@ -146,15 +146,14 @@ $
 
 # Registers:
 "0	LINE	0
-	13 Oct  Maggie Mort & Celia Roberts (Sociology)	 ‘Our Bodies, Our Data’ – seeking citizens’ views about health biosensing
-	27 Oct  Jin Lipeng (LICA)	 ‘Hide and Seek – The Visual Representation of Animal Violence’
-	3 Nov   Ali Hanbury (Sociology)	 ‘I want a green diary’. Using a participatory orientation to researching young women's experiences of the HPV vaccination.
-	10 Nov  Rachael Eastham (Health Research)	 ‘Mapping women's reproductive lives - using life history methods to research experiences with contraception‘
-	17 Nov  Alison Lloyd Williams & Marion Walker (Sociology)	 Forging new channels in UK flood strategy: building children’s voices into the politics of flood risk management
-	24 Nov  Brigit McWade (Sociology)	: Was it autoethnography? Ongoing reflections about writing the self in, and then out of my research
-	1 Dec   Adrian Mackenzie (Sociology)	 Many names and large numbers: methods for imitative fluxes?
-	8 Dec   Celia Roberts & Oscar Maldonado Castaneda (Sociology)	 Visualising Stress: How can we review thousands of scientific articles?
-"1	LINE	0
+	    Plugin 'reedes/vim-wordy'
+"1	CHAR	0
+	
+	A key observation --
+"2	CHAR	0
+	
+	A key observation --
+"3	LINE	0
 	\index{kittydar}
 	\index{classification}
 	\index{technicity}
@@ -167,22 +166,39 @@ $
 	\index{categories}
 	\index{problematisation}
 	\index{phronesis}
-"2	CHAR	0
+"4	LINE	0
+	\index{kittydar}
+	\index{classification}
+	\index{technicity}
+	\index{generalization}
+	\index{recursivity}
+	\index{calculation}
+	\index{technique}
+	\index{calculation}
+	\index{diagram}
+	\index{categories}
+	\index{problematisation}
+	\index{phronesis}
+"5	LINE	0
+	\index{kittydar}
+	\index{classification}
+	\index{technicity}
+	\index{generalization}
+	\index{recursivity}
+	\index{calculation}
+	\index{technique}
+	\index{calculation}
+	\index{diagram}
+	\index{categories}
+	\index{problematisation}
+	\index{phronesis}
+"6	CHAR	0
 	Nature.
-"3	CHAR	0
+"7	CHAR	0
 	719
 <(As usual, and in keeping the diagrammatic reading of these forms, these operations all consist of ways of either moving or combining numbers in practice.) The relevant point is that equation \ref{eq:linear_model_solution} calculates some values for the linear regression model coefficients $\hat\beta$ and therefore assigns a slope and intercept, a direction and displacement to a line or flat surface traversing the density-shape of a dataset in its full dimensional vector space (nine dimensions in the case of `prostate`).[^2.38] In this expression, the data shown as $\mathfb{X}$ supports the calculation of the coefficients $\hat{\beta}$ that define a surface or plane running through the common vector space. 
-"4	CHAR	0
+"8	CHAR	0
 	[^2.38a]
-"5	LINE	0
-	
-"6	LINE	0
-	
-"7	LINE	0
-	
-"8	LINE	0
-	2200
-<Often data is  represented as if it is an homogeneous mass or a continuous stream. I am suggesting, however, that rather than volume, we should examine the transformations that allow different shapes and densities of data to come together. Data  spaces out in many different density shapes, depending on how the data has been generated or instanced. Whatever the starting point (a measuring instrument, people clicking and typing on websites, a device like a camera, a random number generator, etc.), it is inevitable that later transformations will remap  it  to different shapes and forms. A given machine learning algorithm, data visualisation or database query will need the data to be in specific vectoral shapes (vectors,  matrices, arrays, etc), and scale it within a certain volume.  \index{data!volume}  The process of composing data for statistical, visual, predictive or even storage purposes, maps a concrete situation, some state of affairs, onto forms imbued with various geometrical, probabilistic, decisionist abstractions often expressed in terms of functions or mathematical models. If, as I have been proposing, we seek contact with the practices, or the concrete value-situation, then the reshaping and reflowing of densities matters greatly.   This forming and reforming of data is evidence of  implicated relations. These practices attest to what Whitehead called 'strain': 'a feeling in which the forms exemplified in the datum concern geometrical, straight, and flat loci will be called a "strain." In a strain, qualitative elements, other than the geometrical forms, express themselves as qualities implicated in those forms' [@Whitehead_1960, 310]. \index{Whitehead, A. North}  \index{data!strain} In many machine learning models, for instance, the exemplified forms are straight or flat loci (as we see in chapter \ref{ch:function}).  Yet  different practices also seek to elicit relations that strain the linear shaping of data, that show how it does not fit.  Some  practices working in the name of linear forms effectively trace strain feelings. These feelings are affective connectors between the abstractions and the concrete-value situations in which data arises. 
 "9	LINE	0
 	
 "a	CHAR	0
@@ -215,7 +231,7 @@ $
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZq
 ""-	CHAR	0
-	rely on
+	#
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -244,22 +260,104 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space_old.rmd
-'0  2  4  ~/gitpush.sh
-'1  2  0  ~/testvim
-'2  6  57  ~/.davfs2/secrets
-'3  13  325  ~/dsi/dsi_theme_lead_proposal.md
-'4  130  0  ~/customer.md
-'5  1  0  ~/customer.md
-'6  1253  1  ~/.viminfo
-'7  317  5  ~/.viminfo
-'8  170  137  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'9  3  0  ~/test/index.md
+'0  1  0  ~/test/ch_introduction.rmd
+'1  190  45  ~/test/ch_introduction.md
+'2  13  35  ~/.vimrc
+'3  14  29  ~/.vimrc
+'4  12  0  ~/.vimrc
+'5  50  5  ~/.vimrc
+'6  2  0  ~/testvim
+'7  1122  2  ~/dotfile/viminfo
+'8  8  0  ~/gitpull.sh
+'9  1  0  ~/testvim
 
 # Jumplist (newest first):
--'  2  4  ~/gitpush.sh
--'  1  0  ~/gitpush.sh
+-'  1  0  ~/test/ch_introduction.rmd
+-'  68  1  ~/test/ch_introduction.rmd
+-'  54  427  ~/test/ch_introduction.rmd
+-'  24  1968  ~/test/ch_introduction.rmd
+-'  190  45  ~/test/ch_introduction.md
+-'  1  0  ~/test/ch_introduction.md
+-'  211  8  ~/test/ch_introduction.md
+-'  212  0  ~/test/ch_introduction.md
+-'  213  0  ~/test/ch_introduction.md
+-'  214  0  ~/test/ch_introduction.md
+-'  215  0  ~/test/ch_introduction.md
+-'  248  0  ~/test/ch_introduction.md
+-'  70  373  ~/test/ch_introduction.md
+-'  68  12  ~/test/ch_introduction.md
+-'  22  59  ~/test/ch_introduction.md
+-'  20  359  ~/test/ch_introduction.md
+-'  13  35  ~/.vimrc
+-'  12  0  ~/.vimrc
+-'  158  184  ~/test/ch_introduction.md
+-'  155  0  ~/test/ch_introduction.md
+-'  14  29  ~/.vimrc
+-'  227  665  ~/test/ch_introduction.md
+-'  178  871  ~/test/ch_introduction.md
+-'  176  774  ~/test/ch_introduction.md
+-'  172  461  ~/test/ch_introduction.md
+-'  171  0  ~/test/ch_introduction.md
+-'  168  480  ~/test/ch_introduction.md
+-'  166  313  ~/test/ch_introduction.md
+-'  162  459  ~/test/ch_introduction.md
+-'  160  259  ~/test/ch_introduction.md
+-'  154  776  ~/test/ch_introduction.md
+-'  150  124  ~/test/ch_introduction.md
+-'  148  594  ~/test/ch_introduction.md
+-'  146  1163  ~/test/ch_introduction.md
+-'  144  328  ~/test/ch_introduction.md
+-'  182  91  ~/test/ch_introduction.md
+-'  50  5  ~/.vimrc
 -'  2  0  ~/testvim
 -'  1  0  ~/testvim
+-'  1122  2  ~/dotfile/viminfo
+-'  73  2  ~/dotfile/viminfo
+-'  44  1  ~/dotfile/viminfo
+-'  41  0  ~/dotfile/viminfo
+-'  1  0  ~/dotfile/viminfo
+-'  8  0  ~/gitpull.sh
+-'  1  0  ~/gitpull.sh
+-'  190  45  ~/test/ch_introduction.md
+-'  1  0  ~/test/ch_introduction.md
+-'  211  8  ~/test/ch_introduction.md
+-'  212  0  ~/test/ch_introduction.md
+-'  213  0  ~/test/ch_introduction.md
+-'  214  0  ~/test/ch_introduction.md
+-'  215  0  ~/test/ch_introduction.md
+-'  248  0  ~/test/ch_introduction.md
+-'  70  373  ~/test/ch_introduction.md
+-'  68  12  ~/test/ch_introduction.md
+-'  22  59  ~/test/ch_introduction.md
+-'  20  359  ~/test/ch_introduction.md
+-'  158  184  ~/test/ch_introduction.md
+-'  155  0  ~/test/ch_introduction.md
+-'  227  665  ~/test/ch_introduction.md
+-'  178  871  ~/test/ch_introduction.md
+-'  176  774  ~/test/ch_introduction.md
+-'  172  461  ~/test/ch_introduction.md
+-'  171  0  ~/test/ch_introduction.md
+-'  168  480  ~/test/ch_introduction.md
+-'  166  313  ~/test/ch_introduction.md
+-'  162  459  ~/test/ch_introduction.md
+-'  160  259  ~/test/ch_introduction.md
+-'  154  776  ~/test/ch_introduction.md
+-'  150  124  ~/test/ch_introduction.md
+-'  148  594  ~/test/ch_introduction.md
+-'  146  1163  ~/test/ch_introduction.md
+-'  144  328  ~/test/ch_introduction.md
+-'  182  91  ~/test/ch_introduction.md
+-'  2  0  ~/testvim
+-'  1  0  ~/testvim
+-'  1122  2  ~/dotfile/viminfo
+-'  73  2  ~/dotfile/viminfo
+-'  44  1  ~/dotfile/viminfo
+-'  41  0  ~/dotfile/viminfo
+-'  1  0  ~/dotfile/viminfo
+-'  8  0  ~/gitpull.sh
+-'  1  0  ~/gitpull.sh
+-'  2  4  ~/gitpush.sh
+-'  1  0  ~/gitpush.sh
 -'  6  57  ~/.davfs2/secrets
 -'  1  0  ~/.davfs2/secrets
 -'  13  325  ~/dsi/dsi_theme_lead_proposal.md
@@ -267,108 +365,66 @@ $
 -'  130  0  ~/customer.md
 -'  1  0  ~/customer.md
 -'  1253  1  ~/.viminfo
--'  3  0  ~/test/index.md
--'  170  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  968  0  ~/rsvn.log
--'  301  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space_old.rmd
--'  1  0  ~/date.md
--'  4  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  222  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space_old.rmd
--'  277  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  317  0  ~/.viminfo
--'  220  7  ~/.viminfo
--'  207  3552  ~/.viminfo
--'  43  1  ~/.viminfo
--'  1797  70  ~/.viminfo
--'  1792  70  ~/.viminfo
--'  312  13  ~/.viminfo
--'  150  4  ~/.viminfo
--'  190  0  ~/.viminfo
--'  1  0  ~/.viminfo
--'  24  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  111  126  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  60  2024  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  54  453  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  25  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  227  2142  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  176  791  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  148  629  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  134  1646  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  117  116  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  113  127  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  80  363  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  3  0  ~/test/indexterms.md
--'  31  0  ~/test/indexterms.md
--'  1  1069  ~/test/indexterms.md
--'  70  756  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  66  1135  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  64  1013  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  58  1353  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  18  229  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  71  0  ~/test/indexterms.md
--'  58  0  ~/test/ch_introduction.rmd
--'  4  0  ~/test/index.md
--'  1  192  ~/test/index.md
--'  1  0  ~/test/ch_introduction.rmd
--'  236  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  26  345  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  274  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  271  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  269  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  267  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  265  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  262  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  259  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  256  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  253  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  246  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  244  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  242  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  239  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  237  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  219  925  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  213  226  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  164  1038  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  129  410  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  127  1790  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  113  1956  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  79  1857  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  3  0  ~/test/indexterms.md
--'  31  0  ~/test/indexterms.md
--'  1  1069  ~/test/indexterms.md
--'  3  0  ~/test/indexterms.md
--'  31  0  ~/test/indexterms.md
--'  1  1069  ~/test/indexterms.md
--'  1253  1  ~/.viminfo
--'  3  0  ~/test/index.md
--'  968  0  ~/rsvn.log
--'  1  0  ~/date.md
--'  317  0  ~/.viminfo
--'  220  7  ~/.viminfo
--'  207  3552  ~/.viminfo
--'  43  1  ~/.viminfo
--'  1797  70  ~/.viminfo
--'  1792  70  ~/.viminfo
--'  312  13  ~/.viminfo
--'  150  4  ~/.viminfo
--'  190  0  ~/.viminfo
--'  1  0  ~/.viminfo
--'  1253  1  ~/.viminfo
 
 # History of marks within files (newest to oldest):
+
+> ~/test/ch_introduction.rmd
+	"	1	0
+	^	68	5
+	.	68	0
+	+	68	0
+
+> ~/test/ch_introduction.md
+	"	190	45
+	^	68	0
+	.	68	0
+	+	155	0
+	+	155	0
+	+	156	19
+	+	68	0
+
+> ~/test/[Vundle] Installer
+	"	32	0
+	.	1	0
+	+	1	0
+
+> ~/.vimrc
+	"	13	35
+	^	13	36
+	.	13	35
+	+	12	27
+	+	50	0
+	+	14	29
+	+	14	0
+	+	13	35
+
+> /usr/share/vim/vim74/doc/editing.txt
+	"	134	51
+
+> ~/[Vundle] Installer
+	"	30	0
+	.	1	0
+	+	30	0
+	+	1	0
+
+> ~/testvim
+	"	2	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> ~/dotfile/viminfo
+	"	1122	2
+
+> ~/gitpull.sh
+	"	8	0
 
 > ~/gitpush.sh
 	"	2	4
 	^	2	5
 	.	2	4
 	+	2	4
-
-> ~/testvim
-	"	2	0
-	.	2	0
-	+	2	0
 
 > ~/.davfs2/secrets
 	"	6	57
@@ -791,9 +847,6 @@ $
 	+	23	0
 	+	24	8
 	+	25	0
-
-> ~/test/ch_introduction.rmd
-	"	58	0
 
 > ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
 	"	29	0
@@ -2013,173 +2066,4 @@ $
 	+	7	0
 
 > ~/Desktop/BukkitServer/start.command
-	"	1	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering.rmd
-	"	139	61
-	^	139	62
-	.	139	62
-	+	232	566
-	+	233	527
-	+	234	511
-	+	236	536
-	+	236	700
-	+	236	902
-	+	236	1169
-	+	236	1385
-	+	238	716
-	+	238	833
-	+	238	1018
-	+	238	1245
-	+	238	1386
-	+	238	1627
-	+	238	1774
-	+	238	1969
-	+	238	2540
-	+	238	2690
-	+	240	595
-	+	240	632
-	+	240	878
-	+	240	991
-	+	240	1081
-	+	240	1162
-	+	240	1304
-	+	240	1453
-	+	240	1650
-	+	240	1810
-	+	240	1925
-	+	240	2098
-	+	240	2272
-	+	240	2375
-	+	242	521
-	+	242	820
-	+	242	1154
-	+	243	500
-	+	245	514
-	+	246	512
-	+	247	575
-	+	248	585
-	+	249	546
-	+	250	530
-	+	252	531
-	+	254	631
-	+	254	764
-	+	254	979
-	+	254	1298
-	+	254	1499
-	+	254	1599
-	+	254	1737
-	+	254	1874
-	+	256	518
-	+	256	606
-	+	256	845
-	+	256	1021
-	+	256	1316
-	+	256	1429
-	+	256	1573
-	+	256	1673
-	+	256	1759
-	+	258	518
-	+	258	706
-	+	258	873
-	+	258	973
-	+	258	1245
-	+	258	1552
-	+	258	1652
-	+	258	1847
-	+	258	2013
-	+	260	518
-	+	260	642
-	+	260	731
-	+	260	922
-	+	260	1238
-	+	262	539
-	+	264	588
-	+	264	733
-	+	264	933
-	+	264	1214
-	+	264	1382
-	+	264	1514
-	+	266	531
-	+	267	523
-	+	1	0
-	+	3	0
-	+	5	0
-	+	7	0
-	+	9	0
-	+	11	0
-	+	12	0
-	+	14	0
-	+	16	0
-	+	1	0
-	+	267	510
-	+	267	0
-	+	139	18
-	+	141	0
-	+	139	0
-	+	139	92
-	+	139	62
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/test.md
-	"	2	52
-	^	2	53
-	.	3	0
-	+	3	0
-	+	3	91
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	92
-	+	3	1
-	+	3	92
-	+	3	207
-	+	3	1
-	+	3	0
-	+	3	171
-	+	3	0
-	+	3	0
-	+	3	0
-	+	2	0
-	+	2	1
-	+	2	52
-	+	3	0
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc output
-	"	3	0
-	.	3	0
-	+	1	0
-	+	7	0
-	+	1	0
-	+	5	0
-	+	3	0
-
-> ~/Documents/notes/robert_casella_introducing_mc_2010.md
-	"	3	167
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/build.sh
-	"	8	3
-
-> ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
-	"	16	29
-	^	16	30
-	.	16	29
-	+	10	354
-	+	17	35
-	+	10	342
-	+	17	34
-	+	10	302
-	+	17	34
-	+	18	0
-	+	14	0
-	+	11	0
-	+	17	0
-	+	14	302
-	+	17	0
-	+	12	0
-	+	13	0
-	+	12	0
-	+	16	29
-
-> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.md
 	"	1	0
