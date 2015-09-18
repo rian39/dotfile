@@ -244,18 +244,22 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space_old.rmd
-'0  6  57  ~/.davfs2/secrets
-'1  13  325  ~/dsi/dsi_theme_lead_proposal.md
-'2  130  0  ~/customer.md
-'3  1  0  ~/customer.md
-'4  1253  1  ~/.viminfo
-'5  317  5  ~/.viminfo
-'6  170  137  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'7  3  0  ~/test/index.md
-'8  277  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
-'9  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space_old.rmd
+'0  2  4  ~/gitpush.sh
+'1  2  0  ~/testvim
+'2  6  57  ~/.davfs2/secrets
+'3  13  325  ~/dsi/dsi_theme_lead_proposal.md
+'4  130  0  ~/customer.md
+'5  1  0  ~/customer.md
+'6  1253  1  ~/.viminfo
+'7  317  5  ~/.viminfo
+'8  170  137  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'9  3  0  ~/test/index.md
 
 # Jumplist (newest first):
+-'  2  4  ~/gitpush.sh
+-'  1  0  ~/gitpush.sh
+-'  2  0  ~/testvim
+-'  1  0  ~/testvim
 -'  6  57  ~/.davfs2/secrets
 -'  1  0  ~/.davfs2/secrets
 -'  13  325  ~/dsi/dsi_theme_lead_proposal.md
@@ -352,12 +356,19 @@ $
 -'  190  0  ~/.viminfo
 -'  1  0  ~/.viminfo
 -'  1253  1  ~/.viminfo
--'  3  0  ~/test/index.md
--'  968  0  ~/rsvn.log
--'  1  0  ~/date.md
--'  130  0  ~/customer.md
 
 # History of marks within files (newest to oldest):
+
+> ~/gitpush.sh
+	"	2	4
+	^	2	5
+	.	2	4
+	+	2	4
+
+> ~/testvim
+	"	2	0
+	.	2	0
+	+	2	0
 
 > ~/.davfs2/secrets
 	"	6	57
@@ -1174,9 +1185,6 @@ $
 
 > /tmp/.fr-HGeQ25/Untitled.md
 	"	41	0
-
-> ~/gitpush.sh
-	"	1	0
 
 > ~/Documents/notes/deleuze_foucault.md
 	"	20	133
@@ -2175,8 +2183,3 @@ $
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.md
 	"	1	0
-
-> ~/Documents/data_intensive/book/ch0_introduction/pandoc output
-	"	1	0
-	.	1	0
-	+	1	0
