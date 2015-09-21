@@ -30,7 +30,7 @@ call vundle#begin()
     Bundle "csexton/jekyll.vim"
     Bundle "vim-scripts/TwitVim"
     Bundle "Shougo/neocomplete.vim"
-    "Plugin 'tpope/vim-sensible'
+    Plugin 'tpope/vim-sensible'
     
 call vundle#end()            " required
 filetype plugin indent on    " required
