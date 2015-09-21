@@ -1,5 +1,5 @@
 #!/bin/bash
-cp .viminfo ~/dotfile/viminfo
+cp ~/.viminfo ~/dotfile/viminfo
 echo pushing dotfile
 cd ~/dotfile/
 git status -s

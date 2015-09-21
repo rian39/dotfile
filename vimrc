@@ -9,6 +9,9 @@ call vundle#begin()
     Plugin 'vim-pandoc/vim-pandoc-syntax'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'reedes/vim-pencil'
+    Plugin 'reedes/vim-wordy'
+    Plugin 'reedes/vim-colors-pencil'
+    Plugin 'tpope/vim-markdown'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'tpope/vim-fugitive'
     Plugin 'tpope/vim-surround'
@@ -44,7 +47,7 @@ endif
 let g:solarized_termcolors=256
 "set background=dark
 "call togglebg#map("<F5>")
-set ruler  
+pencilset ruler  
 set tabstop=4
 set shiftwidth=4
 set expandtab
