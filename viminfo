@@ -230,18 +230,20 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-'0  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
-'1  260  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'2  1  0  ~/Documents/data_intensive/book/ch4_probability/structure.md
-'3  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
-'4  264  736  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'5  77  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'6  1  0  ~/Documents/supervision/hazel_marsh/panel_report.md
-'7  178  326  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'8  7  13  ~/.history_git/settings.conf
-'9  333  0  ~/R/metacommunities/data_analysis/github_repository_topics/Github_repo_topics.py
+'0  31  15  ~/dotfile/gitpush.sh
+'1  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+'2  260  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'3  1  0  ~/Documents/data_intensive/book/ch4_probability/structure.md
+'4  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+'5  264  736  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'6  77  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'7  1  0  ~/Documents/supervision/hazel_marsh/panel_report.md
+'8  178  326  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'9  7  13  ~/.history_git/settings.conf
 
 # Jumplist (newest first):
+-'  31  15  ~/dotfile/gitpush.sh
+-'  1  0  ~/dotfile/gitpush.sh
 -'  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 -'  57  968  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 -'  26  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
@@ -334,6 +336,14 @@ $
 -'  9  1425  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
 
 # History of marks within files (newest to oldest):
+
+> ~/dotfile/gitpush.sh
+	"	31	15
+	^	31	16
+	.	31	15
+	+	12	27
+	+	19	16
+	+	31	15
 
 > ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
 	"	2	0
@@ -2226,9 +2236,3 @@ $
 	+	8	0
 	+	6	23
 	u	2	0
-
-> ~/Documents/data_intensive/book/ch1_learning/__run__
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
