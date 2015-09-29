@@ -9,14 +9,14 @@ git push
 
 cd ~/document-archive/
 echo pushing document-archive
-git add ~/document-archive/*.pdf
+git add ~/document-archive/\*.pdf
 git commit -a -m 'new pdfs'
 #git status -s
 git push
 
 cd ~/notes/
 echo pushing notes
-git add ~/notes/*.md
+git add ~/notes/\*.md
 git commit -a -m 'adding new notes'
 git status -s
 git push
@@ -28,7 +28,7 @@ git push
 
 cd ~/rian39.github.io/
 echo pushing posts
-git add _posts/*.md
+git add _posts/\*.md
 git commit -a -m 'adding new posts'
 git status -s
 git push
