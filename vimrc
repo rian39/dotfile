@@ -47,7 +47,7 @@ endif
 let g:solarized_termcolors=256
 "set background=dark
 "call togglebg#map("<F5>")
-pencilset ruler  
+"pencilset ruler  
 set tabstop=4
 set shiftwidth=4
 set expandtab
