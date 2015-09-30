@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/4.2
+~MSle0~/4.4
 
 # Last Substitute Search Pattern:
 ~MSle0&figure
@@ -17,8 +17,18 @@
 $
 
 # Command Line History (newest to oldest):
-:e ch_dimensional_exuberance_old.rmd
+:bp
+:buffer 24
+:e ~/notes/wasserman_all_of_stat2003.md
+:buffer 
 :b6
+:e lazzarato_signs_machines_2014.md
+:e peirce_essential_vol2.md
+:e peirce_essential_vol1.md
+:e ~/notes/peirce_philosophical_writings1955.md
+:Wordy none
+:Wordy weak
+:e ch_dimensional_exuberance_old.rmd
 :set modifiable
 :buffer 6
 :e ch_naive_informed_old.rmd
@@ -27,7 +37,6 @@ $
 :e ch_curves_functions.md
 :set fdc=0
 :e ~/book/ch3_curves/function_notes.md
-:bp
 :sp
 :buffer 5
 :w ~/book/ch4_probability/ch_naive_informed_old.rmd
@@ -48,8 +57,6 @@ $
 :Git add
 :ga
 :buffer 1
-:Wordy none
-:Wordy weak
 :q
 :e ~/notes/malley_statistical_learning_2011.md
 :q!
@@ -71,9 +78,11 @@ $
 # Search String History (newest to oldest):
 ? \Vie\%#
 ? \Vml\%#
+? \Vmlrs\%#
+?/4.4
+? \Vmlr\%#
 ??4.2
 ? \<4\>
-? \Vmlrs\%#
 ? \Vcvs\%#
 ?/operational
 ? \v^([^|]*\|){2,2} #
@@ -88,7 +97,6 @@ $
 ? \Vlabfig\%#
 ?/South 
 ?/gradient
-? \Vmlr\%#
 ?/3.41
 ?/view
 ?/Kitchin
@@ -146,31 +154,67 @@ $
 
 # Registers:
 "0	LINE	0
-	supervised  unsupervised
-	parametric  non-parametric
-	bias        variance
-	prediction  inference
-	generative  discriminative
-"1	CHAR	0
-	And, we might add, ontologized as things in the world. 
+	1181
+<While these structuring differences are practically very important, and deeply shape certain kinds of practice in machine learning, the underlying component that allows swapping between knowledge and the world, between measurements and events is probability thinking, and in particular, the functions that describe variations in probability, probability distributions. Historically, two distributions loom large. The binomial distribution was explored extensively in the seventeenth and eighteenth centuries in the context of games of chance [@Hacking_1975, 57-134]. The normal distribution pervades nineteenth century statistical thinking as it generalizes across law, medicine, agriculture, finance and not least, sociology. In all of these settings, probability distributions are a common way of showing and  talking about _random variables_ in statistics. These distributions appear in countless shapes and forms in scientific, government and popular literature of many different kinds. Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]). Perhaps the most famous function or mapping is the normal or Gaussian distribution:
+	
+	\begin {equation}
+	\label {eq:gaussian_distribution}
+	f(x;\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+	\end {equation}
+	
+	
+	3390
+<The  function shown in equation (\ref{eq:gaussian_distribution}) is the so-called normal or Gaussian distribution. Its  mathematics were intensively worked over during the late eighteenth and early nineteenth centuries in what has been termed 'one of the major success stories in the history of science' [@Stigler_1986, 158], and it has a power-laden biopolitical history closely tied with knowledges and governing of  national and other  populations in terms of morality, health, and wealth (see [@Hacking_1975, 113-124]. The key symbols here include $\mu$, the mean and $\sigma$, the variance, a number that describes how widely dispersed the values of the variable, $x$ are. These two parameters together describe the shape of the curve. Given $\mu$ and $\sigma$, it become possible to map different outcomes to probabilities. Put more statistically, viewed in terms of functions such as the Gaussian distribution, events become random variables. Following the kind of definition that we find in a standard statistics textbook, every variable potentially becomes a function: 'a random variable is a mapping that assigns a real number to each outcome' [@Wasserman_2003,19]. The possibility of treating all variables as random variables, that is, as probability distributions was a significant historical achievement, but one that continues to develop. We might note the real power of probability distributions when conceptualised as real quantities in the world, not epiphenomenal by-products of inaccuracies in our observations or measuring devices. For instance, given the normal distribution, it is possible, under certain circumstances, to effectively subjectify someone on the spot. If an educational psychologist indicates to someone that their intelligence lies towards the left-hand side of the normal curve peak in Figure 2 (and hence less than the population mean), they quickly render them somehow subject to a potentially institutionally and economically consequential trajectory. This is not a recent development. Since its inception in the social physics of Quetelet as a way of referring to a property of populations, the normal curve has promised or threatened to support the re-shaping and control of populations (in terms of health, morality and wealth). Since then, probability distributions and their corresponding curves have multiplies. Subsequent statisticians used dozens of different probability distributions to map continuous and discrete variations to real numbers. Other probability distributions abound — normal (Gaussian), uniform, Cauchy exponential, gamma, beta,  hypergeometric, binomial, Poisson, chi-squared, Dirichlet, Boltzmann-Gibbs distributions, etc. (see [@NIST_2012] for a gallery of distributions) — because outcomes occur in widely differing patterns. The  queuing times at airport check-ins do not, for instance, easily fit a normal distribution. Queues are usually modelled using a Poisson distribution, which unfortunately for travellers, distributes waiting times very differently.  Similarly, it might be better to think of the probability of rain today in Lancaster in terms of a Poisson distribution that models that queue of clouds in the Atlantic just waiting to land on the northwest coast of England. Rather than addressing the question of if it will rain or not, a Poisson-based model might address the question of how soon.
+	
+"1	LINE	0
+	
 "2	LINE	0
-	> Because of a gradient that no doubt characterizes our cultures, discursive formations are constantly becoming epistemologized [@Foucault_1972, 195]
+	
 "3	LINE	0
-	- the whole topic model discussion
-"4	LINE	0
+	619
+<[^4.113]: Maurizio Lazzarato describes ontological mutations as 'always machinic. They are never the simple result of the actions or choices of the "man" who, leaving the assemblage, removes himself from the non-human, technical, or incorporeal elements that constitute him -- all that is pure abstraction' [@Lazzarato_2014, 83]. Lazzarato's account of diagrams as processes that slip past signification and representation echoes Deleuze and Guattari's, but usefully highlights the plurality of machines that inhabit science, music, art, cities and markets.  \index{Lazzarato, Maurizio!machinic ontological mutation}
+"4	CHAR	0
+	852
+<Reading and working with machine learning techniques usually means encountering and responding to some of that statistical apparatus drawn from statistics, but these are not typically the statistical tests of significance or variation. In contrast to a statistics textbook such as the widely used _Basic Practice of Statistics_ [@Moore_2009] or even a more advanced guide such as _All of Statistics_ [@Wasserman_2003], where statistics (t-test, chi-squared test, etc.) hypothesis testing, and analysis of uncertainties (confidence intervals, etc) order the exposition, the machine learning texts invoke a thoroughly probabilistic conceptual apparatus curiously de-populated of the community fo practice found in statistics. Statistical underpinnings may be fundamental, but this does not mean that  machine learners simply automate statistics.[^4.4]
 	
 "5	LINE	0
-	730
-<This swapping or re-distribution is not a simple operation of attribution, as if machine learners somehow mistake a measurement for the world. Machine learners do constantly take statistical thinking as given. When Hastie and co-authors write (as we saw in the last chapter) 'our goal is to find a useful approximation $\hat(f)(x)$ to the function $f(x)$ that underlies the predictive relationship between input and output' [@Hastie_2009, 28], they invoke the 'real quantities' first elaborated and articulated by statistical thinkers such as Quetelet. At the same time, the major structuring differences in machine learning as a field of knowledge-practice show the marks of this commitment to the reality of the statistical. 
+	supervised &  unsupervised \\
 "6	LINE	0
+	## extra stuff
 	
-"7	LINE	0
+	
+	[stuff here from alpaydin; deals with generative; etc; but also discriminative -- generating the data vs a conditional probability of a particular variable; modelling the whole thing versus modelling some particular quantity; ]
+	
+	659
+<The quantification entailed in statistics is a counting of events that have been named or labelled in some way. The perhaps more profound point is that this counting of atomic events can be combined in a seemingly limitless variety of combinations. In the emails, individual words are events, and therefore each email is a complicated composite event. Similarly, in machine learning on images, each pixel could be treated as an event, and the image as a whole becomes an immensely complicated aggregate colour and light event. As we will see, many other machine learning techniques try to deal with this combinatory character of composite events directly. 
+	
+	727
+<There is some new operating terminology in this chapter (terms such as random variable, probability distribution and likelihood).  While I attempt to be both mathematically and conceptually concise in my use of these terms, the terms themselves are somewhat troubled by the transformations I'm describing. The underpinnings of taken-for-granted and everyday statistical such as random variable or probability are not immune from change. Like all technical formalisms they took hold at a certain practical and historical conjuncture that will not and perhaps already does not hold entirely still. As the philosophy Ian Hacking suggests in his discussion of early 20th century changes in probability in _The Taming of Chance_,
+	
+	263
+<>By the 1930s, however, the world teemed with frequencies, and the 'objective' notion would come to seem more important than the 'subjective' one for the rest of the century -- simply because there were so many more frequencies to be known [@Hacking_1990, 97].
+	
+	1429
+<I'm suggesting that we countenance a scene in which multiple different probability practices stack on top of each other in a somewhat untamed way. Amidst these, random variables and their associated probability distributions particularly concern us. As we will see, the power of the transformation in probability associated with machine learning algorithms resides in their capacity to draw in many more relations, features and components of data in support of a probabilistic outcome. When things are best described as probability distributions, they take on a different form of temporal and multiplicative existence, and this no longer easily attributed to either 'subjective' or 'objective' probability, or to a shift in balance between the long-standing poles of 'subjective' and 'objective' probability. A probabilistically generated airline seat price attracts different kinds of transactions than a fixed priced seat. Similarly, a probabilistically generated tumour classification implies different modes of responsiveness and care. Gaining some understanding of the concrete arrangements of forces in these probabilistic modes might allow us to account for the ways in which certain methods -- Bayesian inference is a striking example of transverse momentum of methods across fields  -- go on the move, or why certain problems -- automatic text classification, image recognition, etc -- suddenly hove into feasibility.
 	
 "8	LINE	0
-	551
-<[^4.4]: Leo Breiman writing in 2001 during the heyday of academic development of machine learning argues, describes the 'two cultures' of statistics: 'in the past fifteen years, the growth in algorithmic modeling applications and methodology has been rapid. It has occurred largely outside statistics in a new community—often called machine learning—that is mostly young computer scientists (Section 7). The advances, particularly over the last five years, have been startling' [@Breiman_2001a, 200].\index{Breiman, Leo!on statistical cultures}
-"9	LINE	0
+	end{table}
+"9	CHAR	0
 	
+	\begin{table}
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	supervised &  unsupervised \\
+	parametric &  non-parametric \\
+	bias &        variance \\
+	prediction &  inference \\
+	generative &  discriminative \\
+	\hline
+	\end{tabular}
+	\caption{Some structuring differences in machine learning}
+	\lab{tab:ml_diffs}
+	\
 "a	CHAR	0
 	1072
 <\index{kittydar}\index{classification}\index{technicity}\index{generalization}\index{recursivity}\index{calculation}\index{technique}\index{calculation}\index{diagram}\index{categories}\index{problematisation}\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{\index{\index{generalization}\index{\index{\index{\index{\index{\index{\index{calculation}\index{technique}\index{calculation}\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{problematisation}\index{\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{linear regression}\index{machine learner|textbf}\index{generalization}\index{algorithm!primacy}\index{Google Trends}\index{artificial intelligence}\index{local regression}\index{facial recognition}\index{calculation}\index{technique}\index{calculation}\index{inner product}\index{data!training}\index{categories}\index{digital humanities}\index{decision tree}\index{problematisation}\index{scientific publications}\index{phronesis}\index{social physics}
@@ -201,7 +245,9 @@ $
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZq
 ""-	CHAR	0
-	And, we might add, ontologized as things in the world. 
+	measurements and 
+
+# global variables:
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -230,39 +276,57 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-'0  31  15  ~/dotfile/gitpush.sh
-'1  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
-'2  260  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'3  1  0  ~/Documents/data_intensive/book/ch4_probability/structure.md
-'4  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
-'5  264  736  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'6  77  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'7  1  0  ~/Documents/supervision/hazel_marsh/panel_report.md
-'8  178  326  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
-'9  7  13  ~/.history_git/settings.conf
+'0  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
+'1  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'2  31  15  ~/dotfile/gitpush.sh
+'3  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+'4  67  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'5  1  0  ~/Documents/data_intensive/book/ch4_probability/structure.md
+'6  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+'7  264  736  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'8  77  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+'9  1  0  ~/Documents/supervision/hazel_marsh/panel_report.md
 
 # Jumplist (newest first):
+-'  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
+-'  13  0  ~/Documents/notes/wasserman_all_of_stat2003.md
+-'  66  938  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  112  701  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  110  440  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  94  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  67  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  70  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  81  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  83  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  49  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  48  184  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  31  15  ~/dotfile/gitpush.sh
 -'  1  0  ~/dotfile/gitpush.sh
 -'  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 -'  57  968  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 -'  26  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 -'  2  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  260  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  319  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  64  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  62  835  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  59  43  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  318  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  111  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  50  835  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  92  1933  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  62  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  31  15  ~/dotfile/gitpush.sh
+-'  1  0  ~/dotfile/gitpush.sh
+-'  263  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  322  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  65  835  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  61  43  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  321  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  45  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  239  149  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  44  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  236  149  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  43  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  303  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  304  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  39  918  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  298  162  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  246  39  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  314  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  306  2  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  307  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  40  918  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  301  162  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  249  39  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  317  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  253  296  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  144  677  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  249  2  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -273,23 +337,22 @@ $
 -'  154  102  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  142  384  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  321  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  74  93  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  324  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  77  93  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  302  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  121  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  122  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  306  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  241  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  308  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  262  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  282  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  305  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  124  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  125  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  309  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  244  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  311  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  265  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  285  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  289  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  286  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  283  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  47  1184  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  45  23  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  46  23  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
--'  30  165  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  31  165  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  1  0  ~/Documents/data_intensive/book/ch4_probability/structure.md
 -'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
 -'  134  25  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
@@ -315,27 +378,141 @@ $
 -'  211  17  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
 -'  208  6  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
 -'  195  27  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  69  595  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  21  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
--'  272  127  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  264  921  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  270  295  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  1  0  ~/Documents/data_intensive/book/ch4_probability/structure.md
--'  265  3  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  103  2  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  301  844  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  280  25  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  275  25  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  271  36  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  176  608  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  143  1513  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  140  1914  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  116  1814  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  102  160  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
--'  9  1425  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
 
 # History of marks within files (newest to oldest):
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+	"	70	0
+	^	69	0
+	.	68	4
+	+	1	0
+	+	2	0
+	+	5	0
+	+	46	43
+	+	48	450
+	+	48	173
+	+	48	413
+	+	48	346
+	+	48	778
+	+	48	1052
+	+	48	1181
+	+	48	0
+	+	48	2077
+	+	48	2554
+	+	48	0
+	+	48	2575
+	+	50	122
+	+	50	2167
+	+	50	237
+	+	50	891
+	+	50	583
+	+	50	739
+	+	51	0
+	+	49	0
+	+	51	0
+	+	49	0
+	+	64	1
+	+	66	0
+	+	64	1
+	+	65	0
+	+	67	0
+	+	94	0
+	+	56	0
+	+	66	15
+	+	66	0
+	+	66	138
+	+	66	267
+	+	66	494
+	+	66	713
+	+	66	343
+	+	66	0
+	+	66	1565
+	+	66	344
+	+	66	0
+	+	66	406
+	+	66	2024
+	+	112	657
+	+	112	0
+	+	112	700
+	+	112	0
+	+	112	742
+	+	66	468
+	+	66	0
+	+	66	569
+	+	66	372
+	+	66	719
+	+	66	392
+	+	66	811
+	+	66	1379
+	+	66	0
+	+	66	1350
+	+	66	1539
+	+	66	0
+	+	66	1565
+	+	67	0
+	+	66	0
+	+	67	0
+	+	86	525
+	+	86	814
+	+	86	0
+	+	86	825
+	+	66	1808
+	+	66	0
+	+	66	1815
+	+	66	0
+	+	66	1854
+	+	66	2465
+	+	66	0
+	+	66	2472
+	+	66	0
+	+	66	2472
+	+	70	64
+	+	70	66
+	+	70	0
+	+	70	65
+	+	70	329
+	+	70	0
+	+	70	559
+	+	70	0
+	+	70	615
+	+	70	0
+	+	113	0
+	+	114	0
+	+	70	0
+	+	70	245
+	+	70	373
+	+	70	0
+	+	70	414
+	+	70	0
+	+	68	4
+	a	23	0
+	b	27	75
+	c	33	21
+	d	48	1068
+	e	50	0
+	f	66	0
+	z	82	0
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
+	"	82	0
+	h	82	0
+
+> ~/Documents/notes/peirce_philosophical_writings1955.md
+	"	1	0
+
+> ~/Documents/notes/peirce_essential_vol1.md
+	"	1	0
+
+> ~/Documents/notes/peirce_essential_vol2.md
+	"	20	0
+	.	20	0
+	+	20	0
+
+> ~/Documents/notes/lazzarato_signs_machines_2014.md
+	"	5	103
+
+> ~/Documents/notes/wasserman_all_of_stat2003.md
+	"	13	0
 
 > ~/dotfile/gitpush.sh
 	"	31	15
@@ -691,120 +868,6 @@ $
 	x	226	0
 	y	228	0
 	z	230	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	260	157
-	^	319	0
-	.	291	0
-	+	44	507
-	+	43	623
-	+	44	174
-	+	47	30
-	+	47	287
-	+	47	0
-	+	47	343
-	+	47	213
-	+	47	396
-	+	48	0
-	+	47	1385
-	+	47	1183
-	+	47	0
-	+	47	1232
-	+	74	1214
-	+	74	0
-	+	74	1263
-	+	283	0
-	+	309	0
-	+	286	0
-	+	310	0
-	+	311	0
-	+	283	0
-	+	262	0
-	+	307	0
-	+	308	0
-	+	241	0
-	+	305	0
-	+	306	0
-	+	121	0
-	+	302	0
-	+	316	4
-	+	317	0
-	+	321	8
-	+	321	0
-	+	321	0
-	+	321	688
-	+	321	0
-	+	321	725
-	+	321	0
-	+	38	0
-	+	39	496
-	+	39	0
-	+	39	525
-	+	39	0
-	+	39	556
-	+	44	0
-	+	303	0
-	+	304	0
-	+	43	354
-	+	43	702
-	+	43	1110
-	+	43	1034
-	+	43	1267
-	+	43	1458
-	+	43	0
-	+	43	1470
-	+	43	1697
-	+	44	0
-	+	318	0
-	+	44	0
-	+	49	172
-	+	47	1636
-	+	51	0
-	+	49	0
-	+	58	0
-	+	58	0
-	+	49	0
-	+	49	13
-	+	50	9
-	+	59	0
-	+	59	58
-	+	60	18
-	+	58	0
-	+	62	727
-	+	55	0
-	+	55	0
-	+	57	5
-	+	58	0
-	+	62	871
-	+	62	727
-	+	62	1020
-	+	62	827
-	+	62	727
-	+	62	834
-	+	62	727
-	+	62	872
-	+	64	505
-	+	64	0
-	+	64	547
-	+	64	0
-	+	319	0
-	+	320	0
-	+	319	0
-	+	64	0
-	+	49	0
-	+	62	0
-	+	49	0
-	+	63	0
-	+	291	0
-	a	22	0
-	b	26	75
-	c	32	21
-	d	47	1068
-	e	62	0
-	z	277	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-	"	1	0
 
 > ~/Documents/data_intensive/book/ch4_probability/structure.md
 	"	1	0
@@ -2202,37 +2265,3 @@ $
 	+	5	0
 	+	6	177
 	+	11	132
-
-> ~/Documents/data_intensive/book/knit_all.sh
-	"	9	0
-	^	2	22
-	.	29	0
-	+	5	31
-	+	2	21
-	+	9	0
-	+	29	0
-
-> ~/Documents/data_intensive/book/ch1_learning/NERD_tree_1
-	"	5	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/book/book.t
-	"	1	0
-
-> ~/Documents/data_intensive/book/ml_lit/data/breiman_random_WOS/Random Forest 1-500.txt
-	"	1	0
-
-> ~/Documents/data_intensive/book/ch1_learning/test.py
-	"	2	18
-	^	6	24
-	.	6	23
-	+	2	0
-	+	6	40
-	+	8	0
-	+	6	23
-	u	2	0
