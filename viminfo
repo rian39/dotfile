@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/seealso
+~Msle0~/\<\.pdf\>
 
 # Last Substitute Search Pattern:
 ~MSle0&figure
@@ -69,6 +69,7 @@ $
 :h neocomplete
 
 # Search String History (newest to oldest):
+? \<\.pdf\>
 ? \Vml\%#
 ?/seealso
 ? \Vie\%#
@@ -118,7 +119,6 @@ $
 ?/gradient
 ?/3.41
 ?/view
-?/Kitchin
 
 # Expression History (newest to oldest):
 
@@ -147,7 +147,7 @@ $
 # Registers:
 "0	CHAR	0
 	ontologies
-""1	LINE	0
+"1	LINE	0
 	cd ~/document-archive/
 	echo pushing document-archive
 	git add ~/document-archive/\*.pdf
@@ -198,8 +198,8 @@ $
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZq
-"-	CHAR	0
-	machine learners
+""-	CHAR	0
+	*
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -228,18 +228,21 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-'0  29  0  ~/dotfile/gitpush.sh
-'1  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'2  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
-'3  1  0  ~/Documents/data_intensive/book/support/to_do.md
-'4  5  1  ~/dsi/social_theme_revised.md
-'5  238  909  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'6  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
-'7  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'8  25  15  ~/dotfile/gitpush.sh
-'9  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+'0  32  27  ~/gitpush.sh
+'1  29  0  ~/dotfile/gitpush.sh
+'2  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'3  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
+'4  1  0  ~/Documents/data_intensive/book/support/to_do.md
+'5  5  1  ~/dsi/social_theme_revised.md
+'6  238  909  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'7  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
+'8  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'9  25  15  ~/dotfile/gitpush.sh
 
 # Jumplist (newest first):
+-'  32  27  ~/gitpush.sh
+-'  18  0  ~/gitpush.sh
+-'  1  0  ~/gitpush.sh
 -'  29  0  ~/dotfile/gitpush.sh
 -'  10  0  ~/dotfile/gitpush.sh
 -'  1  0  ~/dotfile/gitpush.sh
@@ -284,8 +287,18 @@ $
 -'  221  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  219  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  222  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+-'  29  0  ~/dotfile/gitpush.sh
+-'  10  0  ~/dotfile/gitpush.sh
+-'  1  0  ~/dotfile/gitpush.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/gitpush.sh
+	"	32	27
+	^	32	28
+	.	32	27
+	+	2	4
+	+	32	27
 
 > ~/dotfile/gitpush.sh
 	"	29	0
@@ -1713,12 +1726,6 @@ $
 
 > ~/gitpull.sh
 	"	8	0
-
-> ~/gitpush.sh
-	"	2	4
-	^	2	5
-	.	2	4
-	+	2	4
 
 > /etc/fstab
 	"	14	0
