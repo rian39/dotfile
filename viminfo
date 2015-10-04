@@ -147,25 +147,30 @@ $
 # Registers:
 "0	CHAR	0
 	ontologies
-"1	LINE	0
-	
+""1	LINE	0
+	cd ~/document-archive/
+	echo pushing document-archive
+	git add ~/document-archive/\*.pdf
+	git commit -a -m 'new pdfs'
+	#git status -s
+	git push
 "2	LINE	0
-	Perhaps the most famous function or mapping is the normal or Gaussian distribution:
-"3	LINE	0
-	[^4.205]: Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]).
-"4	LINE	0
 	
+"3	LINE	0
+	Perhaps the most famous function or mapping is the normal or Gaussian distribution:
+"4	LINE	0
+	[^4.205]: Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]).
 "5	LINE	0
+	
+"6	LINE	0
 	675
 <The re-distribution of probability that takes place in machine learning through multiple-swapping of observational positions bears several implications for thinking about the power of the techniques. The lure of the techniques is a kind of trap since the swapping or inversion of statistical thought takes what was put into the world by modern statistical thought and puts it into machines whose intricate workings themselves become the event to be observed. At the same time, although taking back the real quantities, the machine learners remain closely in contact with worlds populated by texts, documents, images, prices, sensor measurements, transactions and records. 
-"6	LINE	0
-	\chapter{$N = all$: machine learning gets all the data}
 "7	LINE	0
-	\hline
+	\chapter{$N = all$: machine learning gets all the data}
 "8	LINE	0
 	\hline
 "9	LINE	0
-	
+	\hline
 "a	CHAR	0
 	1072
 <\index{kittydar}\index{classification}\index{technicity}\index{generalization}\index{recursivity}\index{calculation}\index{technique}\index{calculation}\index{diagram}\index{categories}\index{problematisation}\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{\index{\index{generalization}\index{\index{\index{\index{\index{\index{\index{calculation}\index{technique}\index{calculation}\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{problematisation}\index{\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{linear regression}\index{machine learner|textbf}\index{generalization}\index{algorithm!primacy}\index{Google Trends}\index{artificial intelligence}\index{local regression}\index{facial recognition}\index{calculation}\index{technique}\index{calculation}\index{inner product}\index{data!training}\index{categories}\index{digital humanities}\index{decision tree}\index{problematisation}\index{scientific publications}\index{phronesis}\index{social physics}
@@ -193,7 +198,7 @@ $
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZq
-""-	CHAR	0
+"-	CHAR	0
 	machine learners
 
 # File marks:
@@ -223,18 +228,21 @@ $
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-'0  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'1  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
-'2  1  0  ~/Documents/data_intensive/book/support/to_do.md
-'3  5  1  ~/dsi/social_theme_revised.md
-'4  238  909  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'5  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
-'6  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'7  31  15  ~/dotfile/gitpush.sh
-'8  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
-'9  65  157  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'0  29  0  ~/dotfile/gitpush.sh
+'1  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'2  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
+'3  1  0  ~/Documents/data_intensive/book/support/to_do.md
+'4  5  1  ~/dsi/social_theme_revised.md
+'5  238  909  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'6  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
+'7  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'8  25  15  ~/dotfile/gitpush.sh
+'9  101  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 
 # Jumplist (newest first):
+-'  29  0  ~/dotfile/gitpush.sh
+-'  10  0  ~/dotfile/gitpush.sh
+-'  1  0  ~/dotfile/gitpush.sh
 -'  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  348  72  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 -'  345  33  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
@@ -278,6 +286,17 @@ $
 -'  222  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # History of marks within files (newest to oldest):
+
+> ~/dotfile/gitpush.sh
+	"	29	0
+	^	29	0
+	.	29	0
+	+	10	27
+	+	13	16
+	+	25	15
+	+	10	0
+	+	30	0
+	+	29	0
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 	"	100	0
@@ -970,14 +989,6 @@ $
 
 > ~/Documents/notes/lazzarato_signs_machines_2014.md
 	"	5	103
-
-> ~/dotfile/gitpush.sh
-	"	31	15
-	^	31	16
-	.	31	15
-	+	12	27
-	+	19	16
-	+	31	15
 
 > ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
 	"	2	0
