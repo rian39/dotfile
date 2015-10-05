@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<\.pdf\>
+~MSle0~/pattern
 
 # Last Substitute Search Pattern:
 ~MSle0&figure
@@ -17,22 +17,36 @@
 $
 
 # Command Line History (newest to oldest):
+:b21
+:b22
+:w
+:buffer 21
+:e ~/notes/peirce_pragmatism_1960.md
+:e peirce_philosophical_writings1955.md
+:e peirce_essential_vol2.md
+:e ~/notes/peirce_essential_vol1.md
+:buffer 7
+:buffer 
+:bp
+:e ch_dimensional_exuberance_old_old.rmd
+:e ~/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+:q!
+:buffer 6
+:e ch_dimensional_exuberance_old.rmd
+:PluginUpdate
 :buffer 13
 :b6
 :e ~/book/book.tex
 :e ~/book/md_to_latex.sh
 :e ~/book/knit_all.sh
 :q
-:buffer 6
 :e ~/book/support/to_do.md
 :w ~/notes/urry_law_2004.md
 :w ~/notes/berger_luckmann.md
 :registers
 :.!pandoc -t markdown --reference-links --no-wrap 
 :map
-:bp
 :read dsi_theme_lead_proposal.md
-:w
 :buffer 20
 :e foucault_will_to_knowledge.md
 :e foucault_order.md
@@ -41,14 +55,11 @@ $
 :e foucault_archaeology.md
 :e ~/notes/wasserman_all_of_stat2003.md
 :buffer 24
-:buffer 
 :e lazzarato_signs_machines_2014.md
-:e peirce_essential_vol2.md
 :e peirce_essential_vol1.md
 :e ~/notes/peirce_philosophical_writings1955.md
 :Wordy none
 :Wordy weak
-:e ch_dimensional_exuberance_old.rmd
 :set modifiable
 :e ch_naive_informed_old.rmd
 :TOC
@@ -69,6 +80,7 @@ $
 :h neocomplete
 
 # Search String History (newest to oldest):
+?/pattern
 ? \<\.pdf\>
 ? \Vml\%#
 ?/seealso
@@ -145,32 +157,50 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	ontologies
-"1	LINE	0
+"0	LINE	0
+	> Algorithms for pattern recognition were therefore from the very beginning associated with the construction of linear decision surfaces [@Cortes_1995, 273-4]
+	
+	> No statement can have a latent existence [@Foucault_1972, 16]
+	
+	1527
+<We have seen the emergence of the common vector space and its epistopological transformations, the multiplication of functions and their entwined partial observers, and then the re-distribution of probability in statistical devices that both populate the world and transform machine learners into populations. Across the vectors, functions, and distributions a  diagram of  machine learning weaves and knots many points of emergence, continuity and conjunction. Formidable accumulations of infrastructure, devices and expertise pivot around machine learning (as we will see in Part II). Already on several occasions problems of the density and mass of techniques, research literature, algorithms and code have appeared. What in this diagram and in the forest-like growth of techniques, projects, applications and proponents allows us to make sense of the dynamics of this accumulation? Via three highly developed and heavily used machine learners  -- decision trees, neural networks, and support vector machines  -- that more or less mesmerised the machine learning scientific literature between 1980-2000, some relatively novel and somewhat discontinuous forms of movement into and through data were initiated. These movements, which we might characterise as _splitting_, _propagating_ and _hyper-planing_ -- continue to fiercely animate machine learners in producing newer techniques (random forests, deep belief nets), intensifying their application, and perhaps more importantly, re-configuring what counts as knowledge.
+	
+""1	LINE	0
+	Consider
+"3	LINE	0
+	## to do
+"4	LINE	0
+	- vapnik and russia vs decision tree/random forest (Breiman; St Ives)
+	- what happens in code here -- the inner product; the recursive, the backprop algorithm ... 
+	- what happens to knowledge -- knowledge understood in Foucaultean sense as savoir;  the discursive practices that criss words and things
+	- the dispersion of techniques in domains suggests something like an enunciative function; at the same time, the techniques themselves are statements addressing a common problem around separating that which overlaps or blurs; 
+	- another form of dispersion -- the same techniques found in different fields under different names -- e.g. reinforcement rule learning
+"5	LINE	0
+	```
+"6	LINE	0
+	```{r global_options, include=FALSE}
+	knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+	                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
+	library(RSQLite)
+	con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
+	res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
+"7	LINE	0
+	
+"8	LINE	0
+	```{r global_options, include=FALSE}
+	knitr::opts_chunk$set(fig.width=12, fig.height=8, 
+	                      echo=FALSE, warning=FALSE, message=FALSE, dev='pdf')
+	library(RSQLite)
+	con <- dbConnect(RSQLite::SQLite(),'../ml_lit/all_refs.sqlite3')
+	res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
+	```
+"9	LINE	0
 	cd ~/document-archive/
 	echo pushing document-archive
 	git add ~/document-archive/\*.pdf
 	git commit -a -m 'new pdfs'
 	#git status -s
 	git push
-"2	LINE	0
-	
-"3	LINE	0
-	Perhaps the most famous function or mapping is the normal or Gaussian distribution:
-"4	LINE	0
-	[^4.205]: Statistical graphics have a rich history and semiology that I do not discuss here (see [@Bertin_1983]).
-"5	LINE	0
-	
-"6	LINE	0
-	675
-<The re-distribution of probability that takes place in machine learning through multiple-swapping of observational positions bears several implications for thinking about the power of the techniques. The lure of the techniques is a kind of trap since the swapping or inversion of statistical thought takes what was put into the world by modern statistical thought and puts it into machines whose intricate workings themselves become the event to be observed. At the same time, although taking back the real quantities, the machine learners remain closely in contact with worlds populated by texts, documents, images, prices, sensor measurements, transactions and records. 
-"7	LINE	0
-	\chapter{$N = all$: machine learning gets all the data}
-"8	LINE	0
-	\hline
-"9	LINE	0
-	\hline
 "a	CHAR	0
 	1072
 <\index{kittydar}\index{classification}\index{technicity}\index{generalization}\index{recursivity}\index{calculation}\index{technique}\index{calculation}\index{diagram}\index{categories}\index{problematisation}\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{\index{\index{generalization}\index{\index{\index{\index{\index{\index{\index{calculation}\index{technique}\index{calculation}\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{problematisation}\index{\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{linear regression}\index{machine learner|textbf}\index{generalization}\index{algorithm!primacy}\index{Google Trends}\index{artificial intelligence}\index{local regression}\index{facial recognition}\index{calculation}\index{technique}\index{calculation}\index{inner product}\index{data!training}\index{categories}\index{digital humanities}\index{decision tree}\index{problematisation}\index{scientific publications}\index{phronesis}\index{social physics}
@@ -198,8 +228,10 @@ $
 <wwwwwwi[€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr]€kr€kl€kr€klx€kr€kb€kb€kd€kd€ku€kd€ku€ku€kd€kdbbb€kb€kb€kbbbbbbbbbbbbbbieither €kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl or a support vector machine€kr€kr€kl€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb€kb,€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kb€kb€kb€kb€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€ku€ku€ku€ku€ku€kd€kr€kr€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€ku€kd€kd€kd€kd€ku€ku
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZq
-""-	CHAR	0
-	*
+"-	CHAR	0
+	knowledge
+
+# global variables:
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -227,71 +259,329 @@ $
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'Z  1  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-'0  32  27  ~/gitpush.sh
-'1  29  0  ~/dotfile/gitpush.sh
-'2  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'3  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
-'4  1  0  ~/Documents/data_intensive/book/support/to_do.md
-'5  5  1  ~/dsi/social_theme_revised.md
-'6  238  909  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'7  5  103  ~/Documents/notes/lazzarato_signs_machines_2014.md
-'8  5  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'9  25  15  ~/dotfile/gitpush.sh
+'Z  1  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+'0  2  52  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+'1  34  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+'2  1  0  ~/Documents/document-archive/.git/MERGE_MSG
+'3  32  27  ~/gitpush.sh
+'4  29  0  ~/dotfile/gitpush.sh
+'5  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'6  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
+'7  1  0  ~/Documents/data_intensive/book/support/to_do.md
+'8  5  1  ~/dsi/social_theme_revised.md
+'9  238  909  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
 
 # Jumplist (newest first):
--'  32  27  ~/gitpush.sh
--'  18  0  ~/gitpush.sh
--'  1  0  ~/gitpush.sh
--'  29  0  ~/dotfile/gitpush.sh
--'  10  0  ~/dotfile/gitpush.sh
--'  1  0  ~/dotfile/gitpush.sh
--'  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  348  72  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  345  33  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  343  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  315  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  305  794  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  34  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  278  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  234  19  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  126  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  233  41  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  231  25  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  230  20  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  229  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  178  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  101  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  137  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  138  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  136  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  139  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  135  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  108  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  157  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  158  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  156  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  159  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  155  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  117  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  179  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  177  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  180  4  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  176  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  199  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  200  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  198  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  201  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  197  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  220  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  221  12  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  219  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  222  0  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  29  0  ~/dotfile/gitpush.sh
--'  10  0  ~/dotfile/gitpush.sh
--'  1  0  ~/dotfile/gitpush.sh
+-'  2  52  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  372  335  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  308  483  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  205  648  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  203  357  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  193  38  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  192  26  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  190  6  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  185  1782  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  96  1350  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  52  1438  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  46  17  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  8  27  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  7  31  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  6  8  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  5  38  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  3  10  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  202  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  11  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old_old.rmd
+-'  4  87  ~/Documents/notes/peirce_pragmatism_1960.md
+-'  6  87  ~/Documents/notes/peirce_pragmatism_1960.md
+-'  5  83  ~/Documents/notes/peirce_philosophical_writings1955.md
+-'  22  0  ~/Documents/notes/peirce_essential_vol2.md
+-'  2  0  ~/Documents/notes/peirce_essential_vol1.md
+-'  31  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  30  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  33  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  32  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  49  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  47  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  26  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  34  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
 
 # History of marks within files (newest to oldest):
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+	"	7	0
+	^	83	296
+	.	83	295
+	+	311	381
+	+	311	527
+	+	311	913
+	+	311	1230
+	+	311	0
+	+	311	1251
+	+	311	1565
+	+	311	0
+	+	311	1586
+	+	311	1478
+	+	311	1735
+	+	311	0
+	+	311	1755
+	+	311	2151
+	+	311	0
+	+	312	0
+	+	311	2216
+	+	313	805
+	+	317	0
+	+	313	881
+	+	313	57
+	+	313	504
+	+	315	0
+	+	313	1183
+	+	311	2219
+	+	311	2442
+	+	44	563
+	+	44	1820
+	+	44	1887
+	+	44	0
+	+	44	1943
+	+	48	894
+	+	48	1322
+	+	48	2670
+	+	50	95
+	+	50	287
+	+	50	0
+	+	50	555
+	+	50	747
+	+	64	0
+	+	64	720
+	+	64	654
+	+	64	919
+	+	64	1132
+	+	64	2241
+	+	67	0
+	+	66	444
+	+	66	796
+	+	66	0
+	+	66	823
+	+	66	998
+	+	66	1246
+	+	67	0
+	+	67	0
+	+	363	0
+	+	364	0
+	+	68	0
+	+	67	0
+	+	66	802
+	+	66	1180
+	+	66	1007
+	+	77	271
+	+	77	0
+	+	64	2588
+	+	64	0
+	+	64	2633
+	+	64	0
+	+	64	2640
+	+	64	0
+	+	64	2698
+	+	77	267
+	+	280	0
+	+	298	0
+	+	302	0
+	+	308	0
+	+	310	0
+	+	280	0
+	+	298	0
+	+	68	0
+	+	74	0
+	+	84	0
+	+	86	0
+	+	84	0
+	+	64	2674
+	+	75	1189
+	+	44	1908
+	+	199	0
+	+	157	0
+	+	117	0
+	+	101	0
+	+	305	123
+	+	305	793
+	+	305	0
+	+	305	761
+	+	343	0
+	+	346	1
+	+	345	63
+	+	348	141
+	+	349	4
+	+	83	295
+	a	23	0
+	b	27	75
+	c	33	0
+	d	48	1068
+	e	50	0
+	f	64	0
+	g	66	0
+	h	75	0
+	i	77	0
+	j	79	0
+	k	81	0
+	l	83	167
+	m	87	0
+	n	98	79
+	o	106	58
+	p	316	220
+	q	238	0
+	r	240	0
+	s	244	0
+	t	257	0
+	u	259	0
+	v	265	0
+	w	269	0
+	x	271	61
+	y	277	0
+	z	305	971
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+	"	31	534
+	^	31	1468
+	.	31	1467
+	+	34	1030
+	+	34	0
+	+	34	1146
+	+	34	0
+	+	34	18
+	+	34	0
+	+	34	0
+	+	34	1036
+	+	34	5
+	+	34	9
+	+	34	18
+	+	34	20
+	+	34	22
+	+	34	24
+	+	34	26
+	+	34	53
+	+	34	26
+	+	34	0
+	+	34	18
+	+	34	18
+	+	34	348
+	+	34	0
+	+	34	229
+	+	34	314
+	+	34	64
+	+	34	0
+	+	34	79
+	+	34	316
+	+	34	427
+	+	34	0
+	+	34	916
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	38
+	+	34	43
+	+	34	248
+	+	34	0
+	+	34	81
+	+	34	0
+	+	34	229
+	+	34	0
+	+	34	476
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	16
+	+	34	2
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	370
+	+	34	228
+	+	34	738
+	+	34	0
+	+	34	240
+	+	34	348
+	+	34	0
+	+	34	0
+	+	34	372
+	+	34	457
+	+	34	0
+	+	34	568
+	+	34	0
+	+	34	863
+	+	34	0
+	+	34	247
+	+	34	684
+	+	34	0
+	+	34	0
+	+	34	156
+	+	34	0
+	+	34	291
+	+	34	0
+	+	34	0
+	+	34	46
+	+	34	0
+	+	1	0
+	+	34	68
+	+	3	0
+	+	4	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	10	0
+	+	34	0
+	+	11	0
+	+	26	0
+	+	25	2
+	+	34	0
+	+	27	0
+	+	31	280
+	+	31	532
+	+	33	0
+	+	31	330
+	+	31	1467
+	a	31	0
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+	"	2	52
+	.	27	0
+	+	22	0
+	+	27	0
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old_old.rmd
+	"	11	0
+
+> ~/Documents/notes/peirce_essential_vol1.md
+	"	2	0
+
+> ~/Documents/notes/peirce_essential_vol2.md
+	"	22	0
+	.	20	0
+	+	20	0
+
+> ~/Documents/notes/peirce_philosophical_writings1955.md
+	"	5	83
+
+> ~/Documents/notes/peirce_pragmatism_1960.md
+	"	4	87
+	^	3	0
+	.	3	0
+	+	6	125
+	+	7	0
+	+	8	0
+	+	9	0
+	+	5	0
+	+	3	0
+
+> ~/Documents/data_intensive/book/[Vundle] Installer
+	"	33	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/document-archive/.git/MERGE_MSG
+	"	1	0
 
 > ~/gitpush.sh
 	"	32	27
@@ -441,137 +731,6 @@ $
 	x	226	0
 	y	228	0
 	z	230	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-	"	217	8
-	^	83	296
-	.	83	295
-	+	311	381
-	+	311	527
-	+	311	913
-	+	311	1230
-	+	311	0
-	+	311	1251
-	+	311	1565
-	+	311	0
-	+	311	1586
-	+	311	1478
-	+	311	1735
-	+	311	0
-	+	311	1755
-	+	311	2151
-	+	311	0
-	+	312	0
-	+	311	2216
-	+	313	805
-	+	317	0
-	+	313	881
-	+	313	57
-	+	313	504
-	+	315	0
-	+	313	1183
-	+	311	2219
-	+	311	2442
-	+	44	563
-	+	44	1820
-	+	44	1887
-	+	44	0
-	+	44	1943
-	+	48	894
-	+	48	1322
-	+	48	2670
-	+	50	95
-	+	50	287
-	+	50	0
-	+	50	555
-	+	50	747
-	+	64	0
-	+	64	720
-	+	64	654
-	+	64	919
-	+	64	1132
-	+	64	2241
-	+	67	0
-	+	66	444
-	+	66	796
-	+	66	0
-	+	66	823
-	+	66	998
-	+	66	1246
-	+	67	0
-	+	67	0
-	+	363	0
-	+	364	0
-	+	68	0
-	+	67	0
-	+	66	802
-	+	66	1180
-	+	66	1007
-	+	77	271
-	+	77	0
-	+	64	2588
-	+	64	0
-	+	64	2633
-	+	64	0
-	+	64	2640
-	+	64	0
-	+	64	2698
-	+	77	267
-	+	280	0
-	+	298	0
-	+	302	0
-	+	308	0
-	+	310	0
-	+	280	0
-	+	298	0
-	+	68	0
-	+	74	0
-	+	84	0
-	+	86	0
-	+	84	0
-	+	64	2674
-	+	75	1189
-	+	44	1908
-	+	199	0
-	+	157	0
-	+	117	0
-	+	101	0
-	+	305	123
-	+	305	793
-	+	305	0
-	+	305	761
-	+	343	0
-	+	346	1
-	+	345	63
-	+	348	141
-	+	349	4
-	+	83	295
-	a	23	0
-	b	27	75
-	c	33	0
-	d	48	1068
-	e	50	0
-	f	64	0
-	g	66	0
-	h	75	0
-	i	77	0
-	j	79	0
-	k	81	0
-	l	83	167
-	m	87	0
-	n	98	79
-	o	106	58
-	p	316	220
-	q	238	0
-	r	240	0
-	s	244	0
-	t	257	0
-	u	259	0
-	v	265	0
-	w	269	0
-	x	271	61
-	y	277	0
-	z	305	971
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 	"	1	0
@@ -989,127 +1148,8 @@ $
 	.	4	21
 	+	4	21
 
-> ~/Documents/notes/peirce_philosophical_writings1955.md
-	"	1	0
-
-> ~/Documents/notes/peirce_essential_vol1.md
-	"	1	0
-
-> ~/Documents/notes/peirce_essential_vol2.md
-	"	20	0
-	.	20	0
-	+	20	0
-
 > ~/Documents/notes/lazzarato_signs_machines_2014.md
 	"	5	103
-
-> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
-	"	2	0
-	^	3	0
-	.	15	0
-	+	270	1007
-	+	270	1259
-	+	270	1143
-	+	270	0
-	+	270	0
-	+	270	1007
-	+	270	1007
-	+	270	1187
-	+	271	0
-	+	272	52
-	+	272	723
-	+	272	0
-	+	272	1030
-	+	272	0
-	+	272	1146
-	+	274	0
-	+	275	18
-	+	277	0
-	+	276	0
-	+	272	1036
-	+	276	5
-	+	276	9
-	+	276	18
-	+	276	20
-	+	276	22
-	+	276	24
-	+	276	26
-	+	276	53
-	+	276	26
-	+	277	0
-	+	278	18
-	+	268	18
-	+	280	348
-	+	280	0
-	+	280	229
-	+	280	314
-	+	284	64
-	+	295	0
-	+	284	79
-	+	284	316
-	+	284	427
-	+	284	0
-	+	284	916
-	+	301	0
-	+	302	0
-	+	301	0
-	+	358	0
-	+	285	0
-	+	286	38
-	+	288	43
-	+	288	248
-	+	289	0
-	+	290	81
-	+	290	0
-	+	290	229
-	+	358	0
-	+	290	476
-	+	291	0
-	+	292	0
-	+	293	0
-	+	295	16
-	+	292	2
-	+	293	0
-	+	295	0
-	+	294	0
-	+	295	370
-	+	305	228
-	+	305	738
-	+	306	0
-	+	299	240
-	+	299	348
-	+	300	0
-	+	306	0
-	+	295	372
-	+	295	457
-	+	298	0
-	+	295	568
-	+	356	0
-	+	356	863
-	+	305	0
-	+	295	247
-	+	295	684
-	+	297	0
-	+	297	0
-	+	297	156
-	+	297	0
-	+	297	291
-	+	358	0
-	+	28	0
-	+	354	46
-	+	353	0
-	+	1	0
-	+	22	68
-	+	3	0
-	+	4	0
-	+	10	0
-	+	11	0
-	+	14	0
-	+	13	0
-	+	15	0
-	h	229	1139
-	i	262	0
-	l	229	32
 
 > ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 	"	101	0
@@ -1215,9 +1255,6 @@ $
 	+	17	24
 	+	25	0
 	+	26	0
-
-> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
-	"	1	0
 
 > ~/Documents/data_intensive/book/ch4_probability/structure.md
 	"	1	0
@@ -2138,84 +2175,3 @@ $
 	+	13	23
 	+	13	0
 	+	10	0
-
-> ~/Documents/data_intensive/book/ch6_topologies/vim-ipython
-	"	20	0
-	.	20	0
-	+	235	0
-	+	237	0
-	+	239	0
-	+	241	0
-	+	248	0
-	+	254	0
-	+	261	0
-	+	264	0
-	+	266	0
-	+	273	0
-	+	276	0
-	+	284	0
-	+	292	0
-	+	299	0
-	+	301	0
-	+	308	0
-	+	316	0
-	+	323	0
-	+	329	0
-	+	335	0
-	+	382	0
-	+	429	0
-	+	485	0
-	+	488	0
-	+	494	0
-	+	561	0
-	+	628	0
-	+	630	0
-	+	632	0
-	+	676	0
-	+	757	0
-	+	759	0
-	+	78	0
-	+	90	0
-	+	92	0
-	+	104	0
-	+	116	0
-	+	118	0
-	+	120	0
-	+	122	0
-	+	133	0
-	+	180	0
-	+	182	0
-	+	184	0
-	+	186	0
-	+	188	0
-	+	200	0
-	+	233	0
-	+	32	0
-	+	34	0
-	+	72	0
-	+	74	0
-	+	76	0
-	+	9	0
-	+	16	0
-	+	18	0
-	+	20	0
-
-> ~/Documents/data_intensive/book/ch6_topologies/NERD_tree_1
-	"	68	10
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/book/ch6_topologies/build.sh
-	"	1	0
-
-> ~/nand_weights.txt
-	"	8	0
