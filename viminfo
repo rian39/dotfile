@@ -12,6 +12,10 @@
 
 # Last Substitute Search Pattern:
 ~MSle0&{perceptron
+~MSle0~/mlrs
+
+# Last Substitute Search Pattern:
+~MSle0&\.md
 
 # Last Substitute String:
 $
@@ -45,11 +49,31 @@ $
 :bp
 :b21
 :b22
+=======
+:reg
+:b7
+:b22
+:buffer 22
+:cw
+:grep 'pattern' ~/notes/*.md
+:buffer 7
+:buffer 24
+:e index_fin.md
+:e index.md
+:%s//\.rmd/g
+:e chapter_list_rmd.txt
+:w
+:w chapter_list_rmd.txt
+:e chapter_list.txt
+:e control_vocab.sh
+:b21
 :buffer 21
 :e ~/notes/peirce_pragmatism_1960.md
 :e peirce_philosophical_writings1955.md
 :e peirce_essential_vol2.md
 :e ~/notes/peirce_essential_vol1.md
+:buffer 
+:bp
 :e ch_dimensional_exuberance_old_old.rmd
 :e ~/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
 :buffer 6
@@ -109,7 +133,53 @@ $
 ?/\\index{\w+[ !]?
 ? \Vnn\%#
 ? \<The\>
+=======
+:e foucault_archaeology.md
+:e ~/notes/wasserman_all_of_stat2003.md
+:e lazzarato_signs_machines_2014.md
+:e peirce_essential_vol1.md
+:e ~/notes/peirce_philosophical_writings1955.md
+:Wordy none
+:Wordy weak
+:set modifiable
+:e ch_naive_informed_old.rmd
+:TOC
+:b5
+:e ch_curves_functions.md
+:set fdc=0
+:e ~/book/ch3_curves/function_notes.md
+:sp
+:buffer 5
+:w ~/book/ch4_probability/ch_naive_informed_old.rmd
+:e ~/.vim/snippets/pandoc.snippets
+:.,.+4b5
+:bn
+:s/figure/subfigure/gc
+:set modifiable on
+:e ~/.Rprofile
+:echo has('lua')
+:h neocomplete
+
+# Search String History (newest to oldest):
+? \Vcvs\%#
+? \Vmlr\%#
+? \Vie\%#
+?/mlrs
+?/\\index{Python
+?/\\index{FOR
+?/kittyar
+?/\\index{sigmoi
+? \Vml\%#
+?/\index{((\w+(, )?)+!?(\w+ ?))+}
+?/\\index{((\w+(, )?)+!?(\w+ ?))+}
+?/\\index
+?/\index
+? \Vlabfig\%#
+? \Vai\%#
+?/Like log
 ?/pattern
+? \Vnn\%#
+?/\.md
 ? \<\.pdf\>
 ?/seealso
 ? \<random\>
@@ -118,6 +188,7 @@ $
 ? \<probabilisation\>
 ?/suggest
 ?/asdfa
+? \Vmlrs\%#
 ? \<61\>
 ? \Vnb\%#
 ?/tab'
@@ -129,6 +200,30 @@ $
 ? \<instance\>
 ? \<probability\>
 ? \<overall\>
+?/115
+? \Vlabeq\%#
+? \Vsvm\%#
+?/asdf
+? \<114\>
+?/4.2
+?/4.4
+??4.2
+? \<4\>
+?/operational
+? \v^([^|]*\|){2,2} #
+?/Logistic or sigm
+?/logistic or sigmoid
+?/align(
+?/sa_heart
+?/Error
+?/error
+?/ERROR
+?/results
+?/South 
+?/gradient
+?/3.41
+?/view
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 # Expression History (newest to oldest):
 
@@ -179,6 +274,28 @@ $
 	
 "9	LINE	0
 	[^5.112]: _Elements of Statistical Learning_ also devotes a chapter to support vector machines [@Hastie_2009, Chapter 14]
+=======
+	cat chapter_list_rmd.txt | xargs grep -E  -h -o --include \*.rmd '\\index{((\w+(, )?)+!?(\w+ ?))+(\|seealso{(\w+ ?)+})?}' > index.md
+	sort index.md > index_u.md
+	uniq -c index_u.md > index_fin.md 
+"2	LINE	0
+	
+"3	LINE	0
+	
+"4	LINE	0
+	
+"5	LINE	0
+	
+"6	LINE	0
+	R.A. Fisher's _iris_ dataset, which contains measurements made in the 1930s of petal and sepal lengths of _iris virginica, iris setosa_ and _iris versicolor_ is a standard example for decision trees [@Fisher_1938].[^5.12] \index{dataset!iris}
+"7	LINE	0
+	1073
+<[^5.12]:  `Iris` is a very small dataset. It is definitely a pre-computational miniature, but that diminutive character makes it diagrammatically mobile.  It supports a rhizomatic ecosystem of examples scattered across the machine learning literature.    The usual framing of the classification problem is how to decide whether a given iris blossom is of the species _virginica_, _setosa_ or _versicolor_.   These irises don't grow in forests -- they are more often found in riverbanks and meadows --  but they do offer a variety of illustrations of how machine learning classifiers are brought to bear on classification problems. Here the classification problem is taxonomic - the  iris genus has various sub-genera, and sections within the sub-genera. _Setosa, _virginica_ and _versicolor_ all belong to the sub-genus _Limniris_. This botanical context is  routinely ignored in  machine learning applications. In machine learning textbooks and tutorials, iris typically would be used to demonstrate how cleanly a classifier can separate the different kinds of irises. 
+"8	LINE	0
+	[^5.06]:  Other `R` packages such as `party` [@Hothorn_2006] and `tree` [@Ripley_2014] also use recursive partitioning, but with various tweaks and optimisations that I leave aside here. 
+"9	LINE	0
+	
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 "a	CHAR	0
 	1072
 <\index{kittydar}\index{classification}\index{technicity}\index{generalization}\index{recursivity}\index{calculation}\index{technique}\index{calculation}\index{diagram}\index{categories}\index{problematisation}\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{\index{\index{generalization}\index{\index{\index{\index{\index{\index{\index{calculation}\index{technique}\index{calculation}\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{problematisation}\index{\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{linear regression}\index{machine learner|textbf}\index{generalization}\index{algorithm!primacy}\index{Google Trends}\index{artificial intelligence}\index{local regression}\index{facial recognition}\index{calculation}\index{technique}\index{calculation}\index{inner product}\index{data!training}\index{categories}\index{digital humanities}\index{decision tree}\index{problematisation}\index{scientific publications}\index{phronesis}\index{social physics}
@@ -208,6 +325,11 @@ $
 	ZqZqZqZqZqZqZZqZqZq
 ""-	CHAR	0
 	 
+=======
+	ZqZqZqZqZqZqZZqZq
+"-	CHAR	0
+	that 
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 # global variables:
 
@@ -525,6 +647,656 @@ $
 	+	8	71
 	+	5	52
 	+	6	102
+=======
+'0  2  0  /usr/share/zsh/functions/Completion/Unix/_git
+'1  101  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+'2  2  52  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+'3  34  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+'4  1  0  ~/Documents/document-archive/.git/MERGE_MSG
+'5  32  27  ~/gitpush.sh
+'6  29  0  ~/dotfile/gitpush.sh
+'7  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+'8  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
+'9  1  0  ~/Documents/data_intensive/book/support/to_do.md
+
+# Jumplist (newest first):
+-'  2  0  /usr/share/zsh/functions/Completion/Unix/_git
+-'  1  0  /usr/share/zsh/functions/Completion/Unix/_git
+-'  101  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  103  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  105  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  107  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  109  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  111  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  113  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  115  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  118  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  120  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  125  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  127  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  129  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  131  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  133  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  135  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  137  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  139  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  141  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  143  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  145  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  161  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  162  449  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  106  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  165  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  167  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  169  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  171  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  176  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  178  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  163  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  117  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  6  93  ~/Documents/notes/abbott_time_matters.md
+-'  31  589  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  100  801  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  3  97  ~/Documents/data_intensive/book/control_vocab.sh
+-'  98  501  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  96  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  91  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  89  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  88  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  79  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  69  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  67  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  60  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  59  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  2  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  14  6  ~/Documents/data_intensive/book/chapter_list_rmd.txt
+-'  4  0  ~/Documents/data_intensive/book/control_vocab.sh
+-'  233  6  ~/Documents/data_intensive/book/index_fin.md
+-'  250  0  ~/Documents/data_intensive/book/index.md
+-'  1  0  ~/Documents/data_intensive/book/chapter_list_rmd.txt
+-'  1  0  ~/Documents/data_intensive/book/chapter_list.txt
+-'  14  0  ~/Documents/data_intensive/book/chapter_list.txt
+-'  4  32  ~/Documents/data_intensive/book/chapter_list.txt
+-'  5  33  ~/Documents/data_intensive/book/control_vocab.sh
+-'  317  6  ~/Documents/data_intensive/book/index_fin.md
+-'  1  0  ~/Documents/data_intensive/book/index_fin.md
+-'  2  52  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  372  335  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  308  483  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  205  648  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  203  357  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  193  38  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+-'  192  26  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+
+# History of marks within files (newest to oldest):
+
+> /usr/share/zsh/functions/Completion/Unix/_git
+	"	2	0
+	.	2	0
+	+	1	0
+	+	2	0
+
+> ~/Documents/data_intensive/book/index_fin.md
+	"	233	6
+
+> ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
+	"	23	2601
+	^	23	2602
+	.	23	2601
+	+	58	283
+	+	58	30
+	+	56	38
+	+	57	37
+	+	359	43
+	+	56	38
+	+	58	15
+	+	56	38
+	+	58	15
+	+	402	39
+	+	402	139
+	+	397	200
+	+	402	213
+	+	2	0
+	+	23	954
+	+	41	167
+	+	137	0
+	+	140	0
+	+	405	27
+	+	406	20
+	+	389	67
+	+	397	152
+	+	397	136
+	+	395	0
+	+	394	0
+	+	395	79
+	+	396	0
+	+	397	155
+	+	397	0
+	+	397	0
+	+	397	21
+	+	402	39
+	+	397	20
+	+	397	155
+	+	398	0
+	+	396	49
+	+	399	45
+	+	399	51
+	+	402	39
+	+	405	0
+	+	402	50
+	+	404	21
+	+	289	33
+	+	290	0
+	+	290	0
+	+	290	57
+	+	402	11
+	+	393	0
+	+	396	17
+	+	402	18
+	+	400	0
+	+	396	27
+	+	396	28
+	+	402	29
+	+	399	73
+	+	402	29
+	+	399	69
+	+	403	21
+	+	404	25
+	+	397	24
+	+	403	38
+	+	397	17
+	+	403	12
+	+	397	19
+	+	397	3
+	+	403	3
+	+	397	0
+	+	403	0
+	+	396	17
+	+	397	18
+	+	395	74
+	+	402	0
+	+	399	74
+	+	404	19
+	+	399	0
+	+	395	74
+	+	18	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	19	0
+	+	20	0
+	+	19	89
+	+	23	547
+	+	19	129
+	+	21	955
+	+	23	2449
+	+	37	1408
+	+	37	1463
+	+	23	2471
+	+	421	22
+	+	423	194
+	+	411	0
+	+	408	0
+	+	423	348
+	+	23	1574
+	+	23	1013
+	+	23	2573
+	+	23	0
+	+	23	2601
+	a	21	0
+	b	23	111
+	c	37	0
+	d	39	163
+	e	41	162
+	f	47	0
+	g	178	56
+	h	180	388
+	i	206	74
+	j	210	0
+	k	217	0
+	l	226	0
+	m	228	0
+	n	232	0
+	o	236	153
+	p	267	150
+	q	293	870
+	r	299	2034
+	s	301	0
+	t	370	0
+	u	376	0
+	v	409	4
+	x	411	0
+	y	413	0
+	z	415	0
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
+	"	125	592
+	^	125	593
+	.	125	592
+	+	102	0
+	+	102	866
+	+	102	0
+	+	102	1015
+	+	102	1282
+	+	103	574
+	+	103	0
+	+	103	616
+	+	103	0
+	+	103	624
+	+	103	0
+	+	103	642
+	+	103	472
+	+	103	363
+	+	103	0
+	+	172	0
+	+	174	0
+	+	103	0
+	+	102	855
+	+	80	0
+	+	81	0
+	+	86	12
+	+	83	75
+	+	84	77
+	+	85	20
+	+	88	204
+	+	28	0
+	+	29	106
+	+	30	0
+	+	28	0
+	+	27	160
+	+	27	0
+	+	27	204
+	+	29	107
+	+	29	0
+	+	29	150
+	+	29	0
+	+	29	185
+	+	104	506
+	+	104	0
+	+	104	514
+	+	104	0
+	+	104	532
+	+	104	744
+	+	104	0
+	+	105	0
+	+	108	0
+	+	106	688
+	+	102	1464
+	+	102	0
+	+	102	1483
+	+	106	1046
+	+	106	0
+	+	106	1084
+	+	104	535
+	+	104	0
+	+	104	569
+	+	106	58
+	+	106	320
+	+	106	988
+	+	108	9
+	+	108	0
+	+	106	1032
+	+	106	0
+	+	106	1076
+	+	108	0
+	+	176	0
+	+	175	0
+	+	108	223
+	+	108	0
+	+	108	241
+	+	108	154
+	+	108	0
+	+	178	0
+	+	177	0
+	+	178	74
+	+	178	1051
+	+	178	0
+	+	178	1069
+	+	108	0
+	+	115	0
+	+	116	0
+	+	108	0
+	+	115	0
+	+	108	0
+	+	117	11
+	+	117	102
+	+	117	0
+	+	117	124
+	+	121	112
+	+	121	0
+	+	121	137
+	+	125	180
+	+	125	0
+	+	125	188
+	+	125	0
+	+	125	201
+	+	125	526
+	+	125	0
+	+	125	592
+	a	31	0
+	c	47	0
+	d	53	0
+	e	59	0
+	f	79	0
+	g	88	0
+	h	96	0
+	i	102	0
+	j	104	327
+	k	106	50
+	l	115	172
+	m	117	0
+	z	156	397
+
+> ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
+	"	204	0
+	^	26	1102
+	.	245	229
+	+	132	402
+	+	132	861
+	+	132	1020
+	+	134	211
+	+	141	570
+	+	31	706
+	+	229	706
+	+	229	0
+	+	230	0
+	+	229	726
+	+	14	7
+	+	18	45
+	+	19	116
+	+	21	111
+	+	22	49
+	+	19	151
+	+	20	71
+	+	112	516
+	+	259	27
+	+	260	15
+	+	266	11
+	+	266	11
+	+	266	7
+	+	266	7
+	+	265	34
+	+	265	0
+	+	266	0
+	+	267	0
+	+	267	22
+	+	268	20
+	+	267	21
+	+	268	12
+	+	273	0
+	+	269	22
+	+	270	20
+	+	273	0
+	+	273	0
+	+	271	0
+	+	272	0
+	+	267	0
+	+	264	0
+	+	256	0
+	+	271	0
+	+	280	0
+	+	19	191
+	+	287	0
+	+	290	38
+	+	291	21
+	+	293	55
+	+	299	24
+	+	301	0
+	+	302	0
+	+	301	27
+	+	302	27
+	+	305	22
+	+	309	0
+	+	311	28
+	+	312	22
+	+	287	3
+	+	289	52
+	+	290	0
+	+	287	0
+	+	280	29
+	+	273	0
+	+	267	16
+	+	268	18
+	+	266	0
+	+	25	1153
+	+	244	250
+	+	233	233
+	+	43	105
+	+	46	0
+	+	47	6
+	+	53	0
+	+	47	0
+	+	48	0
+	+	49	73
+	+	50	250
+	+	51	19
+	+	49	61
+	+	35	16
+	+	25	1121
+	+	244	233
+	+	108	983
+	+	16	82
+	+	25	714
+	+	56	410
+	+	56	694
+	+	3	16
+	+	5	0
+	+	8	0
+	+	7	0
+	+	9	0
+	+	17	24
+	+	25	0
+	+	26	0
+	+	26	1089
+	+	26	0
+	+	26	1102
+	+	245	229
+
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+	"	186	1547
+	^	186	1548
+	.	186	1547
+	+	125	372
+	+	186	1547
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
+	"	101	0
+	.	27	0
+	+	22	0
+	+	27	0
+	h	164	0
+
+> ~/Documents/data_intensive/book/control_vocab.sh
+	"	8	107
+	^	8	108
+	.	8	107
+	+	4	0
+	+	5	0
+	+	4	12
+	+	5	16
+	+	4	25
+	+	5	21
+	+	3	113
+	+	3	0
+	+	6	13
+	+	7	0
+	+	3	66
+	+	8	42
+	+	10	40
+	+	3	67
+	+	8	0
+	+	9	0
+	+	8	64
+	+	3	109
+	+	8	0
+	+	8	107
+
+> ~/Documents/data_intensive/book/chapter_list.txt
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/book/chapter_list_rmd.txt
+	"	14	6
+	.	1	6
+	+	1	6
+
+> ~/Documents/data_intensive/book/index.md
+	"	250	0
+
+> ~/Documents/notes/abbott_time_matters.md
+	"	6	93
+
+> ~/Documents/notes/savage_descriptive_2009.md
+	"	3	395
+	.	4	0
+	+	3	158
+	+	3	238
+	+	3	318
+	+	3	395
+	+	4	0
+
+> ~/Documents/notes/whiteheadmodes.md
+	"	43	62
+	^	10	0
+	.	10	0
+	+	10	0
+
+> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
+	"	7	0
+	^	83	296
+	.	83	295
+	+	311	381
+	+	311	527
+	+	311	913
+	+	311	1230
+	+	311	0
+	+	311	1251
+	+	311	1565
+	+	311	0
+	+	311	1586
+	+	311	1478
+	+	311	1735
+	+	311	0
+	+	311	1755
+	+	311	2151
+	+	311	0
+	+	312	0
+	+	311	2216
+	+	313	805
+	+	317	0
+	+	313	881
+	+	313	57
+	+	313	504
+	+	315	0
+	+	313	1183
+	+	311	2219
+	+	311	2442
+	+	44	563
+	+	44	1820
+	+	44	1887
+	+	44	0
+	+	44	1943
+	+	48	894
+	+	48	1322
+	+	48	2670
+	+	50	95
+	+	50	287
+	+	50	0
+	+	50	555
+	+	50	747
+	+	64	0
+	+	64	720
+	+	64	654
+	+	64	919
+	+	64	1132
+	+	64	2241
+	+	67	0
+	+	66	444
+	+	66	796
+	+	66	0
+	+	66	823
+	+	66	998
+	+	66	1246
+	+	67	0
+	+	67	0
+	+	363	0
+	+	364	0
+	+	68	0
+	+	67	0
+	+	66	802
+	+	66	1180
+	+	66	1007
+	+	77	271
+	+	77	0
+	+	64	2588
+	+	64	0
+	+	64	2633
+	+	64	0
+	+	64	2640
+	+	64	0
+	+	64	2698
+	+	77	267
+	+	280	0
+	+	298	0
+	+	302	0
+	+	308	0
+	+	310	0
+	+	280	0
+	+	298	0
+	+	68	0
+	+	74	0
+	+	84	0
+	+	86	0
+	+	84	0
+	+	64	2674
+	+	75	1189
+	+	44	1908
+	+	199	0
+	+	157	0
+	+	117	0
+	+	101	0
+	+	305	123
+	+	305	793
+	+	305	0
+	+	305	761
+	+	343	0
+	+	346	1
+	+	345	63
+	+	348	141
+	+	349	4
+	+	83	295
+	a	23	0
+	b	27	75
+	c	33	0
+	d	48	1068
+	e	50	0
+	f	64	0
+	g	66	0
+	h	75	0
+	i	77	0
+	j	79	0
+	k	81	0
+	l	83	167
+	m	87	0
+	n	98	79
+	o	106	58
+	p	316	220
+	q	238	0
+	r	240	0
+	s	244	0
+	t	257	0
+	u	259	0
+	v	265	0
+	w	269	0
+	x	271	61
+	y	277	0
+	z	305	971
+
+> ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old_old.rmd
+	"	11	0
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 > ~/Documents/data_intensive/book/support/[Vundle] Installer
 	"	33	0
@@ -912,6 +1684,215 @@ $
 
 > ~/Documents/notes/balibar.md
 	"	6	60
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
+	"	176	0
+	^	133	29
+	.	133	28
+	+	287	5
+	+	281	896
+	+	281	2026
+	+	281	0
+	+	281	2034
+	+	281	0
+	+	281	2069
+	+	284	514
+	+	284	1071
+	+	284	0
+	+	284	1113
+	+	287	457
+	+	287	0
+	+	287	497
+	+	296	9
+	+	303	124
+	+	305	527
+	+	305	0
+	+	305	561
+	+	309	370
+	+	309	0
+	+	309	400
+	+	272	12
+	+	272	145
+	+	272	239
+	+	264	601
+	+	266	115
+	+	266	0
+	+	266	289
+	+	88	992
+	+	88	1149
+	+	93	0
+	+	266	636
+	+	266	1035
+	+	268	446
+	+	270	24
+	+	270	295
+	+	271	0
+	+	270	338
+	+	270	471
+	+	223	1001
+	+	264	920
+	+	264	0
+	+	265	0
+	+	270	1187
+	+	272	91
+	+	272	468
+	+	272	306
+	+	272	554
+	+	272	0
+	+	273	0
+	+	272	598
+	+	272	0
+	+	272	629
+	+	272	367
+	+	272	583
+	+	272	127
+	+	134	0
+	+	191	14
+	+	196	64
+	+	197	19
+	+	198	3
+	+	194	52
+	+	195	0
+	+	194	44
+	+	193	32
+	+	204	67
+	+	208	0
+	+	209	0
+	+	211	58
+	+	210	70
+	+	204	70
+	+	7	50
+	+	37	42
+	+	37	26
+	+	37	18
+	+	42	93
+	+	42	12
+	+	42	8
+	+	42	20
+	+	37	0
+	+	42	33
+	+	42	0
+	+	40	30
+	+	42	0
+	+	37	0
+	+	41	2
+	+	56	22
+	+	57	0
+	+	52	42
+	+	57	0
+	+	55	17
+	+	56	30
+	+	54	11
+	+	196	0
+	+	191	0
+	+	198	0
+	+	199	9
+	+	163	40
+	+	133	28
+	a	24	748
+	b	33	0
+	c	61	0
+	d	67	0
+	e	69	588
+	f	77	0
+	g	88	0
+	h	92	41
+	i	98	41
+	j	104	0
+	k	121	486
+	l	125	0
+	m	150	0
+	n	152	0
+	o	169	0
+	p	180	0
+	q	185	39
+	r	187	0
+	s	217	60
+	t	219	997
+	u	223	264
+	v	225	602
+	w	227	0
+	x	242	351
+	y	261	1423
+	z	264	736
+
+> ~/dsi/social_theme_revised.md
+	"	5	1
+	^	5	2
+	.	5	1
+	+	8	0
+	+	6	0
+	+	1	21
+	+	3	115
+	+	4	111
+	+	5	1
+
+> ~/Documents/notes/wasserman_all_of_stat2003.md
+	"	13	21
+
+> ~/Documents/notes/foucault_archaeology.md
+	"	38	526
+	.	38	526
+	+	38	526
+
+> ~/Documents/notes/foucault_care_self_1988.md
+	"	2	0
+	^	2	0
+	.	2	0
+	+	2	0
+
+> ~/Documents/notes/foucault_discipline_1977.md
+	"	12	1
+
+> ~/Documents/notes/foucault_order.md
+	"	28	393
+
+> ~/Documents/notes/foucault_will_to_knowledge.md
+	"	34	381
+	^	4	22
+	.	4	21
+	+	4	21
+
+> ~/Documents/notes/lazzarato_signs_machines_2014.md
+	"	5	103
+
+> ~/Documents/data_intensive/book/ch4_probability/structure.md
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
+	"	43	0
+	.	40	0
+	+	40	0
+
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions_old.rmd
+	"	1	0
+	.	21	0
+	+	24	1025
+	+	24	0
+	+	24	0
+	+	248	0
+	+	17	3363
+	+	17	0
+	+	22	0
+	+	20	0
+	+	21	0
+	h	249	798
+
+> ~/Documents/data_intensive/book/ch3_curves/function_notes.md
+	"	1	0
+
+> ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.md
+	"	265	3
+
+> ~/Documents/teaching/socl201-methods/datasets/datasets.md
+	"	2	0
+	^	2	0
+	.	2	0
+	+	1	73
+	+	2	0
+
+> ~/Documents/teaching/socl201-methods/datasets/oecd_better_life_country-stats.tsv
+	"	1	0
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 > ~/Documents/notes/benjamin_work_of_art.md
 	"	98	1717
@@ -1046,6 +2027,8 @@ $
 	y	413	0
 	z	415	0
 
+=======
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 > ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 	"	1	0
 	^	269	962
@@ -2063,3 +3046,186 @@ $
 
 > ~/rsvn.log
 	"	968	0
+
+> /usr/share/vim/vim74/doc/starting.txt
+	"	1475	58
+
+> ~/test/indexterms.md
+	"	3	0
+	.	1	0
+	+	1	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	71	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	71	0
+	+	1	0
+	+	1	0
+	+	1	1069
+	+	1	0
+
+> ~/Documents/teaching/ugdirecting/nss/nss_day.md
+	"	25	0
+	^	25	0
+	.	25	0
+	+	6	6
+	+	8	43
+	+	9	31
+	+	10	17
+	+	11	76
+	+	12	5
+	+	6	0
+	+	1	0
+	+	4	0
+	+	1	9
+	+	3	25
+	+	12	112
+	+	12	196
+	+	13	4
+	+	15	26
+	+	16	4
+	+	15	1
+	+	17	74
+	+	18	30
+	+	20	7
+	+	21	32
+	+	22	1
+	+	21	0
+	+	23	0
+	+	24	8
+	+	25	0
+
+> ~/Documents/data_intensive/book/mybook.sty
+	"	97	0
+	.	14	0
+	+	23	24
+	+	27	33
+	+	24	24
+	+	25	0
+	+	27	0
+	+	26	40
+	+	23	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	23	16
+	+	24	16
+	+	25	16
+	+	26	16
+	+	27	16
+	+	11	27
+	+	12	0
+	+	12	0
+	+	15	0
+	+	12	0
+	+	11	0
+	+	18	0
+	+	12	0
+	+	11	0
+	+	29	0
+	+	29	19
+	+	12	0
+	+	11	0
+	+	28	0
+	+	23	0
+	+	29	0
+	+	30	0
+	+	30	0
+	+	30	0
+	+	30	0
+	+	30	0
+	+	30	0
+	+	23	0
+	+	13	19
+	+	23	0
+	+	23	18
+	+	23	17
+	+	24	26
+	+	25	26
+	+	26	26
+	+	27	26
+	+	15	0
+	+	25	17
+	+	26	17
+	+	27	17
+	+	8	20
+	+	23	20
+	+	21	10
+	+	23	0
+	+	23	0
+	+	22	0
+	+	23	0
+	+	22	0
+	+	23	17
+	+	23	0
+	+	19	0
+	+	23	0
+	+	9	0
+	+	4	13
+	+	5	21
+	+	6	20
+	+	7	18
+	+	91	55
+	+	90	0
+	+	95	0
+	+	93	0
+	+	92	17
+	+	103	32
+	+	103	0
+	+	103	9
+	+	92	0
+	+	93	0
+	+	103	0
+	+	104	0
+	+	37	0
+	+	95	46
+	+	95	0
+	+	95	0
+	+	95	0
+	+	106	0
+	+	15	0
+	+	20	0
+	+	14	0
+
+> /usr/share/vim/vim74/doc/syntax.txt
+	"	4839	7
+
+> /usr/share/vim/vim74/doc/tagsrch.txt
+	"	633	40
+
+> /usr/share/vim/vim74/doc/pattern.txt
+	"	1378	28
+
+> ~/Documents/data_intensive/book/ch2_vector/[Vundle] Installer
+	"	29	0
+	.	1	0
+	+	1	0
+
+> ~/Documents/data_intensive/book/ch1_learning/ch_praxis_old.rmd
+	"	1	0
+	.	315	0
+	+	270	0
+	+	315	0
+	+	315	0
+	h	377	0
+
+> /usr/share/vim/vim74/doc/motion.txt
+	"	898	31
+	a	837	5
+
+> /tmp/.fr-HGeQ25/Untitled.md
+	"	41	0
+>>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
