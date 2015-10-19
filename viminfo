@@ -49,7 +49,6 @@ $
 :bp
 :b21
 :b22
-=======
 :reg
 :b7
 :b22
@@ -133,7 +132,6 @@ $
 ?/\\index{\w+[ !]?
 ? \Vnn\%#
 ? \<The\>
-=======
 :e foucault_archaeology.md
 :e ~/notes/wasserman_all_of_stat2003.md
 :e lazzarato_signs_machines_2014.md
@@ -223,7 +221,6 @@ $
 ?/gradient
 ?/3.41
 ?/view
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 # Expression History (newest to oldest):
 
@@ -274,7 +271,6 @@ $
 	
 "9	LINE	0
 	[^5.112]: _Elements of Statistical Learning_ also devotes a chapter to support vector machines [@Hastie_2009, Chapter 14]
-=======
 	cat chapter_list_rmd.txt | xargs grep -E  -h -o --include \*.rmd '\\index{((\w+(, )?)+!?(\w+ ?))+(\|seealso{(\w+ ?)+})?}' > index.md
 	sort index.md > index_u.md
 	uniq -c index_u.md > index_fin.md 
@@ -295,7 +291,6 @@ $
 	[^5.06]:  Other `R` packages such as `party` [@Hothorn_2006] and `tree` [@Ripley_2014] also use recursive partitioning, but with various tweaks and optimisations that I leave aside here. 
 "9	LINE	0
 	
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 "a	CHAR	0
 	1072
 <\index{kittydar}\index{classification}\index{technicity}\index{generalization}\index{recursivity}\index{calculation}\index{technique}\index{calculation}\index{diagram}\index{categories}\index{problematisation}\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{\index{\index{generalization}\index{\index{\index{\index{\index{\index{\index{calculation}\index{technique}\index{calculation}\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{\index{problematisation}\index{\index{phronesis}\index{\index{\index{kittydar}\index{classification}\index{linear regression}\index{machine learner|textbf}\index{generalization}\index{algorithm!primacy}\index{Google Trends}\index{artificial intelligence}\index{local regression}\index{facial recognition}\index{calculation}\index{technique}\index{calculation}\index{inner product}\index{data!training}\index{categories}\index{digital humanities}\index{decision tree}\index{problematisation}\index{scientific publications}\index{phronesis}\index{social physics}
@@ -325,11 +320,9 @@ $
 	ZqZqZqZqZqZqZZqZqZq
 ""-	CHAR	0
 	 
-=======
 	ZqZqZqZqZqZqZZqZq
 "-	CHAR	0
 	that 
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 # global variables:
 
@@ -647,87 +640,8 @@ $
 	+	8	71
 	+	5	52
 	+	6	102
-=======
-'0  2  0  /usr/share/zsh/functions/Completion/Unix/_git
-'1  101  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
-'2  2  52  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
-'3  34  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
-'4  1  0  ~/Documents/document-archive/.git/MERGE_MSG
-'5  32  27  ~/gitpush.sh
-'6  29  0  ~/dotfile/gitpush.sh
-'7  217  8  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
-'8  3  123  ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
-'9  1  0  ~/Documents/data_intensive/book/support/to_do.md
 
 # Jumplist (newest first):
--'  2  0  /usr/share/zsh/functions/Completion/Unix/_git
--'  1  0  /usr/share/zsh/functions/Completion/Unix/_git
--'  101  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  103  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  105  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  107  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  109  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  111  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  113  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  115  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  118  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  120  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  125  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  127  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  129  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  131  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  133  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  135  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  137  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  139  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  141  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  143  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  145  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  161  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  162  449  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  106  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  165  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  167  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  169  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  171  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  176  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  178  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  163  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  117  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  6  93  ~/Documents/notes/abbott_time_matters.md
--'  31  589  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  100  801  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  3  97  ~/Documents/data_intensive/book/control_vocab.sh
--'  98  501  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  96  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  91  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  89  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  88  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  79  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  69  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  67  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  60  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  59  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  2  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  1  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  14  6  ~/Documents/data_intensive/book/chapter_list_rmd.txt
--'  4  0  ~/Documents/data_intensive/book/control_vocab.sh
--'  233  6  ~/Documents/data_intensive/book/index_fin.md
--'  250  0  ~/Documents/data_intensive/book/index.md
--'  1  0  ~/Documents/data_intensive/book/chapter_list_rmd.txt
--'  1  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  14  0  ~/Documents/data_intensive/book/chapter_list.txt
--'  4  32  ~/Documents/data_intensive/book/chapter_list.txt
--'  5  33  ~/Documents/data_intensive/book/control_vocab.sh
--'  317  6  ~/Documents/data_intensive/book/index_fin.md
--'  1  0  ~/Documents/data_intensive/book/index_fin.md
--'  2  52  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  372  335  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  308  483  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  205  648  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  203  357  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  193  38  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
--'  192  26  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old.rmd
 
 # History of marks within files (newest to oldest):
 
@@ -1296,7 +1210,6 @@ $
 
 > ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance_old_old.rmd
 	"	11	0
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 > ~/Documents/data_intensive/book/support/[Vundle] Installer
 	"	33	0
@@ -1892,7 +1805,6 @@ $
 
 > ~/Documents/teaching/socl201-methods/datasets/oecd_better_life_country-stats.tsv
 	"	1	0
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 
 > ~/Documents/notes/benjamin_work_of_art.md
 	"	98	1717
@@ -2027,8 +1939,6 @@ $
 	y	413	0
 	z	415	0
 
-=======
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
 > ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 	"	1	0
 	^	269	962
@@ -3228,4 +3138,3 @@ $
 
 > /tmp/.fr-HGeQ25/Untitled.md
 	"	41	0
->>>>>>> 73614b462189f40fad3eba33c033f3c6083b5a03
