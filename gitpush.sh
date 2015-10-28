@@ -27,9 +27,9 @@ git commit -a -m 'adding new posts'
 git status -s
 git push
 
-cd ~/document-archive/
+cd ~/archive/
 echo pushing document-archive
-git add ~/document-archive/*.pdf
+git add ~/archive/*.pdf
 git commit -a -m 'new pdfs'
 #git status -s
 git push

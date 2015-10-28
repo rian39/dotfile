@@ -17,6 +17,7 @@
 $#
 
 # Command Line History (newest to oldest):
+:e gitpull.sh
 :buffer 24
 :bd
 :%s/##/#/gc
@@ -255,7 +256,7 @@ $#
 # Registers:
 "0	LINE	0
 	\addbibresource{./ref_bibs/data_forms_thought.bib}
-""1	LINE	0
+"1	LINE	0
 	\addbibresource{./ref_bibs/uni.bib}
 "2	LINE	0
 	%\subfile{ch2_vector/ch.tex}
@@ -326,8 +327,8 @@ $#
 	vv
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZqZq
-"-	CHAR	0
-	.bib
+""-	CHAR	0
+	document-
 
 # global variables:
 
@@ -358,18 +359,21 @@ $#
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 'Z  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects_old.rmd
-'0  108  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'1  3  0  ~/Documents/data_intensive/book/md_to_latex.sh
-'2  85  6  ~/Documents/data_intensive/book/index_fin.md
-'3  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
-'4  31  0  ~/Documents/data_intensive/book/ml_lit/amalgamate_all_records.py
-'5  1  0  ~/Documents/imaginaries_cesagen_2010/scripts/year_term.txt
-'6  1  0  ~/Documents/imaginaries_cesagen_2010/scripts/network4.r
-'7  5  230  ~/Documents/notes/beniger_control.md
-'8  12  23  ~/Documents/data_intensive/book/ml_lit/discipline_cross.r
-'9  100  1673  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'0  24  5  ~/dotfile/gitpull.sh
+'1  108  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'2  3  0  ~/Documents/data_intensive/book/md_to_latex.sh
+'3  85  6  ~/Documents/data_intensive/book/index_fin.md
+'4  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
+'5  31  0  ~/Documents/data_intensive/book/ml_lit/amalgamate_all_records.py
+'6  1  0  ~/Documents/imaginaries_cesagen_2010/scripts/year_term.txt
+'7  1  0  ~/Documents/imaginaries_cesagen_2010/scripts/network4.r
+'8  5  230  ~/Documents/notes/beniger_control.md
+'9  12  23  ~/Documents/data_intensive/book/ml_lit/discipline_cross.r
 
 # Jumplist (newest first):
+-'  24  5  ~/dotfile/gitpull.sh
+-'  32  10  ~/dotfile/gitpush.sh
+-'  1  0  ~/dotfile/gitpush.sh
 -'  108  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  100  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  65  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -432,8 +436,33 @@ $#
 -'  247  2  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 -'  130  416  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 -'  79  1994  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
+-'  101  0  ~/Documents/data_intensive/book/mybook.sty
+-'  102  0  ~/Documents/data_intensive/book/mybook.sty
+-'  3  0  ~/Documents/data_intensive/book/control_vocab.sh
+-'  37789  0  ~/Documents/ref_bibs/uni.bib
+-'  2000  2  ~/Documents/ref_bibs/uni.bib
+-'  200  0  ~/Documents/ref_bibs/uni.bib
+-'  513  2  ~/Documents/ref_bibs/uni.bib
 
 # History of marks within files (newest to oldest):
+
+> ~/dotfile/gitpush.sh
+	"	32	10
+	^	29	0
+	.	32	10
+	+	10	27
+	+	13	16
+	+	25	15
+	+	10	0
+	+	30	0
+	+	29	0
+	+	30	5
+	+	32	10
+
+> ~/dotfile/gitpull.sh
+	"	24	5
+	.	19	5
+	+	19	5
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 	"	108	1585
@@ -2486,17 +2515,6 @@ $#
 	+	2	4
 	+	32	27
 
-> ~/dotfile/gitpush.sh
-	"	29	0
-	^	29	0
-	.	29	0
-	+	10	27
-	+	13	16
-	+	25	15
-	+	10	0
-	+	30	0
-	+	29	0
-
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 	"	1	0
 
@@ -2533,6 +2551,3 @@ $#
 	+	3	521
 	+	4	0
 	+	3	622
-
-> ~/Documents/notes/wasserman_all_of_stat2003.md
-	"	13	21
