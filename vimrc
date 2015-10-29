@@ -104,6 +104,9 @@ hi comment ctermfg=blue
 :map <Up> gk
 :map <Down> gj
 
+"next buffer
+:nnoremap <F6> :bn<CR>
+
 "pandoc plugin files
 
 "let g:pandoc#filetypes#handled = ['

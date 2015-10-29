@@ -16,7 +16,7 @@ git status -s
 git pull
 echo done ref_bibs ok
 
-cd ~/document-archive/
+cd ~/archive/
 echo ----------------------------
 echo fetching document-archive
 echo ----------------------------
