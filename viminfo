@@ -8,15 +8,16 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/#
+~MSle0~/1.001
 
 # Last Substitute Search Pattern:
 ~MSle0&##
 
 # Last Substitute String:
-$#
+$
 
 # Command Line History (newest to oldest):
+:e ch_introduction_recent.rmd
 :e gitpull.sh
 :buffer 24
 :bd
@@ -131,17 +132,26 @@ $#
 :e foucault_care_self_1988.md
 
 # Search String History (newest to oldest):
+? \Vml\%#
+? \Vie\%#
+?/1.001
+?/0.301
+? \Vlda\%#
+?/machine learn\(ing\|er\)
+?/machine learn\(ing|er\)
+?/machine learn(ing!er)
+?/machine learning
+? \Vmlr\%#
+? \Vmlrs\%#
+? \Vsvm\%#
+?/HERE
 ?/#
 ?/##
 ? ##
 ?/\.tex
-? \Vml\%#
-? \Vie\%#
 ?/2.41
 ?/back
 ?/\\-
-? \Vmlr\%#
-? \Vmlrs\%#
 ? \<optimism\>
 ?/Berl
 ? \<index\>
@@ -161,8 +171,6 @@ $#
 ?/15
 ? \<dimensionality\>
 ?/dimensionality
-?/HERE
-? \Vlda\%#
 ?/epistemologi
 ? \Vrf\%#
 ?/Mackenzie
@@ -186,7 +194,6 @@ $#
 ?/intern
 ?/<<<<<
 ?/partial ob
-? \Vsvm\%#
 ? \Vdt\%#
 ? \Vlr\%#
 ? \Vlogr\%#
@@ -255,54 +262,28 @@ $#
 
 # Registers:
 "0	LINE	0
-	\addbibresource{./ref_bibs/data_forms_thought.bib}
-"1	LINE	0
-	\addbibresource{./ref_bibs/uni.bib}
-"2	LINE	0
-	%\subfile{ch2_vector/ch.tex}
-	%\subfile{ch3_curves/ch.tex}
-	%\subfile{ch4_probability/ch.tex}
-	%\cleardoublepage \phantomsection \addcontentsline{toc}{chapter}{Part II}
-	%\part*{Modes of dispersion}
-	%\subfile{part2.tex}
-	%\subfile{ch5_dimensionality/ch.tex}
-	%\subfile{ch6_topologies/ch.tex}
-	%\subfile{ch7_subjects/ch.tex}
-	%\subfile{ch8_conclusion/ch.tex}
+	897
+<In various scholarly and political debates around changes business, media, education, health, government or science, quasi-omnipotent agency has been imputed to algorithms  \index{algorithm!primacy} [@Pasquinelli_2014;@Neyland_2014;@Totaro_2014;@Smith_2013; @Beer_2013;@Fuller_2012;@Wilf_2013; @Barocas_2013; @Gillespie_2014; @Galloway_2004] \index{Gillespie, Tarleton} or sometimes just 'the algorithm.' The power of algorithms in the academic literature are understood in different ways, but there is general agreement that these techniques are powerful, or at least, can bear down heavily on people's lives and conduct. In what does this power consist? What imbues algorithms with power? Is there some general  or 'breakout' feature such as recursivity \index{algorithm!recursivity}) or abstraction \index{abstraction!in algorithms}  that configures contemporary rationality algorithmically?
+"1	CHAR	0
+	\begin{figure}
+	  \centering
+	      \includegraphics[width=0.9\textwidth]{figure/machine_learning_over_time-1.pdf}
+	        \caption{Machine learners in scientific literature. 
+"2	CHAR	0
+	what comes together in it. 
 "3	LINE	0
-	%\addcontentsline{toc}{chapter}{mlrs}
-	%\addcontentsline{toc}{chapter}{general}
-	%\printindex{mlrs}{Machine learners}
+	[^1.001]: Carl Benedikt Frey and Michael Osborne model the chances of occupational change for 700 occupations using, aptly enough, the machine learning technique of Gaussian Processes [@Frey_2013]. 
 "4	LINE	0
-	%\subfile{ch2_vector/ch.tex}
-	%\subfile{ch3_curves/ch.tex}
-	%\subfile{ch4_probability/ch.tex}
-	%\cleardoublepage \phantomsection \addcontentsline{toc}{chapter}{Part II}
-	%\part*{Modes of dispersion}
-	%\subfile{part2.tex}
-	%\subfile{ch5_dimensionality/ch.tex}
-	%\subfile{ch6_topologies/ch.tex}
-	%\subfile{ch7_subjects/ch.tex}
-	%\subfile{ch8_conclusion/ch.tex}
+	library(ggplot2)
 "5	LINE	0
-	%\subfile{ch2_vector/ch.tex}
-	%\subfile{ch3_curves/ch.tex}
-	%\subfile{ch4_probability/ch.tex}
-	%\cleardoublepage \phantomsection \addcontentsline{toc}{chapter}{Part II}
-	%\part*{Modes of dispersion}
-	%\subfile{part2.tex}
-	%\subfile{ch5_dimensionality/ch.tex}
-	%\subfile{ch6_topologies/ch.tex}
-	%\subfile{ch7_subjects/ch.tex}
+	
 "6	LINE	0
-	latexmk -C book.tex
+	HERE
 "7	LINE	0
-	\title{Machine Learning: Archaeology of a Data Practice}
-"8	CHAR	0
-	First, 
+	335
+<to add -- machine learning pulls big data into being; what are the precedents in trying to make sense of such things -- algorithms, epistemic objects, network society, feed forward, etc. Go back to Foucault to try to find propositions that help excavate the knowledges of order, distribution, ranking and estimation shaping up here.
 "9	LINE	0
-	482
-<The operation of optimism plays out directly in machine learning competitions. The leaderboard ranks efforts to drive down error rates through collective testings, the same efforts that perhaps first affected machine learning around handwritten digit recognition in the 1990s. Entrants work hard to optimise the generalization errors of their models, but Kaggle aligns their work in a bootstrap aggregating \index{bagging} that assigns subject positions according to error rates.
+	\addbibresource{./ref_bibs/uni.bib}
 "a	CHAR	0
 	\\index{((\w+[-, ]*)+!?(\w+[-, ]*))+(\|see(also)?{(\w+[-, ]*)+})?(\|[()])?}
 "b	CHAR	0
@@ -328,12 +309,11 @@ $#
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZqZq
 ""-	CHAR	0
-	document-
+	are
 
 # global variables:
 
 # File marks:
-'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 'B  1  0  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
 'C  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 'D  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
@@ -358,29 +338,43 @@ $#
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'Z  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects_old.rmd
-'0  24  5  ~/dotfile/gitpull.sh
-'1  108  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'2  3  0  ~/Documents/data_intensive/book/md_to_latex.sh
-'3  85  6  ~/Documents/data_intensive/book/index_fin.md
-'4  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
-'5  31  0  ~/Documents/data_intensive/book/ml_lit/amalgamate_all_records.py
-'6  1  0  ~/Documents/imaginaries_cesagen_2010/scripts/year_term.txt
-'7  1  0  ~/Documents/imaginaries_cesagen_2010/scripts/network4.r
-'8  5  230  ~/Documents/notes/beniger_control.md
-'9  12  23  ~/Documents/data_intensive/book/ml_lit/discipline_cross.r
+'0  1  0  /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
+'1  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+'2  17  5  ~/Documents/data_intensive/book/book.tex
+'3  1  0  /media/mackenza/overflow/rl1.py
+'4  24  5  ~/dotfile/gitpull.sh
+'5  104  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'6  3  0  ~/Documents/data_intensive/book/md_to_latex.sh
+'7  85  6  ~/Documents/data_intensive/book/index_fin.md
+'8  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
+'9  31  0  ~/Documents/data_intensive/book/ml_lit/amalgamate_all_records.py
 
 # Jumplist (newest first):
+-'  1  0  /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
+-'  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  215  16  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  212  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  248  78  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  109  1468  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  101  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  151  743  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  152  4  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
+-'  190  620  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  15  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  193  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  17  5  ~/Documents/data_intensive/book/book.tex
+-'  5  0  ~/Documents/data_intensive/book/book.tex
+-'  1  0  ~/Documents/data_intensive/book/book.tex
+-'  1  0  /media/mackenza/overflow/rl1.py
 -'  24  5  ~/dotfile/gitpull.sh
 -'  32  10  ~/dotfile/gitpush.sh
 -'  1  0  ~/dotfile/gitpush.sh
--'  108  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  100  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  104  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  65  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  174  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  148  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  111  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  101  0  ~/Documents/data_intensive/book/mybook.sty
 -'  102  0  ~/Documents/data_intensive/book/mybook.sty
 -'  109  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
@@ -428,7 +422,6 @@ $#
 -'  104  0  ~/Documents/data_intensive/book/mybook.sty
 -'  1  0  ~/Documents/data_intensive/book/mybook.sty
 -'  10  0  ~/Documents/data_intensive/book/build_latex_book.sh
--'  1  0  ~/Documents/data_intensive/book/book.tex
 -'  24  0  ~/Documents/data_intensive/book/book.tex
 -'  13  0  ~/Documents/data_intensive/book/build_latex_book.sh
 -'  3  0  ~/Documents/data_intensive/book/build_latex_book.sh
@@ -442,161 +435,143 @@ $#
 -'  37789  0  ~/Documents/ref_bibs/uni.bib
 -'  2000  2  ~/Documents/ref_bibs/uni.bib
 -'  200  0  ~/Documents/ref_bibs/uni.bib
--'  513  2  ~/Documents/ref_bibs/uni.bib
+-'  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  215  16  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  212  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  248  78  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  109  1468  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  101  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  151  743  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  152  4  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  190  620  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  15  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+-'  193  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
 
 # History of marks within files (newest to oldest):
 
-> ~/dotfile/gitpush.sh
-	"	32	10
-	^	29	0
-	.	32	10
-	+	10	27
-	+	13	16
-	+	25	15
-	+	10	0
-	+	30	0
-	+	29	0
-	+	30	5
-	+	32	10
-
-> ~/dotfile/gitpull.sh
-	"	24	5
-	.	19	5
-	+	19	5
+> /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
+	"	1	0
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-	"	108	1585
-	^	17	294
-	.	174	0
-	+	24	0
-	+	24	787
-	+	24	1269
-	+	24	1590
-	+	24	1981
-	+	54	0
-	+	55	0
-	+	54	452
-	+	54	0
-	+	55	0
-	+	60	0
-	+	60	0
-	+	60	0
-	+	60	196
-	+	60	1113
-	+	60	275
-	+	60	1176
-	+	60	1307
-	+	60	2023
-	+	60	0
-	+	60	2040
-	+	70	772
-	+	145	681
-	+	248	2
-	+	145	677
-	+	248	137
-	+	248	297
-	+	24	258
-	+	24	1181
-	+	54	136
-	+	54	21
-	+	54	554
-	+	64	309
-	+	64	475
-	+	60	806
-	+	60	0
-	+	60	819
-	+	80	376
-	+	60	371
-	+	60	0
-	+	60	429
-	+	60	0
-	+	61	0
-	+	60	496
-	+	60	0
-	+	60	509
-	+	60	687
-	+	60	0
-	+	60	702
-	+	60	0
-	+	61	0
-	+	60	773
-	+	60	0
-	+	60	789
-	+	60	0
-	+	60	809
-	+	60	1450
-	+	60	1700
-	+	60	1477
-	+	62	40
-	+	157	1231
-	+	173	862
-	+	174	0
-	+	234	555
-	+	234	0
-	+	234	586
-	+	58	130
-	+	145	27
-	+	109	1473
-	+	110	0
-	+	111	187
-	+	111	2
-	+	109	1468
-	+	111	0
-	+	250	0
-	+	251	0
-	+	230	646
-	+	64	14
-	+	64	516
-	+	64	361
-	+	64	503
-	+	64	0
-	+	64	561
-	+	64	0
-	+	64	609
-	+	64	1296
-	+	64	1379
-	+	64	1270
-	+	64	1386
-	+	17	0
-	+	17	252
-	+	17	0
-	+	17	259
-	+	17	0
-	+	17	293
-	+	65	0
-	+	100	0
-	+	111	0
-	+	148	0
-	+	174	0
-	a	24	0
-	b	54	71
-	c	60	54
-	d	64	0
-	e	66	0
-	f	70	23
-	g	80	0
-	h	97	749
-	i	101	328
-	j	105	0
-	k	114	0
-	l	118	116
-	m	141	925
-	n	143	701
-	o	145	137
-	p	147	929
-	q	155	315
-	r	157	101
-	s	159	343
-	t	165	0
-	u	171	137
-	v	177	808
-	w	181	159
-	x	225	0
-	y	227	0
-	z	229	0
+	"	77	634
+	^	77	605
+	.	77	605
+	+	77	769
+	+	86	398
+	+	102	0
+	+	103	0
+	+	101	2
+	+	75	1764
+	+	77	371
+	+	86	587
+	+	94	0
+	+	86	588
+	+	87	0
+	+	88	110
+	+	88	5
+	+	88	161
+	+	88	17
+	+	88	266
+	+	88	184
+	+	99	0
+	+	88	210
+	+	88	0
+	+	88	271
+	+	88	672
+	+	88	360
+	+	88	178
+	+	88	557
+	+	88	825
+	+	88	0
+	+	88	792
+	+	88	749
+	+	88	957
+	+	88	0
+	+	88	1060
+	+	88	275
+	+	88	0
+	+	88	340
+	+	88	0
+	+	88	363
+	+	88	0
+	+	88	0
+	+	88	370
+	+	88	870
+	+	88	1489
+	+	88	0
+	+	88	1601
+	+	88	1399
+	+	88	137
+	+	88	299
+	+	88	726
+	+	88	139
+	+	88	0
+	+	88	168
+	+	88	616
+	+	88	964
+	+	89	0
+	+	90	923
+	+	90	1178
+	+	93	0
+	+	92	329
+	+	92	526
+	+	92	329
+	+	92	604
+	+	92	329
+	+	92	681
+	+	92	329
+	+	92	381
+	+	90	848
+	+	91	0
+	+	92	329
+	+	93	0
+	+	92	521
+	+	92	912
+	+	94	36
+	+	95	0
+	+	92	585
+	+	92	713
+	+	92	915
+	+	69	52
+	+	92	127
+	+	92	0
+	+	92	169
+	+	92	374
+	+	92	0
+	+	92	397
+	+	88	909
+	+	75	165
+	+	77	161
+	+	77	0
+	+	85	0
+	+	75	1721
+	+	75	1501
+	+	77	126
+	+	78	0
+	+	79	0
+	+	80	0
+	+	81	0
+	+	82	0
+	+	83	0
+	+	77	126
+	+	78	0
+	+	77	605
+	a	23	69
+	b	53	0
+	c	59	0
+	d	61	0
+	e	65	0
+	f	67	0
+	g	71	0
+	h	77	0
+	i	86	0
+	j	88	0
+	k	90	0
+	l	92	1
 
 > ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
-	"	224	0
+	"	1	0
 	^	441	1267
 	.	403	0
 	+	382	0
@@ -724,6 +699,151 @@ $#
 	x	393	0
 	y	395	0
 	z	397	0
+
+> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+	"	67	0
+	^	99	333
+	.	99	696
+	+	193	0
+	+	192	51
+	+	152	0
+	+	151	742
+	+	151	0
+	+	151	755
+	+	212	0
+	+	216	0
+	+	215	16
+	+	231	487
+	+	99	20
+	+	99	219
+	+	85	0
+	+	99	332
+	+	99	696
+
+> ~/Documents/data_intensive/book/book.tex
+	"	17	5
+	.	17	5
+	+	20	27
+	+	20	0
+	+	14	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	14	28
+	+	20	24
+	+	20	22
+	+	20	22
+	+	20	27
+	+	20	30
+	+	20	26
+	+	20	24
+	+	20	26
+	+	20	4
+	+	20	0
+	+	20	4
+	+	20	6
+	+	20	6
+	+	20	0
+	+	27	0
+	+	20	24
+	+	20	5
+	+	20	5
+	+	20	69
+	+	14	69
+	+	14	9
+	+	4	0
+	+	14	0
+	+	20	0
+	+	14	0
+	+	14	0
+	+	14	2
+	+	14	0
+	+	14	0
+	+	4	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	27	0
+	+	20	0
+	+	6	0
+	+	27	0
+	+	20	0
+	+	26	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	14	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	14	0
+	+	20	0
+	+	14	0
+	+	14	0
+	+	20	0
+	+	7	0
+	+	19	0
+	+	20	0
+	+	4	0
+	+	20	0
+	+	4	29
+	+	16	0
+	+	18	0
+	+	19	0
+	+	15	0
+	+	18	0
+	+	20	0
+	+	27	0
+	+	20	0
+	+	26	0
+	+	20	0
+	+	15	28
+	+	19	24
+	+	18	14
+	+	10	0
+	+	9	16
+	+	17	5
+
+> /media/mackenza/overflow/rl1.py
+	"	1	0
+
+> ~/dotfile/gitpush.sh
+	"	32	10
+	^	29	0
+	.	32	10
+	+	10	27
+	+	13	16
+	+	25	15
+	+	10	0
+	+	30	0
+	+	29	0
+	+	30	5
+	+	32	10
+
+> ~/dotfile/gitpull.sh
+	"	24	5
+	.	19	5
+	+	19	5
 
 > ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 	"	5	0
@@ -1540,110 +1660,6 @@ $#
 	^	3	0
 	.	3	0
 	+	3	0
-
-> ~/Documents/data_intensive/book/book.tex
-	"	19	16
-	.	9	16
-	+	20	25
-	+	20	27
-	+	20	0
-	+	14	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	14	28
-	+	20	24
-	+	20	22
-	+	20	22
-	+	20	27
-	+	20	30
-	+	20	26
-	+	20	24
-	+	20	26
-	+	20	4
-	+	20	0
-	+	20	4
-	+	20	6
-	+	20	6
-	+	20	0
-	+	27	0
-	+	20	24
-	+	20	5
-	+	20	5
-	+	20	69
-	+	14	69
-	+	14	9
-	+	4	0
-	+	14	0
-	+	20	0
-	+	14	0
-	+	14	0
-	+	14	2
-	+	14	0
-	+	14	0
-	+	4	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	27	0
-	+	20	0
-	+	6	0
-	+	27	0
-	+	20	0
-	+	26	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	14	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	14	0
-	+	20	0
-	+	14	0
-	+	14	0
-	+	20	0
-	+	7	0
-	+	19	0
-	+	20	0
-	+	4	0
-	+	20	0
-	+	4	29
-	+	16	0
-	+	18	0
-	+	19	0
-	+	15	0
-	+	18	0
-	+	20	0
-	+	27	0
-	+	20	0
-	+	26	0
-	+	20	0
-	+	15	28
-	+	19	24
-	+	18	14
-	+	10	0
-	+	9	16
 
 > ~/Documents/data_intensive/book/mybook.sty
 	"	101	0
@@ -2517,37 +2533,3 @@ $#
 
 > ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
 	"	1	0
-
-> ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed_old.rmd
-	"	286	0
-	h	286	0
-
-> ~/Documents/data_intensive/book/knit_all.sh
-	"	16	0
-	.	16	0
-	+	8	0
-	+	15	0
-	+	16	0
-
-> ~/Documents/teaching/socl201-methods/truth/luckman_berger.md
-	"	3	123
-	^	3	623
-	.	3	622
-	+	1	0
-	+	1	1002
-	+	1	605
-	+	1	604
-	+	4	0
-	+	1	106
-	+	1	726
-	+	2	0
-	+	3	82
-	+	3	167
-	+	3	253
-	+	3	342
-	+	3	425
-	+	3	521
-	+	3	580
-	+	3	521
-	+	4	0
-	+	3	622
