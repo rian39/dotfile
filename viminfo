@@ -18,6 +18,7 @@ $
 
 # Command Line History (newest to oldest):
 :e ch_introduction_recent.rmd
+:e ch0_introduction/ch_introduction.rmd
 :e gitpull.sh
 :buffer 24
 :bd
@@ -264,26 +265,56 @@ $
 "0	LINE	0
 	897
 <In various scholarly and political debates around changes business, media, education, health, government or science, quasi-omnipotent agency has been imputed to algorithms  \index{algorithm!primacy} [@Pasquinelli_2014;@Neyland_2014;@Totaro_2014;@Smith_2013; @Beer_2013;@Fuller_2012;@Wilf_2013; @Barocas_2013; @Gillespie_2014; @Galloway_2004] \index{Gillespie, Tarleton} or sometimes just 'the algorithm.' The power of algorithms in the academic literature are understood in different ways, but there is general agreement that these techniques are powerful, or at least, can bear down heavily on people's lives and conduct. In what does this power consist? What imbues algorithms with power? Is there some general  or 'breakout' feature such as recursivity \index{algorithm!recursivity}) or abstraction \index{abstraction!in algorithms}  that configures contemporary rationality algorithmically?
-"1	CHAR	0
+"1	LINE	0
+	
+"2	LINE	0
+	# The play in the diagram
+"3	CHAR	0
+	283
+<What form of data practice yields  let us take a preliminary look at line-oriented predictive calculations done by machine learners. In the early pages of a highly cited textbook on machine learning that I shall return to frequently [@Hastie_2009], the following equations appear:
+	
+	\begin {equation}
+	\label{eq:linear_regression}
+	\hat{Y} = \beta_0 + \sum_{j=1}^{p}X_j\hat{\beta}_j
+	\end {equation}
+	\index{@S$\sum$}
+	\index{@Y$Y\hat{Y}$}
+	
+	\begin {equation}
+	\label{eq:linear_regression_inner_product}
+	\hat{Y} = X^T\hat{\beta}
+	\end {equation}
+	\index{T@$\X^{T}$}
+	
+	[@Hastie_2009, 11]
+	
+	1720
+<These expressions are a rather harsher introduction than the cats. The two equations \ref{eq:linear_regression} and \ref{eq:linear_regression_inner_product}, which more or less express the same thing (the second is known as the 'inner product' \index{inner product} form),  anchors much of the classifying work done by `kittydar`  and the lines that smooth the spiky data in the Google Trends plot shown in Figure \ref{fig:google_trends}. They both express the 'linear regression model' \index{linear regression|see{machine learner!linear regression model}} albeit using slightly different formalisms. Every character of these equations, as well as a set of conventions that more or less indirectly govern how the different characters and symbols relate to each other and how they track out into the world, is worth attending to from both the perspective of generativity (new things or relations in the world) and power (the orderings of conduct). In the interests of the tracking the calculations that move through machine learning  and situating the knowing associated with them,  I propose to look at these expressions as a diagram (see Chapter \ref{ch:diagram}) \index{diagram}. In this diagram,  each of the letters and symbols indicates a movement in some direction, an operation that connects, accumulates or separates either numbers or sets of numbers. Importantly, to preempt discussion that will be the subject of later chapters, both the neural networks and support vector machines to be found in `kittydar` derive from combinations and accumulations of these anchoring formalisms.[^0.11]\index{calculation|)} Hence mathematical expressions powerfully index the calculative moments I wish to analyse here. 
+	
+	1470
+<How are the expressions shown in Equations \ref{eq:linear_model} and \ref{eq:linear_regression_inner_product} read by machine learners (bearing in mind I use that term indiscriminately to include people and machines)? The *learning* of machine learning is part of the reality-making power of these operations. The learning of these formalisations has become surprisingly popular in recent years (hence the upward curve on the 'machine learning' Google Trend). Erstwhile Stanford professor of computer science Andrew Ng \index{Ng, Andrew} delivered a set of lectures on machine learning in 2008 that were uploaded to Youtube [@Ng_2008]. The lectures effectively begin by talking about the formalisms  of Equation \ref{eq:linear_regression} and Ng spends much time developing them through mathematical derivations, worked examples and references to relevant scientific literature and significant events in the field.  At the time of writing, they have been viewed by more than 0.5 million people. We don't how these people viewed Ng's lectures, nor what they did with them, but the fact that a set of lectures given to post-graduates on predictive modelling attracts so many viewers attests to a contagious interest in  learning to machine learn.  (In later chapters, I return often to these pedagogical materials, and especially to the non-academic or translational accounts of machine learning written by and for software developers or non-machine learning experts. )
+	
+	1497
+<While these kinds of formalisms can readily be found in textbooks or on whiteboards and blackboards, and lecture slide presentations, their implementations in software also proliferate in the world. Where they travel is sometimes hard to know. Implementations of machine learning algorithms and techniques have proliferated in software libraries,  many of which are open source. Code operationalises formalisation in ways that textbooks and lectures cannot. Available as software libraries, packages and online web services, and described, discussed and debated in many print and online formats, machine learners are heavily involved in writing and reading code. The entwining of machine learning with the practical specificities of code engenders surprising moments of *circulation.* `kittydar` exemplifies this circulation in which machine learners drift through the archipelagos of software development and coding, landing up in very far-scattered locations (such as a web browser). Similarly, if we turn to contemporary fields of knowledge production, the engineering and scientific literature that either explicitly develops or draws machine learning  in the last two decades mounts up to several hundred thousand publications (see Chapter \ref{ch:diagram} )  and probably several million more publications in scattered scientific fields (including increasingly many humanities and social sciences) indirectly make use of them. This is both forensically useful and a challenge to analyse. 
+	
+	1166
+<As the linear models shown in Equations \ref{eq:linear_model} and \ref{eq:linear_regression_inner_product} circulate in the communicative formalisations of pedagogy and training and in the operational forms of code,  awareness of their diagrammatic play hybridises with operational power ('power has no essence; it is simply operational' [@Deleuze_1988, 27]) so that new forms of agency arise.[^0.91]  For instance, if a programmer working on a website incorporates a predictive algorithm to classify users of the website and to vary the what they see on the basis of that classification (and this started to happen widely sometime around 2005; see, for example, *Programming Collective Intelligence* [@Segaran_2007]), \index{Segaran, Toby} what they make in that work is quite different from what might have been done by a web developer in 2000 as they sought to re-design web pages using a database-driven content system. If they make use of a Naive Bayes predictive model to classify whether someone visiting a website is likely to be high income or interested in computer games, and then display different banners or advertisements accordingly, what changes? 
+	
+	
+"5	LINE	0
+	
+"6	LINE	0
+	822
+<If abstractions, mathematics or the algorithm loom large in classification practices today, how do we re-establish their connection to the workings of power without pre-emptively ascribing potency to the mathematical way, to the algorithm or abstraction? In the chapters that follow, I map machine learning data practices in greater empirical and conceptual depth, and develop some terms to describe them less generically (common vector space in Chapter \ref{ch:vector}, partial observer trajectory in Chapter \ref{ch:function},  decision surface in Chapter \ref{ch:pattern}, inverse probabilization in Chapter \ref{ch:probability}), but all of the facets I describe cluster around the problem of understanding how an almost banal, not esoteric, operation is repeated, borrowed, copied and diffused in so many settings.
+"7	CHAR	0
 	\begin{figure}
 	  \centering
 	      \includegraphics[width=0.9\textwidth]{figure/machine_learning_over_time-1.pdf}
 	        \caption{Machine learners in scientific literature. 
-"2	CHAR	0
+"8	CHAR	0
 	what comes together in it. 
-"3	LINE	0
-	[^1.001]: Carl Benedikt Frey and Michael Osborne model the chances of occupational change for 700 occupations using, aptly enough, the machine learning technique of Gaussian Processes [@Frey_2013]. 
-"4	LINE	0
-	library(ggplot2)
-"5	LINE	0
-	
-"6	LINE	0
-	HERE
-"7	LINE	0
-	335
-<to add -- machine learning pulls big data into being; what are the precedents in trying to make sense of such things -- algorithms, epistemic objects, network society, feed forward, etc. Go back to Foucault to try to find propositions that help excavate the knowledges of order, distribution, ranking and estimation shaping up here.
 "9	LINE	0
-	\addbibresource{./ref_bibs/uni.bib}
+	[^1.001]: Carl Benedikt Frey and Michael Osborne model the chances of occupational change for 700 occupations using, aptly enough, the machine learning technique of Gaussian Processes [@Frey_2013]. 
 "a	CHAR	0
 	\\index{((\w+[-, ]*)+!?(\w+[-, ]*))+(\|see(also)?{(\w+[-, ]*)+})?(\|[()])?}
 "b	CHAR	0
@@ -309,11 +340,12 @@ $
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZqZq
 ""-	CHAR	0
-	are
+	diagrammatic 
 
 # global variables:
 
 # File marks:
+'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 'B  1  0  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
 'C  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
 'D  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
@@ -338,18 +370,30 @@ $
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'0  1  0  /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
-'1  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
-'2  17  5  ~/Documents/data_intensive/book/book.tex
-'3  1  0  /media/mackenza/overflow/rl1.py
-'4  24  5  ~/dotfile/gitpull.sh
-'5  104  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'6  3  0  ~/Documents/data_intensive/book/md_to_latex.sh
-'7  85  6  ~/Documents/data_intensive/book/index_fin.md
-'8  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
-'9  31  0  ~/Documents/data_intensive/book/ml_lit/amalgamate_all_records.py
+'Z  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+'0  129  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'1  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+'2  1  0  /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
+'3  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+'4  17  5  ~/Documents/data_intensive/book/book.tex
+'5  1  0  /media/mackenza/overflow/rl1.py
+'6  24  5  ~/dotfile/gitpull.sh
+'7  104  1585  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'8  3  0  ~/Documents/data_intensive/book/md_to_latex.sh
+'9  85  6  ~/Documents/data_intensive/book/index_fin.md
 
 # Jumplist (newest first):
+-'  129  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  95  675  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  127  482  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  128  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  155  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  101  638  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  89  19  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  59  1750  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  53  177  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+-'  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
 -'  1  0  /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
 -'  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
 -'  215  16  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
@@ -365,7 +409,6 @@ $
 -'  15  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
 -'  193  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
 -'  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  17  5  ~/Documents/data_intensive/book/book.tex
 -'  5  0  ~/Documents/data_intensive/book/book.tex
 -'  1  0  ~/Documents/data_intensive/book/book.tex
@@ -416,131 +459,39 @@ $
 -'  26  0  ~/Documents/data_intensive/book/book.tex
 -'  27  0  ~/Documents/data_intensive/book/book.tex
 -'  20  0  ~/Documents/data_intensive/book/book.tex
--'  16  28  ~/Documents/data_intensive/book/book.tex
--'  6  0  ~/Documents/data_intensive/book/book.tex
--'  1444  0  ~/Documents/data_intensive/book/book.log
--'  104  0  ~/Documents/data_intensive/book/mybook.sty
--'  1  0  ~/Documents/data_intensive/book/mybook.sty
--'  10  0  ~/Documents/data_intensive/book/build_latex_book.sh
--'  24  0  ~/Documents/data_intensive/book/book.tex
--'  13  0  ~/Documents/data_intensive/book/build_latex_book.sh
--'  3  0  ~/Documents/data_intensive/book/build_latex_book.sh
--'  4  7  ~/Documents/data_intensive/book/book.tex
--'  247  2  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  130  416  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  79  1994  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  101  0  ~/Documents/data_intensive/book/mybook.sty
--'  102  0  ~/Documents/data_intensive/book/mybook.sty
--'  3  0  ~/Documents/data_intensive/book/control_vocab.sh
--'  37789  0  ~/Documents/ref_bibs/uni.bib
--'  2000  2  ~/Documents/ref_bibs/uni.bib
--'  200  0  ~/Documents/ref_bibs/uni.bib
--'  67  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  215  16  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  212  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  248  78  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  109  1468  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  101  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  151  743  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  152  4  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  190  620  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  15  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
--'  193  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
 
 # History of marks within files (newest to oldest):
 
-> /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
-	"	1	0
-
 > ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-	"	77	634
-	^	77	605
-	.	77	605
-	+	77	769
-	+	86	398
-	+	102	0
-	+	103	0
-	+	101	2
-	+	75	1764
-	+	77	371
-	+	86	587
-	+	94	0
-	+	86	588
-	+	87	0
-	+	88	110
-	+	88	5
-	+	88	161
-	+	88	17
-	+	88	266
-	+	88	184
-	+	99	0
-	+	88	210
-	+	88	0
-	+	88	271
-	+	88	672
-	+	88	360
-	+	88	178
-	+	88	557
-	+	88	825
-	+	88	0
-	+	88	792
-	+	88	749
-	+	88	957
-	+	88	0
-	+	88	1060
-	+	88	275
-	+	88	0
-	+	88	340
-	+	88	0
-	+	88	363
-	+	88	0
-	+	88	0
-	+	88	370
-	+	88	870
-	+	88	1489
-	+	88	0
-	+	88	1601
-	+	88	1399
-	+	88	137
-	+	88	299
-	+	88	726
-	+	88	139
-	+	88	0
-	+	88	168
-	+	88	616
-	+	88	964
-	+	89	0
-	+	90	923
-	+	90	1178
+	"	129	0
+	^	129	182
+	.	129	0
+	+	94	526
+	+	94	329
+	+	94	604
+	+	94	329
+	+	94	681
+	+	94	329
+	+	94	381
+	+	92	848
 	+	93	0
-	+	92	329
-	+	92	526
-	+	92	329
-	+	92	604
-	+	92	329
-	+	92	681
-	+	92	329
-	+	92	381
-	+	90	848
-	+	91	0
-	+	92	329
-	+	93	0
-	+	92	521
-	+	92	912
-	+	94	36
+	+	94	329
 	+	95	0
-	+	92	585
-	+	92	713
-	+	92	915
+	+	94	521
+	+	94	912
+	+	96	36
+	+	96	0
+	+	94	585
+	+	94	713
+	+	94	915
 	+	69	52
-	+	92	127
-	+	92	0
-	+	92	169
-	+	92	374
-	+	92	0
-	+	92	397
-	+	88	909
+	+	94	127
+	+	94	0
+	+	94	169
+	+	94	374
+	+	94	0
+	+	94	397
+	+	90	909
 	+	75	165
 	+	77	161
 	+	77	0
@@ -557,18 +508,239 @@ $
 	+	77	126
 	+	78	0
 	+	77	605
+	+	59	1231
+	+	59	1420
+	+	59	1817
+	+	85	317
+	+	81	508
+	+	85	1064
+	+	85	1425
+	+	90	0
+	+	85	1651
+	+	86	0
+	+	89	0
+	+	89	0
+	+	89	133
+	+	89	264
+	+	95	80
+	+	96	0
+	+	87	0
+	+	88	0
+	+	96	0
+	+	97	137
+	+	97	236
+	+	101	487
+	+	103	95
+	+	103	643
+	+	103	481
+	+	103	634
+	+	103	921
+	+	103	955
+	+	103	0
+	+	103	952
+	+	105	0
+	+	105	129
+	+	117	254
+	+	121	513
+	+	125	986
+	+	126	0
+	+	125	998
+	+	122	0
+	+	123	28
+	+	128	0
+	+	128	0
+	+	125	999
+	+	127	368
+	+	128	0
+	+	127	0
+	+	127	378
+	+	128	0
+	+	127	431
+	+	129	0
+	+	127	214
+	+	127	0
+	+	127	482
+	+	127	0
+	+	127	526
+	+	129	86
+	+	129	44
+	+	129	183
+	+	129	0
 	a	23	69
 	b	53	0
 	c	59	0
 	d	61	0
-	e	65	0
+	e	63	709
 	f	67	0
-	g	71	0
-	h	77	0
-	i	86	0
-	j	88	0
-	k	90	0
-	l	92	1
+	g	69	62
+	h	75	227
+	i	77	67
+	j	85	67
+	k	87	810
+	l	89	0
+	m	95	675
+	n	97	0
+	o	101	208
+	p	103	206
+	q	105	48
+	r	111	48
+	s	117	48
+	t	125	209
+	u	127	482
+
+> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
+	"	223	76
+	^	99	333
+	.	99	696
+	+	193	0
+	+	192	51
+	+	152	0
+	+	151	742
+	+	151	0
+	+	151	755
+	+	212	0
+	+	216	0
+	+	215	16
+	+	231	487
+	+	99	20
+	+	99	219
+	+	85	0
+	+	99	332
+	+	99	696
+
+> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
+	"	1	0
+	^	296	1016
+	.	282	0
+	+	337	0
+	+	284	0
+	+	284	1006
+	+	317	246
+	+	317	0
+	+	317	257
+	+	281	0
+	+	284	1593
+	+	286	127
+	+	286	0
+	+	286	636
+	+	286	243
+	+	286	349
+	+	286	85
+	+	286	376
+	+	286	623
+	+	287	0
+	+	286	636
+	+	287	0
+	+	286	636
+	+	286	737
+	+	286	651
+	+	286	0
+	+	286	689
+	+	286	806
+	+	286	928
+	+	287	0
+	+	287	66
+	+	287	618
+	+	287	66
+	+	287	0
+	+	287	69
+	+	288	467
+	+	288	686
+	+	287	0
+	+	296	0
+	+	296	5
+	+	296	0
+	+	296	0
+	+	286	357
+	+	286	0
+	+	286	366
+	+	286	70
+	+	288	66
+	+	288	654
+	+	288	0
+	+	288	692
+	+	288	0
+	+	288	703
+	+	288	916
+	+	288	1044
+	+	287	0
+	+	290	111
+	+	290	0
+	+	290	153
+	+	294	224
+	+	295	15
+	+	294	970
+	+	294	0
+	+	294	977
+	+	294	0
+	+	294	1011
+	+	294	34
+	+	294	219
+	+	295	0
+	+	295	161
+	+	295	408
+	+	295	0
+	+	295	466
+	+	296	290
+	+	295	479
+	+	295	0
+	+	296	0
+	+	295	0
+	+	259	915
+	+	260	0
+	+	295	0
+	+	296	114
+	+	296	0
+	+	297	0
+	+	296	165
+	+	296	289
+	+	296	143
+	+	296	226
+	+	296	420
+	+	296	586
+	+	296	0
+	+	296	827
+	+	296	0
+	+	296	981
+	+	296	0
+	+	296	989
+	+	296	0
+	+	296	1017
+	+	35	0
+	+	122	0
+	+	197	0
+	+	209	0
+	+	227	0
+	+	282	0
+	a	23	0
+	b	25	0
+	c	31	0
+	d	33	0
+	e	84	0
+	f	90	0
+	g	100	0
+	h	102	0
+	i	108	0
+	j	114	0
+	k	116	0
+	l	124	0
+	m	126	0
+	n	143	0
+	o	152	0
+	p	173	0
+	q	179	0
+	r	199	0
+	s	201	0
+	t	207	0
+	u	211	50
+	v	213	0
+	w	229	0
+	x	231	158
+	y	237	0
+	z	253	161
+
+> /tmp/.fr-ZsSqSR/user-ct-test-collection-06.txt
+	"	1	0
 
 > ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
 	"	1	0
@@ -699,26 +871,6 @@ $
 	x	393	0
 	y	395	0
 	z	397	0
-
-> ~/Documents/data_intensive/book/ch0_introduction/ch_introduction_recent.rmd
-	"	67	0
-	^	99	333
-	.	99	696
-	+	193	0
-	+	192	51
-	+	152	0
-	+	151	742
-	+	151	0
-	+	151	755
-	+	212	0
-	+	216	0
-	+	215	16
-	+	231	487
-	+	99	20
-	+	99	219
-	+	85	0
-	+	99	332
-	+	99	696
 
 > ~/Documents/data_intensive/book/book.tex
 	"	17	5
@@ -1498,137 +1650,6 @@ $
 	x	217	0
 	y	223	0
 	z	225	0
-
-> ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-	"	282	0
-	^	296	1016
-	.	282	0
-	+	337	0
-	+	284	0
-	+	284	1006
-	+	317	246
-	+	317	0
-	+	317	257
-	+	281	0
-	+	284	1593
-	+	286	127
-	+	286	0
-	+	286	636
-	+	286	243
-	+	286	349
-	+	286	85
-	+	286	376
-	+	286	623
-	+	287	0
-	+	286	636
-	+	287	0
-	+	286	636
-	+	286	737
-	+	286	651
-	+	286	0
-	+	286	689
-	+	286	806
-	+	286	928
-	+	287	0
-	+	287	66
-	+	287	618
-	+	287	66
-	+	287	0
-	+	287	69
-	+	288	467
-	+	288	686
-	+	287	0
-	+	296	0
-	+	296	5
-	+	296	0
-	+	296	0
-	+	286	357
-	+	286	0
-	+	286	366
-	+	286	70
-	+	288	66
-	+	288	654
-	+	288	0
-	+	288	692
-	+	288	0
-	+	288	703
-	+	288	916
-	+	288	1044
-	+	287	0
-	+	290	111
-	+	290	0
-	+	290	153
-	+	294	224
-	+	295	15
-	+	294	970
-	+	294	0
-	+	294	977
-	+	294	0
-	+	294	1011
-	+	294	34
-	+	294	219
-	+	295	0
-	+	295	161
-	+	295	408
-	+	295	0
-	+	295	466
-	+	296	290
-	+	295	479
-	+	295	0
-	+	296	0
-	+	295	0
-	+	259	915
-	+	260	0
-	+	295	0
-	+	296	114
-	+	296	0
-	+	297	0
-	+	296	165
-	+	296	289
-	+	296	143
-	+	296	226
-	+	296	420
-	+	296	586
-	+	296	0
-	+	296	827
-	+	296	0
-	+	296	981
-	+	296	0
-	+	296	989
-	+	296	0
-	+	296	1017
-	+	35	0
-	+	122	0
-	+	197	0
-	+	209	0
-	+	227	0
-	+	282	0
-	a	23	0
-	b	25	0
-	c	31	0
-	d	33	0
-	e	84	0
-	f	90	0
-	g	100	0
-	h	102	0
-	i	108	0
-	j	114	0
-	k	116	0
-	l	124	0
-	m	126	0
-	n	143	0
-	o	152	0
-	p	173	0
-	q	179	0
-	r	199	0
-	s	201	0
-	t	207	0
-	u	211	50
-	v	213	0
-	w	229	0
-	x	231	158
-	y	237	0
-	z	253	161
 
 > ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
 	"	109	0
