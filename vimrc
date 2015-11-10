@@ -107,6 +107,10 @@ hi comment ctermfg=blue
 "next buffer
 :nnoremap <F6> :bn<CR>
 
+"insert datetime
+:nnoremap <F7> :r !date<CR>
+:inoremap <F7> :r !date<CR>
+
 "pandoc plugin files
 
 "let g:pandoc#filetypes#handled = ['
