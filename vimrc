@@ -34,6 +34,7 @@ call vundle#begin()
     Bundle "vim-scripts/TwitVim"
     Bundle "Shougo/neocomplete.vim"
     Plugin 'tpope/vim-sensible'
+    Plugin 'vim-scripts/Mark--Karkat'
     
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -106,6 +107,7 @@ hi comment ctermfg=blue
 
 "next buffer
 :nnoremap <F6> :bn<CR>
+:nnoremap <F4> :bp<CR>
 
 "insert datetime
 :nnoremap <F7> :r !date<CR>

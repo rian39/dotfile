@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/iris
+~MSle0~/infrastr
 
 # Last Substitute Search Pattern:
 ~MSle0&##
@@ -17,8 +17,12 @@
 $
 
 # Command Line History (newest to oldest):
-:e ~/infrastructures_handbook/combinatorial_infrastructures.rmd
+:map
+:PluginUpdate
+:hlsearch
 :Pandoc! odt
+:e combinatorial_infrastructures_to_copy_from_and_delete.rmd
+:e ~/infrastructures_handbook/combinatorial_infrastructures.rmd
 :Pandoc! pdf
 :q
 :e mackenzie_mattering.md
@@ -107,7 +111,6 @@ $
 :e treemap.r
 :e tree2.r
 :buffer 6
-:map
 :nnoremap <F6> :bn<CR>
 :bn
 :nnoremap <F6> :bn
@@ -121,7 +124,6 @@ $
 :e ~/notes/husserl_origins.md
 :mksession 
 :e social_theme_blurb.md
-:PluginUpdate
 :e design_social_theme.md
 :e ~/notes/foucault_archaeology.md
 :Pandoc! docx
@@ -162,6 +164,24 @@ $
 :e foucault_care_self_1988.md
 
 # Search String History (newest to oldest):
+? \<infrastructure\>
+? combinatorial 
+?/infrastr
+? infrastructures
+? Infrastructures
+?/asdfasdf
+? \<Infrastructures\>
+?/infrastructure\c
+?/asdfad
+? \<nominalistic\>
+?/nominalistic
+? compound
+? compounds
+? \<compounds\>
+?/asdfas
+? \<compounded\>
+?/compound
+? \<display\>
 ?/iris
 ?/Naming, ho
 ? \<provocative\>
@@ -352,6 +372,16 @@ $
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@\<infrastructure\>
+@combinatorial 
+@infrastructures
+@Infrastructures
+@\<Infrastructures\>
+@\<nominalistic\>
+@compound
+@compounds
+@\<compounds\>
+@\<compounded\>
 @Y
 @infrastructure
 @test
@@ -374,28 +404,28 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	such as XKEY, TREASUREMAP, and so forth [@CJFE_2015]. The Snowden revelations,
+""0	CHAR	0
+	infrastructural 
 "1	CHAR	0
+	It is only recently that t
+"2	CHAR	0
 	One of the problems
 	in making sense of contemporary communication infrastructures is the
 	sheer variety of channels, modalities, platforms, scales of operation
 	and levels of infrastructural interdependency. 
-"2	LINE	0
-	Mon Nov  9 09:48:31 GMT 2015
 "3	LINE	0
+	Mon Nov  9 09:48:31 GMT 2015
+"4	LINE	0
 	4
 	5
-"4	LINE	0
-	res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 "5	LINE	0
-	al = '|l|l|l|l|l|'
+	res = dbGetQuery(con, statement ="select * from basic_refs limit 10;")
 "6	LINE	0
-	dim(fun_top)s
+	al = '|l|l|l|l|l|'
 "7	LINE	0
-	align(tab) <- "p{0.1\\textwidth}|p{0.4\\textwidth}|p{0.4\\textwidth}| p{0.1\\textwidth}"
+	dim(fun_top)s
 "8	LINE	0
-	dtt = xtable(head(det,50), label = 'tab:top_keywords', caption = 'Most common author-supplied keywords from the 5000 cited research publications in machine learning, 1990-2015')
+	align(tab) <- "p{0.1\\textwidth}|p{0.4\\textwidth}|p{0.4\\textwidth}| p{0.1\\textwidth}"
 "9	LINE	0
 	dtt = xtable(head(det,50), label = 'tab:top_keywords', caption = 'Most common author-supplied keywords from the 5000 cited research publications in machine learning, 1990-2015')
 "a	CHAR	0
@@ -424,10 +454,12 @@ $
 	vv
 "z	CHAR	0
 	ZqZqZqZqZqZqZZqZqZq
-""-	CHAR	0
-	pdf'
+"-	CHAR	0
+	infrastructural 
 
 # global variables:
+!MARK_MARKS	STR	['combinatorial ', '', '\<nominalistic\>', '\<Infrastructures\>', 'Infrastructures', 'infrastructures']
+!MARK_ENABLED	NUM	1
 
 # File marks:
 'A  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
@@ -438,7 +470,7 @@ $
 'F  2  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
 'G  2  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
 'H  1  0  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
-'I  2  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion.rmd
+'I  1  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
 'J  2  0  ~/Documents/data_intensive/book/ch9_conclusion/ch_conclusion.rmd
 'K  1  0  ~/Documents/data_intensive/book/acknowledgments.rmd
 'L  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
@@ -455,19 +487,63 @@ $
 'W  74  0  ~/Documents/data_intensive/book/ch2_curves/ch2_curves_function.rmd
 'X  1  51  ~/Documents/data_intensive/book/book.rmd
 'Y  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch0_introduction.rmd
-'Z  1  0  ~/Documents/data_intensive/book/ch8_conclusion/ch_conclusion_old.rmd
-'0  160  53  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
-'1  11  777  ~/R/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
-'2  7  1113  ~/Documents/reviews/ana_gros_phd_2015/Gross_report_nov15.md
-'3  4  0  ~/test2/t1
-'4  16  0  ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
-'5  18  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering.md
-'6  17  0  ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
-'7  1  0  /media/mackenza/0031-014A1/git.sh
-'8  216  234  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
-'9  156  175  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
+'Z  1  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+'0  13  259  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+'1  1  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+'2  37  12  ~/.vimrc
+'3  32  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+'4  160  53  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
+'5  11  777  ~/R/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+'6  7  1113  ~/Documents/reviews/ana_gros_phd_2015/Gross_report_nov15.md
+'7  4  0  ~/test2/t1
+'8  16  0  ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
+'9  18  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering.md
 
 # Jumplist (newest first):
+-'  13  259  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  11  1466  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  12  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  84  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  1  2  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  74  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  16  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  15  933  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  64  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  37  12  ~/.vimrc
+-'  57  557  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  70  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  68  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  67  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  65  42  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  75  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+-'  74  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+-'  80  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+-'  61  1764  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  71  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+-'  55  8  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  59  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  53  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  48  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  46  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  36  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  34  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  33  16  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  38  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  40  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  50  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  52  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  54  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  1  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+-'  32  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  31  1020  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  39  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+-'  30  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  27  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  29  1139  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  19  883  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  25  1082  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  23  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+-'  21  0  ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
 -'  160  53  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
 -'  1  0  ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
 -'  11  777  ~/R/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
@@ -498,76 +574,130 @@ $
 -'  80  326  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  79  62  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
 -'  77  13  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  56  82  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  53  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  15  0  ~/Documents/data_intensive/book/mybook.sty
--'  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  37  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  12  1177  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.md
--'  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.md
--'  36  41  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.rmd
--'  14  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  172  306  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  16  0  ~/Documents/data_intensive/book/mybook.sty
--'  1  0  ~/Documents/data_intensive/book/mybook.sty
--'  1  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  2  9  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  6  31  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  291  9  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
--'  1  0  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
--'  1  19  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  1  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  306  172  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  19  3  ~/Documents/data_intensive/book/ch4_probability/ch_naive_informed.rmd
--'  2  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  57  112  ~/Documents/data_intensive/book/ch1_learning/ch_praxis.rmd
--'  154  0  ~/Documents/data_intensive/book/ch0_introduction/ch_introduction.rmd
--'  1  37  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  113  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  82  225  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  14  8  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  13  8  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  265  179  ~/Documents/data_intensive/book/ch7_subjects/ch_learning_subjects.rmd
--'  173  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  172  140  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  14  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  171  0  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  164  13  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  55  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  57  0  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  56  31  ~/Documents/data_intensive/book/ch3_curves/ch_curves_functions.rmd
--'  58  4  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  57  53  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  71  49  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  62  287  ~/Documents/data_intensive/book/ch5_dimensionality/ch_dimensional_exuberance.rmd
--'  79  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.md
--'  99  366  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  37  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  246  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  194  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  117  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  105  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  104  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  90  0  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  244  526  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  103  856  ~/Documents/data_intensive/book/ch6_topologies/ch_genomic_topologies.rmd
--'  1  0  /media/mackenza/0031-014A1/git.sh
--'  15  0  ~/Documents/data_intensive/book/mybook.sty
--'  12  1177  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.md
--'  1  0  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.md
--'  16  0  ~/Documents/data_intensive/book/mybook.sty
--'  1  0  ~/Documents/data_intensive/book/mybook.sty
--'  1  0  /media/mackenza/0031-014A1/git.sh
--'  15  0  ~/Documents/data_intensive/book/mybook.sty
--'  12  1177  ~/Documents/data_intensive/book/ch2_vector/ch_vector_space.md
--'  18  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering.md
--'  1  0  /media/mackenza/0031-014A1/git.sh
--'  16  0  ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
--'  1  0  ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
--'  18  0  ~/Documents/data_intensive/baroque_mattering_2013_4/mackenzie_mattering.md
--'  17  0  ~/Documents/data_intensive/baroque_mattering_2013_4/pandoc.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures.rmd
+	"	13	259
+	^	13	379
+	.	13	378
+	+	25	678
+	+	25	804
+	+	25	49
+	+	27	255
+	+	27	790
+	+	25	798
+	+	25	531
+	+	25	1085
+	+	25	1352
+	+	27	874
+	+	27	1148
+	+	25	908
+	+	27	1179
+	+	20	0
+	+	19	833
+	+	27	1179
+	+	19	885
+	+	25	835
+	+	27	1357
+	+	28	0
+	+	27	790
+	+	28	0
+	+	27	1179
+	+	27	1303
+	+	29	82
+	+	29	317
+	+	29	0
+	+	29	467
+	+	29	755
+	+	29	1092
+	+	29	1242
+	+	29	1715
+	+	31	0
+	+	17	39
+	+	31	96
+	+	31	7
+	+	31	344
+	+	31	773
+	+	31	965
+	+	31	185
+	+	31	1098
+	+	31	1195
+	+	32	0
+	+	60	0
+	+	61	191
+	+	61	296
+	+	61	724
+	+	61	341
+	+	61	674
+	+	61	320
+	+	61	1144
+	+	61	1530
+	+	61	1180
+	+	61	1524
+	+	61	31
+	+	61	1680
+	+	61	1816
+	+	65	222
+	+	70	0
+	+	71	13
+	+	65	222
+	+	66	0
+	+	13	547
+	+	15	70
+	+	11	0
+	+	11	294
+	+	11	0
+	+	11	401
+	+	11	680
+	+	11	1347
+	+	13	378
+	a	11	0
+	b	13	0
+	c	15	0
+	d	19	0
+	e	21	0
+	f	23	0
+	g	25	0
+	h	27	0
+	i	29	44
+	j	31	0
+	k	33	16
+	l	39	0
+	n	53	0
+	o	55	0
+	p	57	0
+	q	59	0
+	r	61	0
+	s	65	42
+	t	67	0
+	u	69	0
+	z	65	0
+
+> ~/Documents/metacommunities/publications/infrastructures_handbook/combinatorial_infrastructures_to_copy_from_and_delete.rmd
+	"	75	0
+	h	75	0
+
+> ~/.vimrc
+	"	37	12
+	^	37	56
+	.	37	12
+	+	12	27
+	+	51	0
+	+	14	29
+	+	14	0
+	+	13	35
+	+	11	0
+	+	51	0
+	+	11	0
+	+	51	0
+	+	13	0
+	+	51	0
+	+	109	21
+	+	37	12
+
+> /usr/local/lib/python2.7/dist-packages/tensorflow/models/image/mnist/convolutional.py
+	"	52	0
 
 > ~/Documents/data_intensive/cold_war_systems_feb2014/simulate_optimise_cluster.rmd
 	"	160	53
@@ -2550,23 +2680,6 @@ $
 	+	25	0
 	+	23	0
 
-> ~/.vimrc
-	"	109	0
-	^	108	22
-	.	108	21
-	+	12	27
-	+	50	0
-	+	14	29
-	+	14	0
-	+	13	35
-	+	11	0
-	+	50	0
-	+	11	0
-	+	50	0
-	+	13	0
-	+	50	0
-	+	108	21
-
 > ~/Documents/notes/husserl_origins.md
 	"	1	0
 
@@ -2824,16 +2937,3 @@ $
 	"	1	0
 	.	14	0
 	+	14	0
-
-> ~/Documents/data_intensive/book/support/[Vundle] Installer
-	"	33	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/book/ch3_curves/NERD_tree_1
-	"	15	0
-	.	1	0
-	+	1	0
-
-> ~/Documents/data_intensive/book/ch3_curves/functions.mdown
-	"	18	163
