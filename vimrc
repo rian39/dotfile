@@ -106,6 +106,7 @@ hi comment ctermfg=blue
 
 "next buffer
 :nnoremap <F6> :bn<CR>
+:nnoremap <F4> :bp<CR>
 
 "insert datetime
 :nnoremap <F7> :r !date<CR>
