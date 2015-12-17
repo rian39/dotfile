@@ -35,6 +35,8 @@ call vundle#begin()
     Bundle "Shougo/neocomplete.vim"
     Plugin 'tpope/vim-sensible'
     Plugin 'vim-scripts/Mark--Karkat'
+    Plugin 'severin-lemaignan/vim-minimap'
+
     
 call vundle#end()            " required
 filetype plugin indent on    " required

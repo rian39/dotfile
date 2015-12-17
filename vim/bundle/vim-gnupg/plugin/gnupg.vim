@@ -1,5 +1,5 @@
 " Name:    gnupg.vim
-" Last Change: 2015 Sep 29
+" Last Change: 2015 Nov 04
 " Maintainer:  James McCoy <vega.james@gmail.com>
 " Original Author:  Markus Braun <markus.braun@krawel.de>
 " Summary: Vim plugin for transparent editing of gpg encrypted files.
@@ -514,15 +514,25 @@ function s:GPGDecrypt(bufread)
       let start = start + strlen("gpg: public key is ")
       let recipient = matchstr(output, s:keyPattern, start)
       call s:GPGDebug(1, "recipient is " . recipient)
-      let name = s:GPGNameToID(recipient)
-      if !empty(name)
-        let b:GPGRecipients += [name]
-        call s:GPGDebug(1, "name of recipient is " . name)
-      else
-        let b:GPGRecipients += [recipient]
-        echohl GPGWarning
-        echom "The recipient \"" . recipient . "\" is not in your public keyring!"
-        echohl None
+      " In order to support anonymous communication, GnuPG allows eliding
+      " information in the encryption metadata specifying what keys the file
+      " was encrypted to (c.f., --throw-keyids and --hidden-recipient).  In
+      " that case, the recipient(s) will be listed as having used a key of all
+      " zeroes.
+      " Since this will obviously never actually be in a keyring, only try to
+      " convert to an ID or add to the recipients list if it's not a hidden
+      " recipient.
+      if recipient !~? '^0x0\+$'
+        let name = s:GPGNameToID(recipient)
+        if !empty(name)
+          let b:GPGRecipients += [name]
+          call s:GPGDebug(1, "name of recipient is " . name)
+        else
+          let b:GPGRecipients += [recipient]
+          echohl GPGWarning
+          echom "The recipient \"" . recipient . "\" is not in your public keyring!"
+          echohl None
+        end
       end
       let start = match(output, asymmPattern, start)
     endwhile
@@ -587,6 +597,7 @@ function s:GPGDecrypt(bufread)
     1mark [
     $mark ]
     let &undolevels = levels
+    let &readonly = filereadable(filename) && filewritable(filename) == 0
     " call the autocommand for the file minus .gpg$
     silent execute ':doautocmd BufReadPost ' . autocmd_filename
     call s:GPGDebug(2, 'called BufReadPost autocommand for ' . autocmd_filename)
@@ -715,9 +726,11 @@ function s:GPGEncrypt()
     return
   endif
 
-  call rename(destfile, resolve(expand('<afile>')))
+  let filename = resolve(expand('<afile>'))
+  call rename(destfile, filename)
   if auType == 'BufWrite'
     setl nomodified
+    let &readonly = filereadable(filename) && filewritable(filename) == 0
   endif
 
   silent exe ':doautocmd '. auType .'Post '. autocmd_filename
