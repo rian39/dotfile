@@ -327,3 +327,6 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   endif
 let g:neocomplete#sources#omni#input_patterns.tex =
         \ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
+
+nnoremap : ;
+nnoremap ; :
