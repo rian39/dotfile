@@ -103,17 +103,18 @@ au FileType py set textwidth=79 " PEP-8 Friendly
 hi comment ctermfg=blue 
 
 "set linenumbers
-:nnoremap <C-M><C-N> :set invnumber<CR>
-:map <Up> gk
-:map <Down> gj
+nnoremap <C-M><C-N> :set invnumber<CR>
+map <Up> gk
+map <Down> gj
 
+nnoremap <F5> :buffers<CR>:buffer<Space>
 "next buffer
-:nnoremap <F6> :bn<CR>
-:nnoremap <F4> :bp<CR>
+nnoremap <F6> :bn<CR>
+nnoremap <F4> :bp<CR>
 
 "insert datetime
-:nnoremap <F7> :r !date<CR>
-:inoremap <F7> :r !date<CR>
+nnoremap <F7> :r !date<CR>
+inoremap <F7> :r !date<CR>
 
 "pandoc plugin files
 
@@ -130,7 +131,7 @@ let g:pandoc#completion#bib#mode='fallback'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 "
 "bibtex
-let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 set omnifunc=pandoc#completion#Complete
 let g:Tex_Flavor='latex'
@@ -174,17 +175,17 @@ augroup pencil
 "augroup END
 
 function! WordCount()
-      let s:old_status = v:statusmsg
+        let s:old_status = v:statusmsg
         let position = getpos(".")
         exe ":silent normal g\<c-g>"
-            let stat = v:statusmsg
-              let s:word_count = 0
-                if stat != '--No lines in buffer--'
-                        let s:word_count = str2nr(split(v:statusmsg)[11])
-                            let v:statusmsg = s:old_status
-                              end
-                                call setpos('.', position)
-                                  return s:word_count 
+        let stat = v:statusmsg
+        let s:word_count = 0
+        if stat != '--No lines in buffer--'
+            let s:word_count = str2nr(split(v:statusmsg)[11])
+            let v:statusmsg = s:old_status
+        end
+        call setpos('.', position)
+        return s:word_count 
 endfunction
 
 
@@ -319,7 +320,6 @@ function! WordFrequency() range
 endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
 
-nnoremap <F5> :buffers<CR>:buffer<Space>
 
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
