@@ -1,6 +1,6 @@
 # Automatically log in to this mailbox at startup
-#set spoolfile="imaps://mackenza:@inc15ives@exchange.lancs.ac.uk/"
-#set folder="imaps://mackenza:@inc15ives@exchange.lancs.ac.uk/"
+#set spoolfile="imaps://mackenza:****@exchange.lancs.ac.uk/"
+#set folder="imaps://mackenza:****@exchange.lancs.ac.uk/"
  ## activate TLS if available on the server
  #set ssl_starttls=yes
  ## always use SSL when connecting to a server
