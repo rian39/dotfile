@@ -330,3 +330,6 @@ let g:neocomplete#sources#omni#input_patterns.tex =
 
 nnoremap : ;
 nnoremap ; :
+nnoremap h2 i## <ESC> <F7>
+nnoremap <leader><leader> :x<CR>
+nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
