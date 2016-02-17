@@ -36,6 +36,7 @@ call vundle#begin()
     Plugin 'tpope/vim-sensible'
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
+    Plugin 'chrisbra/csv.vim'
 
     
 call vundle#end()            " required
@@ -330,3 +331,9 @@ let g:neocomplete#sources#omni#input_patterns.tex =
 
 nnoremap : ;
 nnoremap ; :
+
+nnoremap <F8> :r !git rev-parse --abbrev-ref HEAD <CR>
+nnoremap h2 0i## <ESC>
+nnoremap <leader><leader> :xa<cr>
+
+nnoremap <leader>nf :set fdc=0<cr>

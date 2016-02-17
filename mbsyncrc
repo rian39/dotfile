@@ -1,0 +1,24 @@
+ImapAccount exchange
+Host exchange.lancs.ac.uk
+User mackenza
+Pass @inc15ives
+
+IMAPStore exchange-remote
+Account exchange
+
+MaildirStore exchange-local
+# The trailing "/" is important
+Path /media/mackenza/overflow/Maildir/
+Inbox /media/mackenza/overflow/Maildir/INBOX
+
+Channel exchange
+Master :exchange-remote:
+Slave :exchange-local:
+# Exclude everything under the internal [Gmail] folder, except the interesting folders
+#/*Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"*/
+# Or include everything
+Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Save the synchronization state files in the relevant directory
+SyncState *
