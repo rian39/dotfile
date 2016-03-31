@@ -115,6 +115,7 @@ bindkey '^Z' fancy-ctrl-z
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias hpo="autossh hpo -t tmux a"
 
 stty -ixon
 export PATH=/home/mackenza/ref_bibs:$PATH
