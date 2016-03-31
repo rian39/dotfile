@@ -23,14 +23,14 @@ mailboxes +director_ug
 mailboxes +sociology
 mailboxes +supervision
 
- # Reduce polling frequency to a sane level
- set mail_check=6
- # And poll the current mailbox more often (not needed with IDLE in post 1.5.11)
- set timeout=10
- # keep a cache of headers for faster loading (1.5.9+?)
- set header_cache=~/.hcache
- # Display download progress every 5K
- set net_inc=5
+# Reduce polling frequency to a sane level
+set mail_check=6
+# And poll the current mailbox more often (not needed with IDLE in post 1.5.11)
+set timeout=10
+# keep a cache of headers for faster loading (1.5.9+?)
+set header_cache=~/.hcache
+# Display download progress every 5K
+set net_inc=5
 #
 set smtp_url = "smtp://rian39@smtp.gmail.com:587/"  # ESMTP with TLS
 set from="a.mackenzie@lancaster.ac.uk"
