@@ -1,6 +1,4 @@
 
-options(MendeleyKey = "ecaa488b04391a65c5e791fd68d995ca04e5f907a")
-options(MendeleyPrivateKey = "925d58994dfa4cfe954a6fe26e28c63a")
 
 options(repos=structure(c(CRAN="http://mirrors.ebi.ac.uk/CRAN/")))
 # Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):
