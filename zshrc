@@ -121,7 +121,6 @@ alias hpo="autossh hpo -t tmux a"
 stty -ixon
 export PATH=/home/mackenza/ref_bibs:$PATH
 
-
 export PATH=/home/mackenza/torch/install/bin:$PATH  # Added automatically by torch-dist
 export LD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
 export DYLD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
