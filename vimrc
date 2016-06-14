@@ -4,6 +4,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+    Bundle 'wellle/tmux-complete.vim'
     Plugin 'gmarik/Vundle.vim'
     Plugin 'vim-pandoc/vim-pandoc'
     Plugin 'vim-pandoc/vim-pandoc-syntax'
@@ -37,8 +38,6 @@ call vundle#begin()
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
-
-    
 call vundle#end()            " required
 filetype plugin indent on    " required
 execute pathogen#infect()
@@ -321,13 +320,29 @@ function! WordFrequency() range
 endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
 
+"neocomplete
+let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#auto_completion_start_length = 2
 
+" always use completions from all buffers
+if !exists('g:neocomplete#same_filetypes')
+     let g:neocomplete#same_filetypes = {}
+endif
+let g:neocomplete#same_filetypes._ = '_'
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
   endif
 let g:neocomplete#sources#omni#input_patterns.tex =
         \ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
+
+inoremap <silent> <CR> <C-r>=neocomplete#smart_close_popup()<CR><CR>
+        " <TAB>: completion.
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+inoremap <expr> <C-h> neocomplete#smart_close_popup()."\<C-h>"
 
 nnoremap : ;
 nnoremap ; :
@@ -337,5 +352,9 @@ nnoremap <F8> :r !git rev-parse --abbrev-ref HEAD <CR>
 nnoremap <leader><leader> :xa<cr>
 
 nnoremap <leader>nf :set fdc=0<cr>
-nnoremap <leader>h2<CR>:r !date<CR> 0i## <ESC>o<CR><ESC>
+nnoremap <leader>h2<CR> :r !date<CR> 0i## <ESC>o<CR><ESC>
 nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
+
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_completion = 0
+
