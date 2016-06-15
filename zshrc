@@ -6,7 +6,8 @@ if [ "$TMUX" = "" ]; then tmux -2; fi
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="bureau"
-ZSH_THEME="random"
+ZSH_THEME="tonotdo.zsh-theme"
+#ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -120,7 +121,6 @@ alias hpo="autossh hpo -t tmux a"
 
 stty -ixon
 export PATH=/home/mackenza/ref_bibs:$PATH
-
 
 export PATH=/home/mackenza/torch/install/bin:$PATH  # Added automatically by torch-dist
 export LD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
