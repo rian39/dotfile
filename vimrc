@@ -38,6 +38,7 @@ call vundle#begin()
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
+    Bundle 'ron89/thesaurus_query.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 execute pathogen#infect()
@@ -81,7 +82,7 @@ vmap <Leader>P "+P
 
 
 "save keys
-noremap <silent> <C-S>          :update<CR>
+noremap <silent> <C-S>          :wa<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
@@ -359,3 +360,4 @@ let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
 
 inoremap <C-d> <esc>:wq!<cr>
+nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
