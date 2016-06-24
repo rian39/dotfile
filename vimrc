@@ -358,3 +358,4 @@ nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
 
+inoremap <C-d> <esc>:wq!<cr>
