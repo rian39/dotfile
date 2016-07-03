@@ -33,7 +33,9 @@ call vundle#begin()
     Bundle "farseer90718/vim-reveal"
     Bundle "csexton/jekyll.vim"
     Bundle "vim-scripts/TwitVim"
-    Bundle "Shougo/neocomplete.vim"
+    "Bundle "Shougo/neocomplete.vim"
+    "Plugin 'Shougo/neosnippet'
+    "Plugin 'Shougo/neosnippet-snippets'
     Plugin 'tpope/vim-sensible'
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
@@ -58,6 +60,7 @@ set expandtab
 set showcmd
 set hlsearch
 set incsearch
+
 "cursor show
 "set cursorline
 "set cursorcolumn
@@ -130,7 +133,7 @@ let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
 let g:pandoc#completion#bib#mode='fallback'
 let g:pandoc#folding#fold_fenced_codeblocks=1
-"
+
 "bibtex
 let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
@@ -141,24 +144,18 @@ let g:Tex_DefaultTargetFormat='pdf'
 " <leader>k Knits to MD
 nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
 
-"Rmd and Rpres are pandoc
-"autocmd BufRead,BufNewFile *.rmd,*.Rpres setfiletype pandoc
-
 "autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc
-"
-"
-"
+
 " New signs for the pandoc bundle
 let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»', 'newline': '¬'}
-
 
 " Format paragraphs with <leader>q
 map <leader>q {!}fmt -w 105<CR>}<CR>
 
 " Place markers with {type} for markdown files
 augroup markers
-   autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'
+autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'
 augroup END
 nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 
@@ -322,28 +319,28 @@ endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
 
 "neocomplete
-let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_auto_select = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#auto_completion_start_length = 2
+"let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#enable_smart_case = 1
+"let g:neocomplete#auto_completion_start_length = 2
 
-" always use completions from all buffers
-if !exists('g:neocomplete#same_filetypes')
-     let g:neocomplete#same_filetypes = {}
-endif
-let g:neocomplete#same_filetypes._ = '_'
+"" always use completions from all buffers
+"if !exists('g:neocomplete#same_filetypes')
+     "let g:neocomplete#same_filetypes = {}
+"endif
+"let g:neocomplete#same_filetypes._ = '_'
 
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-  endif
-let g:neocomplete#sources#omni#input_patterns.tex =
-        \ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
+"if !exists('g:neocomplete#sources#omni#input_patterns')
+    "let g:neocomplete#sources#omni#input_patterns = {}
+  "endif
+"let g:neocomplete#sources#omni#input_patterns.tex =
+        "\ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
 
-inoremap <silent> <CR> <C-r>=neocomplete#smart_close_popup()<CR><CR>
-        " <TAB>: completion.
-inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
-inoremap <expr> <C-h> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <silent> <CR> <C-r>=neocomplete#smart_close_popup()<CR><CR>
+        "" <TAB>: completion.
+"inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+"inoremap <expr> <C-h> neocomplete#smart_close_popup()."\<C-h>"
 
 nnoremap : ;
 nnoremap ; :
@@ -360,4 +357,6 @@ let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
 
 inoremap <C-d> <esc>:wq!<cr>
-nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
+"nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
+
+au CursorHoldI * stopinsert
