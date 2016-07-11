@@ -26,7 +26,7 @@ call vundle#begin()
     Bundle "tomtom/tlib_vim"
     Bundle "garbas/vim-snipmate"
     Bundle "klen/python-mode"
-    Bundle "ivanov/vim-ipython"
+    "Bundle "ivanov/vim-ipython"
     Bundle "jamessan/vim-gnupg"
     Bundle "lervag/vimtex"
     Bundle "kshenoy/vim-signature"
@@ -122,20 +122,21 @@ inoremap <F7> :r !date<CR>
 
 "pandoc plugin files
 
-"let g:pandoc#filetypes#handled = ['
+"let g:pandoc#filetypes#handled = '
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/at_this_moment.bib', '/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:pandoc#biblio#bibs =  ['/home/mackenza/Documents/ref_bibs/uni.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
+"let g:pandoc#completion#bib#mode='citeproc'
 let g:pandoc#completion#bib#mode='fallback'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 
 "bibtex
-let g:Tex_BIBINPUTS = ['/home/mackenza/Documents/ref_bibs/mackenzie.bib','/home/mackenza/Documents/ref_bibs/ngs.bib', '/home/mackenza/Documents/ref_bibs/at_this_moment.bib','/home/mackenza/Documents/ref_bibs/data_forms_thought.bib', '/home/mackenza/Documents/ref_bibs/machine_learning.bib', '/home/mackenza/Documents/ref_bibs/R.bib', '/home/mackenza/Documents/ref_bibs/google_analytics.bib']
+let g:Tex_BIBINPUTS =  ['/home/mackenza/Documents/ref_bibs/uni.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 set omnifunc=pandoc#completion#Complete
 let g:Tex_Flavor='latex'
@@ -155,35 +156,35 @@ map <leader>q {!}fmt -w 105<CR>}<CR>
 
 " Place markers with {type} for markdown files
 augroup markers
-autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'
+    autocmd! BufEnter *.md,*.mkd,*.txt,*.rmd,*.Rpres match Error '{{\w\+}}'
 augroup END
 nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 
 let g:pencil#wrapModeDefault = 'soft'
 augroup pencil
-      autocmd!
-        autocmd FileType markdown,mkd,md,rmd call pencil#init()
-          autocmd FileType text         call pencil#init()
-      augroup END
+    autocmd!
+    autocmd FileType markdown,mkd,md,rmd call pencil#init()
+    autocmd FileType text         call pencil#init()
+augroup END
 "augroup pencil
-      "autocmd!
-    "autocmd FileType markdown,mkd call pencil#init()
-    "autocmd FileType textile call pencil#init()
-    "autocmd FileType text call pencil#init({'wrap': 'hard'})
+"autocmd!
+"autocmd FileType markdown,mkd call pencil#init()
+"autocmd FileType textile call pencil#init()
+"autocmd FileType text call pencil#init({'wrap': 'hard'})
 "augroup END
 
 function! WordCount()
-        let s:old_status = v:statusmsg
-        let position = getpos(".")
-        exe ":silent normal g\<c-g>"
-        let stat = v:statusmsg
-        let s:word_count = 0
-        if stat != '--No lines in buffer--'
-            let s:word_count = str2nr(split(v:statusmsg)[11])
-            let v:statusmsg = s:old_status
-        end
-        call setpos('.', position)
-        return s:word_count 
+    let s:old_status = v:statusmsg
+    let position = getpos(".")
+    exe ":silent normal g\<c-g>"
+    let stat = v:statusmsg
+    let s:word_count = 0
+    if stat != '--No lines in buffer--'
+        let s:word_count = str2nr(split(v:statusmsg)[11])
+        let v:statusmsg = s:old_status
+    end
+    call setpos('.', position)
+    return s:word_count 
 endfunction
 
 
@@ -208,12 +209,12 @@ nmap <Space> <Plug>RDSendLine
 let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
- let g:airline#extensions#tabline#fnamemod = ':t'
- if !exists('g:airline_symbols')
-       let g:airline_symbols = {}
-   endif
+let g:airline#extensions#tabline#fnamemod = ':t'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 
- " unicode symbols
+" unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
@@ -229,51 +230,51 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 "lightline config
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]
-      \ },
-      \ 'component_function': {
-      \   'fugitive': 'MyFugitive',
-      \   'readonly': 'MyReadonly',
-      \   'modified': 'MyModified',
-      \      'count': 'WordCount'
-      \ },
-      \ 'separator': { 'left':  '▶', 'right':  '▶'},
-      \ 'subseparator': { 'left':  '»', 'right': '»' }
-      \ }
+            \ 'colorscheme': 'wombat',
+            \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'fugitive', 'readonly', 'filename', 'modified', 'count' ] ]
+            \ },
+            \ 'component_function': {
+            \   'fugitive': 'MyFugitive',
+            \   'readonly': 'MyReadonly',
+            \   'modified': 'MyModified',
+            \      'count': 'WordCount'
+            \ },
+            \ 'separator': { 'left':  '▶', 'right':  '▶'},
+            \ 'subseparator': { 'left':  '»', 'right': '»' }
+            \ }
 
 function! MyModified()
-if &filetype == "help"
-return ""
-elseif &modified
-return "+"
-elseif &modifiable
-return ""
-else
-return ""
-endif
+    if &filetype == "help"
+        return ""
+    elseif &modified
+        return "+"
+    elseif &modifiable
+        return ""
+    else
+        return ""
+    endif
 endfunction
 
 function! MyReadonly()
-if &filetype == "help"
-return ""
-  elseif &readonly
-  return "⭤"
-else
-    return ""
-endif
+    if &filetype == "help"
+        return ""
+    elseif &readonly
+        return "⭤"
+    else
+        return ""
+    endif
 endfunction
 
 function! MyFugitive()
-return exists('*fugitive#head') ? fugitive#head() : ''
+    return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 
 function! MyFilename()
-return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-\ ('' != MyModified() ? ' ' . MyModified() : '')
+    return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+                \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+                \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
 set laststatus=2
@@ -304,17 +305,17 @@ let g:vimtex_complete_recursive_bib = 1
 
 "word frequency count
 function! WordFrequency() range
-  let all = split(join(getline(a:firstline, a:lastline)), '\A\+')
-  let frequencies = {}
-  for word in all
-    let frequencies[word] = get(frequencies, word, 0) + 1
-  endfor
-  new
-  setlocal buftype=nofile bufhidden=hide noswapfile tabstop=20
-  for [key,value] in items(frequencies)
-    call append('$', key."\t".value)
-  endfor
-  sort i
+    let all = split(join(getline(a:firstline, a:lastline)), '\A\+')
+    let frequencies = {}
+    for word in all
+        let frequencies[word] = get(frequencies, word, 0) + 1
+    endfor
+    new
+    setlocal buftype=nofile bufhidden=hide noswapfile tabstop=20
+    for [key,value] in items(frequencies)
+        call append('$', key."\t".value)
+    endfor
+    sort i
 endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
 
@@ -327,15 +328,15 @@ command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
 
 "" always use completions from all buffers
 "if !exists('g:neocomplete#same_filetypes')
-     "let g:neocomplete#same_filetypes = {}
+"let g:neocomplete#same_filetypes = {}
 "endif
 "let g:neocomplete#same_filetypes._ = '_'
 
 "if !exists('g:neocomplete#sources#omni#input_patterns')
-    "let g:neocomplete#sources#omni#input_patterns = {}
-  "endif
+"let g:neocomplete#sources#omni#input_patterns = {}
+"endif
 "let g:neocomplete#sources#omni#input_patterns.tex =
-        "\ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
+"\ '\v\\\a*(ref|cite)\a*([^]*\])?\{([^}]*,)*[^}]*'
 
 "inoremap <silent> <CR> <C-r>=neocomplete#smart_close_popup()<CR><CR>
         "" <TAB>: completion.
