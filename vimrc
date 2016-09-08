@@ -37,6 +37,7 @@ call vundle#begin()
     "Plugin 'Shougo/neosnippet'
     "Plugin 'Shougo/neosnippet-snippets'
     Plugin 'tpope/vim-sensible'
+    Plugin 'junegunn/goyo.vim'
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
@@ -278,7 +279,6 @@ function! MyFilename()
 endfunction
 
 set laststatus=2
-"let g:pencil#wrapModeDefault = 'soft'
 
 colorscheme molokai
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):

@@ -14,8 +14,6 @@ twitter: @rian2011ad
 
 Social Theme Leader, Data Science Institute, Lancaster University, http://www.lancaster.ac.uk/dsi/about-us/
 
-Co-Director, Centre for Science Studies http://www.lancs.ac.uk/fass/centres/css/
-
 Computational Culture: A Journal of Software Studies    http://computationalculture.net/
 Big Data and Society                                    http://bds.sagepub.com/
 Theory, Culture and Society                             http://tcs.sagepub.com/
