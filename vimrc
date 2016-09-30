@@ -8,6 +8,7 @@ call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'vim-pandoc/vim-pandoc'
     Plugin 'vim-pandoc/vim-pandoc-syntax'
+    Plugin 'vim-pandoc/vim-rmarkdown'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'reedes/vim-pencil'
     Plugin 'reedes/vim-wordy'
@@ -147,7 +148,8 @@ let g:Tex_DefaultTargetFormat='pdf'
 nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
 
 "autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-au BufRead,BufNewFile {*.md,*.mkd,*.markdown,*.rmd} set ft=pandoc
+au BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=pandoc
+au BufRead,BufNewFile {*.rmd} set ft=rmarkdown
 
 " New signs for the pandoc bundle
 let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»', 'newline': '¬'}
@@ -167,6 +169,7 @@ augroup pencil
     autocmd FileType markdown,mkd,md,rmd call pencil#init()
     autocmd FileType text         call pencil#init()
 augroup END
+
 "augroup pencil
 "autocmd!
 "autocmd FileType markdown,mkd call pencil#init()

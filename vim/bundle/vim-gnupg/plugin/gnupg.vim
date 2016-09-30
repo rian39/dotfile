@@ -1,5 +1,5 @@
 " Name:    gnupg.vim
-" Last Change: 2016 Apr 24
+" Last Change: 2016 Sep 17
 " Maintainer:  James McCoy <jamessan@jamessan.com>
 " Original Author:  Markus Braun <markus.braun@krawel.de>
 " Summary: Vim plugin for transparent editing of gpg encrypted files.
@@ -175,7 +175,7 @@
 if (exists("g:loaded_gnupg") || &cp || exists("#GnuPG"))
   finish
 endif
-let g:loaded_gnupg = '2.6'
+let g:loaded_gnupg = '2.6.1-dev'
 let s:GPGInitRun = 0
 
 " check for correct vim version {{{2
@@ -568,7 +568,7 @@ function s:GPGDecrypt(bufread)
   " since even with the --quiet option passphrase typos will be reported,
   " we must redirect stderr (using shell temporarily)
   call s:GPGDebug(1, "decrypting file")
-  let cmd = { 'level': 1, 'ex': silent . 'r !' }
+  let cmd = { 'level': 1, 'ex': silent . 'read ++edit !' }
   let cmd.args = '--quiet --decrypt ' . s:shellescape(filename, 1)
   call s:GPGExecute(cmd)
 
@@ -599,7 +599,10 @@ function s:GPGDecrypt(bufread)
     1mark [
     $mark ]
     let &undolevels = levels
-    let &readonly = filereadable(filename) && filewritable(filename) == 0
+    " The buffer should be readonly if
+    " - 'readonly' is already set (e.g., when using view/vim -R)
+    " - permissions don't allow writing
+    let &readonly = &readonly || (filereadable(filename) && filewritable(filename) == 0)
     " call the autocommand for the file minus .gpg$
     silent execute ':doautocmd BufReadPost ' . autocmd_filename
     call s:GPGDebug(2, 'called BufReadPost autocommand for ' . autocmd_filename)
@@ -640,16 +643,6 @@ function s:GPGEncrypt()
 
   silent exe ':doautocmd '. auType .'Pre '. autocmd_filename
   call s:GPGDebug(2, 'called '. auType .'Pre autocommand for ' . autocmd_filename)
-
-  " store encoding and switch to a safe one
-  if (&fileencoding != &encoding)
-    let s:GPGEncoding = &encoding
-    let &encoding = &fileencoding
-    call s:GPGDebug(2, "encoding was \"" . s:GPGEncoding . "\", switched to \"" . &encoding . "\"")
-  else
-    let s:GPGEncoding = ""
-    call s:GPGDebug(2, "encoding and fileencoding are the same (\"" . &encoding . "\"), not switching")
-  endif
 
   " guard for unencrypted files
   if (exists("b:GPGEncrypted") && b:GPGEncrypted == 0)
@@ -711,16 +704,10 @@ function s:GPGEncrypt()
 
   " encrypt the buffer
   let destfile = tempname()
-  let cmd = { 'level': 1, 'ex': "'[,']w !" }
+  let cmd = { 'level': 1, 'ex': "'[,']write !" }
   let cmd.args = '--quiet --no-encrypt-to ' . options
   let cmd.redirect = '>' . s:shellescape(destfile, 1)
   silent call s:GPGExecute(cmd)
-
-  " restore encoding
-  if (s:GPGEncoding != "")
-    let &encoding = s:GPGEncoding
-    call s:GPGDebug(2, "restored encoding \"" . &encoding . "\"")
-  endif
 
   if (v:shell_error) " message could not be encrypted
     " Command failed, so clean up the tempfile
