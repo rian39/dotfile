@@ -127,4 +127,4 @@ export LD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$LD_LIBRARY_PATH  # Adde
 export DYLD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
 
 
-. /home/mackenza/torch/install/bin/torch-activate
+#. /home/mackenza/torch/install/bin/torch-activate

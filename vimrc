@@ -40,6 +40,7 @@ call vundle#begin()
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
+    Plugin 'junegunn/goyo.vim'
     Bundle 'ron89/thesaurus_query.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
