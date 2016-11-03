@@ -44,6 +44,7 @@ call vundle#begin()
     Plugin 'chrisbra/csv.vim'
     Plugin 'junegunn/goyo.vim'
     Bundle 'ron89/thesaurus_query.vim'
+    Plugin 'christianrondeau/vim-base64'
 call vundle#end()            " required
 filetype plugin indent on    " required
 execute pathogen#infect()
@@ -357,6 +358,7 @@ nnoremap <leader><leader> :xa<cr>
 nnoremap <leader>nf :set fdc=0<cr>
 nnoremap <leader>h2<CR> o<CR><ESC>:r !date<CR> 0i## <ESC>o<CR><ESC>
 nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
+nnoremap <leader>m<CR> :RMarkdown! pdf<CR>
 
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
