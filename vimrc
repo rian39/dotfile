@@ -38,7 +38,7 @@ call vundle#begin()
     "Plugin 'Shougo/neosnippet'
     "Plugin 'Shougo/neosnippet-snippets'
     Plugin 'tpope/vim-sensible'
-    Plugin 'junegunn/goyo.vim'
+    "Plugin 'junegunn/goyo.vim'
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
