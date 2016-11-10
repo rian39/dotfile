@@ -45,9 +45,10 @@ call vundle#begin()
     Plugin 'junegunn/goyo.vim'
     Bundle 'ron89/thesaurus_query.vim'
     Plugin 'christianrondeau/vim-base64'
+    Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 filetype plugin indent on    " required
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax enable
 syntax on
 se t_Co=16
@@ -285,7 +286,7 @@ endfunction
 
 set laststatus=2
 
-colorscheme molokai
+colorscheme jellybeans
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
 
 "let g:reveal_root_path = '/home/mackenza/reveal.js'
