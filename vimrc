@@ -44,6 +44,7 @@ call vundle#begin()
     Plugin 'chrisbra/csv.vim'
     Bundle 'ron89/thesaurus_query.vim'
     Plugin 'christianrondeau/vim-base64'
+    Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
