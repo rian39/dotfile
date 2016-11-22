@@ -364,8 +364,9 @@ nnoremap <leader>m<CR> :RMarkdown! pdf<CR>
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
 
-inoremap <C-d> <esc>:wq!<cr>
 "nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
 
 au CursorHoldI * stopinsert
 nnoremap gO :!eog <cfile> &<CR>
+nnoremap gP :!evince <cfile> &<CR>
+
