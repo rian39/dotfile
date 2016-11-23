@@ -368,11 +368,7 @@ let g:pymode_rope_completion = 0
 "nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
 
 au CursorHoldI * stopinsert
-<<<<<<< HEAD
 
 colorscheme solarized
-=======
 nnoremap gO :!eog <cfile> &<CR>
 nnoremap gP :!evince <cfile> &<CR>
-
->>>>>>> c3f5cecccff3509fdd5947212554d812214f161c
