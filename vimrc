@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Bundle 'wellle/tmux-complete.vim'
     Plugin 'gmarik/Vundle.vim'
+    Plugin 'Zenburn'
     Plugin 'vim-pandoc/vim-pandoc'
     Plugin 'vim-pandoc/vim-pandoc-syntax'
     Plugin 'vim-pandoc/vim-rmarkdown'
@@ -38,7 +39,6 @@ call vundle#begin()
     "Plugin 'Shougo/neosnippet'
     "Plugin 'Shougo/neosnippet-snippets'
     Plugin 'tpope/vim-sensible'
-    "Plugin 'junegunn/goyo.vim'
     Plugin 'vim-scripts/Mark--Karkat'
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
@@ -46,6 +46,7 @@ call vundle#begin()
     Bundle 'ron89/thesaurus_query.vim'
     Plugin 'christianrondeau/vim-base64'
     Plugin 'christoomey/vim-tmux-navigator'
+    Plugin 'leafgarland/typescript-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
@@ -56,7 +57,7 @@ if !has('gui_running')
       set t_Co=256
 endif
 let g:solarized_termcolors=256
-"set background=dark
+set background=dark
 "call togglebg#map("<F5>")
 "pencilset ruler  
 set tabstop=4
@@ -286,7 +287,6 @@ endfunction
 
 set laststatus=2
 
-colorscheme jellybeans
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
 
 "let g:reveal_root_path = '/home/mackenza/reveal.js'
@@ -368,3 +368,5 @@ inoremap <C-d> <esc>:wq!<cr>
 "nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
 
 au CursorHoldI * stopinsert
+
+colorscheme solarized
