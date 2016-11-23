@@ -357,16 +357,22 @@ nnoremap <F8> :r !git rev-parse --abbrev-ref HEAD <CR>
 nnoremap <leader><leader> :xa<cr>
 
 nnoremap <leader>nf :set fdc=0<cr>
-nnoremap <leader>h2<CR> o<CR><ESC>:r !date<CR> 0i## <ESC>o<CR><ESC>
+"nnoremap <leader>h2<CR> o<CR><ESC>:r !date<CR> 0i## <ESC>o<CR><ESC>
+nnoremap <leader>h2<CR> :r !date<CR> 0i## <ESC>o<CR><ESC>
 nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
 nnoremap <leader>m<CR> :RMarkdown! pdf<CR>
 
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
 
-inoremap <C-d> <esc>:wq!<cr>
 "nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
 
 au CursorHoldI * stopinsert
+<<<<<<< HEAD
 
 colorscheme solarized
+=======
+nnoremap gO :!eog <cfile> &<CR>
+nnoremap gP :!evince <cfile> &<CR>
+
+>>>>>>> c3f5cecccff3509fdd5947212554d812214f161c
