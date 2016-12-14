@@ -373,4 +373,5 @@ colorscheme solarized
 nnoremap gO :!eog <cfile> &<CR>
 nnoremap gP :!evince <cfile> &<CR>
 
-nnoremap <C-\> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <C-T> :TOC<CR>

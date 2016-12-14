@@ -129,3 +129,5 @@ export DYLD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$DYLD_LIBRARY_PATH  # 
 
 
 #. /home/mackenza/torch/install/bin/torch-activate
+
+alias vim="vim -u ~/.vimrc"
