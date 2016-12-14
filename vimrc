@@ -358,7 +358,6 @@ nnoremap <leader><leader> :xa<cr>
 
 nnoremap <leader>nf :set fdc=0<cr>
 nnoremap <leader>h2<CR> o<CR><ESC>:r !date<CR> 0i## <ESC>o<CR><ESC>
-"nnoremap <leader>h2<CR> :r !date<CR> 0O## <ESC>o<CR><ESC>
 nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
 nnoremap <leader>m<CR> :RMarkdown! pdf<CR>
 
