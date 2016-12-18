@@ -78,6 +78,7 @@ set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L
 
 set foldcolumn=6
 set autoread
+au CursorHold * checktime  
 
 "map leader
 
@@ -372,4 +373,5 @@ colorscheme solarized
 nnoremap gO :!eog <cfile> &<CR>
 nnoremap gP :!evince <cfile> &<CR>
 
-nnoremap <C-\> :NERDTreeToggle<CR>
+nnoremap <C-\> :NERDTreeToggle<cr>
+nnoremap <F2> :NERDTreeToggle<cr>
