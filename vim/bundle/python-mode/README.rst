@@ -6,10 +6,9 @@
 
 -----
 
-*The project needs maintainers and contributors*
+*The project needs contributors*
 
-Actually, I have no time for support the project, so if you feel yourself as
-strong don't be hesitate to contact me.
+** Python-mode Slack Channel is here: https://python-mode.herokuapp.com/ **
 
 -----
 
@@ -181,7 +180,10 @@ at https://github.com/klen/python-mode/issues
 Contributing
 ============
 
-See the `AUTHORS` file.
+* Kirill Klenov (horneds@gmail.com)
+* Bryce Guinta (https://github.com/brycepg)
+
+Also see the `AUTHORS` file.
 
 Development of python-mode happens at github:
 https://github.com/klen/python-mode
