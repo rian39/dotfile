@@ -78,6 +78,7 @@ set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L
 
 set foldcolumn=6
 set autoread
+au CursorHold * checktime  
 
 "map leader
 
