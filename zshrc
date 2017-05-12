@@ -5,9 +5,9 @@ if [ "$TMUX" = "" ]; then tmux -2; fi
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="bureau"
+ZSH_THEME="bureau"
 #ZSH_THEME="tonotdo.zsh-theme"
-ZSH_THEME="kennethreitz"
+#ZSH_THEME="kennethreitz"
 #ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.

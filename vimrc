@@ -22,7 +22,7 @@ call vundle#begin()
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'nanotech/jellybeans.vim'
     Plugin 'itchyny/lightline.vim'
-    Plugin 'vim-scripts/Vim-R-plugin'
+    "Plugin 'jalvesaq/Nvim-R'
     Plugin 'vim-scripts/Screen-vim---gnu-screentmux'
     Bundle "MarcWeber/vim-addon-mw-utils"
     Bundle "tomtom/tlib_vim"
@@ -47,6 +47,8 @@ call vundle#begin()
     Plugin 'christianrondeau/vim-base64'
     Plugin 'christoomey/vim-tmux-navigator'
     Plugin 'leafgarland/typescript-vim'
+    Plugin 'morhetz/gruvbox'
+    Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
@@ -123,9 +125,6 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 nnoremap <F6> :bn<CR>
 nnoremap <F4> :bp<CR>
 
-"insert datetime
-nnoremap <F7> :r !date<CR>
-inoremap <F7> :r !date<CR>
 
 "pandoc plugin files
 
@@ -354,7 +353,6 @@ nnoremap : ;
 nnoremap ; :
 nnoremap <F7> :r !date<CR>
 nnoremap <F8> :r !git rev-parse --abbrev-ref HEAD <CR>
-"nnoremap h2 0i## <ESC>o<CR><ESC>
 nnoremap <leader><leader> :xa<cr>
 
 nnoremap <leader>nf :set fdc=0<cr>
@@ -369,9 +367,13 @@ let g:pymode_rope_completion = 0
 
 au CursorHoldI * stopinsert
 
-colorscheme solarized
 nnoremap gO :!eog <cfile> &<CR>
 nnoremap gP :!evince <cfile> &<CR>
 
 nnoremap <C-\> :NERDTreeToggle<cr>
 nnoremap <F2> :NERDTreeToggle<cr>
+
+let g:gruvbox_italic=1
+colorscheme gruvbox
+let g:gruvbox_bold=1
+let g:gruvbox_contrast_dark='hard'
