@@ -1,5 +1,3 @@
-
-
 options(repos=structure(c(CRAN="http://mirrors.ebi.ac.uk/CRAN/")))
 
 view <- function(data, autofilter=TRUE) {
