@@ -22,7 +22,7 @@ call vundle#begin()
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'nanotech/jellybeans.vim'
     Plugin 'itchyny/lightline.vim'
-    Plugin 'vim-scripts/Vim-R-plugin'
+    "Plugin 'vim-scripts/Vim-R-plugin'
     Plugin 'vim-scripts/Screen-vim---gnu-screentmux'
     Bundle "MarcWeber/vim-addon-mw-utils"
     Bundle "tomtom/tlib_vim"
@@ -47,6 +47,8 @@ call vundle#begin()
     Plugin 'christianrondeau/vim-base64'
     Plugin 'christoomey/vim-tmux-navigator'
     Plugin 'leafgarland/typescript-vim'
+    Plugin 'itchyny/calendar.vim'
+    "Plugin 'jalvesaq/Nvim-R'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
@@ -112,6 +114,10 @@ au FileType py set autoindent
 au FileType py set smartindent
 au FileType py set textwidth=79 " PEP-8 Friendly
 hi comment ctermfg=blue 
+
+"R editing
+
+autocmd FileType r setlocal formatoptions+=t
 
 "set linenumbers
 nnoremap <C-M><C-N> :set invnumber<CR>
@@ -375,3 +381,6 @@ nnoremap gP :!evince <cfile> &<CR>
 
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <C-T> :TOC<CR>
+
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
