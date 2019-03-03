@@ -1,4 +1,4 @@
-options(repos=structure(c(CRAN="http://mirrors.ebi.ac.uk/CRAN/")))
+options(repos=structure(c(CRAN="https://mirror.aarnet.edu.au/pub/CRAN/")))
 
 view <- function(data, autofilter=TRUE) {
         # data: data frame
