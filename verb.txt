@@ -17,6 +17,7 @@ banish
 bank
 bash
 bask
+batch
 baulk
 bawl
 beach
@@ -64,6 +65,7 @@ burrow
 bust
 cake
 cash
+catch
 caulk
 chance
 chew
@@ -90,6 +92,7 @@ dance
 dare
 dart
 dash
+deal
 dirty
 ditch
 dive
@@ -119,6 +122,7 @@ exit
 eye
 fail
 fear
+feel
 fight
 file
 fine
@@ -170,6 +174,7 @@ hand
 happen
 hash
 hassle
+hatch
 haul
 hawk
 head
@@ -203,6 +208,7 @@ jest
 jilt
 joke
 jump
+keel
 keen
 keep
 key
@@ -228,6 +234,7 @@ lap
 lard
 lash
 last
+latch
 lather
 leach
 leaf
@@ -258,6 +265,7 @@ man
 map
 mash
 mask
+match
 maul
 meet
 melt
@@ -302,6 +310,7 @@ open
 other
 pain
 pan
+patch
 peel
 pelt
 pen
@@ -357,6 +366,7 @@ rave
 ream
 reap
 reef
+reel
 rely
 rest
 ride
@@ -385,6 +395,8 @@ sap
 save
 say
 scan
+scratch
+seal
 search
 seed
 seek
