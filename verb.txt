@@ -13,7 +13,6 @@ bag
 bail
 bake
 ban
-ban
 banish
 bank
 bash
@@ -24,6 +23,7 @@ beach
 bear
 beg
 best
+bid
 bide
 bin
 bitch
@@ -283,6 +283,7 @@ mumble
 munch
 mutter
 nail
+nail
 name
 nap
 natter
@@ -362,6 +363,7 @@ ride
 rile
 ring
 rip
+rivet
 roast
 rob
 roil
@@ -478,6 +480,7 @@ sulk
 sunder
 sway
 swell
+tack
 tackle
 tag
 tail
@@ -579,7 +582,3 @@ yoke
 zap
 zero
 zip
-tack
-nail
-rivet
-
