@@ -1,4 +1,5 @@
 ace
+ache
 age
 aid
 ail
@@ -26,6 +27,7 @@ beg
 best
 bid
 bide
+bike
 bin
 bitch
 bite
@@ -54,6 +56,7 @@ brain
 branch
 brawl
 brick
+bud
 budge
 build
 bulk
@@ -93,6 +96,7 @@ dare
 dart
 dash
 deal
+dig
 dirty
 ditch
 dive
@@ -102,6 +106,7 @@ drain
 drape
 drawl
 dread
+dredge
 dress
 drill
 drip
@@ -116,8 +121,10 @@ dwell
 ease
 eat
 echo
+edge
 eek
 elbow
+end
 exit
 eye
 fail
@@ -128,6 +135,12 @@ file
 fine
 finger
 fizzle
+flick
+flirt
+flit
+float
+flock
+floor
 flounder
 flow
 fob
@@ -135,6 +148,7 @@ foil
 foot
 fork
 founder
+frame
 fray
 free
 frolic
@@ -185,6 +199,7 @@ heed
 help
 hew
 hide
+hike
 hit
 hit
 hitch
@@ -239,6 +254,8 @@ lather
 leach
 leaf
 leap
+lick
+like
 like
 lilt
 limp
@@ -299,6 +316,7 @@ near
 need
 nest
 net
+nick
 notice
 nourish
 nudge
@@ -316,6 +334,8 @@ pelt
 pen
 pester
 pick
+pick
+pike
 pile
 pin
 pine
@@ -339,6 +359,7 @@ prate
 pray
 preach
 press
+prick
 prick
 prove
 prune
@@ -419,6 +440,7 @@ shuck
 shunt
 shush
 shut
+sick
 side
 sigh
 silt
@@ -434,6 +456,7 @@ slate
 slather
 slave
 sleep
+slick
 slide
 slight
 slip
@@ -482,6 +505,7 @@ strap
 stream
 strew
 stride
+strike
 string
 stud
 stuff
@@ -505,12 +529,14 @@ teach
 teeth
 test
 tether
+thaw
 thrall
 thrash
 thrill
 throw
 thrust
 thunder
+tick
 tick
 tide
 tile
