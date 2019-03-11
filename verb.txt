@@ -15,6 +15,7 @@ bag
 bail
 bake
 ban
+band
 banish
 bank
 bash
@@ -55,6 +56,7 @@ boss
 brace
 brain
 branch
+brand
 brawl
 brick
 bud
@@ -66,6 +68,7 @@ bump
 bunch
 bundle
 burrow
+burr
 bust
 cake
 cash
@@ -162,6 +165,7 @@ free
 frolic
 fry
 fumble
+fur
 furrow
 fuss
 gape
@@ -198,6 +202,7 @@ hack
 hail
 ham
 hand
+hand
 happen
 hash
 hassle
@@ -215,6 +220,7 @@ help
 hew
 hide
 hike
+hiss
 hit
 hitch
 hock
@@ -228,6 +234,7 @@ hop
 hope
 hose
 host
+hug
 hug
 hulk
 hum
@@ -255,6 +262,7 @@ kick
 kill
 kink
 kip
+kiss
 kiss
 kit
 knee
@@ -317,6 +325,7 @@ mew
 mill
 mine
 miss
+miss
 mither
 mob
 mock
@@ -372,11 +381,13 @@ pitch
 plan
 plant
 plot
+plough
 plug
 plump
 plunder
 plunder
 plunge
+pocket
 poke
 post
 pouch
@@ -425,6 +436,7 @@ rip
 rivet
 roast
 rob
+rocket
 roil
 roll
 roof
@@ -432,6 +444,8 @@ root
 rope
 rort
 rot
+rough
+row
 row
 rug
 rust
@@ -439,6 +453,7 @@ rut
 sack
 sag
 sail
+sand
 sand
 sap
 save
@@ -450,6 +465,7 @@ seal
 search
 seed
 seek
+seep
 seeth
 sell
 send
@@ -465,6 +481,7 @@ shirk
 shout
 shrill
 shrivel
+shrug
 shuck
 shunt
 shush
@@ -475,6 +492,7 @@ sigh
 silt
 sin
 sink
+sip
 siphon
 sit
 sizzle
@@ -494,6 +512,7 @@ slop
 slope
 slot
 slouch
+slough
 sluice
 slump
 slur
@@ -533,11 +552,13 @@ stitch
 strain
 strap
 stream
+stretch
 strew
 stride
 strike
 string
-string
+stroke
+strut
 stud
 stuff
 stumble
@@ -545,8 +566,19 @@ stump
 suck
 sulk
 sunder
+swan
+swap
 sway
+swear
+sweat
+sweep
 swell
+swell
+swill
+swim
+swipe
+switch
+swot
 tack
 tackle
 tag
@@ -580,6 +612,7 @@ top
 top
 toss
 touch
+tough
 track
 train
 trap
@@ -593,6 +626,7 @@ trump
 trundle
 trust
 try
+tug
 tumble
 tune
 tup
@@ -600,6 +634,7 @@ twang
 twirl
 twist
 twitch
+up
 urge
 vanish
 vault
@@ -616,12 +651,14 @@ vomit
 vote
 vouch
 vow
+vow
 wag
 wail
 wane
 wash
 waste
 water
+wave
 weather
 well
 wet
@@ -640,6 +677,8 @@ winge
 wire
 wit
 woof
+worry
+wow
 wrack
 wrap
 wreath
@@ -657,3 +696,6 @@ yoke
 zap
 zero
 zip
+fetch
+match
+
