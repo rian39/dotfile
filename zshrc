@@ -25,6 +25,9 @@ ZSH_THEME="bureau"
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+
 # Uncomment the following line to enable command auto-correction.
  ENABLE_CORRECTION="true"
 
@@ -122,6 +125,7 @@ alias hpo="autossh hpo -t tmux a"
 
 stty -ixon
 export PATH=/home/mackenza/ref_bibs:$PATH
+export PATH=/home/mackenza/.cabal/bin:$PATH
 
 export PATH=/home/mackenza/torch/install/bin:$PATH  # Added automatically by torch-dist
 export LD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
@@ -129,3 +133,14 @@ export DYLD_LIBRARY_PATH=/home/mackenza/torch/install/lib:$DYLD_LIBRARY_PATH  # 
 
 
 #. /home/mackenza/torch/install/bin/torch-activate
+
+alias vim="vim -u ~/.vimrc"
+
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+__git_files () {
+        _wanted files expl 'local files' _files  
+    }
+
