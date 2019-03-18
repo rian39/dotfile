@@ -1,4 +1,3 @@
-
 ace
 ache
 age
@@ -18,8 +17,10 @@ ban
 band
 banish
 bank
+base
 bash
 bask
+baste
 batch
 baulk
 bawl
@@ -67,8 +68,8 @@ bumble
 bump
 bunch
 bundle
-burrow
 burr
+burrow
 bust
 cake
 cash
@@ -93,6 +94,7 @@ crow
 crumple
 crunch
 crust
+curb
 curtsy
 dab
 dam
@@ -141,6 +143,7 @@ fall
 fear
 feel
 feign
+fetch
 fight
 file
 fine
@@ -315,6 +318,7 @@ map
 mash
 mask
 match
+match
 maul
 meet
 melt
@@ -391,7 +395,10 @@ pocket
 poke
 post
 pouch
+pour
 prance
+port
+pounce
 prank
 prate
 pray
@@ -401,18 +408,24 @@ prick
 prick
 prove
 prune
+puff
+pucker
 pummel
 pump
 punch
+pun
 pure
 purge
+quaff
 quail
 quake
 quash
 quaver
 quell
 quench
+quest
 quilt
+quit
 quiver
 rag
 rain
@@ -423,6 +436,7 @@ rank
 rasp
 rat
 rave
+read
 ream
 reap
 reef
@@ -454,7 +468,6 @@ sack
 sag
 sail
 sand
-sand
 sap
 save
 saw
@@ -469,6 +482,8 @@ seep
 seeth
 sell
 send
+serve
+set
 sew
 shack
 share
@@ -496,6 +511,7 @@ sip
 siphon
 sit
 sizzle
+skid
 slam
 slant
 slap
@@ -534,12 +550,20 @@ sort
 sow
 spam
 span
+spar
+spell
 spew
+spill
+spin
 spit
 spoil
+spool
 spoon
+sport
 sprain
 spread
+spur
+spurt
 stash
 steer
 stew
@@ -550,6 +574,7 @@ stint
 stir
 stitch
 strain
+strand
 strap
 stream
 stretch
@@ -557,12 +582,14 @@ strew
 stride
 strike
 string
+strip
 stroke
 strut
 stud
 stuff
 stumble
 stump
+stun
 suck
 sulk
 sunder
@@ -574,6 +601,7 @@ sweat
 sweep
 swell
 swell
+swerve
 swill
 swim
 swipe
@@ -681,6 +709,7 @@ worry
 wow
 wrack
 wrap
+wreak
 wreath
 wrest
 wring
@@ -696,6 +725,3 @@ yoke
 zap
 zero
 zip
-fetch
-match
-
