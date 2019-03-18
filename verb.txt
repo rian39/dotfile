@@ -291,7 +291,6 @@ leaf
 leap
 lick
 like
-like
 lilt
 limp
 link
@@ -329,7 +328,6 @@ mew
 mill
 mine
 miss
-miss
 mither
 mob
 mock
@@ -346,7 +344,6 @@ mug
 mumble
 munch
 mutter
-nail
 nail
 name
 nap
@@ -405,7 +402,6 @@ pray
 preach
 press
 prick
-prick
 prove
 prune
 puff
@@ -416,6 +412,7 @@ punch
 pun
 pure
 purge
+purse
 quaff
 quail
 quake
@@ -479,6 +476,7 @@ search
 seed
 seek
 seep
+heel
 seeth
 sell
 send
