@@ -70,6 +70,7 @@ bunch
 bundle
 burr
 burrow
+burst
 bust
 cake
 cash
@@ -157,6 +158,7 @@ flock
 floor
 flounder
 flow
+fly
 fob
 foil
 foot
@@ -219,6 +221,7 @@ heap
 heat
 heave
 heed
+heel
 help
 hew
 hide
@@ -237,7 +240,6 @@ hop
 hope
 hose
 host
-hug
 hug
 hulk
 hum
@@ -268,6 +270,7 @@ kip
 kiss
 kiss
 kit
+knacker
 knee
 kneel
 knell
@@ -371,7 +374,6 @@ pelt
 pen
 pester
 pick
-pick
 pike
 pile
 pin
@@ -386,16 +388,15 @@ plough
 plug
 plump
 plunder
-plunder
 plunge
 pocket
 poke
+port
 post
 pouch
+pounce
 pour
 prance
-port
-pounce
 prank
 prate
 pray
@@ -404,12 +405,12 @@ press
 prick
 prove
 prune
-puff
 pucker
+puff
 pummel
 pump
-punch
 pun
+punch
 pure
 purge
 purse
@@ -436,6 +437,7 @@ rave
 read
 ream
 reap
+rear
 reef
 reel
 rely
@@ -476,7 +478,6 @@ search
 seed
 seek
 seep
-heel
 seeth
 sell
 send
@@ -626,7 +627,6 @@ throw
 thrust
 thunder
 tick
-tick
 tide
 tile
 tin
@@ -634,7 +634,6 @@ tip
 title
 toke
 toll
-top
 top
 toss
 touch
