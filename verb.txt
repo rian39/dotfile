@@ -207,7 +207,6 @@ hack
 hail
 ham
 hand
-hand
 happen
 hash
 hassle
@@ -245,6 +244,7 @@ hulk
 hum
 humble
 hunch
+knuckle
 hurl
 hurt
 hurtle
@@ -306,6 +306,7 @@ lock
 log
 loll
 loop
+loot
 lop
 lope
 lost
@@ -319,7 +320,6 @@ man
 map
 mash
 mask
-match
 match
 maul
 meet
