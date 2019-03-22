@@ -54,7 +54,9 @@ boot
 bop
 bore
 boss
+bounce
 brace
+braid
 brain
 branch
 brand
@@ -115,6 +117,7 @@ drain
 drape
 draw
 drawl
+drawl
 dread
 dredge
 dress
@@ -156,6 +159,7 @@ flit
 float
 flock
 floor
+flounce
 flounder
 flow
 fly
@@ -244,7 +248,6 @@ hulk
 hum
 humble
 hunch
-knuckle
 hurl
 hurt
 hurtle
@@ -279,6 +282,7 @@ knit
 knock
 knot
 know
+knuckle
 lack
 lag
 lame
@@ -369,6 +373,7 @@ pain
 pan
 patch
 paw
+pay
 peel
 pelt
 pen
@@ -394,6 +399,7 @@ poke
 port
 post
 pouch
+pounce
 pounce
 pour
 prance
@@ -425,7 +431,9 @@ quest
 quilt
 quit
 quiver
+quiz
 rag
+raid
 rain
 rake
 ram
@@ -447,6 +455,7 @@ rile
 ring
 rip
 rivet
+roam
 roast
 rob
 rocket
@@ -458,7 +467,6 @@ rope
 rort
 rot
 rough
-row
 row
 rug
 rust
@@ -550,15 +558,21 @@ sow
 spam
 span
 spar
+spare
 spell
 spew
 spill
 spin
 spit
+splash
+splat
+split
+splotch
 spoil
 spool
 spoon
 sport
+spot
 sprain
 spread
 spur
@@ -639,6 +653,7 @@ toss
 touch
 tough
 track
+trade
 train
 trap
 trash
