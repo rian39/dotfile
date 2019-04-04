@@ -832,6 +832,7 @@ wheel
 wheeze
 whet
 whiff
+whilt
 whip
 whirl
 whizz
