@@ -132,6 +132,7 @@ dare
 dart
 dash
 deal
+deck
 dib
 die
 dig
