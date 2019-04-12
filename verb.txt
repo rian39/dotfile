@@ -1,4 +1,9 @@
 ache
+store
+pore
+core
+gore
+jaw
 age
 aid
 ail
@@ -40,6 +45,7 @@ bitch
 bite
 blame
 blanch
+blare
 blast
 blather
 bleach
@@ -108,6 +114,7 @@ choose
 chuck
 churn
 coast
+coil
 con
 cool
 couch
@@ -180,6 +187,7 @@ eye
 fail
 fake
 fall
+fare
 farm
 fast
 fear
@@ -194,8 +202,8 @@ fine
 finger
 fire
 fizzle
-flake
 flail
+flake
 flame
 flank
 flare
@@ -238,6 +246,7 @@ gawk
 gaze
 gel
 glance
+glare
 gleam
 glide
 glow
@@ -445,6 +454,7 @@ page
 pain
 palm
 pan
+pare
 patch
 paw
 pay
@@ -566,7 +576,11 @@ sap
 save
 saw
 say
+scab
+scam
 scan
+scar
+scare
 scratch
 seal
 search
@@ -581,7 +595,6 @@ set
 sew
 shack
 shaft
-skate
 share
 shell
 shelter
@@ -613,6 +626,7 @@ siphon
 sire
 sit
 sizzle
+skate
 skid
 slam
 slant
@@ -643,10 +657,12 @@ smooth
 snap
 snip
 snipe
+snort
 soak
 soap
 sob
 sock
+soil
 soothe
 sop
 sort
@@ -691,6 +707,7 @@ stain
 stall
 stanch
 stand
+stare
 stash
 state
 stave
@@ -773,6 +790,7 @@ tin
 tip
 title
 toast
+toil
 toke
 toll
 tool
