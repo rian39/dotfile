@@ -1,9 +1,4 @@
 ache
-store
-pore
-core
-gore
-jaw
 age
 aid
 ail
@@ -67,6 +62,7 @@ bone
 boom
 boost
 boot
+booze
 bop
 bore
 boss
@@ -117,6 +113,7 @@ coast
 coil
 con
 cool
+core
 couch
 crack
 crank
@@ -254,6 +251,7 @@ glug
 gnash
 gnaw
 goad
+gore
 grace
 grant
 grapple
@@ -324,6 +322,7 @@ hurtle
 hush
 hustle
 jail
+jaw
 jerk
 jest
 jet
@@ -448,13 +447,22 @@ numb
 offer
 ogle
 oil
+ooze
 open
 other
+pace
+pack
+pad
 page
 pain
 palm
 pan
+pant
+paper
 pare
+part
+pass
+paste
 patch
 paw
 pay
@@ -482,6 +490,7 @@ plunge
 pocket
 poke
 pool
+pore
 port
 post
 pouch
@@ -657,6 +666,7 @@ smooth
 snap
 snip
 snipe
+snooze
 snort
 soak
 soap
@@ -720,6 +730,7 @@ stink
 stint
 stir
 stitch
+store
 stow
 strain
 strand
