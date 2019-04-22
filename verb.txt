@@ -5,6 +5,7 @@ ail
 aim
 allot
 amount
+angle
 annul
 ape
 arc
@@ -19,6 +20,7 @@ ban
 band
 banish
 bank
+bar
 base
 bash
 bask
@@ -30,6 +32,7 @@ beach
 bead
 bear
 beg
+bend
 best
 bid
 bide
@@ -103,6 +106,7 @@ cash
 cast
 catch
 caulk
+chair
 chance
 chew
 chide
@@ -121,6 +125,7 @@ crap
 crash
 crate
 crawl
+craze
 cream
 cripple
 crop
@@ -136,9 +141,11 @@ curtsy
 dab
 dam
 dance
+dangle
 dare
 dart
 dash
+daze
 deal
 deck
 dib
@@ -187,11 +194,13 @@ fall
 fare
 farm
 fast
+faze
 fear
 feed
 feel
 feign
 fence
+fend
 fetch
 fight
 file
@@ -226,6 +235,8 @@ founder
 frame
 fray
 free
+friend
+flay
 frolic
 fruit
 fry
@@ -236,12 +247,14 @@ furrow
 fuse
 fuss
 gape
+gas
 gash
 gasp
 gate
 gawk
 gaze
 gel
+giggle
 glance
 glare
 gleam
@@ -276,6 +289,7 @@ hack
 hail
 ham
 hand
+handle
 happen
 harm
 hash
@@ -321,11 +335,15 @@ hurt
 hurtle
 hush
 hustle
+ink
 jail
+jangle
+jar
 jaw
 jerk
 jest
 jet
+jiggle
 jilt
 joke
 jolt
@@ -338,6 +356,7 @@ jump
 keel
 keen
 keep
+ken
 key
 kick
 kill
@@ -355,6 +374,7 @@ knock
 knot
 know
 knuckle
+lace
 lack
 lag
 lame
@@ -365,10 +385,12 @@ lash
 last
 latch
 lather
+laze
 leach
 lead
 leaf
 leap
+lend
 lick
 like
 lilt
@@ -390,12 +412,15 @@ lope
 lost
 lug
 lunch
+lunge
 lust
 madden
 mail
 make
 man
+mangle
 map
+marr
 mash
 mask
 master
@@ -403,10 +428,12 @@ match
 maul
 meet
 melt
+mend
 merge
 mess
 mete
 mew
+mike
 mill
 mine
 mire
@@ -440,6 +467,7 @@ need
 nest
 net
 nick
+niggle
 notice
 nourish
 nudge
@@ -470,6 +498,7 @@ peel
 pelt
 pen
 pester
+phase
 pick
 pike
 pile
@@ -478,6 +507,7 @@ pine
 pip
 pit
 pitch
+plague
 plan
 plant
 please
@@ -496,6 +526,7 @@ post
 pouch
 pounce
 pour
+praise
 prance
 prank
 prate
@@ -530,11 +561,13 @@ quit
 quiver
 quiz
 quote
+race
 raft
 rag
 rage
 raid
 rain
+raise
 rake
 ram
 ranch
@@ -543,6 +576,7 @@ rap
 rasp
 rat
 rave
+raze
 read
 ream
 reap
@@ -572,6 +606,7 @@ rough
 route
 row
 ruck
+ruffle
 rug
 ruse
 rush
@@ -619,6 +654,7 @@ shrink
 shrivel
 shrug
 shuck
+shuffle
 shunt
 shush
 shut
@@ -683,11 +719,14 @@ spar
 spare
 spell
 spew
+spice
+spike
 spill
 spin
 spit
 splash
 splat
+splice
 split
 splotch
 spoil
@@ -734,6 +773,7 @@ store
 stow
 strain
 strand
+strangle
 strap
 stream
 stretch
@@ -769,11 +809,13 @@ swim
 swipe
 switch
 swot
+table
 tack
 tackle
 tag
 tail
 take
+tangle
 tank
 tap
 tarp
@@ -812,6 +854,7 @@ touch
 tough
 tout
 tow
+trace
 track
 trade
 trail
@@ -820,6 +863,7 @@ trap
 trash
 trawl
 tread
+trend
 trill 
 trim
 trip
@@ -898,10 +942,12 @@ woof
 worry
 wow
 wrack
+wrangle
 wrap
 wreak
 wreath
 wrest
+wriggle
 wring
 writhe
 wrong
@@ -911,6 +957,7 @@ yaw
 yawn
 yearn
 yell
+yen
 yip
 yodel
 yoke
