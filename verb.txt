@@ -166,6 +166,7 @@ dread
 dredge
 dress
 drill
+drink
 drip
 drive
 drizzle
@@ -213,6 +214,7 @@ flake
 flame
 flank
 flare
+flay
 flick
 flinch
 flirt
@@ -236,7 +238,6 @@ frame
 fray
 free
 friend
-flay
 frolic
 fruit
 fry
@@ -290,6 +291,7 @@ hail
 ham
 hand
 handle
+hanker
 happen
 harm
 hash
@@ -325,6 +327,7 @@ hop
 hope
 hose
 host
+hove
 hug
 hulk
 hum
@@ -405,6 +408,7 @@ lob
 lock
 log
 loll
+loom
 loop
 loot
 lop
@@ -425,6 +429,7 @@ mash
 mask
 master
 match
+mate
 maul
 meet
 melt
@@ -769,6 +774,7 @@ stink
 stint
 stir
 stitch
+stoke
 store
 stow
 strain
