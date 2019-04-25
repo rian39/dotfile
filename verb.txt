@@ -1,4 +1,3 @@
-ache
 age
 aid
 ail
@@ -32,6 +31,7 @@ beach
 bead
 bear
 beg
+belt
 bend
 best
 bid
@@ -55,13 +55,16 @@ block
 bloom
 blot
 blow
+bludge
 blunder
 bluster
 boast
 bob
+bog
 boil
 bolt
 bone
+book
 boom
 boost
 boot
@@ -71,6 +74,7 @@ bore
 boss
 bounce
 brace
+brag
 braid
 brain
 branch
@@ -113,10 +117,12 @@ chide
 choose
 chuck
 churn
+clutch
 coast
 coil
 con
 cool
+cop
 core
 couch
 crack
@@ -176,6 +182,7 @@ drop
 drum
 dub
 duck
+duel
 dump
 dust
 dwell
@@ -221,14 +228,17 @@ flirt
 flit
 float
 flock
+flog
 floor
 flounce
 flounder
 flow
 fluff
+fluke
 fly
 foam
 fob
+fog
 foil
 fool
 foot
@@ -238,10 +248,12 @@ frame
 fray
 free
 friend
+frisk
 frolic
 fruit
 fry
 fudge
+fuel
 fumble
 fur
 furrow
@@ -302,6 +314,7 @@ haul
 hawk
 haze
 head
+heal
 heap
 heat
 heave
@@ -348,11 +361,13 @@ jest
 jet
 jiggle
 jilt
+jog
 joke
 jolt
 jostle
 jot
 joust
+judge
 jug
 juice
 jump
@@ -417,6 +432,7 @@ lost
 lug
 lunch
 lunge
+lurk
 lust
 madden
 mail
@@ -482,6 +498,7 @@ ogle
 oil
 ooze
 open
+ortche
 other
 pace
 pack
@@ -498,10 +515,12 @@ pass
 paste
 patch
 paw
+pawn
 pay
 peel
 pelt
 pen
+perk
 pester
 phase
 pick
@@ -516,6 +535,7 @@ plague
 plan
 plant
 please
+plop
 plot
 plough
 plug
@@ -525,6 +545,7 @@ plunge
 pocket
 poke
 pool
+pop
 pore
 port
 post
@@ -594,6 +615,7 @@ ride
 rile
 ring
 rip
+risk
 rivet
 roam
 roast
@@ -690,6 +712,7 @@ slide
 slight
 slip
 slit
+slog
 slop
 slope
 slot
@@ -722,6 +745,7 @@ spam
 span
 spar
 spare
+spawn
 spell
 spew
 spice
@@ -735,12 +759,14 @@ splice
 split
 splotch
 spoil
+spook
 spool
 spoon
 sport
 spot
 sprain
 spread
+spruik
 spur
 spurn
 spurt
@@ -933,8 +959,10 @@ whet
 whiff
 whip
 whirl
+whisk
 whizz
 whoosh
+whop
 widen
 will
 wilt
