@@ -102,6 +102,7 @@ cage
 cake
 calm
 carp
+cart
 cash
 cast
 catch
