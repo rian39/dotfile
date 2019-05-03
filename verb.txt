@@ -1,4 +1,5 @@
-Age
+afraid
+age
 aid
 ail
 aim
@@ -72,6 +73,7 @@ booze
 bop
 bore
 boss
+bother
 bounce
 brace
 brag
@@ -106,6 +108,7 @@ cage
 cake
 calm
 carp
+cart
 cash
 cast
 catch
@@ -130,6 +133,7 @@ crank
 crap
 crash
 crate
+crave
 crawl
 craze
 cream
@@ -163,6 +167,7 @@ ditch
 dive
 dob
 dock
+dowse
 draft
 drain
 drape
@@ -196,6 +201,7 @@ elbow
 end
 exit
 eye
+fade
 fail
 fake
 fall
@@ -216,11 +222,13 @@ fine
 finger
 fire
 fizzle
+flag
 flail
 flake
 flame
 flank
 flare
+flaunt
 flay
 flick
 flinch
@@ -259,6 +267,7 @@ fur
 furrow
 fuse
 fuss
+gag
 gape
 gas
 gash
@@ -279,6 +288,7 @@ gnaw
 goad
 gore
 grace
+graft
 grant
 grapple
 grasp
@@ -289,16 +299,19 @@ grieve
 grill
 grip
 grok
+groove
 grouch
 grow
 grumble
 grump
 grunt
 guide
+gulp
 gurgle
 gush
 gust
 hack
+haft
 hail
 ham
 hand
@@ -311,6 +324,7 @@ hassle
 hatch
 hate
 haul
+haunt
 hawk
 haze
 head
@@ -336,6 +350,8 @@ hole
 home
 hone
 hoot
+hoove
+hoover
 hop
 hope
 hose
@@ -429,6 +445,7 @@ loot
 lop
 lope
 lost
+low
 lug
 lunch
 lunge
@@ -478,7 +495,9 @@ mumble
 munch
 muscle
 muse
+mush
 mutter
+nag
 nail
 name
 nap
@@ -498,7 +517,6 @@ ogle
 oil
 ooze
 open
-ortche
 other
 pace
 pack
@@ -565,6 +583,7 @@ prove
 prune
 pucker
 puff
+pulp
 pulse
 pummel
 pump
@@ -615,6 +634,7 @@ ride
 rile
 ring
 rip
+ripple
 risk
 rivet
 roam
@@ -630,6 +650,8 @@ rope
 rort
 rot
 rough
+rouse
+roust
 route
 row
 ruck
@@ -673,6 +695,7 @@ shepherd
 shill
 shine
 shirk
+shiver
 shoo
 shoot
 shout
@@ -718,6 +741,7 @@ slope
 slot
 slouch
 slough
+slow
 slug
 sluice
 slump
@@ -740,6 +764,7 @@ soil
 soothe
 sop
 sort
+souse
 sow
 spam
 span
@@ -827,6 +852,7 @@ suit
 sulk
 sunder
 surge
+swagger
 swan
 swap
 sway
@@ -853,6 +879,8 @@ tap
 tarp
 task
 taste
+taunt
+tax
 teach
 tear
 teeth
@@ -860,6 +888,7 @@ tense
 test
 tether
 thaw
+thirst
 thrall
 thrash
 thread
@@ -880,6 +909,7 @@ toke
 toll
 tool
 top
+torch
 toss
 tote
 touch
@@ -901,6 +931,7 @@ trim
 trip
 troll
 troop
+trounce
 trudge
 trump
 trundle
@@ -934,6 +965,7 @@ vomit
 vote
 vouch
 vow
+wade
 waft
 wag
 wager
@@ -946,6 +978,7 @@ wash
 waste
 water
 wave
+wax
 weather
 weed
 well
