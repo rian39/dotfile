@@ -1,5 +1,3 @@
-afraid
-age
 aid
 ail
 aim
@@ -49,6 +47,7 @@ blast
 blather
 bleach
 bleat
+bleep
 blind
 blink
 bloat
@@ -137,6 +136,7 @@ crave
 crawl
 craze
 cream
+creep
 cripple
 crop
 crouch
@@ -208,6 +208,7 @@ fall
 fare
 farm
 fast
+fault
 faze
 fear
 feed
@@ -363,6 +364,7 @@ hum
 humble
 hunch
 hurl
+hurry
 hurt
 hurtle
 hush
@@ -386,6 +388,7 @@ joust
 judge
 jug
 juice
+jumble
 jump
 keel
 keen
@@ -657,6 +660,7 @@ row
 ruck
 ruffle
 rug
+rumble
 ruse
 rush
 rust
@@ -675,6 +679,7 @@ scan
 scar
 scare
 scratch
+scurry
 seal
 search
 seed
