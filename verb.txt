@@ -269,6 +269,7 @@ gag
 gape
 gas
 gash
+flash
 gasp
 gate
 gawk
@@ -473,6 +474,7 @@ mill
 mine
 mire
 miss
+mist
 mither
 mob
 mock
@@ -693,6 +695,7 @@ shirk
 shoo
 shoot
 shout
+shower
 shrill
 shrink
 shrivel
@@ -749,6 +752,7 @@ snip
 snipe
 snooze
 snort
+snow
 soak
 soap
 sob
@@ -819,6 +823,7 @@ stir
 stitch
 stoke
 store
+storm
 stow
 strain
 strand
