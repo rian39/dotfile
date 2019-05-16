@@ -1,4 +1,3 @@
-afraid
 age
 aid
 ail
@@ -49,6 +48,7 @@ blast
 blather
 bleach
 bleat
+bleep
 blind
 blink
 bloat
@@ -73,6 +73,7 @@ booze
 bop
 bore
 boss
+bother
 bounce
 brace
 brag
@@ -136,6 +137,7 @@ crave
 crawl
 craze
 cream
+creep
 cripple
 crop
 crouch
@@ -166,6 +168,7 @@ ditch
 dive
 dob
 dock
+dowse
 draft
 drain
 drape
@@ -206,6 +209,7 @@ fall
 fare
 farm
 fast
+fault
 faze
 fear
 feed
@@ -362,6 +366,7 @@ hum
 humble
 hunch
 hurl
+hurry
 hurt
 hurtle
 hush
@@ -385,6 +390,7 @@ joust
 judge
 jug
 juice
+jumble
 jump
 keel
 keen
@@ -444,6 +450,7 @@ loot
 lop
 lope
 lost
+low
 lug
 lunch
 lunge
@@ -649,11 +656,14 @@ rope
 rort
 rot
 rough
+rouse
+roust
 route
 row
 ruck
 ruffle
 rug
+rumble
 ruse
 rush
 rust
@@ -672,6 +682,7 @@ scan
 scar
 scare
 scratch
+scurry
 seal
 search
 seed
@@ -692,6 +703,7 @@ shepherd
 shill
 shine
 shirk
+shiver
 shoo
 shoot
 shout
@@ -738,6 +750,7 @@ slope
 slot
 slouch
 slough
+slow
 slug
 sluice
 slump
@@ -761,6 +774,7 @@ soil
 soothe
 sop
 sort
+souse
 sow
 spam
 span
@@ -849,6 +863,7 @@ suit
 sulk
 sunder
 surge
+swagger
 swan
 swap
 sway
@@ -876,6 +891,7 @@ tarp
 task
 taste
 taunt
+tax
 teach
 tear
 teeth
@@ -973,6 +989,7 @@ wash
 waste
 water
 wave
+wax
 weather
 weed
 well
