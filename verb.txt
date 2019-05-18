@@ -1,4 +1,5 @@
 age
+cloud
 aid
 ail
 aim
@@ -120,6 +121,7 @@ chide
 choose
 chuck
 churn
+cinch
 clutch
 coast
 coil
@@ -156,6 +158,7 @@ dangle
 dare
 dart
 dash
+dawn
 daze
 deal
 deck
@@ -164,6 +167,7 @@ die
 dig
 dim
 dirty
+dish
 ditch
 dive
 dob
@@ -230,6 +234,7 @@ flake
 flame
 flank
 flare
+flash
 flaunt
 flay
 flick
@@ -273,7 +278,6 @@ gag
 gape
 gas
 gash
-flash
 gasp
 gate
 gawk
@@ -284,6 +288,7 @@ glance
 glare
 gleam
 glide
+glitch
 glow
 glug
 gnash
@@ -456,6 +461,7 @@ lunch
 lunge
 lurk
 lust
+lynch
 madden
 mail
 make
@@ -551,6 +557,7 @@ pick
 pike
 pile
 pin
+pinch
 pine
 pip
 pit
@@ -649,6 +656,7 @@ rob
 rocket
 roil
 roll
+romp
 roof
 roost
 root
@@ -800,6 +808,7 @@ spoon
 sport
 spot
 sprain
+sprawl
 spread
 spruik
 spur
@@ -836,6 +845,7 @@ stint
 stir
 stitch
 stoke
+stomp
 store
 storm
 stow
@@ -864,6 +874,7 @@ sulk
 sunder
 surge
 swagger
+swamp
 swan
 swap
 sway
