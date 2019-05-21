@@ -1,5 +1,4 @@
 age
-cloud
 aid
 ail
 aim
@@ -122,6 +121,7 @@ choose
 chuck
 churn
 cinch
+cloud
 clutch
 coast
 coil
@@ -829,11 +829,11 @@ stage
 stagger
 stain
 stall
-stanch
 stand
 stare
 stash
 state
+staunch
 stave
 steer
 step
