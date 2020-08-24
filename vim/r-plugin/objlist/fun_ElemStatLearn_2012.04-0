@@ -1,3 +1,0 @@
-syn keyword rFunction simple.ridge
-syn keyword rFunction waveform
-syn keyword rFunction zip2image

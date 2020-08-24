@@ -1,67 +1,76 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
-    Bundle 'wellle/tmux-complete.vim'
     Plugin 'gmarik/Vundle.vim'
-    Plugin 'Zenburn'
+    Plugin 'jalvesaq/Nvim-R'
+    Plugin 'vim-pandoc/vim-rmarkdown'
+    Plugin 'junegunn/seoul256.vim'
     Plugin 'vim-pandoc/vim-pandoc'
     Plugin 'vim-pandoc/vim-pandoc-syntax'
-    Plugin 'vim-pandoc/vim-rmarkdown'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'reedes/vim-pencil'
-    Plugin 'reedes/vim-wordy'
     Plugin 'reedes/vim-colors-pencil'
-    Plugin 'tpope/vim-markdown'
     Plugin 'scrooloose/nerdcommenter'
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'tpope/vim-surround'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'altercation/vim-colors-solarized'
-    Plugin 'nanotech/jellybeans.vim'
-    Plugin 'itchyny/lightline.vim'
-    Plugin 'jalvesaq/Nvim-R'
-    Plugin 'vim-scripts/Screen-vim---gnu-screentmux'
-    Bundle "MarcWeber/vim-addon-mw-utils"
-    Bundle "tomtom/tlib_vim"
-    Bundle "garbas/vim-snipmate"
-    Bundle "klen/python-mode"
-    "Bundle "ivanov/vim-ipython"
-    Bundle "jamessan/vim-gnupg"
-    Bundle "lervag/vimtex"
-    Bundle "kshenoy/vim-signature"
-    Bundle "farseer90718/vim-reveal"
-    Bundle "csexton/jekyll.vim"
-    Bundle "vim-scripts/TwitVim"
-    "Bundle "Shougo/neocomplete.vim"
-    "Plugin 'Shougo/neosnippet'
-    "Plugin 'Shougo/neosnippet-snippets'
-    Plugin 'tpope/vim-sensible'
-    Plugin 'vim-scripts/Mark--Karkat'
-    Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
     Plugin 'junegunn/goyo.vim'
-    Bundle 'ron89/thesaurus_query.vim'
-    Plugin 'christianrondeau/vim-base64'
-    Plugin 'christoomey/vim-tmux-navigator'
-    Plugin 'leafgarland/typescript-vim'
+    Bundle "kshenoy/vim-signature"
+    Plugin 'tpope/vim-surround'
+    Plugin 'scrooloose/nerdtree'
     Plugin 'morhetz/gruvbox'
+    Plugin 'nanotech/jellybeans.vim'
+    Plugin 'NLKNguyen/papercolor-theme'
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'itchyny/lightline.vim'
     Plugin 'ctrlpvim/ctrlp.vim'
+    Bundle "jamessan/vim-gnupg"
+    Bundle "SirVer/ultisnips"
+    Bundle "chaoren/vim-wordmotion"
+    Bundle "jalvesaq/zotcite"
+    "Plugin 'wellle/tmux-complete.vim'
+    "Plugin 'christoomey/vim-tmux-navigator'
+    "Plugin 'christianrondeau/vim-base64'
+    "Plugin 'hkupty/iron.nvim'
+    "Plugin 'ChesleyTan/wordCount.vim'
+    Plugin 'tpope/vim-fugitive'
+    "Plugin 'tpope/vim-markdown'
+    "Plugin 'Shougo/neosnippet'
+    "Plugin 'Shougo/neosnippet-snippets'
+    "Plugin 'tpope/vim-sensible'
+    "Plugin 'severin-lemaignan/vim-minimap'
+    "Plugin 'jceb/vim-orgmode'
+    "Bundle "garbas/vim-snipmate"
+    "Bundle "MarcWeber/vim-addon-mw-utils"
+    "Plugin 'reedes/vim-wordy'
+    "Plugin 'reedes/vim-colors-pencil'
+    "Plugin 'vim-scripts/Screen-vim---gnu-screentmux'
+    "Bundle "tomtom/tlib_vim"
+    "Bundle "klen/python-mode"
+    "Bundle "ivanov/vim-ipython"
+    "Bundle "lervag/vimtex"
+    "Bundle "farseer90718/vim-reveal"
+    "Bundle "csexton/jekyll.vim"
+    "Bundle "vim-scripts/TwitVim"
+    "Bundle "Shougo/neocomplete.vim"
+    "Plugin 'vim-scripts/Mark--Karkat'
+    "Bundle 'ron89/thesaurus_query.vim'
+    "Plugin 'leafgarland/typescript-vim'
+    "Plugin 'supercollider/scvim'
+    "Plugin 'munshkr/vim-tidal'
+    "Plugin 'sudar/vim-arduino-syntax'
+    "Plugin 'thorstenb/odpdown'
+    "Plugin 'sudar/vim-arduino-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
-"execute pathogen#infect()
 syntax enable
 syntax on
-se t_Co=16
+let g:solarized_termcolors=256
 if !has('gui_running')
       set t_Co=256
 endif
-let g:solarized_termcolors=256
+set termguicolors
 set background=dark
-"call togglebg#map("<F5>")
-"pencilset ruler  
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -69,16 +78,10 @@ set showcmd
 set hlsearch
 set incsearch
 
-"cursor show
-"set cursorline
-"set cursorcolumn
-
 set encoding=utf-8
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
 
-set foldcolumn=6
 set autoread
 au CursorHold * checktime  
 
@@ -125,26 +128,26 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 nnoremap <F6> :bn<CR>
 nnoremap <F4> :bp<CR>
 
-
 "pandoc plugin files
 
-"let g:pandoc#filetypes#handled = '
-let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs =  ['/home/mackenza/Documents/ref_bibs/uni.bib']
+let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
+let g:pandoc#filetypes#pandoc_markdown = 0
+let g:pandoc#biblio#sources = "cg"
+let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/mackenzie.bib', 'ensemble.bib', 'mulligans.bib', 'home/mackenza/ref_bibs/epidemiology.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
-"let g:pandoc#completion#bib#mode='citeproc'
+"let g:pandoc#completion#bib#mode='pandoc-citeproc'
 let g:pandoc#completion#bib#mode='fallback'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 
 "bibtex
-let g:Tex_BIBINPUTS =  ['/home/mackenza/Documents/ref_bibs/uni.bib']
+let g:Tex_BIBINPUTS =  ['/home/mackenza/ref_bibs/uni.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
-set omnifunc=pandoc#completion#Complete
+"set omnifunc=pandoc#completion#Complete
 let g:Tex_Flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
@@ -153,7 +156,7 @@ nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md'
 
 "autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=pandoc
-au BufRead,BufNewFile {*.rmd} set ft=rmarkdown
+au BufRead,BufNewFile {*.rmd,*.md} set ft=rmarkdown
 
 " New signs for the pandoc bundle
 let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»', 'newline': '¬'}
@@ -174,31 +177,25 @@ augroup pencil
     autocmd FileType text         call pencil#init()
 augroup END
 
-"augroup pencil
-"autocmd!
-"autocmd FileType markdown,mkd call pencil#init()
-"autocmd FileType textile call pencil#init()
-"autocmd FileType text call pencil#init({'wrap': 'hard'})
-"augroup END
-
 function! WordCount()
-    let s:old_status = v:statusmsg
-    let position = getpos(".")
-    exe ":silent normal g\<c-g>"
-    let stat = v:statusmsg
-    let s:word_count = 0
-    if stat != '--No lines in buffer--'
-        let s:word_count = str2nr(split(v:statusmsg)[11])
-        let v:statusmsg = s:old_status
-    end
-    call setpos('.', position)
+    "let s:old_status = v:statusmsg
+    "let position = getpos(".")
+    "exe ":silent normal g\<c-g>"
+    "let stat = v:statusmsg
+    "let s:word_count = 0
+    "if stat != '--No lines in buffer--'
+        "let s:word_count = str2nr(split(v:statusmsg)[11])
+        "let v:statusmsg = s:old_status
+    "end
+    "call setpos('.', position)
+    let w = wordcount().words
+    let s:word_count = w
     return s:word_count 
 endfunction
 
 
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):
 filetype plugin on
-let vimrplugin_assign = 0
 " Change the <LocalLeader> key:
 let maplocalleader = ","
 " Use Ctrl+Space to do omnicompletion:
@@ -213,29 +210,6 @@ vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
 
-"** airline related**
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
 "lightline config
 let g:lightline = {
             \ 'colorscheme': 'wombat',
@@ -247,7 +221,7 @@ let g:lightline = {
             \   'fugitive': 'MyFugitive',
             \   'readonly': 'MyReadonly',
             \   'modified': 'MyModified',
-            \      'count': 'WordCount'
+            \   'count':'WordCount'
             \ },
             \ 'separator': { 'left':  '▶', 'right':  '▶'},
             \ 'subseparator': { 'left':  '»', 'right': '»' }
@@ -287,23 +261,6 @@ endfunction
 
 set laststatus=2
 
-" Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
-
-"let g:reveal_root_path = '/home/mackenza/reveal.js'
-
-"jekyll stuff
-
-let g:jekyll_path = "/home/mackenza/rian39.github.io"
-let g:jekyll_post_suffix = "md"
-let g:jekyll_post_published = "false"
-let g:jekyll_post_created = "epoch"
-let g:jekyll_post_created = "%D %T"
-let g:jekyll_prompt_tags = "true"
-let g:jekyll_prompt_categories = "true"
-map <Leader>jb  :JekyllBuild<CR>
-map <Leader>jn  :JekyllPost<CR>
-map <Leader>jl  :JekyllList<CR>
-
 "vimtex stuff
 let g:tex_flavor = 'latex'
 let g:vimtex_complete_enabled = 1
@@ -325,30 +282,6 @@ function! WordFrequency() range
 endfunction
 command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
 
-"neocomplete
-"let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
-"let g:neocomplete#enable_at_startup = 1
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#enable_smart_case = 1
-"let g:neocomplete#auto_completion_start_length = 2
-
-"" always use completions from all buffers
-"if !exists('g:neocomplete#same_filetypes')
-"let g:neocomplete#same_filetypes = {}
-"endif
-"let g:neocomplete#same_filetypes._ = '_'
-
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-"let g:neocomplete#sources#omni#input_patterns.tex =
-"\ '\v\\\a*(ref|cite)\a*([^]*\])?\{([^}]*,)*[^}]*'
-
-"inoremap <silent> <CR> <C-r>=neocomplete#smart_close_popup()<CR><CR>
-        "" <TAB>: completion.
-"inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
-"inoremap <expr> <C-h> neocomplete#smart_close_popup()."\<C-h>"
-
 nnoremap : ;
 nnoremap ; :
 nnoremap <F7> :r !date<CR>
@@ -356,6 +289,7 @@ nnoremap <F8> :r !git rev-parse --abbrev-ref HEAD <CR>
 nnoremap <leader><leader> :xa<cr>
 
 nnoremap <leader>nf :set fdc=0<cr>
+nnoremap <leader>yf :set fdc=3<cr>
 nnoremap <leader>h2<CR> o<ESC>:pu=strftime('%c')<CR> 0i## <ESC>o- <ESC>
 nnoremap <leader><leader>t i# <ESC>:r !git rev-parse --abbrev-ref HEAD<CR>
 nnoremap <leader>m<CR> :RMarkdown! pdf<CR>
@@ -363,17 +297,37 @@ nnoremap <leader>m<CR> :RMarkdown! pdf<CR>
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion = 0
 
-"nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
+nnoremap <Leader>tq :ThesaurusQueryReplaceCurrentWord<CR>
 
 au CursorHoldI * stopinsert
 
 nnoremap gO :!eog <cfile> &<CR>
 nnoremap gP :!evince <cfile> &<CR>
+nnoremap gW :!lowriter <cfile> &<CR>
+nnoremap gC :!localc <cfile> &<CR>
 
 nnoremap <C-\> :NERDTreeToggle<cr>
 nnoremap <F2> :NERDTreeToggle<cr>
 
-let g:gruvbox_italic=1
 colorscheme gruvbox
+let g:gruvbox_italic=1
 let g:gruvbox_bold=1
 let g:gruvbox_contrast_dark='hard'
+
+augroup ironmapping
+    autocmd!
+    autocmd Filetype ipython nmap <buffer> <localleader>t <Plug>(iron-send-motion)
+    autocmd Filetype ipython vmap <buffer> <localleader>t <Plug>(iron-send-motion)
+    autocmd Filetype ipython nmap <buffer> <localleader>p <Plug>(iron-repeat-cmd)
+augroup END
+
+
+augroup my_colours
+	autocmd!
+	autocmd ColorScheme industry hi SpellBad cterm=reverse
+augroup END
+
+set fdc=0
+nnoremap ,* *<C-O>:%s///gn<CR>
+
+tnoremap <Esc> <C-\><C-n>

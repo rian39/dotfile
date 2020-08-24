@@ -114,10 +114,10 @@ if ! shopt -oq posix; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/mackenza/google-cloud-sdk/path.bash.inc'
+#source '/home/mackenza/google-cloud-sdk/path.bash.inc'
 
 # The next line enables bash completion for gcloud.
-source '/home/mackenza/google-cloud-sdk/completion.bash.inc'
+#source '/home/mackenza/google-cloud-sdk/completion.bash.inc'
 
 # Lines added by the Vim-R-plugin command :RpluginConfig (2014-Oct-01 11:17):
 # Change the TERM environment variable (to get 256 colors) and make Vim
